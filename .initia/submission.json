@@ -1,7 +1,7 @@
 {
   "project_name": "iUSD Pay",
   "repo_url": "https://github.com/ocean2fly/iusd-payment",
-  "commit_sha": "",
+  "commit_sha": "318900a0792c405b9dc1725d408a39f9ed1969fd",
   "rollup_chain_id": "iusd-pay-rollup-1",
   "deployed_address": "0x7c5d5b1dd602fe033ba17bfbbe741e328adfef72",
   "vm": "move",
