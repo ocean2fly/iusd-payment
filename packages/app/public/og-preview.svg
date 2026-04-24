@@ -1,0 +1,10 @@
+<svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#0a0a0a"/>
+  <circle cx="600" cy="210" r="80" fill="none" stroke="#6366f1" stroke-width="2" opacity="0.4"/>
+  <circle cx="600" cy="210" r="55" fill="none" stroke="#6366f1" stroke-width="2" opacity="0.6"/>
+  <circle cx="600" cy="210" r="30" fill="#6366f1" opacity="0.85"/>
+  <text x="600" y="340" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="56" font-weight="700" fill="white">iUSD Payment</text>
+  <text x="600" y="410" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="56" font-weight="700" fill="white">Waiting For You</text>
+  <text x="600" y="480" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="26" fill="#9ca3af">Private · Secure · On-chain · Initia</text>
+  <text x="600" y="570" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="20" fill="#6366f1">iusd-pay.xyz</text>
+</svg>

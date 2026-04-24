@@ -1,0 +1,1250 @@
+{
+  "popup": {
+    "title": "Tarayıcı ayarlarında pop-up'lara izin verin",
+    "subtitle": "Tarayıcınız oturum açma pop-up'ını engelliyor. Gösterildiği gibi Ayarlar'dan etkinleştirin.",
+    "next": "İleri",
+    "back": "Geri",
+    "gotIt": "Anladım",
+    "continue": "Devam",
+    "enableTitle": "Pop-up'ları etkinleştir",
+    "signinNeedsPopup": "Oturum açmak bir pop-up penceresi gerektiriyor.",
+    "gotoMobile": "Ayarlar → tarayıcı → pop-up'lara izin ver yolunu izleyin.",
+    "gotoDesktop": "Ayarlar → pop-up'lara izin ver yolunu izleyin.",
+    "checkDetail": "Ayrıntıyı gör"
+  },
+  "auth": {
+    "connect": "Bağlan",
+    "signIn": "Oturum aç →",
+    "connecting": "Bağlanıyor…",
+    "signing": "İmzalanıyor…",
+    "checkWallet": "İmza isteği için cüzdanınızı kontrol edin…",
+    "settingUp": "Hesabınız ayarlanıyor…",
+    "coinbaseConnected": "Coinbase Wallet bağlandı!",
+    "walletConnected": "Cüzdan bağlandı!",
+    "wcTimeout": "WalletConnect zaman aşımına uğradı",
+    "restoring": "Cüzdan oturumu geri yükleniyor…",
+    "openingWindow": "Oturum açma penceresi açılıyor…",
+    "tapConnect": "Bağlan'a dokunun — cüzdan imza isteyecek",
+    "signInWith": "Şununla oturum aç",
+    "or": "veya",
+    "tryAgain": "Tekrar dene",
+    "reconnect": "Cüzdanı yeniden bağla",
+    "popupBlockedMobile": "Pop-up engellendi. Ayarlar → tarayıcı → pop-up'lara izin ver yolunu izleyin.",
+    "popupBlockedDesktop": "Pop-up engellendi. Ayarlar → pop-up'lara izin ver yolunu izleyin.",
+    "signFailed": "Oturum açma başarısız. Lütfen tekrar deneyin.",
+    "connectionLost": "Cüzdan bağlantısı koptu. Lütfen yeniden bağlanın.",
+    "signatureCancelled": "İmza iptal edildi.",
+    "networkBlocked": "API erişilemiyor veya engellendi (ağ/CORS). Temiz bir sekmede tekrar deneyin."
+  },
+  "landing": {
+    "tagline": "Initia üzerinde stablecoin ödemesi",
+    "installAsApp": "Uygulama olarak yükle",
+    "forceRefresh": "Zorla yenile",
+    "refresh": "Yenile",
+    "forceRefreshTip": "Yerel sayfa sorunlarını çözmek için zorla yenile"
+  },
+  "wallets": {
+    "openInWalletBrowser": "Cüzdan uygulaması tarayıcısında aç",
+    "pasteUrl": "iUSD pay URL'sini (kopyalandı) yapıştır ve git",
+    "done": "Tamam",
+    "other": "Diğer"
+  },
+  "common": {
+    "language": "Dil",
+    "cancel": "İptal",
+    "save": "Kaydet",
+    "saving": "Kaydediliyor…",
+    "saved": "Kaydedildi",
+    "close": "Kapat",
+    "change": "Değiştir",
+    "loading": "Yükleniyor…",
+    "view": "Görüntüle",
+    "optional": "İsteğe bağlı",
+    "on": "AÇIK",
+    "off": "KAPALI"
+  },
+  "welcome": {
+    "tagline": "Initia üzerinde stablecoin ödemeleri",
+    "whatYouGet": "Neler var",
+    "features": {
+      "transfer": "Tarama ile özgürce transfer edin ve talep edin",
+      "merchants": "Satıcılarla sorunsuz entegrasyon",
+      "gifts": "Arkadaşlara ve gruplara hediye gönderin"
+    },
+    "agreePrefix": "Kabul ediyorum:",
+    "and": "ve",
+    "tos": "Hizmet Şartları",
+    "privacy": "Gizlilik Politikası",
+    "experimentalNote": ". Bu uygulama mainnet'te deneyseldir.",
+    "getStarted": "Başla →"
+  },
+  "dashboard": {
+    "tapEditNickname": "Rumuzu düzenlemek için dokun",
+    "minGasHint": "Gaz için en az 1 INIT veya 1 USDC",
+    "refreshBalances": "Bakiyeleri yenile",
+    "actions": {
+      "transfer": "Gönder",
+      "request": "Talep",
+      "gift": "Hediye",
+      "inbox": "Gelen",
+      "contacts": "Kişiler",
+      "scan": "Tara",
+      "history": "Geçmiş",
+      "settings": "Ayarlar"
+    }
+  },
+  "settings": {
+    "title": "Ayarlar",
+    "account": {
+      "title": "Hesap",
+      "nickname": "Rumuz",
+      "setNickname": "Rumuz belirle",
+      "bio": "Bio / Slogan",
+      "bioPlaceholder": "örn: Beni tara ve hediye et, sana öpücükle cevap vereyim 💋",
+      "id": "ID",
+      "wallet": "Cüzdan",
+      "copied": "Kopyalandı",
+      "ecosystem": "Ekosistem",
+      "autoClaim": "Otomatik Talep"
+    },
+    "appearance": {
+      "title": "Görünüm",
+      "auto": "Oto",
+      "light": "Açık",
+      "dark": "Koyu"
+    },
+    "sound": {
+      "title": "Ses",
+      "desc": "UI tıklamaları, kart çevirme, kutlamalar",
+      "muted": "Sessiz",
+      "on": "Açık",
+      "styles": "Ses Stilleri",
+      "customize": "Özelleştir",
+      "tapPreview": "Herhangi bir stile dokunup önizleyin ve seçin",
+      "unmutePreview": "Önizleme duymak için üstteki sessiz modu kaldırın",
+      "cat": {
+        "click": "Tık",
+        "cardFlip": "Kart Çevirme",
+        "gift": "Hediye",
+        "transaction": "İşlem",
+        "menu": "Menü"
+      }
+    },
+    "receive": {
+      "title": "Alım Adresi",
+      "privacyProtection": "Gizlilik Koruması",
+      "defaultWallet": "Cüzdanım (varsayılan)",
+      "change": "Değiştir",
+      "modalTitle": "Alım Adresinizi Koruyun",
+      "modalDesc": "iUSD ödemelerini almak için ayrı bir cüzdan belirleyebilir, bağlı cüzdanınızı özel tutabilirsiniz. Ödemeler otomatik olarak bu adrese yönlendirilir.",
+      "complianceHeader": "⚠ Uyumluluk Bildirimi",
+      "complianceDesc": "Yönlendirmeden bağımsız olarak tüm işlemler geçerli AML politikaları kapsamında denetlenebilir olmaya devam eder. Bu imza anlayış ve onayınızı teyit eder.",
+      "placeholder": "0x… veya init1… (boş = kendi cüzdanınız)",
+      "signSave": "İmzala ve Kaydet",
+      "signing": "İmzalanıyor…"
+    },
+    "about": {
+      "title": "Hakkında",
+      "iusdPay": "iUSD Pay",
+      "network": "Ağ",
+      "contract": "Sözleşme",
+      "tos": "Hizmet Şartları",
+      "privacy": "Gizlilik Politikası",
+      "forceRefresh": "Zorla Yenile",
+      "community": "Topluluk"
+    },
+    "danger": {
+      "title": "Tehlikeli Bölge",
+      "disconnect": "Cüzdan Bağlantısını Kes",
+      "disconnectTitle": "Cüzdan bağlantısı kesilsin mi?",
+      "disconnectDesc": "İstediğiniz zaman yeniden bağlanabilirsiniz.",
+      "delete": "Hesabı Sil",
+      "deleteConfirmWarn": "⚠ Bu işlem hesabınızı kalıcı olarak siler",
+      "confirmDelete": "Silmeyi Onayla",
+      "deleting": "Siliniyor…"
+    }
+  },
+  "transfer": {
+    "title": "Gönder",
+    "paymentCodeTitle": "Ödeme Kodu",
+    "showToRecipient": "Bu QR'ı alıcıya gösterin.",
+    "scanAndEnter": "Taratın ve ödeme talep etmek için tutarı girin.",
+    "waitingForRequest": "İstek bekleniyor…",
+    "sessionExpired": "Oturum süresi doldu",
+    "generateNew": "Yeni Kod Üret",
+    "generating": "Ödeme kodu üretiliyor…",
+    "recipientPlaceholder": "Rumuz veya Hesap ID",
+    "contacts": "Kişiler",
+    "checking": "Kontrol ediliyor…",
+    "noContactsMatch": "\"{{query}}\" ile eşleşen kişi yok",
+    "noContactsYet": "Henüz kişi yok",
+    "noContactsHint": "Başlamak için bir ödeme gönderin veya Geçmişi açın",
+    "amountLabel": "Tutar",
+    "amountMin": "Min 0.1 iUSD",
+    "amountMax": "İşlem başına maks 1.000 iUSD",
+    "memoLabel": "Memo",
+    "memoPlaceholder": "İsteğe bağlı not",
+    "fee": "Ücret: {{amount}} iUSD",
+    "feeCap": "(tavan)",
+    "total": "Toplam: {{amount}} iUSD",
+    "autoSaveContact": "Bu kişi otomatik olarak Kişiler'e kaydedilecek",
+    "paymentQR": "Ödeme QR",
+    "building": "Oluşturuluyor…",
+    "confirming": "Onayla…",
+    "send": "Gönder",
+    "sendAmount": "{{amount}} iUSD Gönder"
+  },
+  "request": {
+    "title": "Talep",
+    "modePersonal": "Ben",
+    "modeBusiness": "İş",
+    "tabNew": "Yeni",
+    "tabInvoices": "Faturalar",
+    "empty": "Henüz talep yok",
+    "createFirst": "İlk talebi oluştur →",
+    "share": "Paylaş ↗",
+    "amountLabel": "Tutar",
+    "noteLabel": "Not",
+    "notePlaceholder": "Açıklama (isteğe bağlı)",
+    "taxNoLabel": "Vergi No",
+    "dueLabel": "Son Tarih",
+    "invLabel": "Fatura #",
+    "payerLabel": "Ödeyen",
+    "payerPlaceholder": "İsim (isteğe bağlı)",
+    "status": {
+      "draft": "Taslak",
+      "sent": "Ödeme Bekleniyor",
+      "paying": "Onay Bekleniyor",
+      "paid": "Ödendi",
+      "overdue": "Gecikti",
+      "refunded": "İade Edildi",
+      "cancelled": "İptal"
+    }
+  },
+  "scan": {
+    "title": "QR Tara",
+    "lookingUp": "Hesap aranıyor…",
+    "paymentDetails": "ÖDEME DETAYLARI",
+    "scannedContent": "TARANAN İÇERİK",
+    "manualInput": "MANUEL GİRİŞ / RESİM",
+    "pasteHint": "URL veya Hesap ID yapıştır…",
+    "startCamera": "Kamerayı Başlat",
+    "stopCamera": "Kamerayı Durdur",
+    "flipCamera": "Kamerayı Çevir",
+    "retry": "Tekrar dene",
+    "scannedCheck": "Tarandı! Masaüstünüzü kontrol edin.",
+    "scanAgain": "↩ Tekrar tara",
+    "tagInvoice": "🧾 Fatura / Talep",
+    "tagIdentity": "👤 Kimlik",
+    "tagScanned": "🔗 Tarandı",
+    "due": "Vade",
+    "payRequest": "💸 Bu talebi öde",
+    "payAmount": "💸 {{amount}} iUSD öde",
+    "contactSaved": "✅ Kişi kaydedildi!",
+    "reAddContactsTag": "👤 Tekrar Ekle",
+    "addContactsTag": "👤 Kişilere ekle",
+    "transfer": "Transfer",
+    "gift": "Hediye",
+    "contactAlreadyAdded": "Kişi zaten ekli",
+    "reAddToContacts": "Tekrar Ekle",
+    "addToContacts": "Kişilere ekle",
+    "visit": "Ziyaret et →",
+    "clickToStart": "Kamerayı başlatmak için tıkla",
+    "pointPhone": "Taranıyor — telefonu QR'ye doğrult",
+    "disconnect": "✕ Bağlantıyı kes",
+    "go": "Git",
+    "dropToScan": "QR taramak için bırak",
+    "chooseFromGallery": "Galeriden seç",
+    "galleryHint": "QR kod resmi seç veya sürükle",
+    "cameraN": "Kamera {{n}}",
+    "err": {
+      "accessBlocked": "🔒 Kamera erişimi engellendi",
+      "permissionDesc": "Kamera izni reddedildi. Tarayıcı ayarlarında tekrar etkinleştirmelisin.",
+      "chromeEdge": "🌐 Chrome / Edge",
+      "pasteInstructions": "Bu URL'yi kopyala → yeni sekmeye yapıştır → Kamerayı ayarla",
+      "allow": "İzin Ver",
+      "copy": "Kopyala",
+      "firefoxHint": "Adres çubuğundaki 🔒 kamera simgesine tıkla → İzin Ver",
+      "safariHint": "Ayarlar → Safari → Kamera → İzin Ver",
+      "androidHint": "⋮ dokun → Site ayarları → Kamera → İzin Ver",
+      "retryAfter": "↺ Etkinleştirdikten sonra tekrar dene",
+      "noCamera": "📷 Kamera bulunamadı",
+      "noCameraDesc": "Bu cihazda kamera tespit edilmedi.",
+      "useManualFull": "Aşağıdaki manuel girişi kullan veya harici tarayıcı bağla.",
+      "inUse": "📷 Kamera kullanımda",
+      "inUseDesc": "Kamera başka bir uygulama tarafından kullanılıyor. Diğer uygulamaları kapatıp tekrar dene.",
+      "flashNotSupported": "Bu cihazda flaş desteklenmiyor",
+      "noQrInImage": "Resimde QR kod bulunamadı",
+      "couldNotCreateRelay": "Relay oturumu oluşturulamadı",
+      "cameraError": "Kamera hatası: {{msg}}",
+      "cameraDenied": "Kamera reddedildi: {{msg}}",
+      "connectionFailed": "Bağlantı başarısız. Basic modunu dene.",
+      "desktopNotReady": "Masaüstü hazır değil. Masaüstü sayfasını yeniden yükle.",
+      "failedToSend": "Gönderilemedi",
+      "invalidSession": "Geçersiz oturum"
+    },
+    "relay": {
+      "gettingCamera": "Kamera alınıyor…",
+      "connectingDesktop": "Masaüstüne bağlanıyor…",
+      "liveCameraHeader": "📹 Canlı Kamera",
+      "qrScannerHeader": "📤 QR Tarayıcı",
+      "liveBadge": "● CANLI",
+      "streamingDesktop": "📹 Masaüstüne yayın — gördüğünü görüyorlar",
+      "pointAtDesktop": "📤 Masaüstündeki QR koduna doğrult",
+      "statusPrefix": "🔄 {{status}}"
+    }
+  },
+  "gift": {
+    "title": "Hediye",
+    "message": "Mesaj",
+    "quickPicks": "Hızlı Seçim",
+    "next": "İleri →",
+    "recipient": "Alıcı",
+    "shares": "Pay",
+    "total": "Toplam",
+    "ready": "Hediye hazır!",
+    "shareAccessHint": "Erişim linkini arkadaşınla paylaş.",
+    "rightClickSave": "Görüntüye sağ tık ile kaydet · Link kopyalandı",
+    "dismiss": "Kapat",
+    "viewDetails": "Hediye detaylarını gör →",
+    "scanToOpen": "Taratarak aç",
+    "noReplies": "Henüz yanıt yok",
+    "noViews": "Henüz görüntüleme yok",
+    "loadingHistory": "Geçmiş yükleniyor…",
+    "giftList": "Hediye listesi",
+    "historyTab": "Geçmiş",
+    "newest": "En yeni",
+    "oldest": "En eski",
+    "newestFirst": "En yeni önce",
+    "oldestFirst": "En eski önce",
+    "noDescription": "Açıklama yok.",
+    "allCollections": "Tüm koleksiyonlar",
+    "collection": {
+      "flowers": "Çiçekler",
+      "drinks": "İçecekler",
+      "food": "Yiyecek",
+      "treats": "Atıştırmalık",
+      "tech": "Teknoloji",
+      "luxury": "Lüks",
+      "office": "Ofis",
+      "art": "Sanat",
+      "books": "Kitaplar",
+      "games": "Oyunlar",
+      "wellness": "Sağlık",
+      "travel": "Seyahat",
+      "fashion": "Moda",
+      "kids": "Çocuk",
+      "pets": "Evcil",
+      "sports": "Spor",
+      "other": "Diğer",
+      "painting": "Resim",
+      "music_box": "Müzik kutusu",
+      "instrument": "Enstrüman",
+      "sculpture": "Heykel",
+      "textile": "Tekstil",
+      "ceramic": "Seramik",
+      "watch": "Saat",
+      "brooch": "Broş",
+      "armor": "Zırh",
+      "furniture": "Mobilya",
+      "jewelry": "Mücevher"
+    },
+    "flexible": "Esnek",
+    "source": "Kaynak ↗",
+    "progressPanel": {
+      "progress": "İlerleme",
+      "inProgress": "Devam ediyor",
+      "completed": "Tamamlandı",
+      "expired": "Süresi doldu",
+      "expiredRefunded": "Süresi doldu · iade edildi",
+      "expiresIn": "{{label}} içinde sona erer",
+      "endsIn": "{{label}} içinde biter",
+      "claimedOf": "/ {{total}} alındı",
+      "claimsHeader": "Alımlar · {{count}}",
+      "replied": "💌 YANITLANDI",
+      "claimedChip": "✓ ALINDI",
+      "anon": "Anonim",
+      "allClaimed": "Tüm paylar alındı.",
+      "refunded_one": "{{count}} alınmayan pay iade edildi",
+      "refunded_other": "{{count}} alınmayan pay iade edildi",
+      "refundedNote": "Alınmayan payların parası hediyenin süresi dolunca otomatik olarak bakiyene iade edildi.",
+      "noClaimsYet": "Henüz kimse almadı. Bağlantıyı paylaşarak onlara haber ver.",
+      "daysHours": "{{days}}g {{hours}}s",
+      "hoursMinutes": "{{hours}}s {{minutes}}d",
+      "minutesOnly": "{{minutes}}d"
+    },
+    "back": "← Geri",
+    "stepChoose": "Hediye seç",
+    "stepWrite": "Mesaj yaz",
+    "stepSendTo": "Kime",
+    "feePercent": "ücret %{{percent}}",
+    "feeLabel": "Ücret (%{{percent}})",
+    "more": "daha fazla",
+    "browseAll": "Tüm hediyelere göz at",
+    "writePlaceholder": "Mesaj yaz...",
+    "amountIusd": "Miktar (iUSD)",
+    "amountRangePlaceholder": "0.1 ~ 1000 iUSD",
+    "tapToEdit": "✎ düzenlemek için dokun",
+    "amountInRange": "0,10 – 1.000 iUSD",
+    "anyoneGroup": "Herhangi biri (grup)",
+    "anyoneCanClaim": "Herkes talep edebilir",
+    "enterContact": "Kişi veya ID gir",
+    "invalidRecipient": "Geçersiz kullanıcı adı veya ID",
+    "usernameInactive": "Kullanıcı pasif",
+    "recipientRequired": "Alıcı gerekli",
+    "sendFailed": "Gönderilemedi",
+    "missingTxParams": "İşlem parametreleri eksik",
+    "giftTxFailed": "Hediye işlemi başarısız",
+    "contactsHeader": "Kişiler",
+    "fromHistory": "✨ Geçmişten",
+    "splitEqual": "Eşit",
+    "splitRandom": "Rastgele",
+    "balanceLine": "Bakiye: {{amount}} iUSD",
+    "wrapping": "Paketleniyor...",
+    "insufficientBalance": "Yetersiz bakiye",
+    "wrapGift": "🎁 Hediyeyi paketle",
+    "giftNumber": "Hediye #{{id}}",
+    "fromName": "{{name}} tarafından",
+    "anonymous": "Anonim",
+    "mysteryAwaits": "Gizemli bir hediye sizi bekliyor",
+    "claimedAgo": "{{time}} talep edildi",
+    "claimed": "Talep edildi",
+    "view": "Gör →",
+    "openCta": "🎁 Aç →",
+    "expiredChip": "Süresi doldu",
+    "claimedOfShort": "{{claimed}}/{{total}} talep edildi",
+    "enjoyEmoji": "İyi eğlenceler! 🎁",
+    "forYouEmoji": "Sevgiyle ❤️",
+    "happyBirthday": "Doğum günün kutlu olsun! 🎂",
+    "thankYouEmoji": "Teşekkürler! 🙏",
+    "cheersEmoji": "Şerefe! 🥂",
+    "justBecause": "Öylesine 🌟",
+    "deserveIt": "Hak ediyorsun ✨",
+    "haveFun": "Eğlen! 🎉",
+    "treatYourself": "Kendini şımart 💫",
+    "yourGiftReady": "Hediyen hazır!",
+    "toLabel": "Kime",
+    "feeLabelShort": "Ücret",
+    "notificationSent": "{{name}} kişisine bildirim gönderildi",
+    "fromSender": "{{name}} tarafından",
+    "giftWaitingShort": "Seni bir hediye bekliyor",
+    "scanToOpenShort": "Açmak için tara",
+    "iusdPay": "iUSD Pay",
+    "copied": "Kopyalandı!",
+    "copyLink": "Bağlantıyı kopyala",
+    "saveImage": "Resmi kaydet",
+    "shareLink": "Bağlantıyı paylaş",
+    "backToQr": "← QR'a dön",
+    "closeShareLater": "Kapatıp sonra Hediye Geçmişi'nden paylaşabilirsin.",
+    "preparing": "Hazırlanıyor...",
+    "imageSaved": "Resim kaydedildi!",
+    "qrBtn": "QR",
+    "backBtn": "Geri",
+    "hasAGiftForYou": "senin için bir hediyesi var",
+    "sharesCount_one": "{{count}} pay",
+    "sharesCount_other": "{{count}} pay",
+    "openedCount": "{{count}}/{{total}} açıldı",
+    "viewsCount": "{{count}} görüntüleme",
+    "someone": "Biri",
+    "shareTitle": "{{name}} Hediye",
+    "featured": "⭐ Öne Çıkan"
+  },
+  "giftClaim": {
+    "loading": "Hediye yükleniyor…",
+    "goHome": "Ana Sayfa",
+    "youReceived": "Aldınız",
+    "from": "Gönderen",
+    "reply": "Yanıtla →",
+    "alreadyClaimed": "Zaten Alındı",
+    "scanProfile": "Profili Tara",
+    "thankPresets": {
+      "thankBoss": "Teşekkürler patron!",
+      "appreciated": "Çok minnettarım!",
+      "soKind": "Çok naziksin!",
+      "madeMyDay": "Günümü yaptın!",
+      "youreBest": "En iyisisin!",
+      "whatSurprise": "Ne sürpriz!",
+      "loveYou": "Seni seviyorum!",
+      "sweetest": "En tatlısısın!",
+      "heartFull": "Kalbim dolu!",
+      "bestBirthday": "En güzel doğum günü!",
+      "bestGift": "En güzel hediye!",
+      "cheersYou": "Sağlığına!"
+    },
+    "iGotLabel": "★ ALDIM",
+    "onlyOneShare": "Yalnızca 1 pay",
+    "sharesCountLabel_one": "{{count}} pay",
+    "sharesCountLabel_other": "{{count}} pay",
+    "fromSenderOverlay": "{{name}} tarafından",
+    "detailsBtn": "detaylar",
+    "claimedLabel": "alındı",
+    "viewedLabel": "görüntüleme",
+    "chasedLabel": "kapıldı",
+    "moreBtn": "[daha fazla]",
+    "membersHeader": "ÜYELER · {{count}}",
+    "lettersHeader": "MEKTUPLAR · {{count}}",
+    "replyBtn": "Yanıtla",
+    "replyToPlaceholder": "{{name}} kişisine yanıt…",
+    "loveWhatYouSee": "★ Beğendin mi?",
+    "giftThemLine": "{{name}} kişisine bahşiş ver",
+    "scanOrOpenProfile": "Profilimi aç →",
+    "scanOr": "Tara veya",
+    "postToPlaceholder": "{{name}} için gönder…",
+    "postBtn": "Gönder",
+    "sentWithLoveBy": "Sevgiyle gönderen",
+    "giftReceivedChip": "Hediye alındı!",
+    "anonName": "onlar",
+    "errInvalidLink": "Geçersiz hediye bağlantısı",
+    "errNotFound": "Hediye bulunamadı",
+    "errClaimFailed": "Alma başarısız",
+    "errFailed": "Başarısız",
+    "errSignInFirst": "Lütfen önce giriş yap",
+    "errInvalidClaimLink": "Geçersiz alma bağlantısı",
+    "signInToSave": "Kişileri kaydetmek için giriş yap",
+    "failedSaveContact": "Kişi kaydetme başarısız",
+    "shareTitle": "{{name}} tarafından hediye"
+  },
+  "history": {
+    "title": "Geçmiş",
+    "paymentJourney": "Ödeme Yolculuğu",
+    "expires": "Sona Eriyor",
+    "noInvoices": "Henüz fatura yok",
+    "noActivity": "Henüz etkinlik yok",
+    "tabs": {
+      "all": "Tümü",
+      "sent": "Gönd.",
+      "received": "Alın.",
+      "gift": "Hediye",
+      "invoices": "Fatura",
+      "stats": "İstatistik"
+    },
+    "payStatus": {
+      "sent": {
+        "pending": "Onay Bekliyor",
+        "confirmed": "Onaylandı",
+        "revoked": "İptal",
+        "refunded": "İade",
+        "expired": "Süresi Doldu",
+        "unknown": "Bilinmiyor"
+      },
+      "received": {
+        "claimable": "Alınabilir",
+        "received": "Alındı",
+        "cancelled": "İptal",
+        "refunded": "İade",
+        "expired": "Süresi Doldu",
+        "unknown": "Bilinmiyor"
+      }
+    },
+    "paymentId": "ÖDEME ID",
+    "sortNewest": "Sırala: En yeni önce (eski için tıkla)",
+    "sortOldest": "Sırala: En eski önce (yeni için tıkla)",
+    "loadMore": "Daha fazla yükle",
+    "invoicePayment": "Fatura Ödemesi",
+    "sentTo": "Gönderilen",
+    "receivedFrom": "Gelen",
+    "cancelInvoice": "Faturayı İptal Et",
+    "cancelInvoiceConfirm": "Bu fatura iptal edilsin mi?",
+    "cancelFailed": "İptal başarısız: {{msg}}",
+    "timeline": {
+      "created": "Oluşturuldu",
+      "fee": "ücret {{amount}}",
+      "pendingClaim": "Talep Bekliyor",
+      "awaitingRecipient": "Alıcı bekleniyor",
+      "autoClaimed": "Otomatik olarak talep edilecek",
+      "confirmed": "Onaylandı",
+      "received": "Alındı",
+      "expiresOn": "Son tarih {{date}}",
+      "revoked": "İptal",
+      "returnedToSender": "Göndericiye iade",
+      "claimed": "Alındı",
+      "refunded": "İade",
+      "returnedToClaimer": "Alana iade",
+      "expired": "Süresi Doldu"
+    },
+    "stats": {
+      "accounting": "MUHASEBE",
+      "giftsSent": "Gönderilen Hediyeler",
+      "giftsReceived": "Alınan Hediyeler",
+      "paid": "Ödendi",
+      "received": "Alındı",
+      "moneyIn": "Gelen",
+      "moneyOut": "Giden",
+      "net": "Net",
+      "pending": "Bekleyen",
+      "thisMonth": "BU AY"
+    },
+    "noGiftHistory": "Henüz hediye geçmişi yok",
+    "receivedSection": "Alınan · {{count}}",
+    "sentSection": "Gönderilen · {{count}}",
+    "loadingMore": "Yükleniyor…",
+    "loadMoreReceived": "Daha fazla alınan yükle",
+    "loadMoreSent": "Daha fazla gönderilen yükle",
+    "refreshTitle": "Yenile",
+    "exportCsv": "Geçmişi CSV'ye dışa aktar",
+    "revokeFailed": "İptal başarısız",
+    "refundFailed": "İade başarısız: {{msg}}",
+    "refundConfirm": "Bu ödeme gönderene iade edilsin mi?",
+    "anyone": "Herkes",
+    "direct": "doğrudan",
+    "fromLabel": "KİMDEN",
+    "toLabel": "KİME",
+    "copySaveTitle": "shortId kopyala + kişilere kaydet",
+    "due": "Vade",
+    "noSentTransactions": "Gönderilen işlem yok",
+    "noReceivedTransactions": "Alınan işlem yok",
+    "noTransactionsYet": "Henüz işlem yok — işlem yaptıkça istatistikler dolacak.",
+    "detailSent": "↑ Gönderildi",
+    "detailReceived": "↓ Alındı",
+    "copyBtn": "📋 Kopyala",
+    "receiptPdf": "↓ Makbuz PDF",
+    "invoicePdf": "↓ Fatura PDF",
+    "revokeBtn": "↩ İptal",
+    "refundBtn": "↩ İade"
+  },
+  "inbox": {
+    "title": "Gelen",
+    "claimed": "Alındı!",
+    "feePaid": "Ücret ödendi",
+    "anonymous": "Anonim",
+    "claimTo": "Şuraya al:",
+    "autoClaimFuture": "Gelecekteki ödemeleri otomatik al",
+    "autoExpires": "Alınmazsa otomatik sona erer",
+    "loadingReplies": "Yanıtlar yükleniyor…",
+    "filter": {
+      "all": "Tümü",
+      "payment": "Ödeme",
+      "gift": "Hediye",
+      "reply": "Yanıt"
+    },
+    "replyCount_one": "{{count}} yanıt",
+    "replyCount_other": "{{count}} yanıt",
+    "refresh": "↻ Yenile",
+    "historyLabel": "GEÇMİŞ · {{count}}",
+    "statusReceived": "Alındı",
+    "statusCancelled": "İptal",
+    "statusRefunded": "İade",
+    "statusExpired": "Süresi doldu",
+    "statusDone": "Tamam",
+    "businessInvoice": "🏪 Kurumsal Fatura",
+    "personalPayment": "👤 Bireysel Ödeme",
+    "fromId": "{{id}} tarafından",
+    "fromLabel": "Kimden",
+    "receipt": "Makbuz",
+    "invoice": "Fatura",
+    "refund": "↩ İade",
+    "refundConfirm": "Bu ödeme gönderene iade edilsin mi?",
+    "refundFailed": "İade başarısız: {{msg}}",
+    "noRepliesHint": "Henüz yanıt yok. Hediye teşekkürleri burada görünecek.",
+    "alreadyClaimedRefreshed": "Bu ödeme zaten otomatik olarak alındı. Gelen kutusu yenilendi.",
+    "alreadyClaimedRemoved": "Zaten alındı — gelen kutusundan kaldırıldı.",
+    "newGiftsSection": "YENİ HEDİYELER · {{count}}",
+    "giftsSection": "HEDİYELER · {{count}}",
+    "sentSection": "GÖNDERİLEN · {{count}}",
+    "loadMoreReplies": "Daha fazla yanıt yükle"
+  },
+  "contacts": {
+    "noResults": "Sonuç yok",
+    "autoSavedHint": "Gönderdiğiniz kişiler otomatik kaydedilir",
+    "importFromHistory": "✨ Geçmişten içe aktar",
+    "importFromHistoryTitle": "Son ödeme + hediye geçmişinden karşı tarafları içe aktar",
+    "searchPlaceholder": "İsim veya ID ile ara..."
+  },
+  "merchant": {
+    "title": "İşletme Profili",
+    "preview": "Önizleme",
+    "businessName": "İşletme Adı *",
+    "businessNamePlaceholder": "örn. Jack's Coffee",
+    "companyLogo": "Şirket Logosu (isteğe bağlı)",
+    "uploadJpgPng": "JPG / PNG Yükle",
+    "remove": "Kaldır",
+    "logoHint": "JPG/PNG · maks 500 KB · güvenli şekilde saklanır",
+    "maxFileSize": "Maks dosya boyutu 500 KB",
+    "clearConfirm": "İş profili temizlensin mi?",
+    "brandColor": "Marka Rengi",
+    "tagline": "Slogan / Açıklama (isteğe bağlı)",
+    "taglinePlaceholder": "örn. Şehrin en iyi kahvesi",
+    "businessFont": "İşletme Adı Yazı Tipi",
+    "contactInfo": "İletişim Bilgileri",
+    "email": "E-POSTA",
+    "phone": "TELEFON",
+    "website": "WEB SİTESİ",
+    "emailPlaceholder": "contact@example.com",
+    "phonePlaceholder": "+90 555 123 45 67",
+    "websitePlaceholder": "https://example.com",
+    "addressLegal": "Adres ve Yasal",
+    "address": "ADRES",
+    "addressPlaceholder": "Cadde 123, Şehir",
+    "taxIdLabel": "VERGİ NO / TİCARET SİCİL",
+    "taxIdPlaceholder": "örn. TR-1234567890",
+    "invoiceNumbering": "Fatura Numaralandırma",
+    "prefix": "ÖN EK",
+    "startingNo": "BAŞLANGIÇ NO",
+    "startingFrom": "Başlangıç: {{sample}} (sunucu tarafında otomatik artar)",
+    "save": "İş Profilini Kaydet",
+    "saved": "✓ Kaydedildi!",
+    "clear": "Temizle",
+    "storedLocally1": "Bu profil cihazınızda yerel olarak saklanır.",
+    "storedLocally2": "Talep sayfasında Business moduna geçip kullanın.",
+    "setUpProfile": "🏢 İş profilinizi kurun →"
+  },
+  "invoices": {
+    "title": "Muhasebe",
+    "protocolFees": "Ödenen Protokol Ücretleri"
+  },
+  "payRequest": {
+    "title": "Ödeme Talebi",
+    "requestSent": "Talep gönderildi!",
+    "error": "Hata"
+  },
+  "receipt": {
+    "paymentSent": "Ödeme gönderildi.",
+    "home": "Ana Sayfa",
+    "viewInvoice": "Faturayı Gör",
+    "loading": "Makbuz yükleniyor…"
+  },
+  "install": {
+    "addToHome": "Ana Ekrana Ekle",
+    "tapShare": "Paylaş'a dokun",
+    "tapMenu": "Menüye dokun",
+    "installTitle": "iUSD Pay'i yükle",
+    "install": "Yükle"
+  },
+  "deposit": {
+    "balance": "Bakiye",
+    "youReceive": "Alacağınız",
+    "rate": "Oran",
+    "estTime": "Tah. süre",
+    "depositTitle": "{{label}} yatır",
+    "withdrawTitle": "{{label}} çek",
+    "from": "Kaynak",
+    "to": "Hedef",
+    "selectFrom": "Yatıracak varlığı seç",
+    "selectTo": "Hedef seç",
+    "loadingAssets": "Yükleniyor...",
+    "noAssets": "Bakiyesi olan varlık bulunamadı",
+    "noDestinations": "Hedef zincir bulunamadı",
+    "onChain": "{{chain}} üzerinde",
+    "current": "mevcut",
+    "max": "MAKS",
+    "gasFee": "Gas ücreti",
+    "estimatedByWallet": "Cüzdan tarafından tahmin edildi",
+    "relayFee": "Relay ücreti",
+    "route": "Rota",
+    "fetchingRoute": "Rota alınıyor...",
+    "insufficient": "Yetersiz bakiye — {{balance}} {{symbol}} var",
+    "preparingTx": "İşlem hazırlanıyor...",
+    "confirmInWallet": "Lütfen cüzdanında onayla",
+    "tryAgain": "Tekrar dene",
+    "submitted": "İşlem gönderildi",
+    "done": "Tamam",
+    "txCancelled": "İşlem iptal edildi",
+    "noEvmWallet": "EVM cüzdan bulunamadı. Lütfen MetaMask'ı yükleyin.",
+    "unsupportedTx": "Desteklenmeyen işlem türü"
+  },
+  "promoBanner": {
+    "coffee": {
+      "title": "Bir arkadaşa kahve ısmarla",
+      "subtitle": "Sıcak bir kahve hediyesi"
+    },
+    "rose": {
+      "title": "Bir gül gönder",
+      "subtitle": "Özel biri için"
+    },
+    "boss": {
+      "title": "Patron ol, avantajlar sun",
+      "subtitle": "Cömertliğini göster"
+    }
+  },
+  "register": {
+    "title": "Hesap oluştur",
+    "chooseNickname": "Ödeme adresin için bir rumuz seç",
+    "nicknamePlaceholder": "örn: alice · 小明 · 🦊",
+    "nicknameHint": "Herhangi bir dil · 1–12 karakter · 🎲 rastgele",
+    "randomNickname": "Rastgele rumuz",
+    "creating": "Oluşturuluyor…",
+    "submit": "Hesap oluştur →"
+  },
+  "registered": {
+    "openWallet": "Cüzdanı aç →",
+    "wow": "VAY! Sende harika bir",
+    "wowCard": "iUSD ödeme kartı var!",
+    "tapCard": "KARTA DOKUN",
+    "shareText": "Bana iUSD hediye gönder — kart QR'ımı tara! 🎁"
+  },
+  "toast": {
+    "thatsYou": "O sensin!",
+    "copied": "{{value}} kopyalandı",
+    "addedToContacts": "{{name}} kişilere eklendi",
+    "linkCopied": "Link panoya kopyalandı",
+    "paymentNotLinked": "Ödeme henüz bağlanmadı — birkaç saniye sonra tekrar deneyin",
+    "claimFailed": "Talep başarısız",
+    "claimQueued": "Talep kuyruğa alındı",
+    "networkError": "Ağ hatası: {{msg}}",
+    "noNewContactsInHistory": "Geçmişte yeni kişi yok",
+    "importedFromHistory_one": "Geçmişten {{count}} kişi içe aktarıldı",
+    "importedFromHistory_other": "Geçmişten {{count}} kişi içe aktarıldı",
+    "noNewImport": "İçe aktarılacak yeni kişi yok",
+    "importFailed": "İçe aktarma başarısız: {{msg}}"
+  },
+  "nav": {
+    "dashboard": "Pano",
+    "home": "Ana Sayfa",
+    "more": "Daha fazla"
+  },
+  "payLink": {
+    "resolving": "Ödeme bağlantısı çözümleniyor…",
+    "invoiceDetails": "FATURA DETAYLARI",
+    "status": "Durum",
+    "invoiceId": "Fatura No",
+    "recipient": "Alıcı",
+    "dueDate": "Son Tarih",
+    "paymentProof": "ÖDEME KANITI",
+    "invalidLink": "Geçersiz Bağlantı",
+    "claimed": "Alındı",
+    "paymentComplete": "Ödeme Tamamlandı",
+    "receivedByName": "{{name}} {{amount}} iUSD aldı",
+    "paymentSent": "Ödeme Gönderildi",
+    "processingAuto": "{{amount}} iUSD · otomatik işleniyor",
+    "claimWithinMinutes": "Tahsil genellikle 1–2 dakikada tamamlanır",
+    "goToDashboard": "Panoya git"
+  },
+  "verify": {
+    "title": "Ödeme Doğrulama",
+    "verifying": "Ödeme doğrulanıyor…",
+    "noPid": "Ödeme ID sağlanmadı.",
+    "notFound": "Ödeme bulunamadı",
+    "error": "Hata: {{msg}}",
+    "verification": "Doğrulama",
+    "to": "ALICI",
+    "platformFee": "Platform Ücreti",
+    "txHash": "İşlem Hash",
+    "goHomepage": "Ana sayfaya"
+  },
+  "profile": {
+    "defaultSlogan": "Günümü güzelleştiriyorsun ✨",
+    "copyFullId": "Tam ID'yi kopyala",
+    "contactAlreadyAdded": "Kişi zaten eklendi",
+    "addToContacts": "Kişilere ekle"
+  },
+  "invoiceView": {
+    "title": "FATURA",
+    "billFrom": "Düzenleyen",
+    "billTo": "Alıcı",
+    "issueDate": "Düzenlenme Tarihi",
+    "dueDate": "Son Tarih",
+    "invoiceAmount": "Fatura Tutarı",
+    "recipientGets": "Alıcı alır",
+    "payLink": "Ödeme Bağlantısı",
+    "taxId": "Vergi No: {{id}}",
+    "noteLabel": "Not: {{note}}",
+    "platformFeeLabel": "Platform Ücreti (%0,5{{cap}})",
+    "platformFeeCapped": ", üst sınır",
+    "paidStatus": "✓ {{date}} tarihinde ödendi",
+    "noToken": "Token yok",
+    "failedToLoad": "Yükleme başarısız",
+    "notFound": "Fatura bulunamadı.",
+    "unavailable": "Fatura kullanılamıyor.",
+    "saveAsImage": "Resim olarak kaydet",
+    "printPdf": "Yazdır / PDF kaydet",
+    "openInSafariChrome": "PDF kaydetmek için Safari veya Chrome'da aç",
+    "close": "Kapat"
+  },
+  "notFound": {
+    "title": "Sayfa bulunamadı",
+    "desc": "Aradığınız sayfa mevcut değil veya taşınmış."
+  },
+  "installGuide": {
+    "alreadyInstalled": "Zaten yüklü!",
+    "usingStandalone": "iUSD Pay'i bağımsız uygulama olarak kullanıyorsunuz.",
+    "installApp": "Uygulamayı yükle",
+    "androidHint": "Bu sayfayı Chrome'da açın ve menüye (⋮) → \"Ana ekrana ekle\" dokunun",
+    "desktopHint": "Chrome'da adres çubuğundaki yükle simgesine (⊕) tıklayın veya Menü → \"Uygulamayı yükle\"",
+    "skip": "Şimdilik geç",
+    "ios": {
+      "step1": "Safari alt kısmındaki Paylaş düğmesine dokunun",
+      "step2": "Aşağı kaydırıp \"Ana ekrana ekle\" dokunun",
+      "step3": "Onaylamak için \"Ekle\" dokunun"
+    }
+  },
+  "giftBox": {
+    "1": {
+      "name": "Müzik kutusu",
+      "description": "Altın ve mineli kalkan biçimli kolye. Bir yüzünde su değirmenli otomaton çiftlik sahnesi, diğer yüzünde kırmızı zemin üzerinde bir gül. Her iki yüz de yarım incilerle özenle çerçevelenmiş; 18. yüzyıl dekoratif sanatının önemli bir örneği."
+    },
+    "2": {
+      "name": "FLY Kahve",
+      "description": "Fly Coffee'yi %50 indirimle yudumla. Mekânda ya da paket olarak, her fincanın kokusunu en iyi fiyatla yaşa."
+    },
+    "3": {
+      "name": "Tekrar saati",
+      "description": "İngiliz usta saatçı Francis Perigal (1741–67 döneminde aktif) tarafından yapılmış tekrarlamalı saat. Kısmen minelenmiş altın kasa; beyaz mine kadran üzerinde siyah rakamlar, elmas işlemeli gümüş ibreler; yaldızlı mekanizma. 18. yüzyıl saat sanatının zirvesi."
+    },
+    "4": {
+      "name": "Gitar",
+      "description": "Kaplumbağa kabuğu, abanoz ve fildişinden chevron desenler ile girift sarmallar, eşkenar dörtgenler ve geometrik şeritlerle arkası, yanları, sapı ve başı kaplı gitar. Ahşap ve kakma sanatının ustaca birleşimi, yapımcısının olağanüstü hünerini gösterir."
+    },
+    "5": {
+      "name": "Müzik kutusu",
+      "description": "Yaklaşık 1820 yılına ait, mandolin biçimli İsviçre müzik kutusu. Çeşitli malzemelerle titizlikle hazırlanmış; 19. yüzyıl başı Avrupa müzik kutusu sanatı ile mandolin enstrümanının estetik çizgisini birleştirir."
+    },
+    "6": {
+      "name": "Gitar",
+      "description": "Giacomo (Jacob) Ertel'in 17. yüzyıl sonunda yaptığı son derece süslü gitar. Ladin, abanoz, meyve ağaçları, kemik, fildişi, sedef ve parşömen kullanılmış. Eser, Alman ustanın süslemeye olan tutkusunu İtalyan gitar yapım geleneğiyle harmanlar."
+    },
+    "7": {
+      "name": "Kırsalda Kış Sabahı",
+      "description": "Currier & Ives stüdyosunun 1873 tarihli el boyaması taş baskısı. Karlı bir kırsal sahne: iki at tarafından çekilen kızakta bir çift ve dört büyük süt güğümü; uzakta çiftlik evi. 19. yüzyıl Amerikan halk ressamlığının tipik örneği."
+    },
+    "8": {
+      "name": "Ya özgürlük ya ölüm!",
+      "description": "Currier & Ives'in 1876 tarihli el boyaması taş baskısı \"Bana özgürlük verin ya da ölüm!\". Mart 1775'te Richmond'daki Virginia Meclisi önünde Patrick Henry'nin sömürgelerin hakları üzerine yaptığı ünlü konuşmayı canlandırır."
+    },
+    "9": {
+      "name": "Müzik kutusu",
+      "description": "Yaklaşık 1820 tarihli İsviçre yapımı uzun dörtgen altın-mineli müzik kutusu. Kenarları mavi ve sarı mine ile süslenmiş; kapakta yarım incilerle çevrilmiş klasik mine minyatür bulunuyor. Müzik kutusu sanatı ile mücevhercilik kusursuz bir biçimde birleşir."
+    },
+    "10": {
+      "name": "Saat kasası",
+      "description": "George Harrison tarafından yaklaşık 1770 yılında yapılan saat kasası. Kısmen minelenmiş altın; dış kasa pırıl pırıl elmaslarla kakılmıştır. 18. yüzyıl İngiliz saatçilik ve mücevhercilik ustalığının açık göstergesi."
+    },
+    "11": {
+      "name": "Division Viol",
+      "description": "Richard Meares'in yaklaşık 1680'de yaptığı bölme violi. Ladin, abanoz, akçaağaç. Geç Rönesans'ın en saygın yaylı çalgılarından olan violler, 17. yüzyıl boyunca yavaş yavaş yerini kemana bıraktı; müzik tarihinin önemli bir tanığıdır."
+    },
+    "12": {
+      "name": "Ejderha",
+      "description": "17. yüzyıl başında Giacomo Laurenziani'nin yaptığı bronz ejder. Koleksiyona alındığında grifon olarak kataloglanmıştı; 1950'lerden sonra James Parker tarafından doğru şekilde ejder olarak yeniden tanımlandı. Barok heykelciliğin dikkat çekici örneği."
+    },
+    "13": {
+      "name": "Güller ve zambaklar",
+      "description": "Henri Fantin-Latour, 1888, tuval üzerine yağlı boya. Mükemmel durumdaki bu çalışma, sanatçının pigmente olan virtüözce hâkimiyetini gösterir: yalnızca fırça değil, fırçanın sap ucunu da kullanarak gülleri ve zambakları enfes ışık ve dokuyla modellemiştir."
+    },
+    "14": {
+      "name": "Saat",
+      "description": "F. L. Meybom'un yaklaşık 1670–75 yıllarındaki cep saati. Kasa altın, mavilenmiş çelik, dağ kristali ve kısmen yaldızlı gümüş ile elmaslardan oluşur; kadran altın üzerine boyalı mine ve basse-taille mine; mekanizma yaldızlı pirinç ve kısmen mavilenmiş çelik."
+    },
+    "15": {
+      "name": "Yusufçuk broş",
+      "description": "Edgar Bense'in yaklaşık 1890 yılına ait Art Nouveau yusufçuk broşu. Altın, elmas ve mine. Zarif plique-à-jour minesiyle işlenmiş kanatlar, özenle şekillendirilmiş bir yusufçuğu süsler; Art Nouveau modasını ve natüralist estetiği bünyesinde somutlaştırır."
+    },
+    "16": {
+      "name": "Kol bileziği",
+      "description": "19. yüzyıla ait Hint kol bileziği (bazubend). Örgü altına yakutlar ve bir rose-cut elmas kakılmış. Benzer örnekler, Babür saray estetiğinin varisi olan Hint aristokrat mücevher geleneğinde görülür."
+    },
+    "17": {
+      "name": "George Clifford'un zırh takımı",
+      "description": "Kraliçe'nin Şampiyonu George Clifford için Jacob Halder'ın 1586'da Greenwich Kraliyet Silah Deposu'nda yaptığı zırh takımı. Çelik, altın, deri ve kumaş. Clifford (1558–1605) 1590'da Kraliçe'nin Şampiyonu ilan edildi ve aynı yıl Jartiyer Şövalyesi oldu."
+    },
+    "18": {
+      "name": "Baykuş başı şeklinde broş",
+      "description": "Castellani'nin yaklaşık 1860 tarihli baykuş başlı broşu. Altın ve akik. Bu parça ve ait olduğu grup (bkz. 2014.713.1–.10) 19. yüzyıl Avrupa'sının tarihsel üsluplara duyduğu güçlü ilgiyi yansıtır; arkeolojik canlanma mücevherciliğinin temsilcisidir."
+    },
+    "19": {
+      "name": "Saat",
+      "description": "Charles Bobinet'nin yaklaşık 1655–60 tarihli cep saati. Akik kasa üzerine mineli altın süslemeler; beyaz mine kadran üzerinde altın ibre; yaldızlı pirinç ve kısmen mavilenmiş çelik mekanizma. 17. yüzyıl ortası Avrupa saatçilik ustalığının kanıtı."
+    },
+    "20": {
+      "name": "İrisler",
+      "description": "Vincent van Gogh, 1890, tuval üzerine yağlı boya. Ünlü Süsenler. Sanatçının son döneminin en simgesel eserlerinden biri; zengin renkleri ve canlı fırça vuruşlarıyla doğanın güzelliğine derin bir saygı duruşudur."
+    },
+    "21": {
+      "name": "Kapaklı şekerlik",
+      "description": "Giovacchino Belli'nin yaklaşık 1811–22 tarihli kapaklı şekerliği. Yaldızlı gümüş. Belli'nin Empire yorumu, aynı dönemin Fransız yorumuna göre daha rahat ve samimi görünür; katı neoklasik çizgileri yumuşatarak karakteristik bir İtalyan lezzeti katar."
+    },
+    "22": {
+      "name": "Sürahi",
+      "description": "Yaklaşık 1600 tarihli yaldızlı gümüş ve mineli ibrik. Gövdesi, Sezar'ın Mısır dönüşü zaferini ya da Hannibal'i yenmesinin ardından Scipio Africanus'un zaferini betimleyen figür ve hayvan alaylarıyla süslenmiştir. Geç Rönesans metal sanatının görkemli bir örneğidir."
+    },
+    "23": {
+      "name": "Mashiba Hisatsugu rolünde oyuncu Asao Gakujūrō I",
+      "description": "Shunkōsai Hokushū (Osaka), 1822, ağaç baskı ukiyo-e (nishiki-e). Kağıt üzerine mürekkep ve renkle, Japon ōban dikey formatında. Osaka Kabuki'sinin aktörü Asao Gakujūrō I'in Mashiba Hisatsugu rolünde, sert bakışı ve meydan okuyan duruşuyla olağanüstü dramatik bir tasvir."
+    },
+    "24": {
+      "name": "And Dağları Tacı",
+      "description": "\"And Dağları'nın Tacı\" — diadem yaklaşık 1660, kemerler yaklaşık 1770. Kolombiya, Popayán. Kabartma ve oyma altın, zümrüt kakmalı. Güney Amerika sömürge döneminin en önemli kuyumculuk eserlerinden biri; Avrupa ve yerli tekniklerin yaratıcı sentezidir."
+    }
+  },
+  "components": {
+    "nicknameEditor": {
+      "title": "Takma ad değiştir",
+      "placeholder": "Takma adın",
+      "randomNickname": "Rastgele takma ad",
+      "generating": "OLUŞTURULUYOR...",
+      "firstChangeFee": "İlk değişiklik ücreti",
+      "changeFeeN": "Değişiklik ücreti (#{{n}}. değişiklik)",
+      "firstFeeNote": "İlk takma ad değişikliği 0,10 iUSD. Sonraki değişiklikler her biri 10,00 iUSD olacaktır.",
+      "feeNote": "Her takma ad değişikliği 10,00 iUSD tutar.",
+      "idStays": "Hesap kimliğin aynı kalır",
+      "notUniqueAck": "Takma adların benzersiz olmadığını anlıyorum. Diğer hesaplar aynı takma adı kullanabilir.",
+      "signing": "İmzalanıyor...",
+      "payAndSave": "{{fee}} iUSD öde ve kaydet",
+      "errEmpty": "Takma ad boş olamaz",
+      "errFee": "Ücret belirlenemedi",
+      "errTxFailed": "İşlem başarısız",
+      "errNoHash": "İşlem hash'i döndürülmedi",
+      "errCancelled": "İşlem iptal edildi",
+      "errGeneric": "Başarısız"
+    },
+    "mwc": {
+      "chooseMethod": "Bağlantı yöntemini seç",
+      "checkWallet": "Cüzdan uygulamanı kontrol et",
+      "approveRequest": "Cüzdan uygulamasında bağlantı isteğini onayla",
+      "returnAfterApprove": "⚠️ Onayladıktan sonra bu sayfaya geri dön",
+      "tryAgain": "Tekrar dene",
+      "cancel": "İptal",
+      "openInWallet": "Cüzdanda aç",
+      "best": "EN İYİ",
+      "continueInBrowser": "{{name}} tarayıcısında devam et",
+      "signAndReturn": "İmzala ve dön",
+      "approveAndReturn": "Uygulamada onayla ve buraya dön",
+      "directConnection": "Doğrudan bağlantı • Relay sunucusu yok",
+      "connectionFailed": "Bağlantı başarısız",
+      "state": {
+        "initializing": "Başlatılıyor...",
+        "generatingUri": "Bağlanıyor...",
+        "waitingApproval": "Cüzdan uygulamasında onayla...",
+        "connected": "Bağlandı!",
+        "failed": "Başarısız"
+      }
+    },
+    "quickLogin": {
+      "signing": "İmzalanıyor...",
+      "verifying": "Doğrulanıyor...",
+      "processing": "İşleniyor...",
+      "signInTo": "{{action}} için giriş yap",
+      "walletTapToSignIn": "Cüzdan bağlandı. Giriş yapmak için dokun.",
+      "almostThere": "Neredeyse bitti! {{action}} için kaydı tamamla.",
+      "redirecting": "Kayda yönlendiriliyor...",
+      "connectionFailed": "Bağlantı başarısız",
+      "tryAgain": "Tekrar dene",
+      "connecting": "Bağlanıyor...",
+      "connectTo": "{{action}} için bağlan",
+      "tapConnectHint": "Bağlan'a dokun — cüzdanın imza isteyecek",
+      "signInWith": "Şununla giriş yap",
+      "orWallet": "YA DA CÜZDAN",
+      "other": "Diğer",
+      "openInWalletBrowser": "Bu bağlantıyı cüzdanının tarayıcısında aç",
+      "linkCopied": "Bağlantı panoya kopyalandı",
+      "dismiss": "Kapat"
+    },
+    "identityCardBack": {
+      "idLabel": "ID:",
+      "deposit": "Yatır",
+      "withdraw": "Çek",
+      "onlyOn": "Yalnızca",
+      "gas": "Gas",
+      "gasOk": "Gas OK",
+      "lowGas": "Düşük Gas"
+    },
+    "qrScan": {
+      "scanQR": "QR tara",
+      "cameraUnavailable": "Kamera kullanılamıyor",
+      "turnFlashOff": "Flaşı kapat",
+      "turnFlashOn": "Flaşı aç",
+      "cancel": "İptal"
+    },
+    "errorBoundary": {
+      "updating": "Güncelleniyor…",
+      "somethingWrong": "Bir şeyler ters gitti",
+      "genericErr": "Beklenmeyen bir hata bu sayfanın yüklenmesini engelledi.",
+      "reload": "Yeniden yükle",
+      "resetReload": "Sıfırla ve yeniden yükle"
+    },
+    "identityCard": {
+      "validFrom": "GEÇERLİ",
+      "status": "DURUM",
+      "statusActive": "Aktif",
+      "statusFrozen": "Dondurulmuş",
+      "statusDeactivated": "Devre Dışı",
+      "viewProfile": "Profil kartını görüntüle",
+      "scanAndGift": "Tara ve hediye et ✨",
+      "share": "↗ Paylaş",
+      "shareText": "iUSD Pay kartım hazır! Tara ve hediye et",
+      "copyLink": "Bağlantıyı kopyala",
+      "copied": "Kopyalandı!"
+    }
+  },
+  "soundStyles": {
+    "click": {
+      "keyboard": {
+        "name": "Klavye",
+        "desc": "Mekanik klavye tıklaması"
+      },
+      "pop": {
+        "name": "Yumuşak Pop",
+        "desc": "Balon patlaması"
+      },
+      "tic": {
+        "name": "Tik",
+        "desc": "Kısa tiz tik"
+      },
+      "chime": {
+        "name": "Çıngırak",
+        "desc": "Hafif ding"
+      },
+      "glass": {
+        "name": "Cam",
+        "desc": "Cam tıngırtısı"
+      },
+      "coin": {
+        "name": "Madeni para",
+        "desc": "Metalik çın"
+      },
+      "digital": {
+        "name": "Dijital",
+        "desc": "8-bit blip"
+      },
+      "drip": {
+        "name": "Damla",
+        "desc": "Su damlası"
+      },
+      "paper": {
+        "name": "Kağıt",
+        "desc": "Kağıt dokunuşu"
+      },
+      "piano": {
+        "name": "Piyano",
+        "desc": "Yumuşak piyano notası"
+      },
+      "silent": {
+        "name": "Sessiz",
+        "desc": "Tıklama sesi yok"
+      }
+    },
+    "card": {
+      "breeze": {
+        "name": "Esinti",
+        "desc": "Hafif rüzgar"
+      },
+      "dream_bells": {
+        "name": "Rüya Çanları",
+        "desc": "Cam rüzgar çanı parıltısı"
+      },
+      "page_turn": {
+        "name": "Sayfa çevirme",
+        "desc": "Kağıt hışırtısı"
+      },
+      "whoosh": {
+        "name": "Vuuuş",
+        "desc": "Hızlı swoosh"
+      },
+      "soft_pop": {
+        "name": "Yumuşak Pop",
+        "desc": "Hafif çift pop"
+      },
+      "silent": {
+        "name": "Sessiz",
+        "desc": "Çevirme sesi yok"
+      }
+    },
+    "gift": {
+      "celebration": {
+        "name": "Kutlama",
+        "desc": "Yükselen akort C-E-G-C"
+      },
+      "sparkle": {
+        "name": "Parıltı",
+        "desc": "Yüksek parıltı notaları"
+      },
+      "fanfare": {
+        "name": "Fanfar",
+        "desc": "Bakır ta-da"
+      },
+      "bell_cascade": {
+        "name": "Çan Selâlesi",
+        "desc": "Alçalan çanlar"
+      },
+      "soft_bell": {
+        "name": "Yumuşak Çan",
+        "desc": "Tek hafif çan"
+      },
+      "silent": {
+        "name": "Sessiz",
+        "desc": "Hediye sesi yok"
+      }
+    },
+    "txn": {
+      "whoosh_up": {
+        "name": "Vuuuş Yukarı",
+        "desc": "Yükselen swoosh"
+      },
+      "coin_drop": {
+        "name": "Para Düşüşü",
+        "desc": "Metal para iniyor"
+      },
+      "pneumatic": {
+        "name": "Pnömatik",
+        "desc": "Retro tüp"
+      },
+      "confirm_chime": {
+        "name": "Onay Çıngırağı",
+        "desc": "Çift ton onay"
+      },
+      "paper_slide": {
+        "name": "Kağıt Kayması",
+        "desc": "Kağıt kayıyor"
+      },
+      "silent": {
+        "name": "Sessiz",
+        "desc": "İşlem sesi yok"
+      }
+    },
+    "menu": {
+      "slide": {
+        "name": "Kay",
+        "desc": "Panel kayarak gelir"
+      },
+      "soft_pop": {
+        "name": "Yumuşak Pop",
+        "desc": "Hafif açılış"
+      },
+      "swish": {
+        "name": "Hışırtı",
+        "desc": "Hava hışırtısı"
+      },
+      "silent": {
+        "name": "Sessiz",
+        "desc": "Menü sesi yok"
+      }
+    }
+  },
+  "time": {
+    "justNow": "az önce",
+    "minutesAgo": "{{n}}d önce",
+    "hoursAgo": "{{n}}s önce",
+    "daysAgo": "{{n}}g önce"
+  },
+  "receiptView": {
+    "back": "← Geri",
+    "paymentReceipt": "Ödeme Makbuzu",
+    "receipt": "Makbuz",
+    "noPaymentId": "Ödeme ID yok",
+    "notFound": "Makbuz bulunamadı.",
+    "failedToLoad": "Yükleme başarısız",
+    "fee": "Ücret: {{amount}} iUSD",
+    "date": "Tarih",
+    "confirmedLabel": "Onaylandı",
+    "verify": "Doğrula",
+    "from": "Kimden",
+    "to": "Kime",
+    "tx": "Tx: {{hash}}",
+    "id": "ID: {{id}}",
+    "statusPaid": "Ödendi",
+    "statusConfirmed": "Onaylandı",
+    "statusPending": "Bekliyor",
+    "statusRevoked": "İptal",
+    "statusRefunded": "İade",
+    "statusExpired": "Süresi doldu",
+    "statusFailed": "Başarısız",
+    "statusUnknown": "Bilinmiyor",
+    "saveAsImage": "Resim olarak kaydet",
+    "printPdf": "Yazdır / PDF kaydet",
+    "openInSafariChrome": "PDF kaydetmek için Safari veya Chrome'da aç",
+    "errorPrefix": "Hata: {{msg}}"
+  },
+  "update": {
+    "available": "Yeni sürüm mevcut",
+    "reload": "Yeniden yükle"
+  }
+}

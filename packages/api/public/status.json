@@ -1,0 +1,9 @@
+{
+  "timestamp": "2026-04-02T07:20:30Z",
+  "commit": "deb1a21",
+  "services": {
+    "api": {"status": 200},
+    "app": {"status": 302},
+    "admin": {"status": 302}
+  }
+}

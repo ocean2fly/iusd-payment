@@ -1,0 +1,172 @@
+/**
+ * Auth Routes Tests — /v1/auth
+ */
+import { describe, it, expect, beforeAll, afterAll, vi } from 'vitest'
+import type { FastifyInstance } from 'fastify'
+import { buildApp } from '../index'
+import { createTestDb } from '../db/index'
+import type Database from 'better-sqlite3'
+
+let app: FastifyInstance
+let testDb: Database.Database
+
+beforeAll(async () => {
+  app = await buildApp()
+  await app.ready()
+  testDb = (app as any).db ?? undefined
+})
+
+afterAll(async () => {
+  await app.close()
+})
+
+const TEST_ADDRESS = 'init1testaddress000000000000000000000000abc'
+
+describe('GET /v1/auth/nonce/:address', () => {
+  it('returns a nonce for valid address', async () => {
+    const res = await app.inject({
+      method: 'GET',
+      url:    `/v1/auth/nonce/${TEST_ADDRESS}`,
+    })
+    expect(res.statusCode).toBe(200)
+    const body = JSON.parse(res.body)
+    expect(body.nonce).toMatch(/^iPay_auth_[a-f0-9]{64}$/)
+    expect(body.address).toBe(TEST_ADDRESS)
+    expect(body.expires_in).toBe(300)
+  })
+
+  it('returns 400 for non-init1 address', async () => {
+    const res = await app.inject({
+      method: 'GET',
+      url:    '/v1/auth/nonce/cosmos1abc',
+    })
+    expect(res.statusCode).toBe(400)
+  })
+
+  it('stores nonce in DB', async () => {
+    const addr = 'init1storagetest00000000000000000000000abc'
+    const res = await app.inject({
+      method: 'GET',
+      url:    `/v1/auth/nonce/${addr}`,
+    })
+    expect(res.statusCode).toBe(200)
+    const body = JSON.parse(res.body)
+
+    // Verify nonce is in DB by trying to use it (it will fail sig check but nonce will exist)
+    const verifyRes = await app.inject({
+      method: 'POST',
+      url:    '/v1/auth/verify',
+      payload: { address: addr, nonce: body.nonce, signature: 'aW52YWxpZA==', pubkey: 'aW52YWxpZA==' },
+    })
+    // Should NOT get NONCE_NOT_FOUND — it should find the nonce (then fail on pubkey)
+    const verifyBody = JSON.parse(verifyRes.body)
+    expect(verifyBody.error).not.toBe('NONCE_NOT_FOUND')
+  })
+
+  it('nonce expires after 5 minutes (mocked time)', async () => {
+    const addr = 'init1expiretest000000000000000000000000abc'
+    const res = await app.inject({
+      method: 'GET',
+      url:    `/v1/auth/nonce/${addr}`,
+    })
+    const body = JSON.parse(res.body)
+
+    // Move time forward 6 minutes
+    const originalDate = Date
+    const futureTime = Date.now() + 6 * 60 * 1000
+    vi.spyOn(global, 'Date').mockImplementation((...args: any[]) => {
+      if (args.length === 0) return new originalDate(futureTime)
+      return new (originalDate as any)(...args)
+    })
+    ;(global.Date as any).now = () => futureTime
+
+    const verifyRes = await app.inject({
+      method: 'POST',
+      url:    '/v1/auth/verify',
+      payload: { address: addr, nonce: body.nonce, signature: 'aW52YWxpZA==', pubkey: 'aW52YWxpZA==' },
+    })
+
+    vi.restoreAllMocks()
+
+    const verifyBody = JSON.parse(verifyRes.body)
+    expect(verifyRes.statusCode).toBe(401)
+    expect(verifyBody.error).toBe('NONCE_EXPIRED')
+  })
+})
+
+describe('POST /v1/auth/verify', () => {
+  it('returns 400 when fields missing', async () => {
+    const res = await app.inject({
+      method:  'POST',
+      url:     '/v1/auth/verify',
+      payload: { address: TEST_ADDRESS },
+    })
+    expect(res.statusCode).toBe(400)
+    const body = JSON.parse(res.body)
+    expect(body.error).toBe('MISSING_FIELDS')
+  })
+
+  it('returns 401 NONCE_NOT_FOUND for unknown address', async () => {
+    const res = await app.inject({
+      method:  'POST',
+      url:     '/v1/auth/verify',
+      payload: {
+        address:   'init1unknownaddress00000000000000000000abc',
+        nonce:     'iPay_auth_deadbeef',
+        signature: 'aW52YWxpZA==',
+        pubkey:    'aW52YWxpZA==',
+      },
+    })
+    expect(res.statusCode).toBe(401)
+    const body = JSON.parse(res.body)
+    expect(body.error).toBe('NONCE_NOT_FOUND')
+  })
+
+  it('returns 401 NONCE_MISMATCH for wrong nonce', async () => {
+    const addr = 'init1mismatchtest00000000000000000000000abc'
+
+    // Request a nonce first
+    await app.inject({ method: 'GET', url: `/v1/auth/nonce/${addr}` })
+
+    const res = await app.inject({
+      method:  'POST',
+      url:     '/v1/auth/verify',
+      payload: {
+        address:   addr,
+        nonce:     'iPay_auth_wrongnonce',
+        signature: 'aW52YWxpZA==',
+        pubkey:    'aW52YWxpZA==',
+      },
+    })
+    expect(res.statusCode).toBe(401)
+    const body = JSON.parse(res.body)
+    expect(body.error).toBe('NONCE_MISMATCH')
+  })
+
+  it('returns 401 for expired nonce', async () => {
+    const addr = 'init1expiredverify000000000000000000000abc'
+
+    const nonceRes = await app.inject({ method: 'GET', url: `/v1/auth/nonce/${addr}` })
+    const { nonce } = JSON.parse(nonceRes.body)
+
+    // Mock time to be 6 minutes in the future
+    const originalDate = Date
+    const futureTime = Date.now() + 6 * 60 * 1000
+    vi.spyOn(global, 'Date').mockImplementation((...args: any[]) => {
+      if (args.length === 0) return new originalDate(futureTime)
+      return new (originalDate as any)(...args)
+    })
+    ;(global.Date as any).now = () => futureTime
+
+    const res = await app.inject({
+      method:  'POST',
+      url:     '/v1/auth/verify',
+      payload: { address: addr, nonce, signature: 'aW52YWxpZA==', pubkey: 'aW52YWxpZA==' },
+    })
+
+    vi.restoreAllMocks()
+
+    expect(res.statusCode).toBe(401)
+    expect(JSON.parse(res.body).error).toBe('NONCE_EXPIRED')
+  })
+})

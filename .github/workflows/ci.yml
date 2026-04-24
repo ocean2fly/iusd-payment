@@ -1,0 +1,172 @@
+name: iPay CI
+
+on:
+  workflow_dispatch:
+    inputs:
+      force_build:
+        description: 'Force build all components (skip change detection)'
+        required: false
+        default: false
+        type: boolean
+
+jobs:
+  # ── Repo Hygiene Guard ──────────────────────────────────────────────────
+  guard:
+    name: Guard (no DB artifacts in git)
+    runs-on: [self-hosted, ipay]
+    steps:
+      - uses: actions/checkout@v4
+      - run: bash scripts/check-no-db-files.sh
+
+  changes:
+    name: Detect Changes
+    needs: [guard]
+    runs-on: [self-hosted, ipay]
+    outputs:
+      api_bundle: ${{ steps.filter.outputs.api_bundle }}
+      admin: ${{ steps.filter.outputs.admin }}
+      frontend: ${{ steps.filter.outputs.frontend }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+      - id: filter
+        shell: bash
+        env:
+          FORCE_BUILD: ${{ inputs.force_build }}
+        run: |
+          if [ "$FORCE_BUILD" = "true" ] || ! git rev-parse HEAD^ >/dev/null 2>&1; then
+            echo "api_bundle=true" >> "$GITHUB_OUTPUT"
+            echo "admin=true" >> "$GITHUB_OUTPUT"
+            echo "frontend=true" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          CHANGED_FILES="$(git diff --name-only HEAD^ HEAD)"
+          printf '%s\n' "$CHANGED_FILES"
+
+          api_bundle=false
+          admin=false
+          frontend=false
+
+          while IFS= read -r file; do
+            [ -z "$file" ] && continue
+            case "$file" in
+              package.json|pnpm-lock.yaml|pnpm-workspace.yaml|packages/api/*|scripts/deploy/*|.github/workflows/ci.yml|.github/workflows/deploy-backend.yml|.github/workflows/deploy-relayer.yml)
+                api_bundle=true
+                ;;
+            esac
+            case "$file" in
+              package.json|pnpm-lock.yaml|pnpm-workspace.yaml|packages/admin/*|scripts/deploy/*|.github/workflows/ci.yml|.github/workflows/deploy-admin.yml)
+                admin=true
+                ;;
+            esac
+            case "$file" in
+              packages/app/*|scripts/patch-ik.sh|scripts/deploy/*|package.json|pnpm-lock.yaml|pnpm-workspace.yaml|.github/workflows/ci.yml|.github/workflows/deploy-frontend.yml)
+                frontend=true
+                ;;
+            esac
+          done <<< "$CHANGED_FILES"
+
+          echo "api_bundle=$api_bundle" >> "$GITHUB_OUTPUT"
+          echo "admin=$admin" >> "$GITHUB_OUTPUT"
+          echo "frontend=$frontend" >> "$GITHUB_OUTPUT"
+
+  # ── API Build + Release Bundle ───────────────────────────────────────────
+  api:
+    needs: [guard, changes]
+    name: API Build + Bundle
+    runs-on: [self-hosted, ipay]
+    if: needs.changes.outputs.api_bundle == 'true'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v3
+        with: { version: 10 }
+      - uses: actions/setup-node@v4
+        with: { node-version: '22', cache: 'pnpm' }
+      - run: pnpm install --no-frozen-lockfile
+      - run: bash scripts/deploy/build-api.sh
+      - name: Create runtime artifact
+        run: |
+          rm -rf release-bundle
+          mkdir -p release-bundle/packages
+          cp package.json pnpm-lock.yaml pnpm-workspace.yaml release-bundle/
+          cp -R scripts release-bundle/
+          cp -R packages/api release-bundle/packages/
+          rm -rf release-bundle/packages/api/node_modules
+          printf '%s\n' "${GITHUB_SHA}" > release-bundle/BUILD_SHA
+      - uses: actions/upload-artifact@v4
+        with:
+          name: api-runtime-bundle
+          path: release-bundle/
+          if-no-files-found: error
+
+  # ── Admin Build ─────────────────────────────────────────────────────────
+  admin:
+    needs: [guard, changes]
+    name: Admin (React + Vite)
+    runs-on: [self-hosted, ipay]
+    if: needs.changes.outputs.admin == 'true'
+    environment: ${{ vars.CI_ENVIRONMENT || 'mainnet' }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v3
+        with: { version: 10 }
+      - uses: actions/setup-node@v4
+        with: { node-version: '22', cache: 'pnpm' }
+      - run: pnpm install --no-frozen-lockfile
+      - name: Build admin
+        env:
+          API_URL: ${{ vars.API_URL }}
+          CHAIN_ID: ${{ vars.CHAIN_ID }}
+          EXPLORER_BASE: ${{ vars.EXPLORER_BASE }}
+          MODULE_ADDRESS: ${{ vars.MODULE_ADDRESS }}
+          IPAY_POOL_ADDRESS: ${{ vars.IPAY_POOL_ADDRESS }}
+          GIFT_POOL_ADDRESS: ${{ vars.GIFT_POOL_ADDRESS }}
+        run: NODE_OPTIONS="--max-old-space-size=4096" bash scripts/deploy/build-admin.sh
+      - uses: actions/upload-artifact@v4
+        with:
+          name: admin-dist
+          path: packages/admin/dist/
+
+  # ── Frontend Build ──────────────────────────────────────────────────────
+  frontend:
+    needs: [guard, changes]
+    name: Frontend (React + Vite)
+    runs-on: [self-hosted, ipay]
+    if: needs.changes.outputs.frontend == 'true'
+    environment: ${{ vars.CI_ENVIRONMENT || 'mainnet' }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v3
+        with: { version: 10 }
+      - uses: actions/setup-node@v4
+        with: { node-version: '22', cache: 'pnpm' }
+      - run: pnpm install --no-frozen-lockfile
+      - name: i18n key consistency
+        run: pnpm --filter @ipay/app i18n:check
+      - name: Build frontend
+        env:
+          NODE_OPTIONS: --max-old-space-size=6144
+          CHAIN_ID: ${{ vars.CHAIN_ID }}
+          RPC_URL: ${{ vars.RPC_URL }}
+          REST_URL: ${{ vars.REST_URL }}
+          API_URL: ${{ vars.API_URL }}
+          APP_URL: ${{ vars.APP_URL }}
+          IPAY_POOL_ADDRESS: ${{ vars.IPAY_POOL_ADDRESS }}
+          GIFT_POOL_ADDRESS: ${{ vars.GIFT_POOL_ADDRESS }}
+          MODULE_ADDRESS: ${{ vars.MODULE_ADDRESS }}
+          IUSD_FA: ${{ vars.IUSD_FA }}
+          IUSD_DECIMALS: ${{ vars.IUSD_DECIMALS }}
+          EXPLORER_BASE: ${{ vars.EXPLORER_BASE }}
+          EXPLORER_TX_BASE: ${{ vars.EXPLORER_TX_BASE }}
+          INS_CONTRACT: ${{ vars.INS_CONTRACT }}
+          INIT_DENOM: ${{ vars.INIT_DENOM }}
+          WC_PROJECT_ID: ${{ vars.WC_PROJECT_ID }}
+          WC_CHAIN_ID: ${{ vars.WC_CHAIN_ID }}
+        run: bash scripts/deploy/build-frontend.sh
+      - uses: actions/upload-artifact@v4
+        with:
+          name: frontend-dist
+          path: packages/app/dist/
+          if-no-files-found: error

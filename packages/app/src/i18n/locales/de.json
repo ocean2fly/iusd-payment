@@ -1,0 +1,1250 @@
+{
+  "popup": {
+    "title": "Pop-ups in den Browsereinstellungen erlauben",
+    "subtitle": "Ihr Browser blockiert das Anmelde-Pop-up. Aktivieren Sie es in den Einstellungen wie gezeigt.",
+    "next": "Weiter",
+    "back": "Zurück",
+    "gotIt": "Verstanden",
+    "continue": "Fortfahren",
+    "enableTitle": "Pop-ups aktivieren",
+    "signinNeedsPopup": "Für die Anmeldung wird ein Pop-up-Fenster benötigt.",
+    "gotoMobile": "Gehen Sie zu Einstellungen → Browser → Pop-ups zulassen.",
+    "gotoDesktop": "Gehen Sie zu Einstellungen → Pop-ups zulassen.",
+    "checkDetail": "Details ansehen"
+  },
+  "auth": {
+    "connect": "Verbinden",
+    "signIn": "Anmelden →",
+    "connecting": "Verbindung wird hergestellt…",
+    "signing": "Wird signiert…",
+    "checkWallet": "Bitte prüfen Sie Ihre Wallet auf eine Signaturanfrage…",
+    "settingUp": "Konto wird eingerichtet…",
+    "coinbaseConnected": "Coinbase Wallet verbunden!",
+    "walletConnected": "Wallet verbunden!",
+    "wcTimeout": "WalletConnect-Zeitüberschreitung",
+    "restoring": "Wallet-Sitzung wird wiederhergestellt…",
+    "openingWindow": "Anmeldefenster wird geöffnet…",
+    "tapConnect": "Auf Verbinden tippen — die Wallet fragt nach einer Signatur",
+    "signInWith": "Anmelden mit",
+    "or": "oder",
+    "tryAgain": "Erneut versuchen",
+    "reconnect": "Wallet erneut verbinden",
+    "popupBlockedMobile": "Pop-up wurde blockiert. Gehen Sie zu Einstellungen → Browser → Pop-ups zulassen.",
+    "popupBlockedDesktop": "Pop-up wurde blockiert. Gehen Sie zu Einstellungen → Pop-ups zulassen.",
+    "signFailed": "Anmeldung fehlgeschlagen. Bitte versuchen Sie es erneut.",
+    "connectionLost": "Wallet-Verbindung verloren. Bitte erneut verbinden.",
+    "signatureCancelled": "Signatur abgebrochen.",
+    "networkBlocked": "API nicht erreichbar oder blockiert (Netzwerk/CORS). Bitte in einem neuen Tab erneut versuchen."
+  },
+  "landing": {
+    "tagline": "Stablecoin-Zahlungen auf Initia",
+    "installAsApp": "Als App installieren",
+    "forceRefresh": "Erzwungene Aktualisierung",
+    "refresh": "Aktualisieren",
+    "forceRefreshTip": "Erzwungene Aktualisierung zur Behebung lokaler Seitenprobleme"
+  },
+  "wallets": {
+    "openInWalletBrowser": "Im Wallet-App-Browser öffnen",
+    "pasteUrl": "iUSD pay URL (kopiert) einfügen und öffnen",
+    "done": "Fertig",
+    "other": "Andere"
+  },
+  "common": {
+    "language": "Sprache",
+    "cancel": "Abbrechen",
+    "save": "Speichern",
+    "saving": "Speichern…",
+    "saved": "Gespeichert",
+    "close": "Schließen",
+    "change": "Ändern",
+    "loading": "Lädt…",
+    "view": "Anzeigen",
+    "optional": "Optional",
+    "on": "AN",
+    "off": "AUS"
+  },
+  "welcome": {
+    "tagline": "Stablecoin-Zahlungen auf Initia",
+    "whatYouGet": "Das bekommst du",
+    "features": {
+      "transfer": "Frei überweisen und anfordern mit Scan",
+      "merchants": "Nahtlose Händlerintegration",
+      "gifts": "Geschenke an Freunde und Gruppen senden"
+    },
+    "agreePrefix": "Ich akzeptiere die",
+    "and": "und die",
+    "tos": "Nutzungsbedingungen",
+    "privacy": "Datenschutzerklärung",
+    "experimentalNote": ". Diese App ist experimentell auf dem Mainnet.",
+    "getStarted": "Loslegen →"
+  },
+  "dashboard": {
+    "tapEditNickname": "Tippen um Spitznamen zu bearbeiten",
+    "minGasHint": "Mind. 1 INIT oder 1 USDC für Gas",
+    "refreshBalances": "Guthaben aktualisieren",
+    "actions": {
+      "transfer": "Senden",
+      "request": "Anfordern",
+      "gift": "Geschenk",
+      "inbox": "Posteingang",
+      "contacts": "Kontakte",
+      "scan": "Scannen",
+      "history": "Verlauf",
+      "settings": "Einstellungen"
+    }
+  },
+  "settings": {
+    "title": "Einstellungen",
+    "account": {
+      "title": "Konto",
+      "nickname": "Spitzname",
+      "setNickname": "Spitzname festlegen",
+      "bio": "Bio / Slogan",
+      "bioPlaceholder": "z. B. Scan mich, schenk mir was, ich antworte mit einem Kuss 💋",
+      "id": "ID",
+      "wallet": "Wallet",
+      "copied": "Kopiert",
+      "ecosystem": "Ökosystem",
+      "autoClaim": "Auto-Einlösung"
+    },
+    "appearance": {
+      "title": "Darstellung",
+      "auto": "Auto",
+      "light": "Hell",
+      "dark": "Dunkel"
+    },
+    "sound": {
+      "title": "Ton",
+      "desc": "UI-Klicks, Kartenwende, Feiermelodien",
+      "muted": "Stumm",
+      "on": "An",
+      "styles": "Tonstile",
+      "customize": "Anpassen",
+      "tapPreview": "Auf einen Stil tippen zum Anhören und Auswählen",
+      "unmutePreview": "Stummschaltung oben aufheben, um Vorschau zu hören",
+      "cat": {
+        "click": "Klick",
+        "cardFlip": "Karte wenden",
+        "gift": "Geschenk",
+        "transaction": "Transaktion",
+        "menu": "Menü"
+      }
+    },
+    "receive": {
+      "title": "Empfangsadresse",
+      "privacyProtection": "Privatsphäre-Schutz",
+      "defaultWallet": "Meine Wallet (Standard)",
+      "change": "Ändern",
+      "modalTitle": "Schütze deine Empfangsadresse",
+      "modalDesc": "Du kannst eine separate Wallet zum Empfang von iUSD festlegen und deine verbundene Wallet privat halten. Zahlungen werden automatisch an diese Adresse geleitet.",
+      "complianceHeader": "⚠ Compliance-Hinweis",
+      "complianceDesc": "Alle Transaktionen bleiben gemäß geltender AML-Richtlinien prüfbar, unabhängig vom Routing. Diese Signatur bestätigt dein Verständnis und deine Zustimmung.",
+      "placeholder": "0x… oder init1… (leer = eigene Wallet)",
+      "signSave": "Signieren & speichern",
+      "signing": "Signiert…"
+    },
+    "about": {
+      "title": "Über",
+      "iusdPay": "iUSD Pay",
+      "network": "Netzwerk",
+      "contract": "Vertrag",
+      "tos": "Nutzungsbedingungen",
+      "privacy": "Datenschutzerklärung",
+      "forceRefresh": "Erzwingen aktualisieren",
+      "community": "Community"
+    },
+    "danger": {
+      "title": "Gefahrenbereich",
+      "disconnect": "Wallet trennen",
+      "disconnectTitle": "Wallet trennen?",
+      "disconnectDesc": "Du kannst jederzeit wieder verbinden.",
+      "delete": "Konto löschen",
+      "deleteConfirmWarn": "⚠ Dies löscht dein Konto endgültig",
+      "confirmDelete": "Löschen bestätigen",
+      "deleting": "Löscht…"
+    }
+  },
+  "transfer": {
+    "title": "Senden",
+    "paymentCodeTitle": "Zahlungscode",
+    "showToRecipient": "Zeigen Sie diesen QR dem Empfänger.",
+    "scanAndEnter": "Scannen und Betrag eingeben, um Zahlung anzufordern.",
+    "waitingForRequest": "Warte auf Anfrage…",
+    "sessionExpired": "Sitzung abgelaufen",
+    "generateNew": "Neuen Code generieren",
+    "generating": "Zahlungscode wird generiert…",
+    "recipientPlaceholder": "Spitzname oder Konto-ID",
+    "contacts": "Kontakte",
+    "checking": "Prüfen…",
+    "noContactsMatch": "Keine Kontakte passen zu „{{query}}“",
+    "noContactsYet": "Noch keine Kontakte",
+    "noContactsHint": "Sende eine Zahlung oder öffne den Verlauf, um zu beginnen",
+    "amountLabel": "Betrag",
+    "amountMin": "Min. 0,1 iUSD",
+    "amountMax": "Max. 1.000 iUSD pro Transaktion",
+    "memoLabel": "Notiz",
+    "memoPlaceholder": "Optionale Notiz",
+    "fee": "Gebühr: {{amount}} iUSD",
+    "feeCap": "(Limit)",
+    "total": "Gesamt: {{amount}} iUSD",
+    "autoSaveContact": "Diese Person wird automatisch in Kontakten gespeichert",
+    "paymentQR": "Zahlungs-QR",
+    "building": "Aufbau…",
+    "confirming": "Bestätigen…",
+    "send": "Senden",
+    "sendAmount": "{{amount}} iUSD senden"
+  },
+  "request": {
+    "title": "Anfordern",
+    "modePersonal": "Ich",
+    "modeBusiness": "Geschäft",
+    "tabNew": "Neu",
+    "tabInvoices": "Rechnungen",
+    "empty": "Noch keine Anfragen",
+    "createFirst": "Erste Anfrage erstellen →",
+    "share": "Teilen ↗",
+    "amountLabel": "Betrag",
+    "noteLabel": "Notiz",
+    "notePlaceholder": "Beschreibung (optional)",
+    "taxNoLabel": "Steuer-Nr.",
+    "dueLabel": "Fällig",
+    "invLabel": "Rechnung Nr.",
+    "payerLabel": "Zahler",
+    "payerPlaceholder": "Name (optional)",
+    "status": {
+      "draft": "Entwurf",
+      "sent": "Wartet auf Zahlung",
+      "paying": "Wartet auf Bestätigung",
+      "paid": "Bezahlt",
+      "overdue": "Überfällig",
+      "refunded": "Erstattet",
+      "cancelled": "Storniert"
+    }
+  },
+  "scan": {
+    "title": "QR scannen",
+    "lookingUp": "Konto wird gesucht…",
+    "paymentDetails": "ZAHLUNGSDETAILS",
+    "scannedContent": "GESCANNTER INHALT",
+    "manualInput": "MANUELLE EINGABE / BILD",
+    "pasteHint": "URL oder Konto-ID einfügen…",
+    "startCamera": "Kamera starten",
+    "stopCamera": "Kamera stoppen",
+    "flipCamera": "Kamera wechseln",
+    "retry": "Erneut versuchen",
+    "scannedCheck": "Gescannt! Prüfen Sie Ihren Desktop.",
+    "scanAgain": "↩ Erneut scannen",
+    "tagInvoice": "🧾 Rechnung / Anfrage",
+    "tagIdentity": "👤 Identität",
+    "tagScanned": "🔗 Gescannt",
+    "due": "Fällig",
+    "payRequest": "💸 Diese Anfrage zahlen",
+    "payAmount": "💸 {{amount}} iUSD zahlen",
+    "contactSaved": "✅ Kontakt gespeichert!",
+    "reAddContactsTag": "👤 Wieder hinzufügen",
+    "addContactsTag": "👤 Zu Kontakten hinzufügen",
+    "transfer": "Überweisen",
+    "gift": "Geschenk",
+    "contactAlreadyAdded": "Kontakt bereits hinzugefügt",
+    "reAddToContacts": "Wieder hinzufügen",
+    "addToContacts": "Zu Kontakten hinzufügen",
+    "visit": "Öffnen →",
+    "clickToStart": "Klicken zum Starten",
+    "pointPhone": "Scannen — richte das Handy auf den QR-Code",
+    "disconnect": "✕ Trennen",
+    "go": "Los",
+    "dropToScan": "Zum Scannen des QR fallen lassen",
+    "chooseFromGallery": "Aus Galerie wählen",
+    "galleryHint": "QR-Code-Bild auswählen oder hineinziehen",
+    "cameraN": "Kamera {{n}}",
+    "err": {
+      "accessBlocked": "🔒 Kamerazugriff blockiert",
+      "permissionDesc": "Kamera-Berechtigung wurde verweigert. Bitte in den Browser-Einstellungen neu aktivieren.",
+      "chromeEdge": "🌐 Chrome / Edge",
+      "pasteInstructions": "URL kopieren → in neuem Tab einfügen → Kamera setzen auf",
+      "allow": "Zulassen",
+      "copy": "Kopieren",
+      "firefoxHint": "Kamera-🔒-Symbol in der Adressleiste klicken → Zulassen",
+      "safariHint": "Einstellungen → Safari → Kamera → Erlauben",
+      "androidHint": "⋮ tippen → Seiteneinstellungen → Kamera → Zulassen",
+      "retryAfter": "↺ Nach Aktivieren erneut",
+      "noCamera": "📷 Keine Kamera gefunden",
+      "noCameraDesc": "Auf diesem Gerät wurde keine Kamera erkannt.",
+      "useManualFull": "Nutze unten die manuelle Eingabe oder verbinde einen externen Scanner.",
+      "inUse": "📷 Kamera in Nutzung",
+      "inUseDesc": "Die Kamera wird von einer anderen App verwendet. Schließe andere Apps und versuche es erneut.",
+      "flashNotSupported": "Blitz auf diesem Gerät nicht unterstützt",
+      "noQrInImage": "Kein QR-Code im Bild gefunden",
+      "couldNotCreateRelay": "Relay-Sitzung konnte nicht erstellt werden",
+      "cameraError": "Kamerafehler: {{msg}}",
+      "cameraDenied": "Kamera verweigert: {{msg}}",
+      "connectionFailed": "Verbindung fehlgeschlagen. Versuche Basic-Modus.",
+      "desktopNotReady": "Desktop nicht bereit. Desktop-Seite neu laden.",
+      "failedToSend": "Senden fehlgeschlagen",
+      "invalidSession": "Ungültige Sitzung"
+    },
+    "relay": {
+      "gettingCamera": "Kamera wird abgerufen…",
+      "connectingDesktop": "Verbinde mit Desktop…",
+      "liveCameraHeader": "📹 Live-Kamera",
+      "qrScannerHeader": "📤 QR-Scanner",
+      "liveBadge": "● LIVE",
+      "streamingDesktop": "📹 Stream zum Desktop — sie sehen, was du siehst",
+      "pointAtDesktop": "📤 Auf den QR-Code am Desktop richten",
+      "statusPrefix": "🔄 {{status}}"
+    }
+  },
+  "gift": {
+    "title": "Geschenk",
+    "message": "Nachricht",
+    "quickPicks": "Schnellauswahl",
+    "next": "Weiter →",
+    "recipient": "Empfänger",
+    "shares": "Anteile",
+    "total": "Gesamt",
+    "ready": "Geschenk bereit!",
+    "shareAccessHint": "Teile den Zugriffslink mit deinem Freund.",
+    "rightClickSave": "Rechtsklick zum Speichern · Link kopiert",
+    "dismiss": "Verwerfen",
+    "viewDetails": "Details anzeigen →",
+    "scanToOpen": "Scannen, um zu öffnen",
+    "noReplies": "Noch keine Antworten",
+    "noViews": "Noch keine Aufrufe",
+    "loadingHistory": "Verlauf wird geladen…",
+    "giftList": "Geschenkliste",
+    "historyTab": "Verlauf",
+    "newest": "Neueste",
+    "oldest": "Älteste",
+    "newestFirst": "Neueste zuerst",
+    "oldestFirst": "Älteste zuerst",
+    "noDescription": "Keine Beschreibung verfügbar.",
+    "allCollections": "Alle Kollektionen",
+    "collection": {
+      "flowers": "Blumen",
+      "drinks": "Getränke",
+      "food": "Essen",
+      "treats": "Süßes",
+      "tech": "Tech",
+      "luxury": "Luxus",
+      "office": "Büro",
+      "art": "Kunst",
+      "books": "Bücher",
+      "games": "Spiele",
+      "wellness": "Wellness",
+      "travel": "Reise",
+      "fashion": "Mode",
+      "kids": "Kinder",
+      "pets": "Haustiere",
+      "sports": "Sport",
+      "other": "Sonstiges",
+      "painting": "Gemälde",
+      "music_box": "Spieldose",
+      "instrument": "Instrument",
+      "sculpture": "Skulptur",
+      "textile": "Textilien",
+      "ceramic": "Keramik",
+      "watch": "Uhr",
+      "brooch": "Brosche",
+      "armor": "Rüstung",
+      "furniture": "Möbel",
+      "jewelry": "Schmuck"
+    },
+    "flexible": "Flexibel",
+    "source": "Quelle ↗",
+    "progressPanel": {
+      "progress": "Fortschritt",
+      "inProgress": "Läuft",
+      "completed": "Abgeschlossen",
+      "expired": "Abgelaufen",
+      "expiredRefunded": "Abgelaufen · erstattet",
+      "expiresIn": "Läuft in {{label}} ab",
+      "endsIn": "Endet in {{label}}",
+      "claimedOf": "von {{total}} beansprucht",
+      "claimsHeader": "Ansprüche · {{count}}",
+      "replied": "💌 GEANTWORTET",
+      "claimedChip": "✓ BEANSPRUCHT",
+      "anon": "Anon",
+      "allClaimed": "Alle Anteile wurden beansprucht.",
+      "refunded_one": "{{count}} nicht beanspruchter Anteil erstattet",
+      "refunded_other": "{{count}} nicht beanspruchte Anteile erstattet",
+      "refundedNote": "Beträge für nicht beanspruchte Anteile wurden beim Ablauf des Geschenks automatisch auf dein Guthaben zurückgebucht.",
+      "noClaimsYet": "Noch niemand hat beansprucht. Teile den Link, um sie zu benachrichtigen.",
+      "daysHours": "{{days}}T {{hours}}Std",
+      "hoursMinutes": "{{hours}}Std {{minutes}}Min",
+      "minutesOnly": "{{minutes}}Min"
+    },
+    "back": "← Zurück",
+    "stepChoose": "Geschenk wählen",
+    "stepWrite": "Nachricht schreiben",
+    "stepSendTo": "Senden an",
+    "feePercent": "Gebühr {{percent}}%",
+    "feeLabel": "Gebühr ({{percent}}%)",
+    "more": "mehr",
+    "browseAll": "Alle Geschenke durchsuchen",
+    "writePlaceholder": "Nachricht schreiben...",
+    "amountIusd": "Betrag (iUSD)",
+    "amountRangePlaceholder": "0,1 ~ 1.000 iUSD",
+    "tapToEdit": "✎ tippen zum Bearbeiten",
+    "amountInRange": "0,10 – 1.000 iUSD",
+    "anyoneGroup": "Jeder (Gruppe)",
+    "anyoneCanClaim": "Jeder kann beanspruchen",
+    "enterContact": "Kontakt oder ID eingeben",
+    "invalidRecipient": "Ungültiger Benutzername oder ID",
+    "usernameInactive": "Benutzername inaktiv",
+    "recipientRequired": "Empfänger erforderlich",
+    "sendFailed": "Senden fehlgeschlagen",
+    "missingTxParams": "Transaktionsparameter fehlen",
+    "giftTxFailed": "Geschenk-Transaktion fehlgeschlagen",
+    "contactsHeader": "Kontakte",
+    "fromHistory": "✨ Aus dem Verlauf",
+    "splitEqual": "Gleich",
+    "splitRandom": "Zufällig",
+    "balanceLine": "Guthaben: {{amount}} iUSD",
+    "wrapping": "Verpacken...",
+    "insufficientBalance": "Guthaben reicht nicht",
+    "wrapGift": "🎁 Geschenk verpacken",
+    "giftNumber": "Geschenk #{{id}}",
+    "fromName": "Von {{name}}",
+    "anonymous": "Anonym",
+    "mysteryAwaits": "Ein mysteriöses Geschenk wartet",
+    "claimedAgo": "Beansprucht {{time}}",
+    "claimed": "Beansprucht",
+    "view": "Ansehen →",
+    "openCta": "🎁 Öffnen →",
+    "expiredChip": "Abgelaufen",
+    "claimedOfShort": "{{claimed}}/{{total}} beansprucht",
+    "enjoyEmoji": "Viel Spaß! 🎁",
+    "forYouEmoji": "Mit Liebe ❤️",
+    "happyBirthday": "Alles Gute zum Geburtstag! 🎂",
+    "thankYouEmoji": "Danke! 🙏",
+    "cheersEmoji": "Prost! 🥂",
+    "justBecause": "Einfach so 🌟",
+    "deserveIt": "Du hast es verdient ✨",
+    "haveFun": "Viel Spaß! 🎉",
+    "treatYourself": "Gönn dir was 💫",
+    "yourGiftReady": "Dein Geschenk ist bereit!",
+    "toLabel": "An",
+    "feeLabelShort": "Gebühr",
+    "notificationSent": "Benachrichtigung an {{name}} gesendet",
+    "fromSender": "VON {{name}}",
+    "giftWaitingShort": "Ein Geschenk wartet auf dich",
+    "scanToOpenShort": "Zum Öffnen scannen",
+    "iusdPay": "iUSD Pay",
+    "copied": "Kopiert!",
+    "copyLink": "Link kopieren",
+    "saveImage": "Bild speichern",
+    "shareLink": "Link teilen",
+    "backToQr": "← Zurück zu QR",
+    "closeShareLater": "Du kannst schließen und später aus dem Geschenk-Verlauf teilen.",
+    "preparing": "Vorbereiten...",
+    "imageSaved": "Bild gespeichert!",
+    "qrBtn": "QR",
+    "backBtn": "Zurück",
+    "hasAGiftForYou": "hat ein Geschenk für dich",
+    "sharesCount_one": "{{count}} Anteil",
+    "sharesCount_other": "{{count}} Anteile",
+    "openedCount": "{{count}}/{{total}} geöffnet",
+    "viewsCount": "{{count}} Aufrufe",
+    "someone": "Jemand",
+    "shareTitle": "{{name}} Geschenk",
+    "featured": "⭐ Empfohlen"
+  },
+  "giftClaim": {
+    "loading": "Geschenk wird geladen…",
+    "goHome": "Startseite",
+    "youReceived": "Du hast erhalten",
+    "from": "Von",
+    "reply": "Antworten →",
+    "alreadyClaimed": "Bereits eingelöst",
+    "scanProfile": "Profil scannen",
+    "thankPresets": {
+      "thankBoss": "Danke Chef!",
+      "appreciated": "Sehr geschätzt!",
+      "soKind": "So lieb!",
+      "madeMyDay": "Hat mir den Tag gerettet!",
+      "youreBest": "Du bist der/die Beste!",
+      "whatSurprise": "Was für eine Überraschung!",
+      "loveYou": "Ich liebe dich!",
+      "sweetest": "Du bist ein Schatz!",
+      "heartFull": "Mein Herz ist voll!",
+      "bestBirthday": "Bester Geburtstag!",
+      "bestGift": "Bestes Geschenk!",
+      "cheersYou": "Auf dich!"
+    },
+    "iGotLabel": "★ ICH HABE",
+    "onlyOneShare": "Nur 1 Anteil",
+    "sharesCountLabel_one": "{{count}} Anteil",
+    "sharesCountLabel_other": "{{count}} Anteile",
+    "fromSenderOverlay": "von {{name}}",
+    "detailsBtn": "Details",
+    "claimedLabel": "beansprucht",
+    "viewedLabel": "Ansichten",
+    "chasedLabel": "bekommen",
+    "moreBtn": "[mehr]",
+    "membersHeader": "MITGLIEDER · {{count}}",
+    "lettersHeader": "BRIEFE · {{count}}",
+    "replyBtn": "Antworten",
+    "replyToPlaceholder": "An {{name}} antworten…",
+    "loveWhatYouSee": "★ Gefällt's dir?",
+    "giftThemLine": "Gib {{name}} ein Trinkgeld",
+    "scanOrOpenProfile": "Mein Profil öffnen →",
+    "scanOr": "Scan oder",
+    "postToPlaceholder": "An {{name}} posten…",
+    "postBtn": "Posten",
+    "sentWithLoveBy": "Mit Liebe gesendet von",
+    "giftReceivedChip": "Geschenk erhalten!",
+    "anonName": "sie",
+    "errInvalidLink": "Ungültiger Geschenk-Link",
+    "errNotFound": "Geschenk nicht gefunden",
+    "errClaimFailed": "Beanspruchung fehlgeschlagen",
+    "errFailed": "Fehlgeschlagen",
+    "errSignInFirst": "Bitte zuerst anmelden",
+    "errInvalidClaimLink": "Ungültiger Einlöse-Link",
+    "signInToSave": "Anmelden um Kontakte zu speichern",
+    "failedSaveContact": "Kontakt speichern fehlgeschlagen",
+    "shareTitle": "Geschenk von {{name}}"
+  },
+  "history": {
+    "title": "Verlauf",
+    "paymentJourney": "Zahlungsverlauf",
+    "expires": "Läuft ab",
+    "noInvoices": "Noch keine Rechnungen",
+    "noActivity": "Noch keine Aktivität",
+    "tabs": {
+      "all": "Alle",
+      "sent": "Gesendet",
+      "received": "Empf.",
+      "gift": "Geschenk",
+      "invoices": "Rechnung",
+      "stats": "Stats"
+    },
+    "payStatus": {
+      "sent": {
+        "pending": "Bestätigung ausstehend",
+        "confirmed": "Bestätigt",
+        "revoked": "Widerrufen",
+        "refunded": "Erstattet",
+        "expired": "Abgelaufen",
+        "unknown": "Unbekannt"
+      },
+      "received": {
+        "claimable": "Einlösbar",
+        "received": "Empfangen",
+        "cancelled": "Abgebrochen",
+        "refunded": "Erstattet",
+        "expired": "Abgelaufen",
+        "unknown": "Unbekannt"
+      }
+    },
+    "paymentId": "ZAHLUNGS-ID",
+    "sortNewest": "Sortierung: Neueste zuerst (klicken für älteste)",
+    "sortOldest": "Sortierung: Älteste zuerst (klicken für neueste)",
+    "loadMore": "Mehr laden",
+    "invoicePayment": "Rechnungszahlung",
+    "sentTo": "Gesendet an",
+    "receivedFrom": "Empfangen von",
+    "cancelInvoice": "Rechnung stornieren",
+    "cancelInvoiceConfirm": "Diese Rechnung stornieren?",
+    "cancelFailed": "Stornierung fehlgeschlagen: {{msg}}",
+    "timeline": {
+      "created": "Erstellt",
+      "fee": "Gebühr {{amount}}",
+      "pendingClaim": "Wartet auf Einlösung",
+      "awaitingRecipient": "Wartet auf Empfänger",
+      "autoClaimed": "Wird automatisch eingelöst",
+      "confirmed": "Bestätigt",
+      "received": "Empfangen",
+      "expiresOn": "Läuft ab {{date}}",
+      "revoked": "Widerrufen",
+      "returnedToSender": "Mittel an Absender zurück",
+      "claimed": "Eingelöst",
+      "refunded": "Erstattet",
+      "returnedToClaimer": "An Einlöser zurück",
+      "expired": "Abgelaufen"
+    },
+    "stats": {
+      "accounting": "BUCHHALTUNG",
+      "giftsSent": "Gesendete Geschenke",
+      "giftsReceived": "Erhaltene Geschenke",
+      "paid": "Bezahlt",
+      "received": "Empfangen",
+      "moneyIn": "Einnahmen",
+      "moneyOut": "Ausgaben",
+      "net": "Netto",
+      "pending": "Ausstehend",
+      "thisMonth": "DIESER MONAT"
+    },
+    "noGiftHistory": "Noch kein Geschenk-Verlauf",
+    "receivedSection": "Erhalten · {{count}}",
+    "sentSection": "Gesendet · {{count}}",
+    "loadingMore": "Lade…",
+    "loadMoreReceived": "Mehr erhaltene laden",
+    "loadMoreSent": "Mehr gesendete laden",
+    "refreshTitle": "Aktualisieren",
+    "exportCsv": "Verlauf als CSV exportieren",
+    "revokeFailed": "Widerruf fehlgeschlagen",
+    "refundFailed": "Erstattung fehlgeschlagen: {{msg}}",
+    "refundConfirm": "Diese Zahlung an den Absender erstatten?",
+    "anyone": "Jeder",
+    "direct": "direkt",
+    "fromLabel": "VON",
+    "toLabel": "AN",
+    "copySaveTitle": "shortId kopieren + in Kontakte speichern",
+    "due": "Fällig",
+    "noSentTransactions": "Keine gesendeten Transaktionen",
+    "noReceivedTransactions": "Keine erhaltenen Transaktionen",
+    "noTransactionsYet": "Noch keine Transaktionen — Statistiken werden mit Transaktionen gefüllt.",
+    "detailSent": "↑ Gesendet",
+    "detailReceived": "↓ Erhalten",
+    "copyBtn": "📋 Kopieren",
+    "receiptPdf": "↓ Beleg PDF",
+    "invoicePdf": "↓ Rechnung PDF",
+    "revokeBtn": "↩ Widerrufen",
+    "refundBtn": "↩ Erstatten"
+  },
+  "inbox": {
+    "title": "Posteingang",
+    "claimed": "Eingelöst!",
+    "feePaid": "Gebühr bezahlt",
+    "anonymous": "Anonym",
+    "claimTo": "Einlösen an:",
+    "autoClaimFuture": "Zukünftige Zahlungen automatisch einlösen",
+    "autoExpires": "Läuft automatisch ab, wenn nicht eingelöst",
+    "loadingReplies": "Antworten werden geladen…",
+    "filter": {
+      "all": "Alle",
+      "payment": "Zahlung",
+      "gift": "Geschenk",
+      "reply": "Antwort"
+    },
+    "replyCount_one": "{{count}} Antwort",
+    "replyCount_other": "{{count}} Antworten",
+    "refresh": "↻ Aktualisieren",
+    "historyLabel": "VERLAUF · {{count}}",
+    "statusReceived": "Erhalten",
+    "statusCancelled": "Storniert",
+    "statusRefunded": "Erstattet",
+    "statusExpired": "Abgelaufen",
+    "statusDone": "Erledigt",
+    "businessInvoice": "🏪 Geschäftsrechnung",
+    "personalPayment": "👤 Privatzahlung",
+    "fromId": "Von {{id}}",
+    "fromLabel": "Von",
+    "receipt": "Beleg",
+    "invoice": "Rechnung",
+    "refund": "↩ Erstatten",
+    "refundConfirm": "Diese Zahlung an den Absender erstatten?",
+    "refundFailed": "Erstattung fehlgeschlagen: {{msg}}",
+    "noRepliesHint": "Noch keine Antworten. Geschenk-Danksagungen erscheinen hier.",
+    "alreadyClaimedRefreshed": "Diese Zahlung wurde bereits automatisch beansprucht. Posteingang aktualisiert.",
+    "alreadyClaimedRemoved": "Bereits beansprucht — aus Posteingang entfernt.",
+    "newGiftsSection": "NEUE GESCHENKE · {{count}}",
+    "giftsSection": "GESCHENKE · {{count}}",
+    "sentSection": "GESENDET · {{count}}",
+    "loadMoreReplies": "Mehr Antworten laden"
+  },
+  "contacts": {
+    "noResults": "Keine Ergebnisse",
+    "autoSavedHint": "Personen, an die du sendest, werden automatisch gespeichert",
+    "importFromHistory": "✨ Aus Verlauf importieren",
+    "importFromHistoryTitle": "Gegenparteien aus Zahlungs- + Geschenk-Verlauf importieren",
+    "searchPlaceholder": "Nach Name oder ID suchen..."
+  },
+  "merchant": {
+    "title": "Geschäftsprofil",
+    "preview": "Vorschau",
+    "businessName": "Firmenname *",
+    "businessNamePlaceholder": "z. B. Jacks Kaffee",
+    "companyLogo": "Firmenlogo (optional)",
+    "uploadJpgPng": "JPG / PNG hochladen",
+    "remove": "Entfernen",
+    "logoHint": "JPG/PNG · max. 500 KB · sicher gespeichert",
+    "maxFileSize": "Max. Dateigröße 500 KB",
+    "clearConfirm": "Geschäftsprofil löschen?",
+    "brandColor": "Markenfarbe",
+    "tagline": "Slogan / Beschreibung (optional)",
+    "taglinePlaceholder": "z. B. Der beste Kaffee der Stadt",
+    "businessFont": "Schriftart Firmenname",
+    "contactInfo": "Kontaktinformationen",
+    "email": "E-MAIL",
+    "phone": "TELEFON",
+    "website": "WEBSEITE",
+    "emailPlaceholder": "contact@example.com",
+    "phonePlaceholder": "+49 151 23456789",
+    "websitePlaceholder": "https://example.com",
+    "addressLegal": "Adresse & Rechtliches",
+    "address": "ADRESSE",
+    "addressPlaceholder": "Musterstr. 1, Stadt",
+    "taxIdLabel": "USt-ID / HR-NUMMER",
+    "taxIdPlaceholder": "z. B. DE123456789",
+    "invoiceNumbering": "Rechnungsnummerierung",
+    "prefix": "PRÄFIX",
+    "startingNo": "START-NR.",
+    "startingFrom": "Beginnt bei: {{sample}} (automatisch serverseitig)",
+    "save": "Geschäftsprofil speichern",
+    "saved": "✓ Gespeichert!",
+    "clear": "Löschen",
+    "storedLocally1": "Dieses Profil wird lokal auf deinem Gerät gespeichert.",
+    "storedLocally2": "In Geschäftsmodus auf der Anfrageseite wechseln, um es zu verwenden.",
+    "setUpProfile": "🏢 Richte dein Geschäftsprofil ein →"
+  },
+  "invoices": {
+    "title": "Buchhaltung",
+    "protocolFees": "Bezahlte Protokollgebühren"
+  },
+  "payRequest": {
+    "title": "Zahlungsanfrage",
+    "requestSent": "Anfrage gesendet!",
+    "error": "Fehler"
+  },
+  "receipt": {
+    "paymentSent": "Zahlung gesendet.",
+    "home": "Startseite",
+    "viewInvoice": "Rechnung ansehen",
+    "loading": "Quittung wird geladen…"
+  },
+  "install": {
+    "addToHome": "Zum Home-Bildschirm",
+    "tapShare": "Teilen antippen",
+    "tapMenu": "Menü antippen",
+    "installTitle": "iUSD Pay installieren",
+    "install": "Installieren"
+  },
+  "deposit": {
+    "balance": "Guthaben",
+    "youReceive": "Du erhältst",
+    "rate": "Kurs",
+    "estTime": "Gesch. Zeit",
+    "depositTitle": "{{label}} einzahlen",
+    "withdrawTitle": "{{label}} auszahlen",
+    "from": "Von",
+    "to": "Nach",
+    "selectFrom": "Asset zum Einzahlen wählen",
+    "selectTo": "Ziel wählen",
+    "loadingAssets": "Lade...",
+    "noAssets": "Keine Assets mit Guthaben gefunden",
+    "noDestinations": "Keine Ziel-Chains gefunden",
+    "onChain": "auf {{chain}}",
+    "current": "aktuell",
+    "max": "MAX",
+    "gasFee": "Gas-Gebühr",
+    "estimatedByWallet": "Von Wallet geschätzt",
+    "relayFee": "Relay-Gebühr",
+    "route": "Route",
+    "fetchingRoute": "Route wird geholt...",
+    "insufficient": "Guthaben reicht nicht — du hast {{balance}} {{symbol}}",
+    "preparingTx": "Transaktion wird vorbereitet...",
+    "confirmInWallet": "Im Wallet bestätigen",
+    "tryAgain": "Erneut versuchen",
+    "submitted": "Transaktion übermittelt",
+    "done": "Fertig",
+    "txCancelled": "Transaktion abgebrochen",
+    "noEvmWallet": "Keine EVM-Wallet gefunden. Bitte MetaMask installieren.",
+    "unsupportedTx": "Nicht unterstützter Transaktionstyp"
+  },
+  "promoBanner": {
+    "coffee": {
+      "title": "Spendiere einen Kaffee",
+      "subtitle": "Ein warmes Kaffee-Geschenk"
+    },
+    "rose": {
+      "title": "Eine Rose senden",
+      "subtitle": "Für jemand Besonderen"
+    },
+    "boss": {
+      "title": "Sei der Chef, biete Vorteile",
+      "subtitle": "Zeige deine Großzügigkeit"
+    }
+  },
+  "register": {
+    "title": "Konto erstellen",
+    "chooseNickname": "Wähle einen Spitznamen für deine Zahlungsadresse",
+    "nicknamePlaceholder": "z. B. alice · 小明 · 🦊",
+    "nicknameHint": "Jede Sprache · 1–12 Zeichen · 🎲 zufällig",
+    "randomNickname": "Zufälliger Spitzname",
+    "creating": "Wird erstellt…",
+    "submit": "Konto erstellen →"
+  },
+  "registered": {
+    "openWallet": "Wallet öffnen →",
+    "wow": "WOW! Du hast eine coole",
+    "wowCard": "iUSD-Zahlungskarte!",
+    "tapCard": "KARTE ANTIPPEN",
+    "shareText": "Schick mir iUSD — scanne den QR meiner Karte! 🎁"
+  },
+  "toast": {
+    "thatsYou": "Das bist du!",
+    "copied": "{{value}} kopiert",
+    "addedToContacts": "{{name}} zu Kontakten hinzugefügt",
+    "linkCopied": "Link in Zwischenablage kopiert",
+    "paymentNotLinked": "Zahlung noch nicht verknüpft — in ein paar Sekunden erneut versuchen",
+    "claimFailed": "Einlösung fehlgeschlagen",
+    "claimQueued": "Einlösung in Warteschlange",
+    "networkError": "Netzwerkfehler: {{msg}}",
+    "noNewContactsInHistory": "Keine neuen Kontakte im Verlauf",
+    "importedFromHistory_one": "{{count}} Kontakt aus Verlauf importiert",
+    "importedFromHistory_other": "{{count}} Kontakte aus Verlauf importiert",
+    "noNewImport": "Keine neuen Kontakte zum Importieren",
+    "importFailed": "Import fehlgeschlagen: {{msg}}"
+  },
+  "nav": {
+    "dashboard": "Übersicht",
+    "home": "Start",
+    "more": "Mehr"
+  },
+  "payLink": {
+    "resolving": "Zahlungslink wird aufgelöst…",
+    "invoiceDetails": "RECHNUNGSDETAILS",
+    "status": "Status",
+    "invoiceId": "Rechnungsnr.",
+    "recipient": "Empfänger",
+    "dueDate": "Fälligkeit",
+    "paymentProof": "ZAHLUNGSNACHWEIS",
+    "invalidLink": "Ungültiger Link",
+    "claimed": "Eingelöst",
+    "paymentComplete": "Zahlung abgeschlossen",
+    "receivedByName": "{{name}} hat {{amount}} iUSD erhalten",
+    "paymentSent": "Zahlung gesendet",
+    "processingAuto": "{{amount}} iUSD · wird automatisch verarbeitet",
+    "claimWithinMinutes": "Einlösung dauert normalerweise 1–2 Minuten",
+    "goToDashboard": "Zur Übersicht"
+  },
+  "verify": {
+    "title": "Zahlungsprüfung",
+    "verifying": "Zahlung wird verifiziert…",
+    "noPid": "Keine Zahlungs-ID angegeben.",
+    "notFound": "Zahlung nicht gefunden",
+    "error": "Fehler: {{msg}}",
+    "verification": "Verifikation",
+    "to": "AN",
+    "platformFee": "Plattformgebühr",
+    "txHash": "Transaktions-Hash",
+    "goHomepage": "Zur Startseite"
+  },
+  "profile": {
+    "defaultSlogan": "Du machst meinen Tag ✨",
+    "copyFullId": "Vollständige ID kopieren",
+    "contactAlreadyAdded": "Kontakt bereits hinzugefügt",
+    "addToContacts": "Zu Kontakten hinzufügen"
+  },
+  "invoiceView": {
+    "title": "RECHNUNG",
+    "billFrom": "Rechnungssteller",
+    "billTo": "Rechnungsempfänger",
+    "issueDate": "Ausstellungsdatum",
+    "dueDate": "Fälligkeitsdatum",
+    "invoiceAmount": "Rechnungsbetrag",
+    "recipientGets": "Empfänger erhält",
+    "payLink": "Zahlungslink",
+    "taxId": "USt-ID: {{id}}",
+    "noteLabel": "Notiz: {{note}}",
+    "platformFeeLabel": "Plattformgebühr (0,5%{{cap}})",
+    "platformFeeCapped": ", gedeckelt",
+    "paidStatus": "✓ Bezahlt am {{date}}",
+    "noToken": "Kein Token",
+    "failedToLoad": "Laden fehlgeschlagen",
+    "notFound": "Rechnung nicht gefunden.",
+    "unavailable": "Rechnung nicht verfügbar.",
+    "saveAsImage": "Als Bild speichern",
+    "printPdf": "Drucken / PDF speichern",
+    "openInSafariChrome": "In Safari oder Chrome öffnen, um als PDF zu speichern",
+    "close": "Schließen"
+  },
+  "notFound": {
+    "title": "Seite nicht gefunden",
+    "desc": "Die gesuchte Seite existiert nicht oder wurde verschoben."
+  },
+  "installGuide": {
+    "alreadyInstalled": "Bereits installiert!",
+    "usingStandalone": "Du benutzt iUSD Pay als eigenständige App.",
+    "installApp": "App installieren",
+    "androidHint": "Öffne diese Seite in Chrome und tippe Menü (⋮) → \"Zum Home-Bildschirm\"",
+    "desktopHint": "Klicke in Chrome auf das Install-Symbol (⊕) in der Adressleiste, oder Menü → \"App installieren\"",
+    "skip": "Später",
+    "ios": {
+      "step1": "Tippe auf die Teilen-Taste unten in Safari",
+      "step2": "Scrolle und tippe \"Zum Home-Bildschirm\"",
+      "step3": "Tippe \"Hinzufügen\" zum Bestätigen"
+    }
+  },
+  "giftBox": {
+    "1": {
+      "name": "Spieldose",
+      "description": "Schildförmiger Anhänger aus Gold und Email. Eine Seite zeigt eine Automaten-Bauernhofszene mit Wasserrad, die andere eine Rose auf rotem Grund. Beide Seiten sind mit Halbperlen umrandet, ein beeindruckendes Zeugnis der dekorativen Kunst des 18. Jahrhunderts."
+    },
+    "2": {
+      "name": "FLY Kaffee",
+      "description": "Genieße Fly Coffee mit 50% Rabatt. Ob im Café oder zum Mitnehmen – erlebe das Aroma jeder Tasse zum besten Preis."
+    },
+    "3": {
+      "name": "Repetieruhr",
+      "description": "Repetieruhr von Francis Perigal (britisch, tätig 1741–67). Gehäuse aus teils emailliertem Gold; weißes Emaille-Zifferblatt mit schwarzen Ziffern und mit Diamanten besetzten Silberzeigern; vergoldetes Werk. Gipfel der Uhrmacherkunst des 18. Jahrhunderts."
+    },
+    "4": {
+      "name": "Gitarre",
+      "description": "Gitarre, deren Boden, Zargen, Hals und Kopf mit Chevrons aus Schildpatt, Ebenholz und Elfenbein belegt sind – mit Rahmenvoluten, Rauten und geometrischen Friesen. Eine meisterhafte Verbindung von Hölzern und Intarsien, Zeugnis außergewöhnlichen Könnens."
+    },
+    "5": {
+      "name": "Spieldose",
+      "description": "Schweizer Spieldose um 1820 in Form einer Mandoline. Aus verschiedenen Materialien kunstvoll gefertigt, verbindet sie die europäische Spieldosen-Kunst des frühen 19. Jahrhunderts mit der Ästhetik des Mandolineninstruments."
+    },
+    "6": {
+      "name": "Gitarre",
+      "description": "Überreich verzierte Gitarre von Giacomo (Jacob) Ertel, spätes 17. Jahrhundert. Fichte, Ebenholz, Obsthölzer, Knochen, Elfenbein, Perlmutt und Pergament. Das Werk vereint die dekorative Leidenschaft des deutschen Meisters mit der italienischen Lauten-/Gitarrentradition."
+    },
+    "7": {
+      "name": "Wintermorgen auf dem Land",
+      "description": "Handkolorierte Lithografie der Werkstatt Currier & Ives, 1873. Verschneite ländliche Szene: Ein von zwei Pferden gezogener Schlitten trägt ein Paar und vier große Milchkannen; in der Ferne der Bauernhof. Typisches Genrebild des amerikanischen 19. Jahrhunderts."
+    },
+    "8": {
+      "name": "Gebt mir Freiheit oder gebt mir den Tod!",
+      "description": "Handkolorierte Lithografie Currier & Ives, 1876, „Gebt mir Freiheit oder gebt mir den Tod!\". Patrick Henry hält seine berühmte Rede über die Rechte der Kolonien vor der Versammlung von Virginia, Richmond, März 1775."
+    },
+    "9": {
+      "name": "Spieldose",
+      "description": "Schweizer längliche Spieldose aus Gold und Email, um 1820. Ränder in Blau und Gelb emailliert; der Deckel trägt eine klassische Emaille-Miniatur, die mit Halbperlen umrandet ist. Perfekte Verbindung von Spieldosenkunst und Juwelierkunst."
+    },
+    "10": {
+      "name": "Uhrgehäuse",
+      "description": "Uhrgehäuse von George Harrison, um 1770. Teils emailliertes Gold; das Außengehäuse ist mit funkelnden Diamanten besetzt. Zeugnis der hohen Handwerkskunst britischer Uhrmacher und Juweliere des 18. Jahrhunderts."
+    },
+    "11": {
+      "name": "Divisionsviole",
+      "description": "Division Viol von Richard Meares, um 1680. Fichte, Ebenholz, Ahorn. Violen, die angesehensten Streichinstrumente der Spätrenaissance, wurden im Laufe des 17. Jahrhunderts nach und nach von der Violine verdrängt; ein bedeutendes musikhistorisches Zeugnis."
+    },
+    "12": {
+      "name": "Drache",
+      "description": "Bronzener Drache vom Beginn des 17. Jahrhunderts, Werk von Giacomo Laurenziani. Beim Erwerb als Greif katalogisiert, später – seit den 1950er-Jahren – von James Parker korrekt als Drache identifiziert; ein eindrucksvolles Beispiel barocker Skulptur."
+    },
+    "13": {
+      "name": "Rosen und Lilien",
+      "description": "Henri Fantin-Latour, 1888, Öl auf Leinwand. Das hervorragend erhaltene Werk zeigt die virtuose Pigmentführung des Malers: Er benutzt nicht nur den Pinsel, sondern auch das Stielende, um Rosen und Lilien mit einer erlesenen Licht- und Texturwirkung zu modellieren."
+    },
+    "14": {
+      "name": "Uhr",
+      "description": "Uhr von F. L. Meybom, um 1670–75. Gehäuse aus Gold, bläuendem Stahl, Bergkristall und teilvergoldetem Silber mit Diamanten; Zifferblatt aus gemaltem Email und Basse-taille-Email auf Gold; Werk aus vergoldetem Messing und teilgebläutem Stahl."
+    },
+    "15": {
+      "name": "Libellenbrosche",
+      "description": "Jugendstil-Libellenbrosche von Edgar Bense, um 1890. Gold, Diamanten und Email. Die zarten Flügel in Plique-à-jour-Email krönen eine fein modellierte Libelle und verkörpern Mode und Juwelierkunst des Jugendstils sowie die naturalistische Ästhetik."
+    },
+    "16": {
+      "name": "Armreif",
+      "description": "Indisches Armband (Bazuband), 19. Jahrhundert. Aus geflochtenem Gold mit Rubinen und einem Rosendiamant besetzt. Ähnliche Beispiele finden sich in der Tradition der aristokratischen indischen Juwelierkunst, Erbin der Mogul-Hofästhetik."
+    },
+    "17": {
+      "name": "Rüstgarnitur des George Clifford",
+      "description": "Rüstungsgarnitur, die Jacob Halder 1586 in der Königlichen Rüstkammer Greenwich für George Clifford anfertigte. Stahl, Gold, Leder und Textil. Clifford (1558–1605) wurde 1590 zum Queen's Champion ernannt und im selben Jahr zum Ritter des Hosenbandordens."
+    },
+    "18": {
+      "name": "Brosche in Form eines Eulenkopfs",
+      "description": "Eulenkopfbrosche von Castellani, um 1860. Gold und Achat. Dieses Stück und die zugehörige Gruppe (siehe 2014.713.1–.10) spiegeln das intensive Interesse des 19. Jahrhunderts an historischen Stilen wider und verkörpern die Juwelierkunst des archäologischen Revivals."
+    },
+    "19": {
+      "name": "Uhr",
+      "description": "Uhr von Charles Bobinet, um 1655–60. Achatgehäuse mit Emaille-Goldmontierung; weißes Emaille-Zifferblatt mit Goldzeiger; Werk aus vergoldetem Messing und teilgebläutem Stahl. Beleg der europäischen Uhrmacherkunst Mitte des 17. Jahrhunderts."
+    },
+    "20": {
+      "name": "Schwertlilien",
+      "description": "Vincent van Gogh, 1890, Öl auf Leinwand. Die berühmten Schwertlilien. Eines der prägendsten Werke der Spätphase des Künstlers: mit üppigen Farben und lebendiger Pinselführung eine tiefe Huldigung an die Schönheit der Natur."
+    },
+    "21": {
+      "name": "Zuckerdose mit Deckel",
+      "description": "Zuckerdose mit Deckel von Giovacchino Belli, um 1811–22. Silber vergoldet. Bellis Lesart des Empirestils ist entspannter und einladender als die zeitgenössische französische Interpretation, mildert die strengen klassizistischen Linien und zeigt typisch italienischen Charakter."
+    },
+    "22": {
+      "name": "Kanne",
+      "description": "Kanne aus Silber-Vergoldung und Email, um 1600. Der Korpus ist mit einem Zug von Figuren und Tieren verziert, der entweder den Triumph Caesars nach seiner Rückkehr aus Ägypten oder den Triumph des Scipio Africanus nach dem Sieg über Hannibal darstellt."
+    },
+    "23": {
+      "name": "Der Schauspieler Asao Gakujūrō I als Mashiba Hisatsugu",
+      "description": "Holzschnitt von Shunkōsai Hokushū (Osaka), 1822. Nishiki-e auf Papier mit Tusche und Farbe, japanisches ōban-Hochformat. Zeigt den Kabuki-Schauspieler Asao Gakujūrō I. in der Rolle des Mashiba Hisatsugu mit wildem Blick und trotziger Pose voller Dramatik."
+    },
+    "24": {
+      "name": "Krone der Anden",
+      "description": "„Krone der Anden\" – Diadem um 1660, Bögen um 1770. Kolumbianisch, aus Popayán. Getriebenes und ziseliertes Gold mit Smaragden. Eines der wichtigsten Goldschmiedestücke des südamerikanischen Kolonialzeitalters, eine kreative Synthese europäischer und einheimischer Techniken."
+    }
+  },
+  "components": {
+    "nicknameEditor": {
+      "title": "Spitzname ändern",
+      "placeholder": "Dein Spitzname",
+      "randomNickname": "Zufälliger Spitzname",
+      "generating": "GENERIERE...",
+      "firstChangeFee": "Erste Änderung Gebühr",
+      "changeFeeN": "Änderungsgebühr (Änderung #{{n}})",
+      "firstFeeNote": "Die erste Spitznamen-Änderung kostet 0,10 iUSD. Weitere Änderungen kosten jeweils 10,00 iUSD.",
+      "feeNote": "Jede Spitznamen-Änderung kostet 10,00 iUSD.",
+      "idStays": "Deine Konto-ID bleibt gleich",
+      "notUniqueAck": "Ich verstehe, dass Spitznamen nicht eindeutig sind. Andere Konten können denselben Spitznamen verwenden.",
+      "signing": "Signieren...",
+      "payAndSave": "Zahle {{fee}} iUSD und speichere",
+      "errEmpty": "Spitzname darf nicht leer sein",
+      "errFee": "Gebühr konnte nicht ermittelt werden",
+      "errTxFailed": "Transaktion fehlgeschlagen",
+      "errNoHash": "Kein Transaktions-Hash erhalten",
+      "errCancelled": "Transaktion abgebrochen",
+      "errGeneric": "Fehlgeschlagen"
+    },
+    "mwc": {
+      "chooseMethod": "Verbindungsmethode wählen",
+      "checkWallet": "Überprüfe deine Wallet-App",
+      "approveRequest": "Verbindungsanfrage in der Wallet-App genehmigen",
+      "returnAfterApprove": "⚠️ Nach Bestätigung zu dieser Seite zurückkehren",
+      "tryAgain": "Erneut versuchen",
+      "cancel": "Abbrechen",
+      "openInWallet": "In Wallet öffnen",
+      "best": "BESTE",
+      "continueInBrowser": "Im Browser von {{name}} fortfahren",
+      "signAndReturn": "Signieren und zurück",
+      "approveAndReturn": "In der App genehmigen und hierhin zurückkehren",
+      "directConnection": "Direkte Verbindung • Keine Relay-Server",
+      "connectionFailed": "Verbindung fehlgeschlagen",
+      "state": {
+        "initializing": "Initialisieren...",
+        "generatingUri": "Verbinden...",
+        "waitingApproval": "In Wallet-App genehmigen...",
+        "connected": "Verbunden!",
+        "failed": "Fehlgeschlagen"
+      }
+    },
+    "quickLogin": {
+      "signing": "Signieren...",
+      "verifying": "Überprüfen...",
+      "processing": "Verarbeiten...",
+      "signInTo": "Anmelden für {{action}}",
+      "walletTapToSignIn": "Wallet verbunden. Zum Anmelden tippen.",
+      "almostThere": "Fast geschafft! Registrierung abschließen, um zu {{action}}.",
+      "redirecting": "Weiterleitung zur Registrierung...",
+      "connectionFailed": "Verbindung fehlgeschlagen",
+      "tryAgain": "Erneut versuchen",
+      "connecting": "Verbinden...",
+      "connectTo": "Verbinden für {{action}}",
+      "tapConnectHint": "Verbinden tippen — deine Wallet wird eine Signatur verlangen",
+      "signInWith": "Anmelden mit",
+      "orWallet": "ODER WALLET",
+      "other": "Andere",
+      "openInWalletBrowser": "Öffne diesen Link im Browser deiner Wallet",
+      "linkCopied": "Link in die Zwischenablage kopiert",
+      "dismiss": "Schließen"
+    },
+    "identityCardBack": {
+      "idLabel": "ID:",
+      "deposit": "Einzahlen",
+      "withdraw": "Auszahlen",
+      "onlyOn": "Nur auf",
+      "gas": "Gas",
+      "gasOk": "Gas OK",
+      "lowGas": "Wenig Gas"
+    },
+    "qrScan": {
+      "scanQR": "QR scannen",
+      "cameraUnavailable": "Kamera nicht verfügbar",
+      "turnFlashOff": "Blitz aus",
+      "turnFlashOn": "Blitz an",
+      "cancel": "Abbrechen"
+    },
+    "errorBoundary": {
+      "updating": "Aktualisieren…",
+      "somethingWrong": "Etwas ist schiefgelaufen",
+      "genericErr": "Ein unerwarteter Fehler verhinderte das Laden dieser Seite.",
+      "reload": "Neu laden",
+      "resetReload": "Zurücksetzen und neu laden"
+    },
+    "identityCard": {
+      "validFrom": "GÜLTIG AB",
+      "status": "STATUS",
+      "statusActive": "Aktiv",
+      "statusFrozen": "Eingefroren",
+      "statusDeactivated": "Deaktiviert",
+      "viewProfile": "Profilkarte ansehen",
+      "scanAndGift": "Scannen und schenken ✨",
+      "share": "↗ Teilen",
+      "shareText": "Meine iUSD Pay Karte! Scannen und schenken",
+      "copyLink": "Link kopieren",
+      "copied": "Kopiert!"
+    }
+  },
+  "soundStyles": {
+    "click": {
+      "keyboard": {
+        "name": "Tastatur",
+        "desc": "Klick mechanische Tastatur"
+      },
+      "pop": {
+        "name": "Sanftes Pop",
+        "desc": "Blase platzen"
+      },
+      "tic": {
+        "name": "Tick",
+        "desc": "Kurzer hoher Tick"
+      },
+      "chime": {
+        "name": "Glöckchen",
+        "desc": "Sanftes Bim"
+      },
+      "glass": {
+        "name": "Glas",
+        "desc": "Glas-Ting"
+      },
+      "coin": {
+        "name": "Münze",
+        "desc": "Metallisches Ching"
+      },
+      "digital": {
+        "name": "Digital",
+        "desc": "8-bit Blip"
+      },
+      "drip": {
+        "name": "Tropfen",
+        "desc": "Wassertropfen"
+      },
+      "paper": {
+        "name": "Papier",
+        "desc": "Papiertippen"
+      },
+      "piano": {
+        "name": "Klavier",
+        "desc": "Sanfte Klaviernote"
+      },
+      "silent": {
+        "name": "Still",
+        "desc": "Kein Klickgeräusch"
+      }
+    },
+    "card": {
+      "breeze": {
+        "name": "Brise",
+        "desc": "Sanfter Wind"
+      },
+      "dream_bells": {
+        "name": "Traumglocken",
+        "desc": "Glas-Windspielglitzern"
+      },
+      "page_turn": {
+        "name": "Seitenwechsel",
+        "desc": "Papierrascheln"
+      },
+      "whoosh": {
+        "name": "Whoosh",
+        "desc": "Schnelles Swoosh"
+      },
+      "soft_pop": {
+        "name": "Sanftes Pop",
+        "desc": "Sanftes Doppelpop"
+      },
+      "silent": {
+        "name": "Still",
+        "desc": "Kein Flip-Geräusch"
+      }
+    },
+    "gift": {
+      "celebration": {
+        "name": "Feier",
+        "desc": "Aufsteigender C-E-G-C-Akkord"
+      },
+      "sparkle": {
+        "name": "Funkeln",
+        "desc": "Hohe Glitzer-Noten"
+      },
+      "fanfare": {
+        "name": "Fanfare",
+        "desc": "Blechbläser Ta-da"
+      },
+      "bell_cascade": {
+        "name": "Glockenkaskade",
+        "desc": "Absteigende Glocken"
+      },
+      "soft_bell": {
+        "name": "Sanfte Glocke",
+        "desc": "Einzelne sanfte Glocke"
+      },
+      "silent": {
+        "name": "Still",
+        "desc": "Kein Geschenkgeräusch"
+      }
+    },
+    "txn": {
+      "whoosh_up": {
+        "name": "Whoosh Hoch",
+        "desc": "Aufsteigendes Swoosh"
+      },
+      "coin_drop": {
+        "name": "Münzfall",
+        "desc": "Metallische Münze landet"
+      },
+      "pneumatic": {
+        "name": "Pneumatisch",
+        "desc": "Retro-Rohrpost"
+      },
+      "confirm_chime": {
+        "name": "Bestätigungston",
+        "desc": "Doppelton-Bestätigung"
+      },
+      "paper_slide": {
+        "name": "Papierrutsch",
+        "desc": "Papier gleitet"
+      },
+      "silent": {
+        "name": "Still",
+        "desc": "Kein Transaktionsgeräusch"
+      }
+    },
+    "menu": {
+      "slide": {
+        "name": "Schieben",
+        "desc": "Panel gleitet rein"
+      },
+      "soft_pop": {
+        "name": "Sanftes Pop",
+        "desc": "Sanftes Öffnen"
+      },
+      "swish": {
+        "name": "Swish",
+        "desc": "Luft-Swish"
+      },
+      "silent": {
+        "name": "Still",
+        "desc": "Kein Menügeräusch"
+      }
+    }
+  },
+  "time": {
+    "justNow": "jetzt",
+    "minutesAgo": "vor {{n}}m",
+    "hoursAgo": "vor {{n}}h",
+    "daysAgo": "vor {{n}}t"
+  },
+  "receiptView": {
+    "back": "← Zurück",
+    "paymentReceipt": "Zahlungsbeleg",
+    "receipt": "Beleg",
+    "noPaymentId": "Keine Zahlungs-ID",
+    "notFound": "Beleg nicht gefunden.",
+    "failedToLoad": "Laden fehlgeschlagen",
+    "fee": "Gebühr: {{amount}} iUSD",
+    "date": "Datum",
+    "confirmedLabel": "Bestätigt",
+    "verify": "Prüfen",
+    "from": "Von",
+    "to": "An",
+    "tx": "Tx: {{hash}}",
+    "id": "ID: {{id}}",
+    "statusPaid": "Bezahlt",
+    "statusConfirmed": "Bestätigt",
+    "statusPending": "Ausstehend",
+    "statusRevoked": "Widerrufen",
+    "statusRefunded": "Erstattet",
+    "statusExpired": "Abgelaufen",
+    "statusFailed": "Fehlgeschlagen",
+    "statusUnknown": "Unbekannt",
+    "saveAsImage": "Als Bild speichern",
+    "printPdf": "Drucken / PDF speichern",
+    "openInSafariChrome": "In Safari oder Chrome öffnen, um als PDF zu speichern",
+    "errorPrefix": "Fehler: {{msg}}"
+  },
+  "update": {
+    "available": "Neue Version verfügbar",
+    "reload": "Neu laden"
+  }
+}

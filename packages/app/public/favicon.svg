@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- Dark rounded background -->
+  <rect width="32" height="32" rx="7" fill="#111827"/>
+  <!-- White dollar "S" curved line = "$" suggestion, clean fintech look -->
+  <!-- Letter i — dot + stem -->
+  <circle cx="10" cy="9" r="2.8" fill="#ffffff"/>
+  <rect x="7.6" y="13.5" width="4.8" height="12" rx="1.5" fill="#ffffff"/>
+  <!-- Separator dot (·) in off-white -->
+  <circle cx="16" cy="19" r="1.5" fill="rgba(255,255,255,0.5)"/>
+  <!-- Letter P — stem + bowl -->
+  <rect x="18.5" y="8" width="4" height="17.5" rx="1.5" fill="#ffffff"/>
+  <path d="M22.5 8 Q30 8 30 13.5 Q30 19 22.5 19 Z" fill="#ffffff"/>
+  <path d="M22.5 11 Q27.5 11 27.5 13.5 Q27.5 16 22.5 16 Z" fill="#111827"/>
+</svg>

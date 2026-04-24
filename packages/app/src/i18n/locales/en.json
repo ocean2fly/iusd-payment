@@ -1,0 +1,1250 @@
+{
+  "popup": {
+    "title": "Allow Pop-ups in Browser Settings",
+    "subtitle": "Your browser is blocking the sign-in pop-up. Enable it in Settings as shown.",
+    "next": "Next",
+    "back": "Back",
+    "gotIt": "Got it",
+    "continue": "Continue",
+    "enableTitle": "Enable Pop-ups",
+    "signinNeedsPopup": "Sign in requires a pop-up window.",
+    "gotoMobile": "Go to settings → browser → allow pop-ups.",
+    "gotoDesktop": "Go to settings → allow pop-ups.",
+    "checkDetail": "Check detail"
+  },
+  "auth": {
+    "connect": "Connect",
+    "signIn": "Sign in →",
+    "connecting": "Connecting…",
+    "signing": "Signing…",
+    "checkWallet": "Check your wallet for a signature request…",
+    "settingUp": "Setting up your account…",
+    "coinbaseConnected": "Coinbase Wallet connected!",
+    "walletConnected": "Wallet connected!",
+    "wcTimeout": "WalletConnect timed out",
+    "restoring": "Restoring wallet session…",
+    "openingWindow": "Opening sign-in window…",
+    "tapConnect": "Tap Connect — your wallet will ask to sign",
+    "signInWith": "Sign in with",
+    "or": "or",
+    "tryAgain": "Try again",
+    "reconnect": "Reconnect wallet",
+    "popupBlockedMobile": "Pop-up was blocked. Go to settings → browser → allow pop-ups.",
+    "popupBlockedDesktop": "Pop-up was blocked. Go to settings → allow pop-ups.",
+    "signFailed": "Sign-in failed. Please try again.",
+    "connectionLost": "Wallet connection lost. Please reconnect.",
+    "signatureCancelled": "Signature cancelled.",
+    "networkBlocked": "API unreachable or blocked (network/CORS/Access). Please retry in a clean tab."
+  },
+  "landing": {
+    "tagline": "stable coin payment on Initia",
+    "installAsApp": "Install as app",
+    "forceRefresh": "Force refresh",
+    "refresh": "Refresh",
+    "forceRefreshTip": "Force refresh to resolve local page issues"
+  },
+  "wallets": {
+    "openInWalletBrowser": "Open wallet app browser",
+    "pasteUrl": "Paste iUSD pay URL (copied) and go",
+    "done": "Done",
+    "other": "Other"
+  },
+  "time": {
+    "justNow": "just now",
+    "minutesAgo": "{{n}}m ago",
+    "hoursAgo": "{{n}}h ago",
+    "daysAgo": "{{n}}d ago"
+  },
+  "update": {
+    "available": "New version available",
+    "reload": "Reload"
+  },
+  "common": {
+    "language": "Language",
+    "cancel": "Cancel",
+    "save": "Save",
+    "saving": "Saving…",
+    "saved": "Saved",
+    "close": "Close",
+    "change": "Change",
+    "loading": "Loading…",
+    "view": "View",
+    "optional": "Optional",
+    "on": "ON",
+    "off": "OFF"
+  },
+  "transfer": {
+    "title": "Transfer",
+    "paymentCodeTitle": "Payment Code",
+    "showToRecipient": "Show this QR to the recipient.",
+    "scanAndEnter": "Scan and enter amount to request payment.",
+    "waitingForRequest": "Waiting for request...",
+    "sessionExpired": "Session expired",
+    "generateNew": "Generate New Code",
+    "generating": "Generating payment code...",
+    "recipientPlaceholder": "Nickname or Account ID",
+    "contacts": "Contacts",
+    "checking": "Checking…",
+    "noContactsMatch": "No contacts match \"{{query}}\"",
+    "noContactsYet": "No contacts yet",
+    "noContactsHint": "Send a payment or visit History to start",
+    "amountLabel": "Amount",
+    "amountMin": "Min 0.1 iUSD",
+    "amountMax": "Max 1,000 iUSD per transaction",
+    "memoLabel": "Memo",
+    "memoPlaceholder": "Optional note",
+    "fee": "Fee: {{amount}} iUSD",
+    "feeCap": "(cap)",
+    "total": "Total: {{amount}} iUSD",
+    "autoSaveContact": "This person will be auto-saved to your Contacts",
+    "paymentQR": "Payment QR",
+    "building": "Building…",
+    "confirming": "Confirm…",
+    "send": "Send",
+    "sendAmount": "Send {{amount}} iUSD"
+  },
+  "request": {
+    "title": "Request",
+    "modePersonal": "Me",
+    "modeBusiness": "Biz",
+    "tabNew": "New",
+    "tabInvoices": "Invoices",
+    "empty": "No requests yet",
+    "createFirst": "Create first request →",
+    "share": "Share ↗",
+    "amountLabel": "Amount",
+    "noteLabel": "Note",
+    "notePlaceholder": "Description (optional)",
+    "taxNoLabel": "Tax No.",
+    "dueLabel": "Due",
+    "invLabel": "Inv #",
+    "payerLabel": "Payer",
+    "payerPlaceholder": "Name (optional)",
+    "status": {
+      "draft": "Draft",
+      "sent": "Awaiting Payment",
+      "paying": "Awaiting Confirm",
+      "paid": "Paid",
+      "overdue": "Overdue",
+      "refunded": "Refunded",
+      "cancelled": "Cancelled"
+    }
+  },
+  "gift": {
+    "title": "Gift",
+    "message": "Message",
+    "quickPicks": "Quick picks",
+    "next": "Next →",
+    "back": "← Back",
+    "recipient": "Recipient",
+    "shares": "Shares",
+    "total": "Total",
+    "ready": "Gift is ready!",
+    "shareAccessHint": "Share access link to your friend.",
+    "rightClickSave": "Right-click image to save · Link copied",
+    "dismiss": "Dismiss",
+    "viewDetails": "View gift details →",
+    "scanToOpen": "Scan to Open Gift",
+    "noReplies": "No replies yet",
+    "noViews": "No views yet",
+    "loadingHistory": "Loading history...",
+    "giftList": "Gift List",
+    "historyTab": "History",
+    "newest": "Newest",
+    "oldest": "Oldest",
+    "newestFirst": "Newest first",
+    "oldestFirst": "Oldest first",
+    "noDescription": "No description available.",
+    "allCollections": "All Collections",
+    "flexible": "Flexible",
+    "source": "Source ↗",
+    "featured": "⭐ Featured",
+    "stepChoose": "Choose Gift",
+    "stepWrite": "Write Message",
+    "stepSendTo": "Send To",
+    "feePercent": "fee {{percent}}%",
+    "feeLabel": "Fee ({{percent}}%)",
+    "more": "more",
+    "browseAll": "Browse all gifts",
+    "writePlaceholder": "Write a message...",
+    "amountIusd": "Amount (iUSD)",
+    "amountRangePlaceholder": "0.1 ~ 1000 iUSD",
+    "tapToEdit": "✎ tap to edit",
+    "amountInRange": "0.10 – 1,000 iUSD",
+    "anyoneGroup": "Anyone (group)",
+    "anyoneCanClaim": "Anyone can claim",
+    "enterContact": "Enter contact or ID",
+    "invalidRecipient": "Invalid username or ID",
+    "usernameInactive": "Username inactive",
+    "recipientRequired": "Recipient required",
+    "sendFailed": "Send failed",
+    "missingTxParams": "Missing transaction parameters",
+    "giftTxFailed": "Gift transaction failed",
+    "contactsHeader": "Contacts",
+    "fromHistory": "✨ From History",
+    "splitEqual": "Equal",
+    "splitRandom": "Random",
+    "balanceLine": "Balance: {{amount}} iUSD",
+    "wrapping": "Wrapping...",
+    "insufficientBalance": "Insufficient Balance",
+    "wrapGift": "🎁 Wrap Gift",
+    "giftNumber": "Gift #{{id}}",
+    "fromName": "From {{name}}",
+    "anonymous": "Anonymous",
+    "mysteryAwaits": "A mystery gift awaits",
+    "claimedAgo": "Claimed {{time}}",
+    "claimed": "Claimed",
+    "view": "View →",
+    "openCta": "🎁 Open →",
+    "expiredChip": "Expired",
+    "claimedOfShort": "{{claimed}}/{{total}} claimed",
+    "yourGiftReady": "Your gift is ready!",
+    "toLabel": "To",
+    "feeLabelShort": "Fee",
+    "notificationSent": "Notification sent to {{name}}",
+    "fromSender": "FROM {{name}}",
+    "giftWaitingShort": "A gift is waiting for you",
+    "scanToOpenShort": "Scan to open",
+    "iusdPay": "iUSD Pay",
+    "copied": "Copied!",
+    "copyLink": "Copy Link",
+    "saveImage": "Save Image",
+    "shareLink": "Share Link",
+    "backToQr": "← Back to QR",
+    "closeShareLater": "You can close this and share later from Gift History.",
+    "preparing": "Preparing...",
+    "imageSaved": "Image Saved!",
+    "qrBtn": "QR",
+    "backBtn": "Back",
+    "hasAGiftForYou": "has a gift for you",
+    "sharesCount_one": "{{count}} share",
+    "sharesCount_other": "{{count}} shares",
+    "openedCount": "{{count}}/{{total}} opened",
+    "viewsCount": "{{count}} views",
+    "someone": "Someone",
+    "shareTitle": "{{name}} Gift",
+    "enjoyEmoji": "Enjoy! 🎁",
+    "forYouEmoji": "For you with love ❤️",
+    "happyBirthday": "Happy birthday! 🎂",
+    "thankYouEmoji": "Thank you! 🙏",
+    "cheersEmoji": "Cheers! 🥂",
+    "justBecause": "Just because 🌟",
+    "deserveIt": "You deserve it ✨",
+    "haveFun": "Have fun! 🎉",
+    "treatYourself": "Treat yourself 💫",
+    "progressPanel": {
+      "daysHours": "{{days}}d {{hours}}h",
+      "hoursMinutes": "{{hours}}h {{minutes}}m",
+      "minutesOnly": "{{minutes}}m",
+      "progress": "Progress",
+      "inProgress": "In progress",
+      "completed": "Completed",
+      "expired": "Expired",
+      "expiredRefunded": "Expired · refunded",
+      "expiresIn": "Expires in {{label}}",
+      "endsIn": "Ends in {{label}}",
+      "claimedOf": "of {{total}} claimed",
+      "claimsHeader": "Claims · {{count}}",
+      "replied": "💌 REPLIED",
+      "claimedChip": "✓ CLAIMED",
+      "anon": "Anon",
+      "allClaimed": "All shares have been claimed.",
+      "refunded_one": "{{count}} unclaimed share refunded",
+      "refunded_other": "{{count}} unclaimed shares refunded",
+      "refundedNote": "Funds for unclaimed shares were automatically returned to your balance when the gift expired.",
+      "noClaimsYet": "No one has claimed yet. Share the link to notify them."
+    },
+    "collection": {
+      "flowers": "Flowers",
+      "drinks": "Drinks",
+      "food": "Food",
+      "treats": "Treats",
+      "tech": "Tech",
+      "luxury": "Luxury",
+      "office": "Office",
+      "art": "Art",
+      "books": "Books",
+      "games": "Games",
+      "wellness": "Wellness",
+      "travel": "Travel",
+      "fashion": "Fashion",
+      "kids": "Kids",
+      "pets": "Pets",
+      "sports": "Sports",
+      "other": "Other",
+      "painting": "Painting",
+      "music_box": "Music Box",
+      "instrument": "Instrument",
+      "sculpture": "Sculpture",
+      "textile": "Textile",
+      "ceramic": "Ceramic",
+      "watch": "Watch",
+      "brooch": "Brooch",
+      "armor": "Armor",
+      "furniture": "Furniture",
+      "jewelry": "Jewelry"
+    }
+  },
+  "nav": {
+    "dashboard": "Dashboard",
+    "home": "Home",
+    "more": "More"
+  },
+  "history": {
+    "title": "History",
+    "paymentJourney": "Payment Journey",
+    "expires": "Expires",
+    "noInvoices": "No invoices yet",
+    "noActivity": "No activity yet",
+    "noGiftHistory": "No gift history yet",
+    "detailSent": "↑ Sent",
+    "detailReceived": "↓ Received",
+    "copyBtn": "📋 Copy",
+    "receiptPdf": "↓ Receipt PDF",
+    "invoicePdf": "↓ Invoice PDF",
+    "revokeBtn": "↩ Revoke",
+    "refundBtn": "↩ Refund",
+    "noSentTransactions": "No sent transactions",
+    "noReceivedTransactions": "No received transactions",
+    "noTransactionsYet": "No transactions yet — stats will populate as you transact.",
+    "receivedSection": "Received · {{count}}",
+    "sentSection": "Sent · {{count}}",
+    "loadingMore": "Loading…",
+    "loadMoreReceived": "Load more received",
+    "loadMoreSent": "Load more sent",
+    "refreshTitle": "Refresh",
+    "exportCsv": "Export history as CSV",
+    "revokeFailed": "Revoke failed",
+    "refundFailed": "Refund failed: {{msg}}",
+    "refundConfirm": "Refund this payment to the sender?",
+    "anyone": "Anyone",
+    "direct": "direct",
+    "fromLabel": "FROM",
+    "toLabel": "TO",
+    "copySaveTitle": "Copy shortId + save to contacts",
+    "due": "Due",
+    "paymentId": "PAYMENT ID",
+    "sortNewest": "Sort: Newest first (click for oldest)",
+    "sortOldest": "Sort: Oldest first (click for newest)",
+    "loadMore": "Load more",
+    "invoicePayment": "Invoice Payment",
+    "sentTo": "Sent to",
+    "receivedFrom": "Received from",
+    "cancelInvoice": "Cancel Invoice",
+    "cancelInvoiceConfirm": "Cancel this invoice?",
+    "cancelFailed": "Cancel failed: {{msg}}",
+    "timeline": {
+      "created": "Created",
+      "fee": "fee {{amount}}",
+      "pendingClaim": "Pending Claim",
+      "awaitingRecipient": "Awaiting recipient",
+      "autoClaimed": "Will be claimed automatically",
+      "confirmed": "Confirmed",
+      "received": "Received",
+      "expiresOn": "Expires {{date}}",
+      "revoked": "Revoked",
+      "returnedToSender": "Funds returned to sender",
+      "claimed": "Claimed",
+      "refunded": "Refunded",
+      "returnedToClaimer": "Returned to claimer",
+      "expired": "Expired"
+    },
+    "stats": {
+      "thisMonth": "THIS MONTH",
+      "accounting": "ACCOUNTING",
+      "giftsSent": "Gifts Sent",
+      "giftsReceived": "Gifts Rcv",
+      "paid": "Paid",
+      "received": "Received",
+      "moneyIn": "Money In",
+      "moneyOut": "Money Out",
+      "net": "Net",
+      "pending": "Pending"
+    },
+    "tabs": {
+      "all": "All",
+      "sent": "Sent",
+      "received": "Recv",
+      "gift": "Gift",
+      "invoices": "Invoice",
+      "stats": "Stats"
+    },
+    "payStatus": {
+      "sent": {
+        "pending": "Pending Confirm",
+        "confirmed": "Confirmed",
+        "revoked": "Revoked",
+        "refunded": "Refunded",
+        "expired": "Expired",
+        "unknown": "Unknown"
+      },
+      "received": {
+        "claimable": "Claimable",
+        "received": "Received",
+        "cancelled": "Cancelled",
+        "refunded": "Refunded",
+        "expired": "Expired",
+        "unknown": "Unknown"
+      }
+    }
+  },
+  "register": {
+    "title": "Create Account",
+    "chooseNickname": "Choose a nickname for your payment address",
+    "nicknamePlaceholder": "e.g. alice · 小明 · 🦊",
+    "nicknameHint": "Any language · 1–12 characters · 🎲 for random",
+    "randomNickname": "Random nickname",
+    "creating": "Creating…",
+    "submit": "Create Account →"
+  },
+  "registered": {
+    "openWallet": "Open Wallet →",
+    "wow": "WOW, you got a cool",
+    "wowCard": "iUSD payment Card!",
+    "tapCard": "TAP CARD",
+    "shareText": "Send me iUSD gifts — scan my card QR! 🎁"
+  },
+  "profile": {
+    "defaultSlogan": "You make my day ✨",
+    "copyFullId": "Copy full ID",
+    "contactAlreadyAdded": "Contact already added",
+    "addToContacts": "Add to Contacts"
+  },
+  "invoiceView": {
+    "title": "INVOICE",
+    "billFrom": "Bill From",
+    "billTo": "Bill To",
+    "issueDate": "Issue Date",
+    "dueDate": "Due Date",
+    "invoiceAmount": "Invoice Amount",
+    "recipientGets": "Recipient Gets",
+    "payLink": "Pay Link",
+    "taxId": "Tax ID: {{id}}",
+    "noteLabel": "Note: {{note}}",
+    "platformFeeLabel": "Platform Fee (0.5%{{cap}})",
+    "platformFeeCapped": ", capped",
+    "paidStatus": "✓ Paid {{date}}",
+    "noToken": "No token",
+    "failedToLoad": "Failed to load",
+    "notFound": "Invoice not found.",
+    "unavailable": "Invoice unavailable.",
+    "saveAsImage": "Save as image",
+    "printPdf": "Print / Save PDF",
+    "openInSafariChrome": "Open in Safari or Chrome to save as PDF",
+    "close": "Close"
+  },
+  "receiptView": {
+    "back": "← Back",
+    "paymentReceipt": "Payment Receipt",
+    "receipt": "Receipt",
+    "noPaymentId": "No payment ID",
+    "notFound": "Receipt not found.",
+    "failedToLoad": "Failed to load",
+    "fee": "Fee: {{amount}} iUSD",
+    "date": "Date",
+    "confirmedLabel": "Confirmed",
+    "verify": "Verify",
+    "from": "From",
+    "to": "To",
+    "tx": "Tx: {{hash}}",
+    "id": "ID: {{id}}",
+    "statusPaid": "Paid",
+    "statusConfirmed": "Confirmed",
+    "statusPending": "Pending",
+    "statusRevoked": "Revoked",
+    "statusRefunded": "Refunded",
+    "statusExpired": "Expired",
+    "statusFailed": "Failed",
+    "statusUnknown": "Unknown",
+    "saveAsImage": "Save as image",
+    "printPdf": "Print / Save PDF",
+    "openInSafariChrome": "Open in Safari or Chrome to save as PDF",
+    "errorPrefix": "Error: {{msg}}"
+  },
+  "merchant": {
+    "title": "Business Profile",
+    "preview": "Preview",
+    "businessName": "Business Name *",
+    "businessNamePlaceholder": "e.g. Jack's Coffee",
+    "companyLogo": "Company Logo (optional)",
+    "uploadJpgPng": "Upload JPG / PNG",
+    "remove": "Remove",
+    "logoHint": "JPG/PNG · max 500 KB · stored securely",
+    "maxFileSize": "Max file size is 500 KB",
+    "clearConfirm": "Clear business profile?",
+    "brandColor": "Brand Color",
+    "tagline": "Tagline / Description (optional)",
+    "taglinePlaceholder": "e.g. Best coffee in town",
+    "businessFont": "Business Name Font",
+    "contactInfo": "Contact Information",
+    "email": "EMAIL",
+    "phone": "PHONE",
+    "website": "WEBSITE",
+    "emailPlaceholder": "contact@example.com",
+    "phonePlaceholder": "+1 234 567 8900",
+    "websitePlaceholder": "https://example.com",
+    "addressLegal": "Address & Legal",
+    "address": "ADDRESS",
+    "addressPlaceholder": "123 Main St, City, Country",
+    "taxIdLabel": "TAX ID / BUSINESS REGISTRATION NO.",
+    "taxIdPlaceholder": "e.g. US-12-3456789",
+    "invoiceNumbering": "Invoice Numbering",
+    "prefix": "PREFIX",
+    "startingNo": "STARTING NO.",
+    "startingFrom": "Starting from: {{sample}} (auto-increments server-side)",
+    "save": "Save Business Profile",
+    "saved": "✓ Saved!",
+    "clear": "Clear",
+    "storedLocally1": "This profile is stored locally on your device.",
+    "storedLocally2": "Switch to Business mode on the Request page to use it.",
+    "setUpProfile": "🏢 Set up your business profile →"
+  },
+  "notFound": {
+    "title": "Page not found",
+    "desc": "The page you're looking for doesn't exist or has been moved."
+  },
+  "installGuide": {
+    "alreadyInstalled": "Already installed!",
+    "usingStandalone": "You're using iUSD Pay as a standalone app.",
+    "installApp": "Install App",
+    "androidHint": "Open this page in Chrome and tap the menu (⋮) → \"Add to Home Screen\"",
+    "desktopHint": "In Chrome, click the install icon (⊕) in the address bar, or go to Menu → \"Install app\"",
+    "skip": "Skip for now",
+    "ios": {
+      "step1": "Tap the Share button at the bottom of Safari",
+      "step2": "Scroll down and tap \"Add to Home Screen\"",
+      "step3": "Tap \"Add\" to confirm"
+    }
+  },
+  "payLink": {
+    "resolving": "Resolving payment link…",
+    "invoiceDetails": "INVOICE DETAILS",
+    "status": "Status",
+    "invoiceId": "Invoice ID",
+    "recipient": "Recipient",
+    "dueDate": "Due date",
+    "paymentProof": "PAYMENT PROOF",
+    "invalidLink": "Invalid Link",
+    "claimed": "Claimed",
+    "paymentComplete": "Payment Complete",
+    "receivedByName": "{{amount}} iUSD received by {{name}}",
+    "paymentSent": "Payment Sent",
+    "processingAuto": "{{amount}} iUSD · processing automatically",
+    "claimWithinMinutes": "Claim usually completes within 1–2 minutes",
+    "goToDashboard": "Go to Dashboard"
+  },
+  "verify": {
+    "title": "Payment Verification",
+    "verifying": "Verifying payment…",
+    "noPid": "No payment ID provided.",
+    "notFound": "Payment not found",
+    "error": "Error: {{msg}}",
+    "verification": "Verification",
+    "to": "TO",
+    "platformFee": "Platform Fee",
+    "txHash": "Transaction Hash",
+    "goHomepage": "Go to Homepage"
+  },
+  "toast": {
+    "thatsYou": "That's you!",
+    "copied": "Copied {{value}}",
+    "addedToContacts": "Added {{name}} to contacts",
+    "linkCopied": "Link copied to clipboard",
+    "paymentNotLinked": "Payment not linked yet — try again in a few seconds",
+    "claimFailed": "Claim failed",
+    "claimQueued": "Claim queued",
+    "networkError": "Network error: {{msg}}",
+    "noNewContactsInHistory": "No new contacts in history",
+    "importedFromHistory_one": "Imported {{count}} contact from history",
+    "importedFromHistory_other": "Imported {{count}} contacts from history",
+    "noNewImport": "No new contacts to import",
+    "importFailed": "Import failed: {{msg}}"
+  },
+  "promoBanner": {
+    "coffee": {
+      "title": "Buy a friend a coffee",
+      "subtitle": "Send a warm coffee gift"
+    },
+    "rose": {
+      "title": "Send a Rose",
+      "subtitle": "Perfect for someone special"
+    },
+    "boss": {
+      "title": "Be the Boss, Offer Perks",
+      "subtitle": "Show your generosity"
+    }
+  },
+  "inbox": {
+    "title": "InBox",
+    "refresh": "↻ Refresh",
+    "historyLabel": "HISTORY · {{count}}",
+    "statusReceived": "Received",
+    "statusCancelled": "Cancelled",
+    "statusRefunded": "Refunded",
+    "statusExpired": "Expired",
+    "statusDone": "Done",
+    "businessInvoice": "🏪 Business Invoice",
+    "personalPayment": "👤 Personal Payment",
+    "fromId": "From {{id}}",
+    "fromLabel": "From",
+    "receipt": "Receipt",
+    "invoice": "Invoice",
+    "refund": "↩ Refund",
+    "refundConfirm": "Refund this payment to the sender?",
+    "refundFailed": "Refund failed: {{msg}}",
+    "noRepliesHint": "No replies yet. Your gift thank-yous will appear here.",
+    "newGiftsSection": "NEW GIFTS · {{count}}",
+    "giftsSection": "GIFTS · {{count}}",
+    "sentSection": "SENT · {{count}}",
+    "alreadyClaimedRefreshed": "This payment was already claimed automatically. Inbox refreshed.",
+    "alreadyClaimedRemoved": "Already claimed — removed from inbox.",
+    "claimed": "Claimed!",
+    "feePaid": "Fee paid",
+    "anonymous": "Anonymous",
+    "claimTo": "Claim to:",
+    "autoClaimFuture": "Auto-claim future payments",
+    "autoExpires": "Auto-expires if unclaimed",
+    "loadingReplies": "Loading replies…",
+    "loadMoreReplies": "Load more replies",
+    "filter": {
+      "all": "All",
+      "payment": "Payment",
+      "gift": "Gift",
+      "reply": "Reply"
+    },
+    "replyCount_one": "{{count}} reply",
+    "replyCount_other": "{{count}} replies"
+  },
+  "contacts": {
+    "noResults": "No results",
+    "autoSavedHint": "People you send to are automatically saved",
+    "importFromHistory": "✨ Import from History",
+    "importFromHistoryTitle": "Import counterparties from recent payment + gift history",
+    "searchPlaceholder": "Search by name or ID..."
+  },
+  "invoices": {
+    "title": "Accounting",
+    "protocolFees": "Protocol Fees Paid"
+  },
+  "payRequest": {
+    "title": "Payment Request",
+    "requestSent": "Request Sent!",
+    "error": "Error"
+  },
+  "receipt": {
+    "paymentSent": "Payment Sent.",
+    "home": "Home",
+    "viewInvoice": "View Invoice",
+    "loading": "Loading receipt…"
+  },
+  "install": {
+    "addToHome": "Add to Home Screen",
+    "tapShare": "Tap Share",
+    "tapMenu": "Tap menu",
+    "installTitle": "Install iUSD Pay",
+    "install": "Install"
+  },
+  "deposit": {
+    "balance": "Balance",
+    "youReceive": "You receive",
+    "rate": "Rate",
+    "estTime": "Est. time",
+    "depositTitle": "Deposit {{label}}",
+    "withdrawTitle": "Withdraw {{label}}",
+    "from": "From",
+    "to": "To",
+    "selectFrom": "Select asset to deposit from",
+    "selectTo": "Select destination",
+    "loadingAssets": "Loading assets...",
+    "noAssets": "No assets with balance found",
+    "noDestinations": "No destination chains found",
+    "onChain": "on {{chain}}",
+    "current": "current",
+    "max": "MAX",
+    "gasFee": "Gas fee",
+    "estimatedByWallet": "Estimated by wallet",
+    "relayFee": "Relay fee",
+    "route": "Route",
+    "fetchingRoute": "Fetching route...",
+    "insufficient": "Insufficient balance — you have {{balance}} {{symbol}}",
+    "preparingTx": "Preparing transaction...",
+    "confirmInWallet": "Please confirm in your wallet",
+    "tryAgain": "Try again",
+    "submitted": "Transaction submitted",
+    "done": "Done",
+    "txCancelled": "Transaction cancelled",
+    "noEvmWallet": "No EVM wallet found. Please install MetaMask.",
+    "unsupportedTx": "Unsupported transaction type"
+  },
+  "giftClaim": {
+    "iGotLabel": "★ I GOT",
+    "onlyOneShare": "Only 1 share",
+    "sharesCountLabel_one": "{{count}} share",
+    "sharesCountLabel_other": "{{count}} shares",
+    "fromSenderOverlay": "from {{name}}",
+    "detailsBtn": "details",
+    "claimedLabel": "claimed",
+    "viewedLabel": "viewed",
+    "chasedLabel": "chased",
+    "moreBtn": "[more]",
+    "membersHeader": "MEMBERS · {{count}}",
+    "lettersHeader": "LETTERS · {{count}}",
+    "replyBtn": "Reply",
+    "replyToPlaceholder": "Reply to {{name}}…",
+    "loveWhatYouSee": "★ Love what you see?",
+    "giftThemLine": "Gift {{name}} a tip",
+    "scanOrOpenProfile": "Open my profile →",
+    "scanOr": "Scan or",
+    "postToPlaceholder": "Post to {{name}}…",
+    "postBtn": "Post",
+    "sentWithLoveBy": "Sent with love by",
+    "giftReceivedChip": "Gift received!",
+    "anonName": "them",
+    "errInvalidLink": "Invalid gift link",
+    "errNotFound": "Gift not found",
+    "errClaimFailed": "Claim failed",
+    "errFailed": "Failed",
+    "errSignInFirst": "Please sign in first",
+    "errInvalidClaimLink": "Invalid claim link",
+    "signInToSave": "Sign in to save contacts",
+    "shareTitle": "Gift from {{name}}",
+    "failedSaveContact": "Failed to save contact",
+    "loading": "Loading gift...",
+    "goHome": "Go Home",
+    "youReceived": "You received",
+    "from": "From",
+    "reply": "Reply →",
+    "alreadyClaimed": "Already Claimed",
+    "scanProfile": "Scan to open profile",
+    "thankPresets": {
+      "thankBoss": "Thank you Boss!",
+      "appreciated": "Much appreciated!",
+      "soKind": "So kind of you!",
+      "madeMyDay": "This made my day!",
+      "youreBest": "You're the best!",
+      "whatSurprise": "What a surprise!",
+      "loveYou": "Love you!",
+      "sweetest": "You're the sweetest!",
+      "heartFull": "My heart is full!",
+      "bestBirthday": "Best birthday ever!",
+      "bestGift": "Best gift ever!",
+      "cheersYou": "Cheers to you!"
+    }
+  },
+  "scan": {
+    "title": "Scan QR",
+    "lookingUp": "Looking up account…",
+    "paymentDetails": "PAYMENT DETAILS",
+    "scannedContent": "SCANNED CONTENT",
+    "manualInput": "MANUAL INPUT / IMAGE",
+    "pasteHint": "Paste URL or Account ID…",
+    "startCamera": "Start Camera",
+    "stopCamera": "Stop Camera",
+    "flipCamera": "Flip Camera",
+    "retry": "Retry",
+    "scannedCheck": "Scanned! Check your desktop.",
+    "scanAgain": "↩ Scan Again",
+    "tagInvoice": "🧾 Invoice / Request",
+    "tagIdentity": "👤 Identity",
+    "tagScanned": "🔗 Scanned",
+    "due": "Due",
+    "payRequest": "💸 Pay This Request",
+    "payAmount": "💸 Pay {{amount}} iUSD",
+    "contactSaved": "✅ Contact Saved!",
+    "reAddContactsTag": "👤 Re-Add to Contacts",
+    "addContactsTag": "👤 Add to Contacts",
+    "transfer": "Transfer",
+    "gift": "Gift",
+    "contactAlreadyAdded": "Contact already added",
+    "reAddToContacts": "Re-add to Contacts",
+    "addToContacts": "Add to Contacts",
+    "visit": "Visit →",
+    "clickToStart": "Click to start camera",
+    "pointPhone": "Scanning — point phone at QR code",
+    "disconnect": "✕ Disconnect",
+    "go": "Go",
+    "dropToScan": "Drop to scan QR",
+    "chooseFromGallery": "Choose from Gallery",
+    "galleryHint": "Select or drag a QR code image",
+    "cameraN": "Camera {{n}}",
+    "err": {
+      "accessBlocked": "🔒 Camera Access Blocked",
+      "permissionDesc": "Camera permission was denied. You need to re-enable it in your browser settings.",
+      "chromeEdge": "🌐 Chrome / Edge",
+      "pasteInstructions": "Copy this URL → paste in a new tab → set Camera to",
+      "allow": "Allow",
+      "copy": "Copy",
+      "firefoxHint": "Click the camera 🔒 icon in the address bar → Allow",
+      "safariHint": "Settings → Safari → Camera → Allow",
+      "androidHint": "Tap ⋮ → Site settings → Camera → Allow",
+      "retryAfter": "↺ Retry After Enabling",
+      "noCamera": "📷 No Camera Found",
+      "noCameraDesc": "No camera detected on this device.",
+      "useManualFull": "Use the Manual Input below or connect an external scanner.",
+      "inUse": "📷 Camera in Use",
+      "inUseDesc": "Camera is being used by another app. Close other apps using the camera and retry.",
+      "flashNotSupported": "Flash not supported on this device",
+      "noQrInImage": "No QR code found in image",
+      "couldNotCreateRelay": "Could not create relay session",
+      "cameraError": "Camera error: {{msg}}",
+      "cameraDenied": "Camera denied: {{msg}}",
+      "connectionFailed": "Connection failed. Try Basic mode.",
+      "desktopNotReady": "Desktop not ready. Reload desktop page.",
+      "failedToSend": "Failed to send",
+      "invalidSession": "Invalid session"
+    },
+    "relay": {
+      "gettingCamera": "Getting camera…",
+      "connectingDesktop": "Connecting to desktop…",
+      "liveCameraHeader": "📹 Live Camera",
+      "qrScannerHeader": "📤 QR Scanner",
+      "liveBadge": "● LIVE",
+      "streamingDesktop": "📹 Streaming to desktop — they see what you see",
+      "pointAtDesktop": "📤 Point at the QR code on the desktop",
+      "statusPrefix": "🔄 {{status}}"
+    }
+  },
+  "welcome": {
+    "tagline": "stablecoin payments on Initia",
+    "whatYouGet": "What you get",
+    "features": {
+      "transfer": "Transfer & request freely with Scan",
+      "merchants": "Integration with merchants smoothly",
+      "gifts": "Send gifts to friends & groups"
+    },
+    "agreePrefix": "I agree to the",
+    "and": "and",
+    "tos": "Terms of Service",
+    "privacy": "Privacy Policy",
+    "experimentalNote": ". This app is experimental on mainnet.",
+    "getStarted": "Get started →"
+  },
+  "dashboard": {
+    "tapEditNickname": "Tap to edit nickname",
+    "minGasHint": "Min 1 INIT or 1 USDC for gas",
+    "refreshBalances": "Refresh balances",
+    "actions": {
+      "transfer": "Transfer",
+      "request": "Request",
+      "gift": "Gift",
+      "inbox": "Inbox",
+      "contacts": "Contacts",
+      "scan": "Scan",
+      "history": "History",
+      "settings": "Settings"
+    }
+  },
+  "settings": {
+    "title": "Settings",
+    "account": {
+      "title": "Account",
+      "nickname": "Nickname",
+      "setNickname": "Set nickname",
+      "bio": "Bio / Slogan",
+      "bioPlaceholder": "e.g. Scan and gift me, reply you a Kiss 💋",
+      "id": "ID",
+      "wallet": "Wallet",
+      "copied": "Copied",
+      "ecosystem": "Eco System",
+      "autoClaim": "Auto-Claim"
+    },
+    "appearance": {
+      "title": "Appearance",
+      "auto": "Auto",
+      "light": "Light",
+      "dark": "Dark"
+    },
+    "sound": {
+      "title": "Sound",
+      "desc": "UI clicks, card flips, celebrations",
+      "muted": "Muted",
+      "on": "On",
+      "styles": "Sound Styles",
+      "customize": "Customize",
+      "tapPreview": "Tap any style to preview & select",
+      "unmutePreview": "Unmute above to hear previews",
+      "cat": {
+        "click": "Click",
+        "cardFlip": "Card Flip",
+        "gift": "Gift",
+        "transaction": "Transaction",
+        "menu": "Menu"
+      }
+    },
+    "receive": {
+      "title": "Receive Address",
+      "privacyProtection": "Privacy Protection",
+      "defaultWallet": "My wallet (default)",
+      "change": "Change",
+      "modalTitle": "Protect Your Receiving Address",
+      "modalDesc": "You may set a separate wallet to receive iUSD payments, keeping your connected wallet private. Payments will be routed to this address automatically.",
+      "complianceHeader": "⚠ Compliance Notice",
+      "complianceDesc": "All transactions remain auditable under applicable AML policies regardless of address routing. This signature confirms you understand and consent.",
+      "placeholder": "0x… or init1… (empty = use own wallet)",
+      "signSave": "Sign & Save",
+      "signing": "Sign…"
+    },
+    "about": {
+      "title": "About",
+      "iusdPay": "iUSD Pay",
+      "network": "Network",
+      "contract": "Contract",
+      "tos": "Terms of Service",
+      "privacy": "Privacy Policy",
+      "forceRefresh": "Force Refresh",
+      "community": "Community"
+    },
+    "danger": {
+      "title": "Danger Zone",
+      "disconnect": "Disconnect Wallet",
+      "disconnectTitle": "Disconnect Wallet?",
+      "disconnectDesc": "You can reconnect anytime.",
+      "delete": "Delete Account",
+      "deleteConfirmWarn": "⚠ This permanently deletes your account",
+      "confirmDelete": "Confirm Delete",
+      "deleting": "Deleting…"
+    }
+  },
+  "components": {
+    "nicknameEditor": {
+      "title": "Change Nickname",
+      "placeholder": "Your nickname",
+      "randomNickname": "Random nickname",
+      "generating": "GENERATING...",
+      "firstChangeFee": "First change fee",
+      "changeFeeN": "Change fee (change #{{n}})",
+      "firstFeeNote": "First nickname change costs 0.10 iUSD. Future changes will cost 10.00 iUSD each.",
+      "feeNote": "Each nickname change costs 10.00 iUSD.",
+      "idStays": "Your Account ID stays the same",
+      "notUniqueAck": "I understand that nicknames are not unique. Other accounts may use the same nickname.",
+      "signing": "Signing...",
+      "payAndSave": "Pay {{fee}} iUSD & Save",
+      "errEmpty": "Nickname cannot be empty",
+      "errFee": "Could not determine fee",
+      "errTxFailed": "Transaction failed",
+      "errNoHash": "No transaction hash returned",
+      "errCancelled": "Transaction cancelled",
+      "errGeneric": "Failed"
+    },
+    "mwc": {
+      "chooseMethod": "Choose connection method",
+      "checkWallet": "Check your wallet app",
+      "approveRequest": "Approve connection request in wallet app",
+      "returnAfterApprove": "⚠️ Return to this page after approving",
+      "tryAgain": "Try again",
+      "cancel": "Cancel",
+      "openInWallet": "Open in wallet",
+      "best": "BEST",
+      "continueInBrowser": "Continue in {{name}}'s browser",
+      "signAndReturn": "Sign and return",
+      "approveAndReturn": "Approve in app, come back here",
+      "directConnection": "Direct connection • No relay servers",
+      "connectionFailed": "Connection failed",
+      "state": {
+        "initializing": "Initializing...",
+        "generatingUri": "Connecting...",
+        "waitingApproval": "Approve in wallet app...",
+        "connected": "Connected!",
+        "failed": "Failed"
+      }
+    },
+    "quickLogin": {
+      "signing": "Signing...",
+      "verifying": "Verifying...",
+      "processing": "Processing...",
+      "signInTo": "Sign in to {{action}}",
+      "walletTapToSignIn": "Wallet connected. Tap to sign in.",
+      "almostThere": "Almost there! Complete registration to {{action}}.",
+      "redirecting": "Redirecting to registration...",
+      "connectionFailed": "Connection failed",
+      "tryAgain": "Try again",
+      "connecting": "Connecting...",
+      "connectTo": "Connect to {{action}}",
+      "tapConnectHint": "Tap Connect — your wallet will ask to sign",
+      "signInWith": "Sign in with",
+      "orWallet": "OR WALLET",
+      "other": "Other",
+      "openInWalletBrowser": "Open this link in your wallet's browser",
+      "linkCopied": "Link copied to clipboard",
+      "dismiss": "Dismiss"
+    },
+    "identityCardBack": {
+      "idLabel": "ID:",
+      "deposit": "Deposit",
+      "withdraw": "Withdraw",
+      "onlyOn": "Only on",
+      "gas": "Gas",
+      "gasOk": "Gas OK",
+      "lowGas": "Low Gas"
+    },
+    "identityCard": {
+      "validFrom": "VALID FROM",
+      "status": "STATUS",
+      "statusActive": "Active",
+      "statusFrozen": "Frozen",
+      "statusDeactivated": "Deactivated",
+      "viewProfile": "View profile card",
+      "scanAndGift": "Scan and Gift ✨",
+      "share": "↗ Share",
+      "shareText": "Got my iUSD Pay card! Scan and gift",
+      "copyLink": "Copy link",
+      "copied": "Copied!"
+    },
+    "qrScan": {
+      "scanQR": "Scan QR",
+      "cameraUnavailable": "Camera not available",
+      "turnFlashOff": "Turn flash off",
+      "turnFlashOn": "Turn flash on",
+      "cancel": "Cancel"
+    },
+    "errorBoundary": {
+      "updating": "Updating…",
+      "somethingWrong": "Something went wrong",
+      "genericErr": "An unexpected error prevented this page from loading.",
+      "reload": "Reload",
+      "resetReload": "Reset & reload"
+    }
+  },
+  "giftBox": {
+    "1": {
+      "name": "Music Box",
+      "description": "Gold and enamel shield-form pendant with an automaton farmyard scene on one side and a rose on the other, bordered with half pearls."
+    },
+    "2": {
+      "name": "FLY Coffee",
+      "description": "Enjoy Fly Coffee, 50% OFF"
+    },
+    "3": {
+      "name": "Repeating watch",
+      "description": "Repeating watch by Francis Perigal (British, 1741–67). Partly enameled gold case, diamond-set silver hands on white enamel dial."
+    },
+    "4": {
+      "name": "Guitar",
+      "description": "Guitar with tortoiseshell, ebony, and ivory chevrons, framed scrollwork and geometric banding — a virtuosic blend of woods and inlay."
+    },
+    "5": {
+      "name": "Music Box",
+      "description": "Swiss music box shaped like a mandolin, ca. 1820, various materials."
+    },
+    "6": {
+      "name": "Guitar",
+      "description": "Highly ornate guitar by Giacomo Ertel (late 17th c.) — spruce, ebony, fruitwood, bone, ivory, mother-of-pearl and parchment, Italian/German craftsmanship."
+    },
+    "7": {
+      "name": "Winter Morning in the Country",
+      "description": "Currier & Ives, 1873. Hand-colored lithograph of a snowy rural scene: a two-horse sleigh carrying a couple and milk cans."
+    },
+    "8": {
+      "name": "Give Me Liberty or Give Me Death!",
+      "description": "Currier & Ives, 1876. Hand-colored lithograph of Patrick Henry delivering his famous speech before the Virginia Assembly, March 1775."
+    },
+    "9": {
+      "name": "Music Box",
+      "description": "Swiss oblong gold-and-enamel music box, ca. 1820, with blue-and-yellow enamel borders framing a classical miniature edged in half pearls."
+    },
+    "10": {
+      "name": "Watch case",
+      "description": "Watch case by George Harrison, ca. 1770 — partly enameled gold, outer case set with diamonds."
+    },
+    "11": {
+      "name": "Division Viol",
+      "description": "Division Viol by Richard Meares, ca. 1680. Spruce, ebony, maple. British bowed instrument of the late Renaissance."
+    },
+    "12": {
+      "name": "Dragon",
+      "description": "Early 17th-century bronze dragon by Giacomo Laurenziani — originally catalogued as a griffin."
+    },
+    "13": {
+      "name": "Roses and Lilies",
+      "description": "Henri Fantin-Latour, 1888. Oil on canvas — a virtuosic floral still life of roses and lilies."
+    },
+    "14": {
+      "name": "Watch",
+      "description": "Watch by F. L. Meybom, ca. 1670–75. Gold and blued-steel case with rock crystal and diamonds; painted enamel dial."
+    },
+    "15": {
+      "name": "Dragonfly brooch",
+      "description": "Art Nouveau dragonfly brooch by Edgar Bense, ca. 1890. Gold, diamond, and plique-à-jour enamel wings."
+    },
+    "16": {
+      "name": "Armlet",
+      "description": "Indian armlet (bazuband), 19th c. Woven gold studded with rubies and a rose-cut diamond."
+    },
+    "17": {
+      "name": "Armor Garniture of George Clifford",
+      "description": "Armor garniture of George Clifford, Queen’s Champion, made by Jacob Halder in 1586. Steel with gold leather and textile."
+    },
+    "18": {
+      "name": "Brooch in the form of an owl head",
+      "description": "Owl-head brooch by Castellani, ca. 1860 — gold and agate, a revival-style piece of 19th-century archaeological jewelry."
+    },
+    "19": {
+      "name": "Watch",
+      "description": "Watch by Charles Bobinet, ca. 1655–60. Agate case with enameled gold mounts; gilded brass movement."
+    },
+    "20": {
+      "name": "Irises",
+      "description": "Vincent van Gogh, 1890. Oil on canvas — the celebrated Irises."
+    },
+    "21": {
+      "name": "Sugar bowl with cover",
+      "description": "Sugar bowl with cover by Giovacchino Belli, ca. 1811–22. Silver gilt in a relaxed Empire style."
+    },
+    "22": {
+      "name": "Ewer",
+      "description": "Silver-gilt and enamel ewer, ca. 1600, processing Triumph of Caesar or Scipio figures across its body."
+    },
+    "23": {
+      "name": "The Actor Asao Gakujūrō I as Mashiba Hisatsugu",
+      "description": "Woodblock print by Shunkōsai Hokushū (Osaka), 1822 — the Kabuki actor Asao Gakujūrō I glaring in defiant pose."
+    },
+    "24": {
+      "name": "the Crown of the Andes",
+      "description": "Crown of the Andes — diadem ca. 1660 and arches ca. 1770. Colombian, Popayán. Gold repoussé-and-chased with emeralds."
+    }
+  },
+  "soundStyles": {
+    "click": {
+      "keyboard": {
+        "name": "Keyboard",
+        "desc": "Mechanical keyboard click"
+      },
+      "pop": {
+        "name": "Soft Pop",
+        "desc": "Bubble pop"
+      },
+      "tic": {
+        "name": "Tic",
+        "desc": "Short high tick"
+      },
+      "chime": {
+        "name": "Chime",
+        "desc": "Soft bell ding"
+      },
+      "glass": {
+        "name": "Glass",
+        "desc": "Glass ting"
+      },
+      "coin": {
+        "name": "Coin",
+        "desc": "Metallic ching"
+      },
+      "digital": {
+        "name": "Digital",
+        "desc": "8-bit blip"
+      },
+      "drip": {
+        "name": "Drip",
+        "desc": "Water drop"
+      },
+      "paper": {
+        "name": "Paper",
+        "desc": "Paper tap"
+      },
+      "piano": {
+        "name": "Piano",
+        "desc": "Gentle piano note"
+      },
+      "silent": {
+        "name": "Silent",
+        "desc": "No click sound"
+      }
+    },
+    "card": {
+      "breeze": {
+        "name": "Breeze",
+        "desc": "Soft wind passing by"
+      },
+      "dream_bells": {
+        "name": "Dream Bells",
+        "desc": "Glass wind-chime shimmer"
+      },
+      "page_turn": {
+        "name": "Page Turn",
+        "desc": "Paper rustle"
+      },
+      "whoosh": {
+        "name": "Whoosh",
+        "desc": "Quick swoosh"
+      },
+      "soft_pop": {
+        "name": "Soft Pop",
+        "desc": "Gentle double-pop"
+      },
+      "silent": {
+        "name": "Silent",
+        "desc": "No flip sound"
+      }
+    },
+    "gift": {
+      "celebration": {
+        "name": "Celebration",
+        "desc": "Rising chord C-E-G-C"
+      },
+      "sparkle": {
+        "name": "Sparkle",
+        "desc": "High twinkle notes"
+      },
+      "fanfare": {
+        "name": "Fanfare",
+        "desc": "Brassy ta-da"
+      },
+      "bell_cascade": {
+        "name": "Bell Cascade",
+        "desc": "Descending bells"
+      },
+      "soft_bell": {
+        "name": "Soft Bell",
+        "desc": "Single gentle bell"
+      },
+      "silent": {
+        "name": "Silent",
+        "desc": "No gift sound"
+      }
+    },
+    "txn": {
+      "whoosh_up": {
+        "name": "Whoosh Up",
+        "desc": "Ascending swoosh"
+      },
+      "coin_drop": {
+        "name": "Coin Drop",
+        "desc": "Metallic coin landing"
+      },
+      "pneumatic": {
+        "name": "Pneumatic",
+        "desc": "Retro tube delivery"
+      },
+      "confirm_chime": {
+        "name": "Confirm Chime",
+        "desc": "Double-tone confirmation"
+      },
+      "paper_slide": {
+        "name": "Paper Slide",
+        "desc": "Paper sliding across"
+      },
+      "silent": {
+        "name": "Silent",
+        "desc": "No transaction sound"
+      }
+    },
+    "menu": {
+      "slide": {
+        "name": "Slide",
+        "desc": "Slide panel in"
+      },
+      "soft_pop": {
+        "name": "Soft Pop",
+        "desc": "Gentle pop open"
+      },
+      "swish": {
+        "name": "Swish",
+        "desc": "Air swish"
+      },
+      "silent": {
+        "name": "Silent",
+        "desc": "No menu sound"
+      }
+    }
+  }
+}

@@ -1,0 +1,142 @@
+import { describe, expect, it } from 'vitest'
+import { createTestDb } from '../db/index'
+
+describe('invoice linkage consistency (sent / received / inbox)', () => {
+  it('resolves the same invoice token + metadata for one payment across all 3 views', () => {
+    const db = createTestDb()
+    try {
+      const paymentId = '0xabc123deadbeef00112233445566778899aabbccddeeff'
+
+      db.exec(`
+        CREATE TABLE IF NOT EXISTS accounts (
+          address TEXT PRIMARY KEY,
+          short_id TEXT,
+          nickname TEXT,
+          viewing_privkey_enc TEXT
+        )
+      `)
+
+      db.prepare(`
+        INSERT INTO accounts (address, short_id, nickname, viewing_privkey_enc)
+        VALUES (?, ?, ?, ?)
+      `).run('0xsender', 'SENDER1234567890', 'sender', 'enc_sender')
+
+      db.prepare(`
+        INSERT INTO accounts (address, short_id, nickname, viewing_privkey_enc)
+        VALUES (?, ?, ?, ?)
+      `).run('0xreceiver', 'RECVR12345678901', 'receiver', 'enc_receiver')
+
+      db.prepare(`
+        INSERT INTO payment_intents
+          (payment_id, sender_short_id, recipient_short_id, amount_micro, created_at, invoice_type)
+        VALUES (?, ?, ?, ?, datetime('now'), 'business')
+      `).run(paymentId, 'SENDER1234567890', 'RECVR12345678901', '12000000')
+
+      db.prepare(`
+        INSERT INTO invoice_tokens
+          (token, owner_short_id, invoice_no, recipient_short_id, amount, fee_mode, note, merchant, pay_link, invoice_mode, status, payer_name)
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+      `).run(
+        'invtok1234567890abcdef12',
+        'RECVR12345678901',
+        'INV-0007',
+        'RECVR12345678901',
+        '12',
+        'recipient',
+        'test-note',
+        '{"name":"Demo Merchant"}',
+        'https://iusd-pay.xyz/pay/invtok1234567890abcdef12',
+        'business',
+        'paid',
+        'Alice',
+      )
+
+      db.prepare(`
+        INSERT INTO invoice_transactions
+          (invoice_token, invoice_no, owner_short_id, recipient_short_id, amount, fee_mode, status, payment_id, amount_micro, paid_at, tx_hash, note, merchant)
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, datetime('now'), ?, ?, ?)
+      `).run(
+        'invtok1234567890abcdef12',
+        'INV-0007',
+        'RECVR12345678901',
+        'RECVR12345678901',
+        '12',
+        'recipient',
+        'paid',
+        paymentId,
+        '12000000',
+        '0xtxhash',
+        'test-note',
+        '{"name":"Demo Merchant"}',
+      )
+
+      db.prepare(`
+        INSERT INTO invoice_payments (invoice_token, payment_id, payer_address, amount_micro)
+        VALUES (?, ?, ?, ?)
+      `).run('invtok1234567890abcdef12', paymentId, '0xsender', '12000000')
+
+      // sent view query (same path as account.ts)
+      const sent = db.prepare(`
+        SELECT ip.payment_id,
+               itx.invoice_token,
+               itx.invoice_no,
+               itx.note AS invoice_note,
+               it.pay_link,
+               itx.fee_mode,
+               itx.status AS invoice_status,
+               it.invoice_mode
+        FROM payment_intents ip
+        LEFT JOIN invoice_transactions itx ON lower(replace(itx.payment_id,'0x','')) = lower(replace(ip.payment_id,'0x',''))
+        LEFT JOIN invoice_tokens it ON it.token = itx.invoice_token
+        WHERE ip.sender_short_id = ?
+      `).get('SENDER1234567890') as any
+
+      // received view query (same join path)
+      const received = db.prepare(`
+        SELECT ip.payment_id,
+               itx.invoice_token,
+               itx.invoice_no,
+               itx.note AS invoice_note,
+               it.pay_link,
+               itx.fee_mode,
+               itx.status AS invoice_status,
+               it.invoice_mode
+        FROM payment_intents ip
+        LEFT JOIN invoice_transactions itx ON lower(replace(itx.payment_id,'0x','')) = lower(replace(ip.payment_id,'0x',''))
+        LEFT JOIN invoice_tokens it ON it.token = itx.invoice_token
+        WHERE ip.recipient_short_id = ?
+      `).get('RECVR12345678901') as any
+
+      // inbox view query (invoice_payments + invoice_tokens path)
+      const inbox = db.prepare(`
+        SELECT pi.payment_id,
+               ip.invoice_token,
+               it.invoice_no,
+               it.note
+        FROM payment_intents pi
+        LEFT JOIN invoice_payments ip ON ip.payment_id = pi.payment_id
+        LEFT JOIN invoice_tokens it ON it.token = ip.invoice_token
+        WHERE pi.recipient_short_id = ?
+      `).get('RECVR12345678901') as any
+
+      expect(sent?.invoice_token).toBe('invtok1234567890abcdef12')
+      expect(received?.invoice_token).toBe('invtok1234567890abcdef12')
+      expect(inbox?.invoice_token).toBe('invtok1234567890abcdef12')
+
+      expect(sent?.invoice_no).toBe('INV-0007')
+      expect(received?.invoice_no).toBe('INV-0007')
+      expect(inbox?.invoice_no).toBe('INV-0007')
+
+      expect(sent?.invoice_note).toBe('test-note')
+      expect(received?.invoice_note).toBe('test-note')
+      expect(inbox?.note).toBe('test-note')
+
+      expect(sent?.invoice_mode).toBe('business')
+      expect(received?.invoice_mode).toBe('business')
+      expect(sent?.invoice_status).toBe('paid')
+      expect(received?.invoice_status).toBe('paid')
+    } finally {
+      db.close()
+    }
+  })
+})

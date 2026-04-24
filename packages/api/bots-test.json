@@ -1,0 +1,29 @@
+[
+  {
+    "index": 0,
+    "address": "0xB09e834482F8031Bfa06C5Da8f50EcBebF451B15",
+    "bech32": "init1kz0gx3yzlqp3h7sxchdg758vh6l52xc48j7vsx",
+    "shortId": "2XTCKAKAITJ7SSFE",
+    "nickname": "azureparrot",
+    "token": "7a099b5719399d9514d4ecb805926d2dce5c47df7e1fba96caddb2cf868c4184",
+    "mnemonic": "allow leopard flight fat dish huge puzzle false club devote ocean trash"
+  },
+  {
+    "index": 1,
+    "address": "0x81790FD443A65A6fE85491410EBC07C9e50b9d44",
+    "bech32": "init1s9usl4zr5edxl6z5j9qsa0q8e8jsh82yhue53f",
+    "shortId": "62RG5SH5J40HXJHQ",
+    "nickname": "expresssailfish",
+    "token": "0b4db256ffd9bef42cf456efb1ac0f0e96bf7da1ca152e5fb8aad769c7271ea9",
+    "mnemonic": "slim local height nothing whip grocery reopen royal boring viable lamp ill"
+  },
+  {
+    "index": 2,
+    "address": "0x5972dd3c3097b6e4B78B59C95d7Bf0E71C14a808",
+    "bech32": "init1t9ed60psj7mwfdutt8y467lsuuwpf2qgfawlm2",
+    "shortId": "3PX9OLYC2UOC6REE",
+    "nickname": "artisticeagle",
+    "token": "aa040b7ccafd9e0f9fe1620247d379244824136c26691e41ad76f301a24ce0ee",
+    "mnemonic": "enforce cause lemon worry display fee little parade sense muscle machine arm"
+  }
+]

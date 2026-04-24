@@ -1,0 +1,17 @@
+{
+  "project_name": "iUSD Pay",
+  "repo_url": "https://github.com/ocean2fly/iusd-payment",
+  "commit_sha": "",
+  "rollup_chain_id": "iusd-pay-rollup-1",
+  "deployed_address": "0x7c5d5b1dd602fe033ba17bfbbe741e328adfef72",
+  "vm": "move",
+  "native_feature": "interwoven-bridge",
+  "core_logic_path": "packages/contracts",
+  "native_feature_frontend_path": "packages/app/src/services/deposit.ts",
+  "demo_video_url": "https://www.youtube.com/watch?v=jcYN0fOw0NA",
+  "bridge_id": 1863,
+  "bridge_creation_tx_link": "https://scan.testnet.initia.xyz/initiation-2/txs/6EA3FF3C01C9596D255C306A6816E037B04F5470DAC4C5033F7466883B815FCC",
+  "batch_submissions_link": "https://scan.testnet.initia.xyz/initiation-2/accounts/init19esesu3nqgrks9ke7k4dy2kxtmk8697af9g0y0/txs",
+  "l2_deploy_tx_hash": "2F3D9A098415762742DAA01EEC7CBF8F570286550E5E7E3C8C21FCD1CD9523DC",
+  "mainnet_deployed_address": "0x6f12953441a068ea4cfded5cca2b90d2f25a9273"
+}

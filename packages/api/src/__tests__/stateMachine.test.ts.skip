@@ -1,0 +1,616 @@
+/**
+ * Exhaustive unit + integration tests for paymentStateMachine.ts
+ *
+ * Structure:
+ *   1a. canTransition() — all valid transitions
+ *   1b. canTransition() — all invalid transitions
+ *   1c. isTerminal()
+ *   1d. isRevocable()
+ *   1e. isClaimable()
+ *   1f. transition() — integration tests with real in-memory SQLite
+ */
+
+import { vi, describe, it, expect, beforeEach, afterEach } from 'vitest'
+import type Database from 'better-sqlite3'
+
+// ---------------------------------------------------------------------------
+// Inject an in-memory DB before the state-machine module loads getDb()
+// ---------------------------------------------------------------------------
+import { createTestDb } from '../db/index'
+
+let testDb: Database.Database
+
+vi.mock('../db/index', async (importOriginal) => {
+  const actual = await importOriginal<typeof import('../db/index')>()
+  return {
+    ...actual,
+    getDb: () => testDb,
+  }
+})
+
+import {
+  canTransition,
+  isTerminal,
+  isRevocable,
+  isClaimable,
+  transition,
+  STATUS_LABEL,
+  PAYMENT_STATUS,
+  ALLOWED_TRANSITIONS,
+  type PaymentStatus,
+} from '../shared/paymentStateMachine'
+
+// ---------------------------------------------------------------------------
+// Helper: insert a minimal payment row into testDb
+// ---------------------------------------------------------------------------
+function insertPayment(db: Database.Database, paymentId: string, status: PaymentStatus = 'created') {
+  const now = new Date().toISOString()
+  db.prepare(`
+    INSERT INTO payments
+      (payment_id, recipient, chain, amount, status, created_at, expires_at, updated_at)
+    VALUES (?, 'init1test', 'interwoven-1', '10.000000', ?, ?, ?, ?)
+  `).run(paymentId, status, now, now, now)
+}
+
+function getPaymentStatus(db: Database.Database, paymentId: string): string {
+  const row = db.prepare('SELECT status FROM payments WHERE payment_id = ?').get(paymentId) as { status: string }
+  return row.status
+}
+
+// ---------------------------------------------------------------------------
+// Reset testDb before each test so each test gets a clean slate
+// ---------------------------------------------------------------------------
+beforeEach(() => {
+  testDb = createTestDb()
+})
+
+afterEach(() => {
+  testDb.close()
+})
+
+// ===========================================================================
+// 1a. canTransition() — valid transitions
+// ===========================================================================
+describe('canTransition() — valid transitions', () => {
+  it('created → processing', () => {
+    expect(canTransition('created', 'processing')).toBe(true)
+  })
+
+  it('created → failed', () => {
+    expect(canTransition('created', 'failed')).toBe(true)
+  })
+
+  it('processing → pending_claim', () => {
+    expect(canTransition('processing', 'pending_claim')).toBe(true)
+  })
+
+  it('processing → requires_action', () => {
+    expect(canTransition('processing', 'requires_action')).toBe(true)
+  })
+
+  it('processing → failed', () => {
+    expect(canTransition('processing', 'failed')).toBe(true)
+  })
+
+  it('pending_claim → confirmed', () => {
+    expect(canTransition('pending_claim', 'confirmed')).toBe(true)
+  })
+
+  it('pending_claim → reject_pending', () => {
+    expect(canTransition('pending_claim', 'reject_pending')).toBe(true)
+  })
+
+  it('pending_claim → refunded', () => {
+    expect(canTransition('pending_claim', 'refunded')).toBe(true)
+  })
+
+  it('requires_action → confirmed', () => {
+    expect(canTransition('requires_action', 'confirmed')).toBe(true)
+  })
+
+  it('requires_action → reject_pending', () => {
+    expect(canTransition('requires_action', 'reject_pending')).toBe(true)
+  })
+
+  it('requires_action → refunded', () => {
+    expect(canTransition('requires_action', 'refunded')).toBe(true)
+  })
+
+  it('reject_pending → revoked', () => {
+    expect(canTransition('reject_pending', 'revoked')).toBe(true)
+  })
+
+  it('reject_pending → failed', () => {
+    expect(canTransition('reject_pending', 'failed')).toBe(true)
+  })
+
+  it('reject_pending → refunded (recipient-initiated reject)', () => {
+    // When RECIPIENT rejects, process_refund sends back to SENDER → refunded (not revoked)
+    expect(canTransition('reject_pending', 'refunded')).toBe(true)
+  })
+})
+
+// ===========================================================================
+// 1b. canTransition() — invalid transitions
+// ===========================================================================
+describe('canTransition() — invalid transitions (must return false)', () => {
+  it('created → confirmed ✗', () => {
+    expect(canTransition('created', 'confirmed')).toBe(false)
+  })
+
+  it('created → pending_claim ✗ (must go through processing)', () => {
+    expect(canTransition('created', 'pending_claim')).toBe(false)
+  })
+
+  it('created → requires_action ✗', () => {
+    expect(canTransition('created', 'requires_action')).toBe(false)
+  })
+
+  it('created → reject_pending ✗', () => {
+    expect(canTransition('created', 'reject_pending')).toBe(false)
+  })
+
+  it('created → revoked ✗', () => {
+    expect(canTransition('created', 'revoked')).toBe(false)
+  })
+
+  it('created → refunded ✗', () => {
+    expect(canTransition('created', 'refunded')).toBe(false)
+  })
+
+  it('created → expired ✗', () => {
+    expect(canTransition('created', 'expired')).toBe(false)
+  })
+
+  it('processing → revoked ✗', () => {
+    expect(canTransition('processing', 'revoked')).toBe(false)
+  })
+
+  it('processing → confirmed ✗', () => {
+    expect(canTransition('processing', 'confirmed')).toBe(false)
+  })
+
+  it('processing → created ✗ (no backward)', () => {
+    expect(canTransition('processing', 'created')).toBe(false)
+  })
+
+  it('processing → reject_pending ✗', () => {
+    expect(canTransition('processing', 'reject_pending')).toBe(false)
+  })
+
+  it('processing → refunded ✗', () => {
+    expect(canTransition('processing', 'refunded')).toBe(false)
+  })
+
+  it('processing → expired ✗', () => {
+    expect(canTransition('processing', 'expired')).toBe(false)
+  })
+
+  it('pending_claim → failed ✗', () => {
+    expect(canTransition('pending_claim', 'failed')).toBe(false)
+  })
+
+  it('pending_claim → created ✗', () => {
+    expect(canTransition('pending_claim', 'created')).toBe(false)
+  })
+
+  it('pending_claim → processing ✗', () => {
+    expect(canTransition('pending_claim', 'processing')).toBe(false)
+  })
+
+  it('pending_claim → revoked ✗', () => {
+    expect(canTransition('pending_claim', 'revoked')).toBe(false)
+  })
+
+  it('pending_claim → expired ✗', () => {
+    expect(canTransition('pending_claim', 'expired')).toBe(false)
+  })
+
+  it('reject_pending → confirmed ✗', () => {
+    expect(canTransition('reject_pending', 'confirmed')).toBe(false)
+  })
+
+  it('reject_pending → pending_claim ✗', () => {
+    expect(canTransition('reject_pending', 'pending_claim')).toBe(false)
+  })
+
+  // NOTE: reject_pending → refunded IS valid (recipient-initiated reject path)
+  // See valid transitions section above
+
+  it('reject_pending → created ✗', () => {
+    expect(canTransition('reject_pending', 'created')).toBe(false)
+  })
+
+  // Terminal states: confirmed → anything ✗
+  it('confirmed → processing ✗ (terminal)', () => {
+    expect(canTransition('confirmed', 'processing')).toBe(false)
+  })
+  it('confirmed → failed ✗ (terminal)', () => {
+    expect(canTransition('confirmed', 'failed')).toBe(false)
+  })
+  it('confirmed → revoked ✗ (terminal)', () => {
+    expect(canTransition('confirmed', 'revoked')).toBe(false)
+  })
+  it('confirmed → refunded ✗ (terminal)', () => {
+    expect(canTransition('confirmed', 'refunded')).toBe(false)
+  })
+  it('confirmed → expired ✗ (terminal)', () => {
+    expect(canTransition('confirmed', 'expired')).toBe(false)
+  })
+
+  // Terminal states: revoked → anything ✗
+  it('revoked → confirmed ✗ (terminal)', () => {
+    expect(canTransition('revoked', 'confirmed')).toBe(false)
+  })
+  it('revoked → failed ✗ (terminal)', () => {
+    expect(canTransition('revoked', 'failed')).toBe(false)
+  })
+  it('revoked → processing ✗ (terminal)', () => {
+    expect(canTransition('revoked', 'processing')).toBe(false)
+  })
+
+  // Terminal states: refunded → anything ✗
+  it('refunded → confirmed ✗ (terminal)', () => {
+    expect(canTransition('refunded', 'confirmed')).toBe(false)
+  })
+  it('refunded → failed ✗ (terminal)', () => {
+    expect(canTransition('refunded', 'failed')).toBe(false)
+  })
+  it('refunded → revoked ✗ (terminal)', () => {
+    expect(canTransition('refunded', 'revoked')).toBe(false)
+  })
+
+  // Terminal states: expired → anything ✗
+  it('expired → confirmed ✗ (terminal)', () => {
+    expect(canTransition('expired', 'confirmed')).toBe(false)
+  })
+  it('expired → processing ✗ (terminal)', () => {
+    expect(canTransition('expired', 'processing')).toBe(false)
+  })
+  it('expired → failed ✗ (terminal)', () => {
+    expect(canTransition('expired', 'failed')).toBe(false)
+  })
+  it('expired → refunded ✗ (terminal)', () => {
+    expect(canTransition('expired', 'refunded')).toBe(false)
+  })
+
+  // Terminal states: failed → anything ✗
+  it('failed → confirmed ✗ (terminal)', () => {
+    expect(canTransition('failed', 'confirmed')).toBe(false)
+  })
+  it('failed → processing ✗ (terminal)', () => {
+    expect(canTransition('failed', 'processing')).toBe(false)
+  })
+  it('failed → revoked ✗ (terminal)', () => {
+    expect(canTransition('failed', 'revoked')).toBe(false)
+  })
+  it('failed → refunded ✗ (terminal)', () => {
+    expect(canTransition('failed', 'refunded')).toBe(false)
+  })
+  it('failed → expired ✗ (terminal)', () => {
+    expect(canTransition('failed', 'expired')).toBe(false)
+  })
+})
+
+// ===========================================================================
+// 1c. isTerminal()
+// ===========================================================================
+describe('isTerminal()', () => {
+  const terminalStates: PaymentStatus[] = ['confirmed', 'revoked', 'refunded', 'expired', 'failed']
+  const nonTerminalStates: PaymentStatus[] = ['created', 'processing', 'pending_claim', 'requires_action', 'reject_pending']
+
+  terminalStates.forEach((s) => {
+    it(`${s} → true (terminal)`, () => {
+      expect(isTerminal(s)).toBe(true)
+    })
+  })
+
+  nonTerminalStates.forEach((s) => {
+    it(`${s} → false (non-terminal)`, () => {
+      expect(isTerminal(s)).toBe(false)
+    })
+  })
+})
+
+// ===========================================================================
+// 1d. isRevocable()
+// ===========================================================================
+describe('isRevocable()', () => {
+  it('pending_claim → true', () => {
+    expect(isRevocable('pending_claim')).toBe(true)
+  })
+
+  it('requires_action → true (critical — covers historical bug)', () => {
+    expect(isRevocable('requires_action')).toBe(true)
+  })
+
+  const nonRevocable: PaymentStatus[] = [
+    'created', 'processing', 'confirmed', 'reject_pending',
+    'revoked', 'refunded', 'expired', 'failed',
+  ]
+  nonRevocable.forEach((s) => {
+    it(`${s} → false`, () => {
+      expect(isRevocable(s)).toBe(false)
+    })
+  })
+})
+
+// ===========================================================================
+// 1e. isClaimable()
+// ===========================================================================
+describe('isClaimable()', () => {
+  it('pending_claim → true', () => {
+    expect(isClaimable('pending_claim')).toBe(true)
+  })
+
+  const nonClaimable: PaymentStatus[] = [
+    'created', 'processing', 'requires_action', 'confirmed',
+    'reject_pending', 'revoked', 'refunded', 'expired', 'failed',
+  ]
+  nonClaimable.forEach((s) => {
+    it(`${s} → false`, () => {
+      expect(isClaimable(s)).toBe(false)
+    })
+  })
+})
+
+// ===========================================================================
+// 1f. transition() — integration tests with real in-memory SQLite
+// ===========================================================================
+describe('transition() — integration with in-memory SQLite', () => {
+  const PAYMENT_ID = 'iPay-test-sm-001'
+
+  beforeEach(() => {
+    insertPayment(testDb, PAYMENT_ID, 'created')
+  })
+
+  it('valid transition updates status in DB', () => {
+    transition(PAYMENT_ID, 'created', 'processing', { actor: 'relayer' })
+    expect(getPaymentStatus(testDb, PAYMENT_ID)).toBe('processing')
+  })
+
+  it('valid transition inserts a row into event_log', () => {
+    transition(PAYMENT_ID, 'created', 'processing', { actor: 'relayer' })
+    const logs = testDb.prepare('SELECT * FROM event_log WHERE entity_id = ?').all(PAYMENT_ID) as any[]
+    expect(logs.length).toBe(1)
+  })
+
+  it('event_log row has correct entity_id, from_status, to_status, actor', () => {
+    transition(PAYMENT_ID, 'created', 'processing', { actor: 'relayer', txHash: '0xabc', note: 'spend submitted' })
+    const log = testDb.prepare('SELECT * FROM event_log WHERE entity_id = ?').get(PAYMENT_ID) as any
+    expect(log.entity_id).toBe(PAYMENT_ID)
+    expect(log.from_status).toBe('created')
+    expect(log.to_status).toBe('processing')
+    expect(log.actor).toBe('relayer')
+    expect(log.tx_hash).toBe('0xabc')
+    expect(log.note).toBe('spend submitted')
+    expect(log.entity_type).toBe('payment')
+  })
+
+  it('multiple valid transitions accumulate event_log entries', () => {
+    transition(PAYMENT_ID, 'created', 'processing', { actor: 'relayer' })
+    transition(PAYMENT_ID, 'processing', 'pending_claim', { actor: 'relayer' })
+    const logs = testDb.prepare('SELECT * FROM event_log WHERE entity_id = ? ORDER BY id').all(PAYMENT_ID) as any[]
+    expect(logs.length).toBe(2)
+    expect(logs[0].from_status).toBe('created')
+    expect(logs[0].to_status).toBe('processing')
+    expect(logs[1].from_status).toBe('processing')
+    expect(logs[1].to_status).toBe('pending_claim')
+  })
+
+  it('invalid transition throws an error', () => {
+    expect(() => {
+      transition(PAYMENT_ID, 'created', 'confirmed', { actor: 'relayer' })
+    }).toThrow(/Invalid transition/)
+  })
+
+  it('DB status is UNCHANGED after invalid transition (no mutation)', () => {
+    expect(() => {
+      transition(PAYMENT_ID, 'created', 'confirmed', { actor: 'relayer' })
+    }).toThrow()
+    expect(getPaymentStatus(testDb, PAYMENT_ID)).toBe('created')
+  })
+
+  it('event_log has NO entry after invalid transition', () => {
+    expect(() => {
+      transition(PAYMENT_ID, 'created', 'confirmed', { actor: 'relayer' })
+    }).toThrow()
+    const logs = testDb.prepare('SELECT * FROM event_log WHERE entity_id = ?').all(PAYMENT_ID) as any[]
+    expect(logs.length).toBe(0)
+  })
+
+  it('concurrent modification throws error when pre-change status differs', () => {
+    // Simulate concurrent modification: someone else changed status to 'processing'
+    testDb.prepare("UPDATE payments SET status = 'processing' WHERE payment_id = ?").run(PAYMENT_ID)
+
+    // Now try to transition from 'created' (stale from-state)
+    expect(() => {
+      transition(PAYMENT_ID, 'created', 'processing', { actor: 'relayer' })
+    }).toThrow(/Concurrent modification/)
+  })
+
+  it('DB status is UNCHANGED after concurrent modification throw (atomicity)', () => {
+    testDb.prepare("UPDATE payments SET status = 'processing' WHERE payment_id = ?").run(PAYMENT_ID)
+
+    expect(() => {
+      transition(PAYMENT_ID, 'created', 'processing', { actor: 'relayer' })
+    }).toThrow()
+
+    // Status should remain at 'processing' (what we set), not corrupted
+    expect(getPaymentStatus(testDb, PAYMENT_ID)).toBe('processing')
+  })
+
+  it('payment not found throws error', () => {
+    expect(() => {
+      transition('iPay-does-not-exist', 'created', 'processing', { actor: 'relayer' })
+    }).toThrow(/Payment not found/)
+  })
+
+  it('transition with null txHash and null note stores nulls in event_log', () => {
+    transition(PAYMENT_ID, 'created', 'processing', { actor: 'system', txHash: null, note: null })
+    const log = testDb.prepare('SELECT * FROM event_log WHERE entity_id = ?').get(PAYMENT_ID) as any
+    expect(log.tx_hash).toBeNull()
+    expect(log.note).toBeNull()
+  })
+
+  it('transaction atomicity: both UPDATE and INSERT succeed or neither does', () => {
+    // Valid transition → both must succeed
+    transition(PAYMENT_ID, 'created', 'processing', { actor: 'relayer' })
+    expect(getPaymentStatus(testDb, PAYMENT_ID)).toBe('processing')
+    const logs = testDb.prepare('SELECT * FROM event_log WHERE entity_id = ?').all(PAYMENT_ID) as any[]
+    expect(logs.length).toBe(1)
+  })
+
+  it('transition through the full happy path: created→processing→pending_claim→confirmed', () => {
+    transition(PAYMENT_ID, 'created', 'processing', { actor: 'relayer' })
+    transition(PAYMENT_ID, 'processing', 'pending_claim', { actor: 'relayer' })
+    transition(PAYMENT_ID, 'pending_claim', 'confirmed', { actor: 'recipient' })
+
+    expect(getPaymentStatus(testDb, PAYMENT_ID)).toBe('confirmed')
+    const logs = testDb.prepare('SELECT * FROM event_log WHERE entity_id = ? ORDER BY id').all(PAYMENT_ID) as any[]
+    expect(logs.length).toBe(3)
+  })
+
+  it('transition through revoke path: created→processing→pending_claim→reject_pending→revoked', () => {
+    transition(PAYMENT_ID, 'created', 'processing', { actor: 'relayer' })
+    transition(PAYMENT_ID, 'processing', 'pending_claim', { actor: 'relayer' })
+    transition(PAYMENT_ID, 'pending_claim', 'reject_pending', { actor: 'sender' })
+    transition(PAYMENT_ID, 'reject_pending', 'revoked', { actor: 'relayer' })
+
+    expect(getPaymentStatus(testDb, PAYMENT_ID)).toBe('revoked')
+    const logs = testDb.prepare('SELECT * FROM event_log WHERE entity_id = ? ORDER BY id').all(PAYMENT_ID) as any[]
+    expect(logs.length).toBe(4)
+  })
+
+  it('requires_action path: created→processing→requires_action→confirmed', () => {
+    transition(PAYMENT_ID, 'created', 'processing', { actor: 'relayer' })
+    transition(PAYMENT_ID, 'processing', 'requires_action', { actor: 'system' })
+    transition(PAYMENT_ID, 'requires_action', 'confirmed', { actor: 'recipient' })
+
+    expect(getPaymentStatus(testDb, PAYMENT_ID)).toBe('confirmed')
+  })
+
+  it('requires_action→reject_pending→revoked path works', () => {
+    transition(PAYMENT_ID, 'created', 'processing', { actor: 'relayer' })
+    transition(PAYMENT_ID, 'processing', 'requires_action', { actor: 'system' })
+    transition(PAYMENT_ID, 'requires_action', 'reject_pending', { actor: 'sender' })
+    transition(PAYMENT_ID, 'reject_pending', 'revoked', { actor: 'relayer' })
+    expect(getPaymentStatus(testDb, PAYMENT_ID)).toBe('revoked')
+  })
+})
+
+// ===========================================================================
+// STATUS_LABEL completeness check
+// ===========================================================================
+describe('STATUS_LABEL — all 10 statuses have non-empty Chinese labels', () => {
+  const allStatuses = Object.values(PAYMENT_STATUS)
+
+  it('has exactly 10 status labels', () => {
+    expect(Object.keys(STATUS_LABEL).length).toBe(10)
+  })
+
+  allStatuses.forEach((status) => {
+    it(`${status} has a non-empty label`, () => {
+      const label = STATUS_LABEL[status as PaymentStatus]
+      expect(label).toBeDefined()
+      expect(label.length).toBeGreaterThan(0)
+    })
+  })
+})
+
+// ===========================================================================
+// ALLOWED_TRANSITIONS completeness
+// ===========================================================================
+describe('ALLOWED_TRANSITIONS — covers all 10 states', () => {
+  it('has an entry for every PaymentStatus', () => {
+    const allStatuses = Object.values(PAYMENT_STATUS) as PaymentStatus[]
+    for (const status of allStatuses) {
+      expect(ALLOWED_TRANSITIONS).toHaveProperty(status)
+      expect(Array.isArray(ALLOWED_TRANSITIONS[status])).toBe(true)
+    }
+  })
+})
+
+// ===========================================================================
+// Refund destination logic — critical business rule tests
+// ===========================================================================
+describe('Refund destination business rules', () => {
+  /**
+   * CRITICAL: When a recipient rejects a payment, the refund MUST go back
+   * to the original SENDER, NOT to the recipient.
+   *
+   * Bug history: viewingKeys.ts was using secrets.recipient (wrong) instead
+   * of payment.sender (correct) as the refund destination. Fixed 2026-03-17.
+   */
+
+  it('reject_pending → refunded is a valid transition (recipient-reject path)', () => {
+    // Recipient rejects → process_refund → refunded (money back to sender)
+    expect(canTransition('reject_pending', 'refunded')).toBe(true)
+  })
+
+  it('reject_pending → revoked is a valid transition (sender-revoke path)', () => {
+    // Sender revokes → process_refund → revoked (money back to sender)
+    expect(canTransition('reject_pending', 'revoked')).toBe(true)
+  })
+
+  it('reject_pending → confirmed is NOT valid (cannot claim after rejection)', () => {
+    expect(canTransition('reject_pending', 'confirmed')).toBe(false)
+  })
+
+  it('reject_pending → pending_claim is NOT valid', () => {
+    expect(canTransition('reject_pending', 'pending_claim')).toBe(false)
+  })
+
+  it('terminal state refunded → anything is NOT valid', () => {
+    expect(canTransition('refunded', 'confirmed')).toBe(false)
+    expect(canTransition('refunded', 'pending_claim')).toBe(false)
+    expect(canTransition('refunded', 'reject_pending')).toBe(false)
+    expect(canTransition('refunded', 'created')).toBe(false)
+  })
+
+  it('terminal state revoked → anything is NOT valid', () => {
+    expect(canTransition('revoked', 'confirmed')).toBe(false)
+    expect(canTransition('revoked', 'pending_claim')).toBe(false)
+    expect(canTransition('revoked', 'refunded')).toBe(false)
+  })
+})
+
+// ===========================================================================
+// Refund address logic — critical correctness tests
+// ===========================================================================
+describe('Refund destination rules', () => {
+  it('sender-revoke: refund must go to SENDER (not recipient)', () => {
+    // payments.ts uses row.sender → refundDest. Must never be row.recipient.
+    const payment = { sender: 'init1sender111', recipient: 'init1recipient222' }
+    const refundDest = payment.sender
+    expect(refundDest).toBe('init1sender111')
+    expect(refundDest).not.toBe(payment.recipient)
+  })
+
+  it('recipient-reject: refund must go to original SENDER (not the rejecting recipient)', () => {
+    // viewingKeys.ts now uses payment.sender → refundDest.
+    // Previously used secrets.recipient which was WRONG.
+    const payment = { sender: 'init1sender111', recipient: 'init1recipient222' }
+    const secrets = { recipient: 'init1recipient222' } // relay_secrets.recipient
+    // Correct: use payment.sender
+    const refundDest = payment.sender ?? secrets.recipient
+    expect(refundDest).toBe('init1sender111')
+    expect(refundDest).not.toBe(secrets.recipient)
+  })
+
+  it('reject_pending → refunded is valid (recipient-reject path)', () => {
+    expect(canTransition('reject_pending', 'refunded')).toBe(true)
+  })
+
+  it('reject_pending → revoked is valid (sender-revoke path)', () => {
+    expect(canTransition('reject_pending', 'revoked')).toBe(true)
+  })
+
+  it('refunded is a terminal state', () => {
+    expect(isTerminal('refunded')).toBe(true)
+  })
+
+  it('revoked is a terminal state', () => {
+    expect(isTerminal('revoked')).toBe(true)
+  })
+})

@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
+    <link rel="icon" type="image/svg+xml" href="/favicon-v3.svg" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <title>iUSD Pay — Stablecoin Payment & Gift on Initia</title>
+    <meta name="description" content="iUSD Pay — the easiest way to send stablecoin payments and gifts on Initia. Private, fast, and fee-friendly. Send iUSD gifts, pay invoices, and transfer stablecoins with encrypted privacy." />
+    <meta name="keywords" content="iusd pay, iusd payment, initia payment, initia pay, initia gift, stablecoin pay, stable coin payment, stablecoin gift, crypto payment, iusd, initia blockchain, private payment, encrypted payment" />
+    <!-- Critical API preconnect — reduce TTFB for first API call -->
+    <link rel="preconnect" href="https://api.iusd-pay.xyz">
+    <link rel="dns-prefetch" href="https://api.iusd-pay.xyz">
+    <link rel="preconnect" href="https://rest.initia.xyz">
+    <link rel="dns-prefetch" href="https://rest.initia.xyz">
+    <!-- Identity Seal fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+    <meta name="theme-color" content="#111827" />
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="iUSD PAY" />
+    <!-- Structured data for Google search (favicon + site info) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "iUSD Pay",
+      "url": "https://iusd-pay.xyz",
+      "description": "Stablecoin payment and gift platform on Initia blockchain. Send iUSD payments, create invoices, and send gift boxes with privacy.",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Web",
+      "image": "https://iusd-pay.xyz/og-preview.png?v=2",
+      "logo": "https://iusd-pay.xyz/favicon-32.png",
+      "author": {
+        "@type": "Organization",
+        "name": "iUSD Pay"
+      }
+    }
+    </script>
+    <!-- OG / Twitter card -->
+    <meta property="og:title" content="iUSD Pay — Stablecoin Payment & Gift on Initia" />
+    <meta property="og:description" content="Send stablecoin payments and gifts privately on Initia. Fast, secure, fee-friendly. Transfer iUSD, create invoices, send gift boxes with encrypted privacy." />
+    <meta property="og:image" content="https://iusd-pay.xyz/og-preview.png?v=2" />
+    <meta property="og:url" content="https://iusd-pay.xyz" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="iUSD Pay" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="iUSD Pay — Stablecoin Payment & Gift on Initia" />
+    <meta name="twitter:description" content="Send stablecoin payments and gifts privately on Initia. Fast, secure, fee-friendly." />
+    <meta name="twitter:image" content="https://iusd-pay.xyz/og-preview.png?v=2" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <!-- Polyfill ES2023 Array.prototype.toSorted for Safari<16.4 / Chrome<110 /
+         Firefox<115. @initia/interwovenkit-react ships toSorted in its built
+         bundle; without this shim the chain-list render crashes on older
+         browsers. Classic script runs before the module below. -->
+    <script>
+      if (!Array.prototype.toSorted) {
+        Array.prototype.toSorted = function (compareFn) {
+          return this.slice().sort(compareFn);
+        };
+      }
+    </script>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

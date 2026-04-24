@@ -1,0 +1,1250 @@
+{
+  "popup": {
+    "title": "Payagan ang Pop-ups sa Settings ng browser",
+    "subtitle": "Bina-block ng iyong browser ang sign-in pop-up. I-enable ito sa Settings tulad ng nakikita.",
+    "next": "Susunod",
+    "back": "Bumalik",
+    "gotIt": "Sige",
+    "continue": "Magpatuloy",
+    "enableTitle": "I-enable ang Pop-ups",
+    "signinNeedsPopup": "Kailangan ng pop-up window para sa pag-sign in.",
+    "gotoMobile": "Pumunta sa Settings → browser → payagan ang pop-ups.",
+    "gotoDesktop": "Pumunta sa Settings → payagan ang pop-ups.",
+    "checkDetail": "Tingnan ang detalye"
+  },
+  "auth": {
+    "connect": "Kumonekta",
+    "signIn": "Mag-sign in →",
+    "connecting": "Kumokonekta…",
+    "signing": "Pumipirma…",
+    "checkWallet": "Tingnan ang iyong wallet para sa kahilingan ng pirma…",
+    "settingUp": "Sina-set up ang iyong account…",
+    "coinbaseConnected": "Konektado ang Coinbase Wallet!",
+    "walletConnected": "Konektado ang wallet!",
+    "wcTimeout": "Nag-time out ang WalletConnect",
+    "restoring": "Inaayos muli ang wallet session…",
+    "openingWindow": "Binubuksan ang sign-in window…",
+    "tapConnect": "I-tap ang Kumonekta — hihingi ng pirma ang iyong wallet",
+    "signInWith": "Mag-sign in gamit ang",
+    "or": "o",
+    "tryAgain": "Subukan muli",
+    "reconnect": "Ikonekta muli ang wallet",
+    "popupBlockedMobile": "Na-block ang pop-up. Pumunta sa Settings → browser → payagan ang pop-ups.",
+    "popupBlockedDesktop": "Na-block ang pop-up. Pumunta sa Settings → payagan ang pop-ups.",
+    "signFailed": "Nabigo ang pag-sign in. Pakisubukan muli.",
+    "connectionLost": "Nawala ang koneksyon sa wallet. Mangyaring ikonekta muli.",
+    "signatureCancelled": "Kinansela ang pirma.",
+    "networkBlocked": "Hindi maabot o naka-block ang API (network/CORS). Subukan sa bagong tab."
+  },
+  "landing": {
+    "tagline": "Bayad sa stablecoin sa Initia",
+    "installAsApp": "I-install bilang app",
+    "forceRefresh": "Sapilitang i-refresh",
+    "refresh": "I-refresh",
+    "forceRefreshTip": "Sapilitang i-refresh para ayusin ang lokal na isyu sa pahina"
+  },
+  "wallets": {
+    "openInWalletBrowser": "Buksan sa browser ng wallet app",
+    "pasteUrl": "I-paste ang URL ng iUSD pay (nakopya na) at magpunta",
+    "done": "Tapos na",
+    "other": "Iba pa"
+  },
+  "common": {
+    "language": "Wika",
+    "cancel": "Kanselahin",
+    "save": "I-save",
+    "saving": "Sina-save…",
+    "saved": "Na-save",
+    "close": "Isara",
+    "change": "Baguhin",
+    "loading": "Naglo-load…",
+    "view": "Tingnan",
+    "optional": "Opsyonal",
+    "on": "ON",
+    "off": "OFF"
+  },
+  "welcome": {
+    "tagline": "Bayad sa stablecoin sa Initia",
+    "whatYouGet": "Ano ang makukuha mo",
+    "features": {
+      "transfer": "Libreng paglipat at paghiling gamit ang Scan",
+      "merchants": "Walang-abala na integrasyon sa mga merchant",
+      "gifts": "Magpadala ng regalo sa mga kaibigan at grupo"
+    },
+    "agreePrefix": "Sumasang-ayon ako sa",
+    "and": "at sa",
+    "tos": "Mga Tuntunin ng Serbisyo",
+    "privacy": "Patakaran sa Privacy",
+    "experimentalNote": ". Eksperimental ang app na ito sa mainnet.",
+    "getStarted": "Simulan →"
+  },
+  "dashboard": {
+    "tapEditNickname": "I-tap para i-edit ang palayaw",
+    "minGasHint": "Minimum 1 INIT o 1 USDC para sa gas",
+    "refreshBalances": "I-refresh ang balanse",
+    "actions": {
+      "transfer": "Ipadala",
+      "request": "Hilingin",
+      "gift": "Regalo",
+      "inbox": "Inbox",
+      "contacts": "Kontak",
+      "scan": "Scan",
+      "history": "Kasaysayan",
+      "settings": "Mga Setting"
+    }
+  },
+  "settings": {
+    "title": "Mga Setting",
+    "account": {
+      "title": "Account",
+      "nickname": "Palayaw",
+      "setNickname": "Magtakda ng palayaw",
+      "bio": "Bio / Slogan",
+      "bioPlaceholder": "hal. Scan mo ako at regaluhan, halikan ang isasagot 💋",
+      "id": "ID",
+      "wallet": "Wallet",
+      "copied": "Nakopya",
+      "ecosystem": "Ecosystem",
+      "autoClaim": "Auto-Claim"
+    },
+    "appearance": {
+      "title": "Itsura",
+      "auto": "Auto",
+      "light": "Maliwanag",
+      "dark": "Madilim"
+    },
+    "sound": {
+      "title": "Tunog",
+      "desc": "UI clicks, card flips, celebrations",
+      "muted": "Naka-mute",
+      "on": "Naka-on",
+      "styles": "Mga Estilo ng Tunog",
+      "customize": "I-customize",
+      "tapPreview": "I-tap ang estilo para ma-preview at mapili",
+      "unmutePreview": "I-unmute sa itaas para marinig ang preview",
+      "cat": {
+        "click": "Click",
+        "cardFlip": "Card Flip",
+        "gift": "Regalo",
+        "transaction": "Transaksyon",
+        "menu": "Menu"
+      }
+    },
+    "receive": {
+      "title": "Address ng Pagtanggap",
+      "privacyProtection": "Proteksyon ng Privacy",
+      "defaultWallet": "Aking wallet (default)",
+      "change": "Baguhin",
+      "modalTitle": "Protektahan ang iyong address ng pagtanggap",
+      "modalDesc": "Maaari kang magtakda ng hiwalay na wallet para tumanggap ng iUSD, pinapanatiling pribado ang nakakonektang wallet. Awtomatikong iro-route ang mga bayad sa address na ito.",
+      "complianceHeader": "⚠ Paalala ng Pagsunod",
+      "complianceDesc": "Nananatiling auditable ang lahat ng transaksyon sa ilalim ng mga naaangkop na patakaran sa AML anuman ang routing. Kinukumpirma ng pirmang ito ang iyong pag-unawa at pahintulot.",
+      "placeholder": "0x… o init1… (walang laman = gamitin ang iyong wallet)",
+      "signSave": "Pirmahan at I-save",
+      "signing": "Pumipirma…"
+    },
+    "about": {
+      "title": "Tungkol",
+      "iusdPay": "iUSD Pay",
+      "network": "Network",
+      "contract": "Kontrata",
+      "tos": "Mga Tuntunin ng Serbisyo",
+      "privacy": "Patakaran sa Privacy",
+      "forceRefresh": "Sapilitang I-refresh",
+      "community": "Komunidad"
+    },
+    "danger": {
+      "title": "Mapanganib na Zona",
+      "disconnect": "Idiskonekta ang Wallet",
+      "disconnectTitle": "Idiskonekta ang wallet?",
+      "disconnectDesc": "Maaari kang muling kumonekta anumang oras.",
+      "delete": "Tanggalin ang Account",
+      "deleteConfirmWarn": "⚠ Permanenteng tatanggalin nito ang iyong account",
+      "confirmDelete": "Kumpirmahin ang Pagtanggal",
+      "deleting": "Tinatanggal…"
+    }
+  },
+  "transfer": {
+    "title": "Magpadala",
+    "paymentCodeTitle": "Payment Code",
+    "showToRecipient": "Ipakita ang QR na ito sa tatanggap.",
+    "scanAndEnter": "I-scan at ilagay ang halaga para humiling ng bayad.",
+    "waitingForRequest": "Naghihintay ng kahilingan…",
+    "sessionExpired": "Nag-expire ang session",
+    "generateNew": "Gumawa ng Bagong Code",
+    "generating": "Gumagawa ng payment code…",
+    "recipientPlaceholder": "Palayaw o Account ID",
+    "contacts": "Mga Kontak",
+    "checking": "Tumitingin…",
+    "noContactsMatch": "Walang kontak na tumutugma sa \"{{query}}\"",
+    "noContactsYet": "Walang kontak pa",
+    "noContactsHint": "Magpadala ng bayad o bisitahin ang Kasaysayan para magsimula",
+    "amountLabel": "Halaga",
+    "amountMin": "Min. 0.1 iUSD",
+    "amountMax": "Max 1,000 iUSD kada transaksyon",
+    "memoLabel": "Memo",
+    "memoPlaceholder": "Opsyonal na memo",
+    "fee": "Bayad: {{amount}} iUSD",
+    "feeCap": "(cap)",
+    "total": "Kabuuang: {{amount}} iUSD",
+    "autoSaveContact": "Ise-save ito sa iyong Mga Kontak",
+    "paymentQR": "Payment QR",
+    "building": "Bina-build…",
+    "confirming": "Kumpirmahin…",
+    "send": "Ipadala",
+    "sendAmount": "Ipadala ang {{amount}} iUSD"
+  },
+  "request": {
+    "title": "Humiling",
+    "modePersonal": "Ako",
+    "modeBusiness": "Biz",
+    "tabNew": "Bago",
+    "tabInvoices": "Mga Invoice",
+    "empty": "Walang kahilingan pa",
+    "createFirst": "Gumawa ng unang kahilingan →",
+    "share": "Ibahagi ↗",
+    "amountLabel": "Halaga",
+    "noteLabel": "Memo",
+    "notePlaceholder": "Paglalarawan (opsyonal)",
+    "taxNoLabel": "Tax No.",
+    "dueLabel": "Huling araw",
+    "invLabel": "Invoice #",
+    "payerLabel": "Pagbabayad",
+    "payerPlaceholder": "Pangalan (opsyonal)",
+    "status": {
+      "draft": "Draft",
+      "sent": "Naghihintay ng Bayad",
+      "paying": "Naghihintay ng Kumpirmasyon",
+      "paid": "Bayad na",
+      "overdue": "Lampas na",
+      "refunded": "Naibalik",
+      "cancelled": "Kanselado"
+    }
+  },
+  "scan": {
+    "title": "I-scan ang QR",
+    "lookingUp": "Hinahanap ang account…",
+    "paymentDetails": "MGA DETALYE NG BAYAD",
+    "scannedContent": "NA-SCAN NA NILALAMAN",
+    "manualInput": "MANUAL INPUT / LARAWAN",
+    "pasteHint": "I-paste ang URL o Account ID…",
+    "startCamera": "Simulan Camera",
+    "stopCamera": "Ihinto Camera",
+    "flipCamera": "I-flip Camera",
+    "retry": "Subukan muli",
+    "scannedCheck": "Na-scan! Tingnan sa desktop.",
+    "scanAgain": "↩ Mag-scan ulit",
+    "tagInvoice": "🧾 Invoice / Request",
+    "tagIdentity": "👤 Pagkakakilanlan",
+    "tagScanned": "🔗 Na-scan",
+    "due": "Deadline",
+    "payRequest": "💸 Bayaran ang request",
+    "payAmount": "💸 Bayaran ang {{amount}} iUSD",
+    "contactSaved": "✅ Na-save ang contact!",
+    "reAddContactsTag": "👤 Idagdag ulit",
+    "addContactsTag": "👤 Idagdag sa contacts",
+    "transfer": "I-transfer",
+    "gift": "Regalo",
+    "contactAlreadyAdded": "Nakadagdag na ang contact",
+    "reAddToContacts": "Idagdag ulit",
+    "addToContacts": "Idagdag sa contacts",
+    "visit": "Bisitahin →",
+    "clickToStart": "I-click para simulan ang camera",
+    "pointPhone": "Nag-scan — iturok ang phone sa QR",
+    "disconnect": "✕ Idiskonekta",
+    "go": "Pumunta",
+    "dropToScan": "I-drop para mag-scan ng QR",
+    "chooseFromGallery": "Pumili sa gallery",
+    "galleryHint": "Pumili o i-drag ang QR code image",
+    "cameraN": "Camera {{n}}",
+    "err": {
+      "accessBlocked": "🔒 Naka-block ang camera access",
+      "permissionDesc": "Na-deny ang permission ng camera. Kailangan mo itong i-enable muli sa browser settings.",
+      "chromeEdge": "🌐 Chrome / Edge",
+      "pasteInstructions": "Kopyahin ang URL → i-paste sa bagong tab → itakda ang Camera sa",
+      "allow": "Payagan",
+      "copy": "Kopyahin",
+      "firefoxHint": "I-click ang camera 🔒 icon sa address bar → Payagan",
+      "safariHint": "Settings → Safari → Camera → Payagan",
+      "androidHint": "I-tap ⋮ → Site settings → Camera → Payagan",
+      "retryAfter": "↺ Subukan ulit pagkatapos i-enable",
+      "noCamera": "📷 Walang camera",
+      "noCameraDesc": "Walang camera ang nadetect sa device na ito.",
+      "useManualFull": "Gamitin ang manual input sa ibaba o i-connect ang external scanner.",
+      "inUse": "📷 Gamit ang camera",
+      "inUseDesc": "Ginagamit ang camera ng ibang app. Isara ang ibang apps at subukan ulit.",
+      "flashNotSupported": "Hindi suportado ang flash sa device na ito",
+      "noQrInImage": "Walang QR code sa imahe",
+      "couldNotCreateRelay": "Hindi magawa ang relay session",
+      "cameraError": "Error sa camera: {{msg}}",
+      "cameraDenied": "Na-deny ang camera: {{msg}}",
+      "connectionFailed": "Nabigong kumonekta. Subukan ang Basic mode.",
+      "desktopNotReady": "Hindi pa handa ang desktop. I-reload ang desktop page.",
+      "failedToSend": "Nabigong ipadala",
+      "invalidSession": "Di-wastong session"
+    },
+    "relay": {
+      "gettingCamera": "Kinukuha ang camera…",
+      "connectingDesktop": "Kumokonekta sa desktop…",
+      "liveCameraHeader": "📹 Live Camera",
+      "qrScannerHeader": "📤 QR Scanner",
+      "liveBadge": "● LIVE",
+      "streamingDesktop": "📹 Nag-stream sa desktop — nakikita nila ang nakikita mo",
+      "pointAtDesktop": "📤 Iturok sa QR code sa desktop",
+      "statusPrefix": "🔄 {{status}}"
+    }
+  },
+  "gift": {
+    "title": "Regalo",
+    "message": "Mensahe",
+    "quickPicks": "Mabilis na pili",
+    "next": "Susunod →",
+    "recipient": "Tatanggap",
+    "shares": "Mga Bahagi",
+    "total": "Kabuuang",
+    "ready": "Handa na ang regalo!",
+    "shareAccessHint": "Ibahagi ang access link sa iyong kaibigan.",
+    "rightClickSave": "Right-click sa larawan para i-save · Na-copy ang link",
+    "dismiss": "Isara",
+    "viewDetails": "Tingnan ang detalye ng regalo →",
+    "scanToOpen": "I-scan para buksan",
+    "noReplies": "Wala pang sagot",
+    "noViews": "Wala pang tingin",
+    "loadingHistory": "Naglo-load ng kasaysayan…",
+    "giftList": "Listahan ng regalo",
+    "historyTab": "Kasaysayan",
+    "newest": "Pinakabago",
+    "oldest": "Pinakaluma",
+    "newestFirst": "Pinakabago muna",
+    "oldestFirst": "Pinakaluma muna",
+    "noDescription": "Walang available na paglalarawan.",
+    "allCollections": "Lahat ng koleksyon",
+    "collection": {
+      "flowers": "Bulaklak",
+      "drinks": "Inumin",
+      "food": "Pagkain",
+      "treats": "Meryenda",
+      "tech": "Teknolohiya",
+      "luxury": "Luho",
+      "office": "Opisina",
+      "art": "Sining",
+      "books": "Aklat",
+      "games": "Laro",
+      "wellness": "Kagalingan",
+      "travel": "Biyahe",
+      "fashion": "Fashion",
+      "kids": "Bata",
+      "pets": "Alagang Hayop",
+      "sports": "Palakasan",
+      "other": "Iba pa",
+      "painting": "Pintura",
+      "music_box": "Music box",
+      "instrument": "Instrumento",
+      "sculpture": "Eskultura",
+      "textile": "Tela",
+      "ceramic": "Seramiko",
+      "watch": "Relo",
+      "brooch": "Brotse",
+      "armor": "Baluti",
+      "furniture": "Muwebles",
+      "jewelry": "Alahas"
+    },
+    "flexible": "Flexible",
+    "source": "Pinagmulan ↗",
+    "progressPanel": {
+      "progress": "Progreso",
+      "inProgress": "Ginagawa pa",
+      "completed": "Tapos na",
+      "expired": "Expired na",
+      "expiredRefunded": "Expired · naibalik",
+      "expiresIn": "Mag-e-expire sa {{label}}",
+      "endsIn": "Matatapos sa {{label}}",
+      "claimedOf": "sa {{total}} nakuha",
+      "claimsHeader": "Mga Claim · {{count}}",
+      "replied": "💌 NAG-REPLY",
+      "claimedChip": "✓ NAKUHA",
+      "anon": "Anon",
+      "allClaimed": "Lahat ng share ay nakuha na.",
+      "refunded_one": "{{count}} hindi nakuhang share ay naibalik",
+      "refunded_other": "{{count}} hindi nakuhang share ay naibalik",
+      "refundedNote": "Ang pondo para sa mga hindi nakuhang share ay awtomatikong naibalik sa iyong balanse nang mag-expire ang regalo.",
+      "noClaimsYet": "Wala pang kumuha. Ibahagi ang link para maabisuhan sila.",
+      "daysHours": "{{days}}araw {{hours}}h",
+      "hoursMinutes": "{{hours}}h {{minutes}}m",
+      "minutesOnly": "{{minutes}}m"
+    },
+    "back": "← Bumalik",
+    "stepChoose": "Pumili ng regalo",
+    "stepWrite": "Sumulat ng mensahe",
+    "stepSendTo": "Ipadala kay",
+    "feePercent": "bayad {{percent}}%",
+    "feeLabel": "Bayad ({{percent}}%)",
+    "more": "higit pa",
+    "browseAll": "Tingnan lahat ng regalo",
+    "writePlaceholder": "Magsulat ng mensahe...",
+    "amountIusd": "Halaga (iUSD)",
+    "amountRangePlaceholder": "0.1 ~ 1000 iUSD",
+    "tapToEdit": "✎ i-tap para mag-edit",
+    "amountInRange": "0.10 – 1,000 iUSD",
+    "anyoneGroup": "Kahit sino (grupo)",
+    "anyoneCanClaim": "Kahit sino pwede mag-claim",
+    "enterContact": "Ilagay ang contact o ID",
+    "invalidRecipient": "Di-wastong username o ID",
+    "usernameInactive": "Username hindi aktibo",
+    "recipientRequired": "Kailangan ng tatanggap",
+    "sendFailed": "Nabigong ipadala",
+    "missingTxParams": "Kulang ang transaction parameters",
+    "giftTxFailed": "Nabigo ang gift transaction",
+    "contactsHeader": "Contacts",
+    "fromHistory": "✨ Mula sa Kasaysayan",
+    "splitEqual": "Pantay",
+    "splitRandom": "Random",
+    "balanceLine": "Balanse: {{amount}} iUSD",
+    "wrapping": "Binabalot...",
+    "insufficientBalance": "Kulang ang balanse",
+    "wrapGift": "🎁 Balutin ang regalo",
+    "giftNumber": "Regalo #{{id}}",
+    "fromName": "Mula kay {{name}}",
+    "anonymous": "Hindi kilala",
+    "mysteryAwaits": "May misteryosong regalo na naghihintay",
+    "claimedAgo": "Na-claim {{time}}",
+    "claimed": "Na-claim",
+    "view": "Tingnan →",
+    "openCta": "🎁 Buksan →",
+    "expiredChip": "Expired",
+    "claimedOfShort": "{{claimed}}/{{total}} na-claim",
+    "enjoyEmoji": "Mag-enjoy! 🎁",
+    "forYouEmoji": "May pagmamahal ❤️",
+    "happyBirthday": "Maligayang kaarawan! 🎂",
+    "thankYouEmoji": "Salamat! 🙏",
+    "cheersEmoji": "Cheers! 🥂",
+    "justBecause": "Basta 🌟",
+    "deserveIt": "Nararapat sa iyo ✨",
+    "haveFun": "Mag-enjoy! 🎉",
+    "treatYourself": "I-treat ang sarili 💫",
+    "yourGiftReady": "Handa na ang regalo mo!",
+    "toLabel": "Kay",
+    "feeLabelShort": "Bayad",
+    "notificationSent": "Naipadala ang notipikasyon kay {{name}}",
+    "fromSender": "MULA KAY {{name}}",
+    "giftWaitingShort": "May naghihintay na regalo sa'yo",
+    "scanToOpenShort": "I-scan para buksan",
+    "iusdPay": "iUSD Pay",
+    "copied": "Nakopya!",
+    "copyLink": "Kopyahin link",
+    "saveImage": "I-save ang larawan",
+    "shareLink": "Ibahagi ang link",
+    "backToQr": "← Bumalik sa QR",
+    "closeShareLater": "Puwede mong isara at ibahagi mamaya sa Gift History.",
+    "preparing": "Naghahanda...",
+    "imageSaved": "Na-save ang larawan!",
+    "qrBtn": "QR",
+    "backBtn": "Bumalik",
+    "hasAGiftForYou": "ay may regalo para sa'yo",
+    "sharesCount_one": "{{count}} bahagi",
+    "sharesCount_other": "{{count}} bahagi",
+    "openedCount": "{{count}}/{{total}} binuksan",
+    "viewsCount": "{{count}} views",
+    "someone": "Isang tao",
+    "shareTitle": "Regalo ni {{name}}",
+    "featured": "⭐ Itinatampok"
+  },
+  "giftClaim": {
+    "loading": "Naglo-load ng regalo…",
+    "goHome": "Home",
+    "youReceived": "Tinanggap mo",
+    "from": "Mula sa",
+    "reply": "Sumagot →",
+    "alreadyClaimed": "Natanggap na",
+    "scanProfile": "I-scan ang profile",
+    "thankPresets": {
+      "thankBoss": "Salamat boss!",
+      "appreciated": "Lubos na appreciated!",
+      "soKind": "Ang bait mo!",
+      "madeMyDay": "Pinasaya mo araw ko!",
+      "youreBest": "Ikaw ang pinakamagaling!",
+      "whatSurprise": "Anong surprise!",
+      "loveYou": "Mahal kita!",
+      "sweetest": "Ikaw ang pinakamatamis!",
+      "heartFull": "Puno ang puso ko!",
+      "bestBirthday": "Pinakamagandang birthday!",
+      "bestGift": "Pinakamagandang regalo!",
+      "cheersYou": "Sa'yo!"
+    },
+    "iGotLabel": "★ NAKAKUHA AKO",
+    "onlyOneShare": "Isang share lang",
+    "sharesCountLabel_one": "{{count}} share",
+    "sharesCountLabel_other": "{{count}} share",
+    "fromSenderOverlay": "mula kay {{name}}",
+    "detailsBtn": "detalye",
+    "claimedLabel": "na-claim",
+    "viewedLabel": "natingnan",
+    "chasedLabel": "nakuha",
+    "moreBtn": "[higit pa]",
+    "membersHeader": "MGA MIYEMBRO · {{count}}",
+    "lettersHeader": "MGA LIHAM · {{count}}",
+    "replyBtn": "Sumagot",
+    "replyToPlaceholder": "Sagutin si {{name}}…",
+    "loveWhatYouSee": "★ Gusto mo ang nakikita mo?",
+    "giftThemLine": "Bigyan ng tip si {{name}}",
+    "scanOrOpenProfile": "Buksan ang profile ko →",
+    "scanOr": "I-scan o",
+    "postToPlaceholder": "I-post kay {{name}}…",
+    "postBtn": "I-post",
+    "sentWithLoveBy": "Ipinadala nang may pagmamahal ni",
+    "giftReceivedChip": "Natanggap ang regalo!",
+    "anonName": "sila",
+    "errInvalidLink": "Di-wastong gift link",
+    "errNotFound": "Hindi natagpuan ang regalo",
+    "errClaimFailed": "Nabigong i-claim",
+    "errFailed": "Nabigo",
+    "errSignInFirst": "Mangyaring mag-sign in muna",
+    "errInvalidClaimLink": "Di-wastong claim link",
+    "signInToSave": "Mag-sign in para mag-save ng contact",
+    "failedSaveContact": "Nabigong i-save ang contact",
+    "shareTitle": "Regalo mula kay {{name}}"
+  },
+  "history": {
+    "title": "Kasaysayan",
+    "paymentJourney": "Paglalakbay ng Bayad",
+    "expires": "Mag-e-expire",
+    "noInvoices": "Wala pang invoice",
+    "noActivity": "Wala pang aktibidad",
+    "tabs": {
+      "all": "Lahat",
+      "sent": "Ipinad.",
+      "received": "Tinang.",
+      "gift": "Regalo",
+      "invoices": "Invoice",
+      "stats": "Stats"
+    },
+    "payStatus": {
+      "sent": {
+        "pending": "Hinihintay Kumpirma",
+        "confirmed": "Nakumpirma",
+        "revoked": "Nabawi",
+        "refunded": "Naibalik",
+        "expired": "Nag-expire",
+        "unknown": "Di-alam"
+      },
+      "received": {
+        "claimable": "Puwedeng Kunin",
+        "received": "Tinanggap",
+        "cancelled": "Nakansela",
+        "refunded": "Naibalik",
+        "expired": "Nag-expire",
+        "unknown": "Di-alam"
+      }
+    },
+    "paymentId": "PAYMENT ID",
+    "sortNewest": "Sortahin: Pinakabago muna (i-click para pinakaluma)",
+    "sortOldest": "Sortahin: Pinakaluma muna (i-click para pinakabago)",
+    "loadMore": "Mag-load pa",
+    "invoicePayment": "Bayad sa Invoice",
+    "sentTo": "Ipinadala kay",
+    "receivedFrom": "Natanggap mula kay",
+    "cancelInvoice": "Kanselahin ang Invoice",
+    "cancelInvoiceConfirm": "Kanselahin ang invoice na ito?",
+    "cancelFailed": "Nabigong kanselahin: {{msg}}",
+    "timeline": {
+      "created": "Ginawa",
+      "fee": "bayad {{amount}}",
+      "pendingClaim": "Naghihintay ng Kuhanin",
+      "awaitingRecipient": "Hinihintay ang tatanggap",
+      "autoClaimed": "Awtomatikong kukunin",
+      "confirmed": "Nakumpirma",
+      "received": "Natanggap",
+      "expiresOn": "Mag-e-expire {{date}}",
+      "revoked": "Nabawi",
+      "returnedToSender": "Ibinalik ang pera sa nagpadala",
+      "claimed": "Nakuha",
+      "refunded": "Naibalik",
+      "returnedToClaimer": "Ibinalik sa kumuha",
+      "expired": "Nag-expire"
+    },
+    "stats": {
+      "accounting": "ACCOUNTING",
+      "giftsSent": "Mga Regalong Ipinadala",
+      "giftsReceived": "Mga Regalong Natanggap",
+      "paid": "Binayaran",
+      "received": "Natanggap",
+      "moneyIn": "Papasok",
+      "moneyOut": "Palabas",
+      "net": "Net",
+      "pending": "Hinihintay",
+      "thisMonth": "BUWANG ITO"
+    },
+    "noGiftHistory": "Walang gift history pa",
+    "receivedSection": "Natanggap · {{count}}",
+    "sentSection": "Ipinadala · {{count}}",
+    "loadingMore": "Naglo-load…",
+    "loadMoreReceived": "Mag-load pa ng natanggap",
+    "loadMoreSent": "Mag-load pa ng ipinadala",
+    "refreshTitle": "I-refresh",
+    "exportCsv": "I-export ang kasaysayan bilang CSV",
+    "revokeFailed": "Nabigong i-revoke",
+    "refundFailed": "Nabigong ibalik: {{msg}}",
+    "refundConfirm": "Ibalik ang bayad na ito sa nagpadala?",
+    "anyone": "Kahit sino",
+    "direct": "tuwiran",
+    "fromLabel": "MULA",
+    "toLabel": "PARA",
+    "copySaveTitle": "Kopyahin shortId + i-save sa contacts",
+    "due": "Due",
+    "noSentTransactions": "Walang ipinadalang transaksyon",
+    "noReceivedTransactions": "Walang natanggap na transaksyon",
+    "noTransactionsYet": "Wala pang transaksyon — mapupuno ang stats kapag nag-transact ka.",
+    "detailSent": "↑ Naipadala",
+    "detailReceived": "↓ Natanggap",
+    "copyBtn": "📋 Kopyahin",
+    "receiptPdf": "↓ Resibo PDF",
+    "invoicePdf": "↓ Invoice PDF",
+    "revokeBtn": "↩ I-revoke",
+    "refundBtn": "↩ Ibalik"
+  },
+  "inbox": {
+    "title": "Inbox",
+    "claimed": "Natanggap!",
+    "feePaid": "Bayad ang bayarin",
+    "anonymous": "Hindi kilala",
+    "claimTo": "Kunin sa:",
+    "autoClaimFuture": "Awtomatikong kunin ang susunod na bayad",
+    "autoExpires": "Awtomatikong mag-e-expire kung hindi kinuha",
+    "loadingReplies": "Nilo-load ang mga sagot…",
+    "filter": {
+      "all": "Lahat",
+      "payment": "Bayad",
+      "gift": "Regalo",
+      "reply": "Sagot"
+    },
+    "replyCount_one": "{{count}} sagot",
+    "replyCount_other": "{{count}} na sagot",
+    "refresh": "↻ I-refresh",
+    "historyLabel": "KASAYSAYAN · {{count}}",
+    "statusReceived": "Natanggap",
+    "statusCancelled": "Kinansela",
+    "statusRefunded": "Naibalik",
+    "statusExpired": "Expired",
+    "statusDone": "Tapos",
+    "businessInvoice": "🏪 Business Invoice",
+    "personalPayment": "👤 Personal Payment",
+    "fromId": "Mula kay {{id}}",
+    "fromLabel": "Mula kay",
+    "receipt": "Resibo",
+    "invoice": "Invoice",
+    "refund": "↩ Ibalik",
+    "refundConfirm": "Ibalik ang bayad na ito sa nagpadala?",
+    "refundFailed": "Nabigong ibalik: {{msg}}",
+    "noRepliesHint": "Wala pang reply. Makikita dito ang mga thank-you ng regalo.",
+    "alreadyClaimedRefreshed": "Awtomatiko nang na-claim ang bayad na ito. Na-refresh ang inbox.",
+    "alreadyClaimedRemoved": "Na-claim na — inalis sa inbox.",
+    "newGiftsSection": "BAGONG REGALO · {{count}}",
+    "giftsSection": "REGALO · {{count}}",
+    "sentSection": "IPINADALA · {{count}}",
+    "loadMoreReplies": "Mag-load pa ng reply"
+  },
+  "contacts": {
+    "noResults": "Walang resulta",
+    "autoSavedHint": "Awtomatikong naka-save ang mga tinanggapan mo",
+    "importFromHistory": "✨ I-import mula sa Kasaysayan",
+    "importFromHistoryTitle": "I-import ang kahati mula sa kamakailang kasaysayan ng bayad + regalo",
+    "searchPlaceholder": "Maghanap sa pangalan o ID..."
+  },
+  "merchant": {
+    "title": "Profile ng Negosyo",
+    "preview": "Preview",
+    "businessName": "Pangalan ng Negosyo *",
+    "businessNamePlaceholder": "hal. Jack's Coffee",
+    "companyLogo": "Logo ng Kumpanya (opsyonal)",
+    "uploadJpgPng": "Mag-upload ng JPG / PNG",
+    "remove": "Alisin",
+    "logoHint": "JPG/PNG · max 500 KB · ligtas na iniimbak",
+    "maxFileSize": "Max file size 500 KB",
+    "clearConfirm": "I-clear ang business profile?",
+    "brandColor": "Kulay ng Brand",
+    "tagline": "Tagline / Paglalarawan (opsyonal)",
+    "taglinePlaceholder": "hal. Pinakamaayos na kape sa bayan",
+    "businessFont": "Font ng Pangalan",
+    "contactInfo": "Impormasyon sa Pakikipag-ugnayan",
+    "email": "EMAIL",
+    "phone": "PHONE",
+    "website": "WEBSITE",
+    "emailPlaceholder": "contact@example.com",
+    "phonePlaceholder": "+63 917 123 4567",
+    "websitePlaceholder": "https://example.com",
+    "addressLegal": "Address at Legal",
+    "address": "ADDRESS",
+    "addressPlaceholder": "123 Main St, Lungsod",
+    "taxIdLabel": "TAX ID / REG. NO.",
+    "taxIdPlaceholder": "hal. PH-12-3456789",
+    "invoiceNumbering": "Pagnumero ng Invoice",
+    "prefix": "PREFIX",
+    "startingNo": "SIMULANG NO.",
+    "startingFrom": "Magsisimula sa: {{sample}} (auto-increment sa server)",
+    "save": "I-save ang Business Profile",
+    "saved": "✓ Na-save!",
+    "clear": "I-clear",
+    "storedLocally1": "Naka-imbak lokal ang profile na ito sa iyong device.",
+    "storedLocally2": "Lumipat sa Business mode sa Request page para gamitin.",
+    "setUpProfile": "🏢 I-set up ang iyong business profile →"
+  },
+  "invoices": {
+    "title": "Accounting",
+    "protocolFees": "Binayarang Protocol Fees"
+  },
+  "payRequest": {
+    "title": "Kahilingan ng Bayad",
+    "requestSent": "Naipadala ang kahilingan!",
+    "error": "Error"
+  },
+  "receipt": {
+    "paymentSent": "Naipadala ang bayad.",
+    "home": "Home",
+    "viewInvoice": "Tingnan ang Invoice",
+    "loading": "Nilo-load ang resibo…"
+  },
+  "install": {
+    "addToHome": "Idagdag sa Home Screen",
+    "tapShare": "I-tap ang Ibahagi",
+    "tapMenu": "I-tap ang menu",
+    "installTitle": "I-install ang iUSD Pay",
+    "install": "I-install"
+  },
+  "deposit": {
+    "balance": "Balanse",
+    "youReceive": "Matatanggap mo",
+    "rate": "Rate",
+    "estTime": "Tinatayang oras",
+    "depositTitle": "Mag-deposito ng {{label}}",
+    "withdrawTitle": "Mag-withdraw ng {{label}}",
+    "from": "Mula sa",
+    "to": "Papunta sa",
+    "selectFrom": "Pumili ng asset na ideposito",
+    "selectTo": "Pumili ng destinasyon",
+    "loadingAssets": "Naglo-load...",
+    "noAssets": "Walang asset na may balanse",
+    "noDestinations": "Walang destination chain",
+    "onChain": "sa {{chain}}",
+    "current": "kasalukuyan",
+    "max": "MAKS",
+    "gasFee": "Bayad sa gas",
+    "estimatedByWallet": "Tinantiya ng wallet",
+    "relayFee": "Bayad sa relay",
+    "route": "Ruta",
+    "fetchingRoute": "Kinukuha ang ruta...",
+    "insufficient": "Kulang ang balanse — mayroon kang {{balance}} {{symbol}}",
+    "preparingTx": "Inihahanda ang transaksyon...",
+    "confirmInWallet": "Kumpirmahin sa iyong wallet",
+    "tryAgain": "Subukan ulit",
+    "submitted": "Naisumite ang transaksyon",
+    "done": "Tapos na",
+    "txCancelled": "Kinansela ang transaksyon",
+    "noEvmWallet": "Walang EVM wallet. I-install ang MetaMask.",
+    "unsupportedTx": "Hindi suportadong uri ng transaksyon"
+  },
+  "promoBanner": {
+    "coffee": {
+      "title": "Libre ng kape ang kaibigan",
+      "subtitle": "Magpadala ng mainit na kape"
+    },
+    "rose": {
+      "title": "Magpadala ng rosas",
+      "subtitle": "Para sa espesyal"
+    },
+    "boss": {
+      "title": "Maging boss, mag-alok ng perks",
+      "subtitle": "Ipakita ang pagkamapagbigay"
+    }
+  },
+  "register": {
+    "title": "Gumawa ng Account",
+    "chooseNickname": "Pumili ng palayaw para sa iyong payment address",
+    "nicknamePlaceholder": "hal. alice · 小明 · 🦊",
+    "nicknameHint": "Anumang wika · 1–12 character · 🎲 random",
+    "randomNickname": "Random na palayaw",
+    "creating": "Ginagawa…",
+    "submit": "Gumawa ng Account →"
+  },
+  "registered": {
+    "openWallet": "Buksan ang Wallet →",
+    "wow": "WOW! May cool kang",
+    "wowCard": "iUSD payment Card!",
+    "tapCard": "I-TAP ANG CARD",
+    "shareText": "Padalhan ako ng iUSD — i-scan ang QR ng card ko! 🎁"
+  },
+  "toast": {
+    "thatsYou": "Ikaw yan!",
+    "copied": "Nakopya ang {{value}}",
+    "addedToContacts": "Idinagdag ang {{name}} sa mga kontak",
+    "linkCopied": "Nakopya ang link sa clipboard",
+    "paymentNotLinked": "Hindi pa naka-link ang bayad — subukan muli sa ilang saglit",
+    "claimFailed": "Nabigo ang pagkuha",
+    "claimQueued": "Nasa pila ang pagkuha",
+    "networkError": "Error sa network: {{msg}}",
+    "noNewContactsInHistory": "Walang bagong kontak sa kasaysayan",
+    "importedFromHistory_one": "Na-import ang {{count}} kontak mula sa kasaysayan",
+    "importedFromHistory_other": "Na-import ang {{count}} kontak mula sa kasaysayan",
+    "noNewImport": "Walang bagong kontak para i-import",
+    "importFailed": "Nabigong mag-import: {{msg}}"
+  },
+  "nav": {
+    "dashboard": "Dashboard",
+    "home": "Home",
+    "more": "Higit pa"
+  },
+  "payLink": {
+    "resolving": "Kinukuha ang payment link…",
+    "invoiceDetails": "DETALYE NG INVOICE",
+    "status": "Status",
+    "invoiceId": "Invoice ID",
+    "recipient": "Tatanggap",
+    "dueDate": "Huling araw",
+    "paymentProof": "PATUNAY NG BAYAD",
+    "invalidLink": "Di-wastong Link",
+    "claimed": "Nakuha",
+    "paymentComplete": "Tapos na ang Bayad",
+    "receivedByName": "Natanggap ni {{name}} ang {{amount}} iUSD",
+    "paymentSent": "Naipadala ang Bayad",
+    "processingAuto": "{{amount}} iUSD · awtomatikong pinoproseso",
+    "claimWithinMinutes": "Ang pagkuha ay karaniwang 1–2 minuto",
+    "goToDashboard": "Pumunta sa Dashboard"
+  },
+  "verify": {
+    "title": "Pag-verify ng Bayad",
+    "verifying": "Vini-verify ang bayad…",
+    "noPid": "Walang ibinigay na payment ID.",
+    "notFound": "Walang nahanap na bayad",
+    "error": "Error: {{msg}}",
+    "verification": "Verification",
+    "to": "SA",
+    "platformFee": "Platform Fee",
+    "txHash": "Transaction Hash",
+    "goHomepage": "Pumunta sa Homepage"
+  },
+  "profile": {
+    "defaultSlogan": "Pinapasaya mo ang araw ko ✨",
+    "copyFullId": "Kopyahin ang buong ID",
+    "contactAlreadyAdded": "Naidagdag na sa mga kontak",
+    "addToContacts": "Idagdag sa Mga Kontak"
+  },
+  "invoiceView": {
+    "title": "INVOICE",
+    "billFrom": "Mula Kay",
+    "billTo": "Para Kay",
+    "issueDate": "Petsa ng Pag-isyu",
+    "dueDate": "Huling Araw",
+    "invoiceAmount": "Halaga ng Invoice",
+    "recipientGets": "Natatanggap ng Tatanggap",
+    "payLink": "Pay Link",
+    "taxId": "TIN: {{id}}",
+    "noteLabel": "Tala: {{note}}",
+    "platformFeeLabel": "Bayad sa Platform (0.5%{{cap}})",
+    "platformFeeCapped": ", may takda",
+    "paidStatus": "✓ Nabayaran noong {{date}}",
+    "noToken": "Walang token",
+    "failedToLoad": "Nabigong i-load",
+    "notFound": "Hindi natagpuan ang invoice.",
+    "unavailable": "Hindi available ang invoice.",
+    "saveAsImage": "I-save bilang imahe",
+    "printPdf": "I-print / I-save ang PDF",
+    "openInSafariChrome": "Buksan sa Safari o Chrome para i-save bilang PDF",
+    "close": "Isara"
+  },
+  "notFound": {
+    "title": "Hindi nahanap ang pahina",
+    "desc": "Ang pahinang hinahanap mo ay wala o nailipat na."
+  },
+  "installGuide": {
+    "alreadyInstalled": "Naka-install na!",
+    "usingStandalone": "Ginagamit mo ang iUSD Pay bilang standalone app.",
+    "installApp": "I-install ang App",
+    "androidHint": "Buksan ang pahina sa Chrome at i-tap ang menu (⋮) → \"Idagdag sa Home Screen\"",
+    "desktopHint": "Sa Chrome, i-click ang install icon (⊕) sa address bar, o Menu → \"I-install ang app\"",
+    "skip": "Ilaktaw muna",
+    "ios": {
+      "step1": "I-tap ang Share button sa ilalim ng Safari",
+      "step2": "Mag-scroll pababa at i-tap ang \"Idagdag sa Home Screen\"",
+      "step3": "I-tap ang \"Idagdag\" para kumpirmahin"
+    }
+  },
+  "giftBox": {
+    "1": {
+      "name": "Music Box",
+      "description": "Liontin na hugis-kalasag gawa sa ginto at enamel. Isang panig ay may eksena ng automaton na sakahan na may gilingang pinapaandar ng tubig; ang kabila ay rosa sa pulang background. Pareho ang magkabilang panig na may hangganang kalahating perlas, huwarang halimbawa ng dekorasyong sining noong ika-18 siglo."
+    },
+    "2": {
+      "name": "FLY Coffee",
+      "description": "Mag-enjoy ng Fly Coffee na may 50% off. Sa cafe man o take out, tikman ang aroma ng bawat tasa sa pinakamahusay na presyo."
+    },
+    "3": {
+      "name": "Repeating watch",
+      "description": "Repeating watch na likha ni Francis Perigal, kilalang British na relohero (aktibo 1741–67). Gintong casing na may bahaging enamel; puting enamel dial na may itim na bilang at pilak na kamay na may brilyante; gilded mechanism. Pinakarurok ng sining ng relo noong ika-18 siglo."
+    },
+    "4": {
+      "name": "Gitara",
+      "description": "Isang gitara na ang likod, tagiliran, leeg, at ulo ay binalot ng chevron na gawa sa balat ng pagong, ebony at garing, na may nakapalamuting scrollwork, rhombus at geometrikong gilid. Mahusay na pagsasama ng kahoy at inlay art na nagpapakita ng pambihirang husay ng manlilikha."
+    },
+    "5": {
+      "name": "Music Box",
+      "description": "Suwisong music box noong mga 1820, hugis mandolin. Gawa sa iba't ibang materyales nang masinsinan, pinagsasama nito ang sining ng mga European music box noong unang bahagi ng ika-19 siglo at ang estetika ng mandolin bilang instrumento."
+    },
+    "6": {
+      "name": "Gitara",
+      "description": "Napakaadornadong gitara ni Giacomo (Jacob) Ertel, huling bahagi ng ika-17 siglo. Spruce, ebony, prutasng kahoy, buto, garing, nakar at perkamino. Pinagsasama nito ang hilig ng manggagawang Aleman sa pagpapaganda at ang tradisyon ng paggawa ng gitara sa Italya."
+    },
+    "7": {
+      "name": "Umaga ng Taglamig sa Probinsya",
+      "description": "Kinulayang-kamay na lithograph ng estudyo ng Currier & Ives, 1873. Nayong natatakpan ng niyebe: isang trineo na hinihila ng dalawang kabayo ay nagdadala ng mag-asawa at apat na malalaking lalagyan ng gatas; sa malayo, ang kanilang sakahan. Tipikal na halimbawa ng pangkaraniwang sining sa Amerika noong ika-19 siglo."
+    },
+    "8": {
+      "name": "Bigyan Ako ng Kalayaan o Bigyan Ako ng Kamatayan!",
+      "description": "Kinulayang-kamay na lithograph ng Currier & Ives, 1876, \"Bigyan mo ako ng kalayaan o bigyan mo ako ng kamatayan!\". Ipinapakita si Patrick Henry na nagbibigay ng sikat na talumpati tungkol sa mga karapatan ng mga kolonya sa Virginia Assembly sa Richmond, Marso 1775."
+    },
+    "9": {
+      "name": "Music Box",
+      "description": "Suwisong music box na parihaba na gawa sa ginto at enamel, mga 1820. Gilid na may asul at dilaw na enamel; ang takip ay may klasikong enameled na miniature na napapalibutan ng kalahating perlas. Perpektong pagsasama ng sining ng music box at hinahanap-buhay na pag-aalahas."
+    },
+    "10": {
+      "name": "Watch case",
+      "description": "Watch case ni George Harrison, mga 1770. Bahagyang enameled na ginto; ang panlabas na case ay may nakakasilaw na brilyante, patunay ng mataas na kakayahan ng mga British watchmaker at jeweller noong ika-18 siglo."
+    },
+    "11": {
+      "name": "Division Viol",
+      "description": "Division viol ni Richard Meares, mga 1680. Spruce, ebony, maple. Ang mga viol, pinakapinahahalagahang bowed instrument sa huling Renaissance, unti-unting pinalitan ng biyolin sa ika-17 siglo; mahalagang saksi sa kasaysayan ng musika."
+    },
+    "12": {
+      "name": "Dragon",
+      "description": "Bronse na dragon noong unang bahagi ng ika-17 siglo ni Giacomo Laurenziani. Nang bilhin, na-catalog ito bilang griffin; pagkatapos ng 1950s, wastong nakilala ni James Parker bilang dragon; mahusay na halimbawa ng eskultura ng Baroque."
+    },
+    "13": {
+      "name": "Roses and Lilies",
+      "description": "Henri Fantin-Latour, 1888, langis sa canvas. Ang obrang ito na nasa napakagandang kondisyon ay nagpapakita ng mahusay na pagkontrol ng pigmento ng pintor: hindi lamang brush ang kanyang ginagamit, kundi pati ang dulo ng hawakan ng brush upang hubugin ang mga rosas at liryo na may matinding liwanag at texture."
+    },
+    "14": {
+      "name": "Relo",
+      "description": "Relo ni F. L. Meybom, mga 1670–75. Ang case ay gawa sa ginto, bluing steel, rock crystal at bahagyang gilded na pilak na may brilyante; dial na may painted enamel at basse-taille enamel sa ginto; mekanismo na gilded brass at bahagyang bluing steel."
+    },
+    "15": {
+      "name": "Dragonfly brooch",
+      "description": "Art Nouveau na tutubi brooch ni Edgar Bense, mga 1890. Ginto, brilyante at enamel. Ang manipis na pakpak sa plique-à-jour enamel ay koronasyon ng isang detalyadong ginawang tutubi, nagsasakatuparan ng fashion at pag-aalahas ng Art Nouveau at naturalistikong estetika."
+    },
+    "16": {
+      "name": "Armlet",
+      "description": "Indian armlet (bazuband), ika-19 siglo. Hinabing ginto na may mga rubi at isang rose-cut na brilyante. Mga katulad na halimbawa ay matatagpuan sa tradisyon ng aristokratikong alahas ng India, tagapagmana ng estetikang korte ng Mughal."
+    },
+    "17": {
+      "name": "Armor Garniture ni George Clifford",
+      "description": "Armor garniture na ginawa ni Jacob Halder noong 1586 sa Royal Armoury ng Greenwich para kay George Clifford. Asero, ginto, balat at tela. Si Clifford (1558–1605) ay inatasan bilang Queen's Champion noong 1590 at iginawad ng Order of the Garter sa parehong taon."
+    },
+    "18": {
+      "name": "Brooch sa hugis ng ulo ng kuwago",
+      "description": "Brotse na hugis ulo ng kuwago ni Castellani, mga 1860. Ginto at agate. Ang obrang ito at ang grupong kinaaaniban nito (tingnan ang 2014.713.1–.10) ay nagpapakita ng matinding interes ng Europa sa ika-19 siglo sa makasaysayang estilo at kumakatawan sa archaeological revival na alahas."
+    },
+    "19": {
+      "name": "Relo",
+      "description": "Relo ni Charles Bobinet, mga 1655–60. Agate na case na may enameled gold mounts; puting enamel dial na may gold hand; gilded brass at bahagyang bluing steel na mekanismo. Patunay ng mataas na sining ng paggawa ng relo sa Europa sa kalagitnaan ng ika-17 siglo."
+    },
+    "20": {
+      "name": "Irises",
+      "description": "Vincent van Gogh, 1890, langis sa canvas. Ang sikat na Irises. Isa sa pinakaikonikong obra sa huling yugto ng pintor; sa kulay na masigla at brushstroke na puno ng buhay, nag-iiwan siya ng malalim na paggalang sa ganda ng kalikasan."
+    },
+    "21": {
+      "name": "Sugar bowl na may takip",
+      "description": "Sugar bowl na may takip ni Giovacchino Belli, mga 1811–22. Silver gilt. Ang bersyon ni Belli ng estilong Empire ay mas relaxed at malapit kaysa sa interpretasyon ng mga Pranses sa kanyang panahon, nag-lalambot ng mga mahigpit na linya ng neoclassic na may natatanging lasa ng Italya."
+    },
+    "22": {
+      "name": "Ewer",
+      "description": "Ewer na silver-gilt at enamel, mga 1600. Ang katawan nito ay may dekorasyon ng prusisyon ng mga tao at hayop na naglalarawan ng Tagumpay ni Caesar sa pagbabalik mula sa Ehipto o ni Scipio Africanus pagkatapos talunin si Hannibal; mahusay na obra ng metal art sa huling Renaissance."
+    },
+    "23": {
+      "name": "Ang Aktor na si Asao Gakujūrō I bilang Mashiba Hisatsugu",
+      "description": "Woodblock print ni Shunkōsai Hokushū (Osaka), 1822. Nishiki-e sa papel na may tinta at kulay, vertical ōban format ng Hapon. Inilalarawan ang Osaka kabuki na aktor na si Asao Gakujūrō I sa papel ni Mashiba Hisatsugu na may matinding tingin at mapanghamong pose na puno ng drama."
+    },
+    "24": {
+      "name": "Korona ng Andes",
+      "description": "\"Korona ng Andes\" — diadem mga 1660 at mga arko mga 1770. Colombia, Popayán. Repoussé at chased na ginto na may esmeralda. Isa sa pinakamahalagang pag-aalahas sa kolonyal na panahon ng Timog Amerika, malikhaing sintesis ng mga teknik sa Europa at katutubo."
+    }
+  },
+  "components": {
+    "nicknameEditor": {
+      "title": "Baguhin ang palayaw",
+      "placeholder": "Iyong palayaw",
+      "randomNickname": "Random na palayaw",
+      "generating": "GINAGAWA...",
+      "firstChangeFee": "Bayad sa unang pagbabago",
+      "changeFeeN": "Bayad sa pagbabago (pagbabago #{{n}})",
+      "firstFeeNote": "Ang unang palit ng palayaw ay 0.10 iUSD. Ang susunod ay 10.00 iUSD bawat isa.",
+      "feeNote": "Ang bawat palit ng palayaw ay 10.00 iUSD.",
+      "idStays": "Hindi magbabago ang Account ID mo",
+      "notUniqueAck": "Naiintindihan kong hindi natatangi ang mga palayaw. Pwede ring gamitin ng iba ang parehong palayaw.",
+      "signing": "Nagla-sign...",
+      "payAndSave": "Bayaran ang {{fee}} iUSD at i-save",
+      "errEmpty": "Hindi maaaring walang laman ang palayaw",
+      "errFee": "Hindi ma-determine ang bayad",
+      "errTxFailed": "Nabigo ang transaksyon",
+      "errNoHash": "Walang transaction hash na ibinalik",
+      "errCancelled": "Kinansela ang transaksyon",
+      "errGeneric": "Nabigo"
+    },
+    "mwc": {
+      "chooseMethod": "Pumili ng paraan ng koneksyon",
+      "checkWallet": "Tingnan ang wallet app mo",
+      "approveRequest": "Aprubahan ang request sa wallet app",
+      "returnAfterApprove": "⚠️ Bumalik sa page na ito pagkatapos aprubahan",
+      "tryAgain": "Subukan ulit",
+      "cancel": "Kanselahin",
+      "openInWallet": "Buksan sa wallet",
+      "best": "PINAKAMAHUSAY",
+      "continueInBrowser": "Magpatuloy sa browser ng {{name}}",
+      "signAndReturn": "Mag-sign at bumalik",
+      "approveAndReturn": "Aprubahan sa app at bumalik dito",
+      "directConnection": "Direktang koneksyon • Walang relay server",
+      "connectionFailed": "Nabigo ang koneksyon",
+      "state": {
+        "initializing": "Nagsisimula...",
+        "generatingUri": "Kumokonekta...",
+        "waitingApproval": "Aprubahan sa wallet app...",
+        "connected": "Konektado!",
+        "failed": "Nabigo"
+      }
+    },
+    "quickLogin": {
+      "signing": "Nagla-sign...",
+      "verifying": "Nagve-verify...",
+      "processing": "Pinoproseso...",
+      "signInTo": "Mag-sign in para sa {{action}}",
+      "walletTapToSignIn": "Nakakonekta ang wallet. I-tap para mag-sign in.",
+      "almostThere": "Malapit na! Kumpletuhin ang rehistro para sa {{action}}.",
+      "redirecting": "Inililipat sa rehistro...",
+      "connectionFailed": "Nabigo ang koneksyon",
+      "tryAgain": "Subukan ulit",
+      "connecting": "Kumokonekta...",
+      "connectTo": "Kumonekta para sa {{action}}",
+      "tapConnectHint": "I-tap ang Connect — hihingi ng signature ang wallet",
+      "signInWith": "Mag-sign in gamit ang",
+      "orWallet": "O WALLET",
+      "other": "Iba pa",
+      "openInWalletBrowser": "Buksan ang link na ito sa browser ng wallet mo",
+      "linkCopied": "Nakopya ang link sa clipboard",
+      "dismiss": "Isara"
+    },
+    "identityCardBack": {
+      "idLabel": "ID:",
+      "deposit": "Mag-deposito",
+      "withdraw": "Mag-withdraw",
+      "onlyOn": "Sa",
+      "gas": "Gas",
+      "gasOk": "Gas OK",
+      "lowGas": "Mababang Gas"
+    },
+    "qrScan": {
+      "scanQR": "I-scan ang QR",
+      "cameraUnavailable": "Walang available na camera",
+      "turnFlashOff": "I-off ang flash",
+      "turnFlashOn": "I-on ang flash",
+      "cancel": "Kanselahin"
+    },
+    "errorBoundary": {
+      "updating": "Ina-update…",
+      "somethingWrong": "May nangyaring mali",
+      "genericErr": "May hindi inaasahang error na pumigil sa pag-load ng page.",
+      "reload": "I-reload",
+      "resetReload": "I-reset at i-reload"
+    },
+    "identityCard": {
+      "validFrom": "BALIDO MULA",
+      "status": "KATAYUAN",
+      "statusActive": "Aktibo",
+      "statusFrozen": "Nakafreeze",
+      "statusDeactivated": "Hindi aktibo",
+      "viewProfile": "Tingnan ang profile card",
+      "scanAndGift": "I-scan at Mag-regalo ✨",
+      "share": "↗ Ibahagi",
+      "shareText": "Nakuha ko ang iUSD Pay card ko! I-scan at mag-regalo",
+      "copyLink": "Kopyahin link",
+      "copied": "Nakopya!"
+    }
+  },
+  "soundStyles": {
+    "click": {
+      "keyboard": {
+        "name": "Keyboard",
+        "desc": "Click ng mekanikal na keyboard"
+      },
+      "pop": {
+        "name": "Malambot na Pop",
+        "desc": "Pumuputok na bula"
+      },
+      "tic": {
+        "name": "Tic",
+        "desc": "Maikling matinis na tic"
+      },
+      "chime": {
+        "name": "Chime",
+        "desc": "Malambot na ding"
+      },
+      "glass": {
+        "name": "Salamin",
+        "desc": "Kalampag ng salamin"
+      },
+      "coin": {
+        "name": "Barya",
+        "desc": "Metaliko na ching"
+      },
+      "digital": {
+        "name": "Digital",
+        "desc": "8-bit blip"
+      },
+      "drip": {
+        "name": "Patak",
+        "desc": "Patak ng tubig"
+      },
+      "paper": {
+        "name": "Papel",
+        "desc": "Tap ng papel"
+      },
+      "piano": {
+        "name": "Piano",
+        "desc": "Banayad na piano"
+      },
+      "silent": {
+        "name": "Tahimik",
+        "desc": "Walang click"
+      }
+    },
+    "card": {
+      "breeze": {
+        "name": "Simoy",
+        "desc": "Malambot na hangin"
+      },
+      "dream_bells": {
+        "name": "Dream Bells",
+        "desc": "Ningning ng salaming bells"
+      },
+      "page_turn": {
+        "name": "Lipat pahina",
+        "desc": "Kaluskos ng papel"
+      },
+      "whoosh": {
+        "name": "Whoosh",
+        "desc": "Mabilis na swoosh"
+      },
+      "soft_pop": {
+        "name": "Malambot na Pop",
+        "desc": "Banayad na double-pop"
+      },
+      "silent": {
+        "name": "Tahimik",
+        "desc": "Walang flip sound"
+      }
+    },
+    "gift": {
+      "celebration": {
+        "name": "Selebrasyon",
+        "desc": "Pataas na chord C-E-G-C"
+      },
+      "sparkle": {
+        "name": "Ningning",
+        "desc": "Matataas na kinang"
+      },
+      "fanfare": {
+        "name": "Fanfare",
+        "desc": "Tansong ta-da"
+      },
+      "bell_cascade": {
+        "name": "Bell Cascade",
+        "desc": "Pababang mga kampana"
+      },
+      "soft_bell": {
+        "name": "Malambot na Kampana",
+        "desc": "Iisang malambot na kampana"
+      },
+      "silent": {
+        "name": "Tahimik",
+        "desc": "Walang gift sound"
+      }
+    },
+    "txn": {
+      "whoosh_up": {
+        "name": "Whoosh Up",
+        "desc": "Pataas na swoosh"
+      },
+      "coin_drop": {
+        "name": "Hulog ng barya",
+        "desc": "Metalikong barya dumadapo"
+      },
+      "pneumatic": {
+        "name": "Pneumatic",
+        "desc": "Retro na tubo"
+      },
+      "confirm_chime": {
+        "name": "Confirm Chime",
+        "desc": "Double-tone confirmation"
+      },
+      "paper_slide": {
+        "name": "Paper Slide",
+        "desc": "Sumusulyap na papel"
+      },
+      "silent": {
+        "name": "Tahimik",
+        "desc": "Walang transaction sound"
+      }
+    },
+    "menu": {
+      "slide": {
+        "name": "Slide",
+        "desc": "Panel na pumapasok"
+      },
+      "soft_pop": {
+        "name": "Malambot na Pop",
+        "desc": "Banayad na pagbukas"
+      },
+      "swish": {
+        "name": "Swish",
+        "desc": "Swish ng hangin"
+      },
+      "silent": {
+        "name": "Tahimik",
+        "desc": "Walang menu sound"
+      }
+    }
+  },
+  "time": {
+    "justNow": "ngayon lang",
+    "minutesAgo": "{{n}}m nakaraan",
+    "hoursAgo": "{{n}}h nakaraan",
+    "daysAgo": "{{n}}d nakaraan"
+  },
+  "receiptView": {
+    "back": "← Bumalik",
+    "paymentReceipt": "Resibo ng Bayad",
+    "receipt": "Resibo",
+    "noPaymentId": "Walang payment ID",
+    "notFound": "Hindi natagpuan ang resibo.",
+    "failedToLoad": "Nabigong mag-load",
+    "fee": "Bayad: {{amount}} iUSD",
+    "date": "Petsa",
+    "confirmedLabel": "Nakumpirma",
+    "verify": "I-verify",
+    "from": "Mula",
+    "to": "Para",
+    "tx": "Tx: {{hash}}",
+    "id": "ID: {{id}}",
+    "statusPaid": "Bayad na",
+    "statusConfirmed": "Nakumpirma",
+    "statusPending": "Naghihintay",
+    "statusRevoked": "Kinansela",
+    "statusRefunded": "Naibalik",
+    "statusExpired": "Expired",
+    "statusFailed": "Nabigo",
+    "statusUnknown": "Di-kilala",
+    "saveAsImage": "I-save bilang imahe",
+    "printPdf": "I-print / I-save ang PDF",
+    "openInSafariChrome": "Buksan sa Safari o Chrome para i-save bilang PDF",
+    "errorPrefix": "Error: {{msg}}"
+  },
+  "update": {
+    "available": "May bagong bersyon",
+    "reload": "I-reload"
+  }
+}

@@ -1,0 +1,36 @@
+node_modules/
+dist/
+build/
+coverage/
+
+# Hardhat build artifacts (auto-generated, not source)
+packages/contracts/evm/artifacts/
+packages/contracts/evm/cache/
+packages/contracts/evm/typechain-types/
+
+# Env
+.env
+.env.local
+
+# Logs
+*.log
+
+# Turbo
+.turbo/
+
+# Lock files (optional: uncomment to commit)
+# pnpm-lock.yaml
+
+# Runtime data (never commit)
+packages/api/data/
+/data/
+db-backups/
+packages/api/db-backups/
+db-backups/*.sql
+packages/api/db-backups/*.sql
+
+# Deployer keys (NEVER COMMIT)
+DEPLOYERS.md
+
+# Deploy secrets
+deploy/config.json

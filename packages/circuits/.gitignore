@@ -1,0 +1,4 @@
+keys/*.ptau
+keys/*_final.zkey
+build/
+node_modules/

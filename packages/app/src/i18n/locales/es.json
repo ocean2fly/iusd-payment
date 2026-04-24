@@ -1,0 +1,1250 @@
+{
+  "popup": {
+    "title": "Permitir ventanas emergentes en la configuración del navegador",
+    "subtitle": "Tu navegador está bloqueando la ventana emergente de inicio de sesión. Habilítala en Ajustes como se muestra.",
+    "next": "Siguiente",
+    "back": "Atrás",
+    "gotIt": "Entendido",
+    "continue": "Continuar",
+    "enableTitle": "Habilitar ventanas emergentes",
+    "signinNeedsPopup": "Iniciar sesión requiere una ventana emergente.",
+    "gotoMobile": "Ve a Ajustes → navegador → permitir ventanas emergentes.",
+    "gotoDesktop": "Ve a Ajustes → permitir ventanas emergentes.",
+    "checkDetail": "Ver detalle"
+  },
+  "auth": {
+    "connect": "Conectar",
+    "signIn": "Iniciar sesión →",
+    "connecting": "Conectando…",
+    "signing": "Firmando…",
+    "checkWallet": "Revisa tu wallet para una solicitud de firma…",
+    "settingUp": "Configurando tu cuenta…",
+    "coinbaseConnected": "¡Coinbase Wallet conectada!",
+    "walletConnected": "¡Wallet conectada!",
+    "wcTimeout": "WalletConnect agotó el tiempo de espera",
+    "restoring": "Restaurando sesión de wallet…",
+    "openingWindow": "Abriendo ventana de inicio de sesión…",
+    "tapConnect": "Toca Conectar — tu wallet pedirá firmar",
+    "signInWith": "Iniciar sesión con",
+    "or": "o",
+    "tryAgain": "Reintentar",
+    "reconnect": "Reconectar wallet",
+    "popupBlockedMobile": "La ventana emergente fue bloqueada. Ve a Ajustes → navegador → permitir ventanas emergentes.",
+    "popupBlockedDesktop": "La ventana emergente fue bloqueada. Ve a Ajustes → permitir ventanas emergentes.",
+    "signFailed": "Falló el inicio de sesión. Inténtalo de nuevo.",
+    "connectionLost": "Se perdió la conexión con la wallet. Vuelve a conectar.",
+    "signatureCancelled": "Firma cancelada.",
+    "networkBlocked": "API inaccesible o bloqueada (red/CORS/Acceso). Reintenta en una pestaña nueva."
+  },
+  "landing": {
+    "tagline": "Pago con stablecoin en Initia",
+    "installAsApp": "Instalar como app",
+    "forceRefresh": "Recarga forzada",
+    "refresh": "Recargar",
+    "forceRefreshTip": "Recarga forzada para resolver problemas locales de la página"
+  },
+  "wallets": {
+    "openInWalletBrowser": "Abrir en el navegador de la app de wallet",
+    "pasteUrl": "Pega la URL de iUSD pay (copiada) y ve",
+    "done": "Listo",
+    "other": "Otra"
+  },
+  "common": {
+    "language": "Idioma",
+    "cancel": "Cancelar",
+    "save": "Guardar",
+    "saving": "Guardando…",
+    "saved": "Guardado",
+    "close": "Cerrar",
+    "change": "Cambiar",
+    "loading": "Cargando…",
+    "view": "Ver",
+    "optional": "Opcional",
+    "on": "ON",
+    "off": "OFF"
+  },
+  "welcome": {
+    "tagline": "Pagos con stablecoin en Initia",
+    "whatYouGet": "Lo que obtienes",
+    "features": {
+      "transfer": "Transfiere y cobra libremente con Scan",
+      "merchants": "Integración fluida con comercios",
+      "gifts": "Envía regalos a amigos y grupos"
+    },
+    "agreePrefix": "Acepto los",
+    "and": "y la",
+    "tos": "Términos del Servicio",
+    "privacy": "Política de Privacidad",
+    "experimentalNote": ". Esta app es experimental en mainnet.",
+    "getStarted": "Comenzar →"
+  },
+  "dashboard": {
+    "tapEditNickname": "Toca para editar el apodo",
+    "minGasHint": "Mín. 1 INIT o 1 USDC para gas",
+    "refreshBalances": "Actualizar saldos",
+    "actions": {
+      "transfer": "Enviar",
+      "request": "Solicitar",
+      "gift": "Regalo",
+      "inbox": "Bandeja",
+      "contacts": "Contactos",
+      "scan": "Escanear",
+      "history": "Historial",
+      "settings": "Ajustes"
+    }
+  },
+  "settings": {
+    "title": "Ajustes",
+    "account": {
+      "title": "Cuenta",
+      "nickname": "Apodo",
+      "setNickname": "Establecer apodo",
+      "bio": "Bio / Lema",
+      "bioPlaceholder": "p. ej. Escanéame y regálame, te devuelvo un beso 💋",
+      "id": "ID",
+      "wallet": "Wallet",
+      "copied": "Copiado",
+      "ecosystem": "Ecosistema",
+      "autoClaim": "Reclamo automático"
+    },
+    "appearance": {
+      "title": "Apariencia",
+      "auto": "Auto",
+      "light": "Claro",
+      "dark": "Oscuro"
+    },
+    "sound": {
+      "title": "Sonido",
+      "desc": "Clics UI, volteo de tarjetas, celebraciones",
+      "muted": "Silenciado",
+      "on": "Activado",
+      "styles": "Estilos de sonido",
+      "customize": "Personalizar",
+      "tapPreview": "Toca un estilo para escuchar y elegir",
+      "unmutePreview": "Activa el sonido arriba para oír vistas previas",
+      "cat": {
+        "click": "Clic",
+        "cardFlip": "Voltear",
+        "gift": "Regalo",
+        "transaction": "Transacción",
+        "menu": "Menú"
+      }
+    },
+    "receive": {
+      "title": "Dirección de recepción",
+      "privacyProtection": "Protección de privacidad",
+      "defaultWallet": "Mi wallet (por defecto)",
+      "change": "Cambiar",
+      "modalTitle": "Protege tu dirección de recepción",
+      "modalDesc": "Puedes establecer una wallet independiente para recibir pagos iUSD, manteniendo tu wallet conectada en privado. Los pagos se enrutarán automáticamente a esta dirección.",
+      "complianceHeader": "⚠ Aviso de cumplimiento",
+      "complianceDesc": "Todas las transacciones siguen siendo auditables bajo las políticas AML aplicables sin importar el enrutamiento. Esta firma confirma tu comprensión y consentimiento.",
+      "placeholder": "0x… o init1… (vacío = usar tu wallet)",
+      "signSave": "Firmar y guardar",
+      "signing": "Firmando…"
+    },
+    "about": {
+      "title": "Acerca",
+      "iusdPay": "iUSD Pay",
+      "network": "Red",
+      "contract": "Contrato",
+      "tos": "Términos del Servicio",
+      "privacy": "Política de Privacidad",
+      "forceRefresh": "Forzar recarga",
+      "community": "Comunidad"
+    },
+    "danger": {
+      "title": "Zona de peligro",
+      "disconnect": "Desconectar wallet",
+      "disconnectTitle": "¿Desconectar wallet?",
+      "disconnectDesc": "Puedes volver a conectarte cuando quieras.",
+      "delete": "Eliminar cuenta",
+      "deleteConfirmWarn": "⚠ Esto elimina tu cuenta permanentemente",
+      "confirmDelete": "Confirmar eliminación",
+      "deleting": "Eliminando…"
+    }
+  },
+  "transfer": {
+    "title": "Enviar",
+    "paymentCodeTitle": "Código de pago",
+    "showToRecipient": "Muestra este QR al receptor.",
+    "scanAndEnter": "Escanea e ingresa el monto para solicitar el pago.",
+    "waitingForRequest": "Esperando solicitud…",
+    "sessionExpired": "Sesión expirada",
+    "generateNew": "Generar nuevo código",
+    "generating": "Generando código de pago…",
+    "recipientPlaceholder": "Apodo o ID de cuenta",
+    "contacts": "Contactos",
+    "checking": "Verificando…",
+    "noContactsMatch": "Sin contactos que coincidan con \"{{query}}\"",
+    "noContactsYet": "Aún sin contactos",
+    "noContactsHint": "Envía un pago o visita Historial para empezar",
+    "amountLabel": "Monto",
+    "amountMin": "Mín. 0.1 iUSD",
+    "amountMax": "Máx. 1,000 iUSD por transacción",
+    "memoLabel": "Nota",
+    "memoPlaceholder": "Nota opcional",
+    "fee": "Comisión: {{amount}} iUSD",
+    "feeCap": "(máx.)",
+    "total": "Total: {{amount}} iUSD",
+    "autoSaveContact": "Esta persona se guardará automáticamente en Contactos",
+    "paymentQR": "QR de pago",
+    "building": "Construyendo…",
+    "confirming": "Confirmar…",
+    "send": "Enviar",
+    "sendAmount": "Enviar {{amount}} iUSD"
+  },
+  "request": {
+    "title": "Solicitar",
+    "modePersonal": "Yo",
+    "modeBusiness": "Empresa",
+    "tabNew": "Nuevo",
+    "tabInvoices": "Facturas",
+    "empty": "Aún sin solicitudes",
+    "createFirst": "Crear primera solicitud →",
+    "share": "Compartir ↗",
+    "amountLabel": "Monto",
+    "noteLabel": "Nota",
+    "notePlaceholder": "Descripción (opcional)",
+    "taxNoLabel": "Nº fiscal",
+    "dueLabel": "Vence",
+    "invLabel": "Factura #",
+    "payerLabel": "Pagador",
+    "payerPlaceholder": "Nombre (opcional)",
+    "status": {
+      "draft": "Borrador",
+      "sent": "Esperando pago",
+      "paying": "Esperando confirmación",
+      "paid": "Pagado",
+      "overdue": "Vencido",
+      "refunded": "Reembolsado",
+      "cancelled": "Cancelado"
+    }
+  },
+  "scan": {
+    "title": "Escanear QR",
+    "lookingUp": "Buscando cuenta…",
+    "paymentDetails": "DETALLES DEL PAGO",
+    "scannedContent": "CONTENIDO ESCANEADO",
+    "manualInput": "ENTRADA MANUAL / IMAGEN",
+    "pasteHint": "Pega URL o ID de cuenta…",
+    "startCamera": "Iniciar cámara",
+    "stopCamera": "Detener cámara",
+    "flipCamera": "Girar cámara",
+    "retry": "Reintentar",
+    "scannedCheck": "¡Escaneado! Revisa tu escritorio.",
+    "scanAgain": "↩ Escanear de nuevo",
+    "tagInvoice": "🧾 Factura / Solicitud",
+    "tagIdentity": "👤 Identidad",
+    "tagScanned": "🔗 Escaneado",
+    "due": "Vence",
+    "payRequest": "💸 Pagar esta solicitud",
+    "payAmount": "💸 Pagar {{amount}} iUSD",
+    "contactSaved": "✅ ¡Contacto guardado!",
+    "reAddContactsTag": "👤 Volver a agregar",
+    "addContactsTag": "👤 Agregar a contactos",
+    "transfer": "Transferir",
+    "gift": "Regalo",
+    "contactAlreadyAdded": "Contacto ya agregado",
+    "reAddToContacts": "Volver a agregar",
+    "addToContacts": "Agregar a contactos",
+    "visit": "Visitar →",
+    "clickToStart": "Clic para iniciar la cámara",
+    "pointPhone": "Escaneando — apunta el teléfono al QR",
+    "disconnect": "✕ Desconectar",
+    "go": "Ir",
+    "dropToScan": "Suelta para escanear QR",
+    "chooseFromGallery": "Elegir de la galería",
+    "galleryHint": "Selecciona o arrastra una imagen de QR",
+    "cameraN": "Cámara {{n}}",
+    "err": {
+      "accessBlocked": "🔒 Acceso a cámara bloqueado",
+      "permissionDesc": "Se denegó el permiso de cámara. Debes habilitarlo de nuevo en los ajustes del navegador.",
+      "chromeEdge": "🌐 Chrome / Edge",
+      "pasteInstructions": "Copia esta URL → pégala en una nueva pestaña → ajusta Cámara a",
+      "allow": "Permitir",
+      "copy": "Copiar",
+      "firefoxHint": "Haz clic en el ícono 🔒 de cámara en la barra → Permitir",
+      "safariHint": "Ajustes → Safari → Cámara → Permitir",
+      "androidHint": "Toca ⋮ → Ajustes del sitio → Cámara → Permitir",
+      "retryAfter": "↺ Reintentar tras activar",
+      "noCamera": "📷 Cámara no encontrada",
+      "noCameraDesc": "No se detectó cámara en este dispositivo.",
+      "useManualFull": "Usa la entrada manual de abajo o conecta un escáner externo.",
+      "inUse": "📷 Cámara en uso",
+      "inUseDesc": "La cámara está en uso por otra app. Cierra las otras apps y reintenta.",
+      "flashNotSupported": "Flash no compatible con este dispositivo",
+      "noQrInImage": "No se encontró código QR en la imagen",
+      "couldNotCreateRelay": "No se pudo crear sesión de relay",
+      "cameraError": "Error de cámara: {{msg}}",
+      "cameraDenied": "Cámara denegada: {{msg}}",
+      "connectionFailed": "Conexión fallida. Prueba modo básico.",
+      "desktopNotReady": "Escritorio no listo. Recarga la página de escritorio.",
+      "failedToSend": "Error al enviar",
+      "invalidSession": "Sesión inválida"
+    },
+    "relay": {
+      "gettingCamera": "Obteniendo cámara…",
+      "connectingDesktop": "Conectando al escritorio…",
+      "liveCameraHeader": "📹 Cámara en vivo",
+      "qrScannerHeader": "📤 Escáner QR",
+      "liveBadge": "● EN VIVO",
+      "streamingDesktop": "📹 Transmitiendo al escritorio — ven lo que ves",
+      "pointAtDesktop": "📤 Apunta al código QR del escritorio",
+      "statusPrefix": "🔄 {{status}}"
+    }
+  },
+  "gift": {
+    "title": "Regalo",
+    "message": "Mensaje",
+    "quickPicks": "Selección rápida",
+    "next": "Siguiente →",
+    "recipient": "Destinatario",
+    "shares": "Partes",
+    "total": "Total",
+    "ready": "¡Regalo listo!",
+    "shareAccessHint": "Comparte el enlace de acceso con tu amigo.",
+    "rightClickSave": "Clic derecho en la imagen para guardar · Enlace copiado",
+    "dismiss": "Descartar",
+    "viewDetails": "Ver detalles del regalo →",
+    "scanToOpen": "Escanea para abrir",
+    "noReplies": "Sin respuestas aún",
+    "noViews": "Sin vistas aún",
+    "loadingHistory": "Cargando historial…",
+    "giftList": "Lista de regalos",
+    "historyTab": "Historial",
+    "newest": "Reciente",
+    "oldest": "Antiguo",
+    "newestFirst": "Más reciente primero",
+    "oldestFirst": "Más antiguo primero",
+    "noDescription": "Sin descripción disponible.",
+    "allCollections": "Todas las colecciones",
+    "collection": {
+      "flowers": "Flores",
+      "drinks": "Bebidas",
+      "food": "Comida",
+      "treats": "Dulces",
+      "tech": "Tecnología",
+      "luxury": "Lujo",
+      "office": "Oficina",
+      "art": "Arte",
+      "books": "Libros",
+      "games": "Juegos",
+      "wellness": "Bienestar",
+      "travel": "Viaje",
+      "fashion": "Moda",
+      "kids": "Niños",
+      "pets": "Mascotas",
+      "sports": "Deportes",
+      "other": "Otro",
+      "painting": "Pintura",
+      "music_box": "Caja de música",
+      "instrument": "Instrumento",
+      "sculpture": "Escultura",
+      "textile": "Textil",
+      "ceramic": "Cerámica",
+      "watch": "Reloj",
+      "brooch": "Broche",
+      "armor": "Armadura",
+      "furniture": "Muebles",
+      "jewelry": "Joyería"
+    },
+    "flexible": "Flexible",
+    "source": "Fuente ↗",
+    "progressPanel": {
+      "progress": "Progreso",
+      "inProgress": "En curso",
+      "completed": "Completado",
+      "expired": "Expirado",
+      "expiredRefunded": "Expirado · reembolsado",
+      "expiresIn": "Expira en {{label}}",
+      "endsIn": "Termina en {{label}}",
+      "claimedOf": "de {{total}} reclamados",
+      "claimsHeader": "Reclamos · {{count}}",
+      "replied": "💌 RESPONDIÓ",
+      "claimedChip": "✓ RECLAMADO",
+      "anon": "Anónimo",
+      "allClaimed": "Todas las partes han sido reclamadas.",
+      "refunded_one": "{{count}} parte sin reclamar reembolsada",
+      "refunded_other": "{{count}} partes sin reclamar reembolsadas",
+      "refundedNote": "Los fondos de las partes sin reclamar se devolvieron automáticamente a tu saldo al expirar el regalo.",
+      "noClaimsYet": "Nadie ha reclamado todavía. Comparte el enlace para avisarles.",
+      "daysHours": "{{days}}d {{hours}}h",
+      "hoursMinutes": "{{hours}}h {{minutes}}m",
+      "minutesOnly": "{{minutes}}m"
+    },
+    "back": "← Atrás",
+    "stepChoose": "Elegir regalo",
+    "stepWrite": "Escribir mensaje",
+    "stepSendTo": "Enviar a",
+    "feePercent": "tarifa {{percent}}%",
+    "feeLabel": "Tarifa ({{percent}}%)",
+    "more": "más",
+    "browseAll": "Ver todos los regalos",
+    "writePlaceholder": "Escribir un mensaje...",
+    "amountIusd": "Cantidad (iUSD)",
+    "amountRangePlaceholder": "0.1 ~ 1000 iUSD",
+    "tapToEdit": "✎ toca para editar",
+    "amountInRange": "0.10 – 1,000 iUSD",
+    "anyoneGroup": "Cualquiera (grupo)",
+    "anyoneCanClaim": "Cualquiera puede reclamar",
+    "enterContact": "Ingresa contacto o ID",
+    "invalidRecipient": "Usuario o ID inválido",
+    "usernameInactive": "Usuario inactivo",
+    "recipientRequired": "Destinatario requerido",
+    "sendFailed": "Envío falló",
+    "missingTxParams": "Faltan parámetros de transacción",
+    "giftTxFailed": "Transacción de regalo falló",
+    "contactsHeader": "Contactos",
+    "fromHistory": "✨ Desde Historial",
+    "splitEqual": "Igual",
+    "splitRandom": "Aleatorio",
+    "balanceLine": "Saldo: {{amount}} iUSD",
+    "wrapping": "Envolviendo...",
+    "insufficientBalance": "Saldo insuficiente",
+    "wrapGift": "🎁 Envolver regalo",
+    "giftNumber": "Regalo #{{id}}",
+    "fromName": "De {{name}}",
+    "anonymous": "Anónimo",
+    "mysteryAwaits": "Un regalo misterioso espera",
+    "claimedAgo": "Reclamado {{time}}",
+    "claimed": "Reclamado",
+    "view": "Ver →",
+    "openCta": "🎁 Abrir →",
+    "expiredChip": "Expirado",
+    "claimedOfShort": "{{claimed}}/{{total}} reclamados",
+    "enjoyEmoji": "¡Disfruta! 🎁",
+    "forYouEmoji": "Con amor ❤️",
+    "happyBirthday": "¡Feliz cumpleaños! 🎂",
+    "thankYouEmoji": "¡Gracias! 🙏",
+    "cheersEmoji": "¡Salud! 🥂",
+    "justBecause": "Solo porque 🌟",
+    "deserveIt": "Te lo mereces ✨",
+    "haveFun": "¡Diviértete! 🎉",
+    "treatYourself": "Date un gusto 💫",
+    "yourGiftReady": "¡Tu regalo está listo!",
+    "toLabel": "Para",
+    "feeLabelShort": "Tarifa",
+    "notificationSent": "Notificación enviada a {{name}}",
+    "fromSender": "DE {{name}}",
+    "giftWaitingShort": "Un regalo te espera",
+    "scanToOpenShort": "Escanea para abrir",
+    "iusdPay": "iUSD Pay",
+    "copied": "¡Copiado!",
+    "copyLink": "Copiar enlace",
+    "saveImage": "Guardar imagen",
+    "shareLink": "Compartir enlace",
+    "backToQr": "← Volver a QR",
+    "closeShareLater": "Puedes cerrar y compartir después desde el Historial.",
+    "preparing": "Preparando...",
+    "imageSaved": "¡Imagen guardada!",
+    "qrBtn": "QR",
+    "backBtn": "Volver",
+    "hasAGiftForYou": "tiene un regalo para ti",
+    "sharesCount_one": "{{count}} parte",
+    "sharesCount_other": "{{count}} partes",
+    "openedCount": "{{count}}/{{total}} abiertos",
+    "viewsCount": "{{count}} vistas",
+    "someone": "Alguien",
+    "shareTitle": "Regalo {{name}}",
+    "featured": "⭐ Destacado"
+  },
+  "giftClaim": {
+    "loading": "Cargando regalo…",
+    "goHome": "Ir al inicio",
+    "youReceived": "Has recibido",
+    "from": "De",
+    "reply": "Responder →",
+    "alreadyClaimed": "Ya reclamado",
+    "scanProfile": "Escanear perfil",
+    "thankPresets": {
+      "thankBoss": "¡Gracias jefe!",
+      "appreciated": "¡Muy agradecido!",
+      "soKind": "¡Qué amable!",
+      "madeMyDay": "¡Alegraste mi día!",
+      "youreBest": "¡Eres el mejor!",
+      "whatSurprise": "¡Qué sorpresa!",
+      "loveYou": "¡Te amo!",
+      "sweetest": "¡Eres muy tierno!",
+      "heartFull": "¡Mi corazón se llena!",
+      "bestBirthday": "¡El mejor cumpleaños!",
+      "bestGift": "¡El mejor regalo!",
+      "cheersYou": "¡Salud por ti!"
+    },
+    "iGotLabel": "★ RECIBÍ",
+    "onlyOneShare": "Solo 1 parte",
+    "sharesCountLabel_one": "{{count}} parte",
+    "sharesCountLabel_other": "{{count}} partes",
+    "fromSenderOverlay": "de {{name}}",
+    "detailsBtn": "detalles",
+    "claimedLabel": "reclamados",
+    "viewedLabel": "vistas",
+    "chasedLabel": "conseguido",
+    "moreBtn": "[más]",
+    "membersHeader": "MIEMBROS · {{count}}",
+    "lettersHeader": "CARTAS · {{count}}",
+    "replyBtn": "Responder",
+    "replyToPlaceholder": "Responder a {{name}}…",
+    "loveWhatYouSee": "★ ¿Te gusta lo que ves?",
+    "giftThemLine": "Da a {{name}} una propina",
+    "scanOrOpenProfile": "Abrir mi perfil →",
+    "scanOr": "Escanea o",
+    "postToPlaceholder": "Publicar a {{name}}…",
+    "postBtn": "Publicar",
+    "sentWithLoveBy": "Enviado con amor por",
+    "giftReceivedChip": "¡Regalo recibido!",
+    "anonName": "ellos",
+    "errInvalidLink": "Enlace de regalo inválido",
+    "errNotFound": "Regalo no encontrado",
+    "errClaimFailed": "Error al reclamar",
+    "errFailed": "Error",
+    "errSignInFirst": "Inicia sesión primero",
+    "errInvalidClaimLink": "Enlace de reclamo inválido",
+    "signInToSave": "Inicia sesión para guardar contactos",
+    "failedSaveContact": "Error al guardar contacto",
+    "shareTitle": "Regalo de {{name}}"
+  },
+  "history": {
+    "title": "Historial",
+    "paymentJourney": "Trayecto del pago",
+    "expires": "Expira",
+    "noInvoices": "Aún sin facturas",
+    "noActivity": "Aún sin actividad",
+    "tabs": {
+      "all": "Todo",
+      "sent": "Enviado",
+      "received": "Recib.",
+      "gift": "Regalo",
+      "invoices": "Factura",
+      "stats": "Stats"
+    },
+    "payStatus": {
+      "sent": {
+        "pending": "Pendiente",
+        "confirmed": "Confirmado",
+        "revoked": "Revocado",
+        "refunded": "Reembolsado",
+        "expired": "Expirado",
+        "unknown": "Desconocido"
+      },
+      "received": {
+        "claimable": "Reclamable",
+        "received": "Recibido",
+        "cancelled": "Cancelado",
+        "refunded": "Reembolsado",
+        "expired": "Expirado",
+        "unknown": "Desconocido"
+      }
+    },
+    "paymentId": "ID DE PAGO",
+    "sortNewest": "Orden: más recientes primero (clic para antiguos)",
+    "sortOldest": "Orden: más antiguos primero (clic para recientes)",
+    "loadMore": "Cargar más",
+    "invoicePayment": "Pago de factura",
+    "sentTo": "Enviado a",
+    "receivedFrom": "Recibido de",
+    "cancelInvoice": "Cancelar factura",
+    "cancelInvoiceConfirm": "¿Cancelar esta factura?",
+    "cancelFailed": "Cancelación fallida: {{msg}}",
+    "timeline": {
+      "created": "Creado",
+      "fee": "comisión {{amount}}",
+      "pendingClaim": "Pendiente de reclamar",
+      "awaitingRecipient": "Esperando al destinatario",
+      "autoClaimed": "Se reclamará automáticamente",
+      "confirmed": "Confirmado",
+      "received": "Recibido",
+      "expiresOn": "Expira {{date}}",
+      "revoked": "Revocado",
+      "returnedToSender": "Fondos devueltos al remitente",
+      "claimed": "Reclamado",
+      "refunded": "Reembolsado",
+      "returnedToClaimer": "Devuelto al reclamante",
+      "expired": "Expirado"
+    },
+    "stats": {
+      "accounting": "CONTABILIDAD",
+      "giftsSent": "Regalos enviados",
+      "giftsReceived": "Regalos recibidos",
+      "paid": "Pagado",
+      "received": "Recibido",
+      "moneyIn": "Ingresos",
+      "moneyOut": "Egresos",
+      "net": "Neto",
+      "pending": "Pendiente",
+      "thisMonth": "ESTE MES"
+    },
+    "noGiftHistory": "Aún no hay historial de regalos",
+    "receivedSection": "Recibidos · {{count}}",
+    "sentSection": "Enviados · {{count}}",
+    "loadingMore": "Cargando…",
+    "loadMoreReceived": "Cargar más recibidos",
+    "loadMoreSent": "Cargar más enviados",
+    "refreshTitle": "Actualizar",
+    "exportCsv": "Exportar historial CSV",
+    "revokeFailed": "Revocar falló",
+    "refundFailed": "Reembolso falló: {{msg}}",
+    "refundConfirm": "¿Reembolsar este pago al remitente?",
+    "anyone": "Cualquiera",
+    "direct": "directo",
+    "fromLabel": "DE",
+    "toLabel": "A",
+    "copySaveTitle": "Copiar shortId + guardar en contactos",
+    "due": "Vence",
+    "noSentTransactions": "Sin transacciones enviadas",
+    "noReceivedTransactions": "Sin transacciones recibidas",
+    "noTransactionsYet": "Aún no hay transacciones — las estadísticas aparecerán al operar.",
+    "detailSent": "↑ Enviado",
+    "detailReceived": "↓ Recibido",
+    "copyBtn": "📋 Copiar",
+    "receiptPdf": "↓ Recibo PDF",
+    "invoicePdf": "↓ Factura PDF",
+    "revokeBtn": "↩ Revocar",
+    "refundBtn": "↩ Reembolsar"
+  },
+  "inbox": {
+    "title": "Bandeja",
+    "claimed": "¡Reclamado!",
+    "feePaid": "Comisión pagada",
+    "anonymous": "Anónimo",
+    "claimTo": "Reclamar a:",
+    "autoClaimFuture": "Reclamo automático de pagos futuros",
+    "autoExpires": "Expira automáticamente si no se reclama",
+    "loadingReplies": "Cargando respuestas…",
+    "filter": {
+      "all": "Todo",
+      "payment": "Pago",
+      "gift": "Regalo",
+      "reply": "Respuesta"
+    },
+    "replyCount_one": "{{count}} respuesta",
+    "replyCount_other": "{{count}} respuestas",
+    "refresh": "↻ Actualizar",
+    "historyLabel": "HISTORIAL · {{count}}",
+    "statusReceived": "Recibido",
+    "statusCancelled": "Cancelado",
+    "statusRefunded": "Reembolsado",
+    "statusExpired": "Expirado",
+    "statusDone": "Hecho",
+    "businessInvoice": "🏪 Factura Empresarial",
+    "personalPayment": "👤 Pago Personal",
+    "fromId": "De {{id}}",
+    "fromLabel": "De",
+    "receipt": "Recibo",
+    "invoice": "Factura",
+    "refund": "↩ Reembolsar",
+    "refundConfirm": "¿Reembolsar este pago al remitente?",
+    "refundFailed": "Reembolso falló: {{msg}}",
+    "noRepliesHint": "Sin respuestas aún. Los agradecimientos aparecerán aquí.",
+    "alreadyClaimedRefreshed": "Este pago ya fue reclamado automáticamente. Bandeja actualizada.",
+    "alreadyClaimedRemoved": "Ya reclamado — eliminado de la bandeja.",
+    "newGiftsSection": "NUEVOS REGALOS · {{count}}",
+    "giftsSection": "REGALOS · {{count}}",
+    "sentSection": "ENVIADOS · {{count}}",
+    "loadMoreReplies": "Cargar más respuestas"
+  },
+  "contacts": {
+    "noResults": "Sin resultados",
+    "autoSavedHint": "Las personas a las que envías se guardan automáticamente",
+    "importFromHistory": "✨ Importar desde Historial",
+    "importFromHistoryTitle": "Importar contrapartes del historial reciente de pagos + regalos",
+    "searchPlaceholder": "Buscar por nombre o ID..."
+  },
+  "merchant": {
+    "title": "Perfil de empresa",
+    "preview": "Vista previa",
+    "businessName": "Nombre del Negocio *",
+    "businessNamePlaceholder": "ej. Cafetería de Juan",
+    "companyLogo": "Logo de la Empresa (opcional)",
+    "uploadJpgPng": "Subir JPG / PNG",
+    "remove": "Eliminar",
+    "logoHint": "JPG/PNG · máx 500 KB · almacenado de forma segura",
+    "maxFileSize": "Tamaño máximo 500 KB",
+    "clearConfirm": "¿Limpiar perfil comercial?",
+    "brandColor": "Color de Marca",
+    "tagline": "Eslogan / Descripción (opcional)",
+    "taglinePlaceholder": "ej. El mejor café del pueblo",
+    "businessFont": "Fuente del Nombre",
+    "contactInfo": "Información de Contacto",
+    "email": "EMAIL",
+    "phone": "TELÉFONO",
+    "website": "SITIO WEB",
+    "emailPlaceholder": "contact@example.com",
+    "phonePlaceholder": "+34 612 345 678",
+    "websitePlaceholder": "https://example.com",
+    "addressLegal": "Dirección y Legal",
+    "address": "DIRECCIÓN",
+    "addressPlaceholder": "Calle 123, Ciudad, País",
+    "taxIdLabel": "NIF / REG. MERCANTIL",
+    "taxIdPlaceholder": "ej. ES-12-3456789",
+    "invoiceNumbering": "Numeración de Facturas",
+    "prefix": "PREFIJO",
+    "startingNo": "Nº INICIAL",
+    "startingFrom": "Empezando desde: {{sample}} (auto-incremento en servidor)",
+    "save": "Guardar Perfil Comercial",
+    "saved": "✓ ¡Guardado!",
+    "clear": "Limpiar",
+    "storedLocally1": "Este perfil se almacena localmente en tu dispositivo.",
+    "storedLocally2": "Cambia a modo Empresa en la página Solicitud para usarlo.",
+    "setUpProfile": "🏢 Configura tu perfil comercial →"
+  },
+  "invoices": {
+    "title": "Contabilidad",
+    "protocolFees": "Comisiones de protocolo pagadas"
+  },
+  "payRequest": {
+    "title": "Solicitud de pago",
+    "requestSent": "¡Solicitud enviada!",
+    "error": "Error"
+  },
+  "receipt": {
+    "paymentSent": "Pago enviado.",
+    "home": "Inicio",
+    "viewInvoice": "Ver factura",
+    "loading": "Cargando recibo…"
+  },
+  "install": {
+    "addToHome": "Añadir a pantalla de inicio",
+    "tapShare": "Toca Compartir",
+    "tapMenu": "Toca menú",
+    "installTitle": "Instalar iUSD Pay",
+    "install": "Instalar"
+  },
+  "deposit": {
+    "balance": "Saldo",
+    "youReceive": "Recibirás",
+    "rate": "Tasa",
+    "estTime": "Tiempo est.",
+    "depositTitle": "Depositar {{label}}",
+    "withdrawTitle": "Retirar {{label}}",
+    "from": "Desde",
+    "to": "Hacia",
+    "selectFrom": "Selecciona el activo para depositar",
+    "selectTo": "Selecciona destino",
+    "loadingAssets": "Cargando...",
+    "noAssets": "No se encontraron activos con saldo",
+    "noDestinations": "No se encontraron cadenas de destino",
+    "onChain": "en {{chain}}",
+    "current": "actual",
+    "max": "MÁX",
+    "gasFee": "Tarifa de gas",
+    "estimatedByWallet": "Estimada por la wallet",
+    "relayFee": "Tarifa de relay",
+    "route": "Ruta",
+    "fetchingRoute": "Obteniendo ruta...",
+    "insufficient": "Saldo insuficiente — tienes {{balance}} {{symbol}}",
+    "preparingTx": "Preparando transacción...",
+    "confirmInWallet": "Confirma en tu wallet",
+    "tryAgain": "Reintentar",
+    "submitted": "Transacción enviada",
+    "done": "Listo",
+    "txCancelled": "Transacción cancelada",
+    "noEvmWallet": "Wallet EVM no encontrada. Instala MetaMask.",
+    "unsupportedTx": "Tipo de transacción no soportado"
+  },
+  "promoBanner": {
+    "coffee": {
+      "title": "Invita a un café",
+      "subtitle": "Envía un café cálido"
+    },
+    "rose": {
+      "title": "Envía una rosa",
+      "subtitle": "Para alguien especial"
+    },
+    "boss": {
+      "title": "Sé jefe, ofrece beneficios",
+      "subtitle": "Muestra generosidad"
+    }
+  },
+  "register": {
+    "title": "Crear cuenta",
+    "chooseNickname": "Elige un apodo para tu dirección de pago",
+    "nicknamePlaceholder": "p. ej. alice · 小明 · 🦊",
+    "nicknameHint": "Cualquier idioma · 1–12 caracteres · 🎲 para aleatorio",
+    "randomNickname": "Apodo aleatorio",
+    "creating": "Creando…",
+    "submit": "Crear cuenta →"
+  },
+  "registered": {
+    "openWallet": "Abrir billetera →",
+    "wow": "¡WOW! Tienes una genial",
+    "wowCard": "¡Tarjeta de pago iUSD!",
+    "tapCard": "TOCA LA TARJETA",
+    "shareText": "¡Envíame iUSD — escanea el QR de mi tarjeta! 🎁"
+  },
+  "toast": {
+    "thatsYou": "¡Ese eres tú!",
+    "copied": "Copiado {{value}}",
+    "addedToContacts": "Añadido {{name}} a contactos",
+    "linkCopied": "Enlace copiado al portapapeles",
+    "paymentNotLinked": "El pago aún no está vinculado — vuelve a intentar en unos segundos",
+    "claimFailed": "Fallo al reclamar",
+    "claimQueued": "Reclamo en cola",
+    "networkError": "Error de red: {{msg}}",
+    "noNewContactsInHistory": "No hay contactos nuevos en el historial",
+    "importedFromHistory_one": "Importado {{count}} contacto del historial",
+    "importedFromHistory_other": "Importados {{count}} contactos del historial",
+    "noNewImport": "No hay contactos nuevos que importar",
+    "importFailed": "Importación fallida: {{msg}}"
+  },
+  "nav": {
+    "dashboard": "Panel",
+    "home": "Inicio",
+    "more": "Más"
+  },
+  "payLink": {
+    "resolving": "Resolviendo enlace de pago…",
+    "invoiceDetails": "DETALLES DE FACTURA",
+    "status": "Estado",
+    "invoiceId": "ID de factura",
+    "recipient": "Destinatario",
+    "dueDate": "Fecha de vencimiento",
+    "paymentProof": "COMPROBANTE DE PAGO",
+    "invalidLink": "Enlace inválido",
+    "claimed": "Reclamado",
+    "paymentComplete": "Pago completado",
+    "receivedByName": "{{name}} recibió {{amount}} iUSD",
+    "paymentSent": "Pago enviado",
+    "processingAuto": "{{amount}} iUSD · procesando automáticamente",
+    "claimWithinMinutes": "La reclamación suele completarse en 1–2 minutos",
+    "goToDashboard": "Ir al panel"
+  },
+  "verify": {
+    "title": "Verificación de pago",
+    "verifying": "Verificando pago…",
+    "noPid": "No se proporcionó ID.",
+    "notFound": "Pago no encontrado",
+    "error": "Error: {{msg}}",
+    "verification": "Verificación",
+    "to": "PARA",
+    "platformFee": "Comisión plataforma",
+    "txHash": "Hash de transacción",
+    "goHomepage": "Ir al inicio"
+  },
+  "profile": {
+    "defaultSlogan": "Alegras mi día ✨",
+    "copyFullId": "Copiar ID completo",
+    "contactAlreadyAdded": "Contacto ya añadido",
+    "addToContacts": "Añadir a contactos"
+  },
+  "invoiceView": {
+    "title": "FACTURA",
+    "billFrom": "Emisor",
+    "billTo": "Receptor",
+    "issueDate": "Fecha de emisión",
+    "dueDate": "Fecha de vencimiento",
+    "invoiceAmount": "Monto de la factura",
+    "recipientGets": "El destinatario recibe",
+    "payLink": "Enlace de pago",
+    "taxId": "NIF: {{id}}",
+    "noteLabel": "Nota: {{note}}",
+    "platformFeeLabel": "Comisión Plataforma (0.5%{{cap}})",
+    "platformFeeCapped": ", tope",
+    "paidStatus": "✓ Pagado el {{date}}",
+    "noToken": "Sin token",
+    "failedToLoad": "Error al cargar",
+    "notFound": "Factura no encontrada.",
+    "unavailable": "Factura no disponible.",
+    "saveAsImage": "Guardar como imagen",
+    "printPdf": "Imprimir / Guardar PDF",
+    "openInSafariChrome": "Abrir en Safari o Chrome para guardar como PDF",
+    "close": "Cerrar"
+  },
+  "notFound": {
+    "title": "Página no encontrada",
+    "desc": "La página que buscas no existe o ha sido movida."
+  },
+  "installGuide": {
+    "alreadyInstalled": "¡Ya instalado!",
+    "usingStandalone": "Estás usando iUSD Pay como app independiente.",
+    "installApp": "Instalar app",
+    "androidHint": "Abre esta página en Chrome y toca el menú (⋮) → \"Agregar a pantalla principal\"",
+    "desktopHint": "En Chrome, haz clic en el ícono de instalar (⊕) en la barra, o Menú → \"Instalar app\"",
+    "skip": "Omitir",
+    "ios": {
+      "step1": "Toca el botón Compartir en la parte inferior de Safari",
+      "step2": "Baja y toca \"Agregar a pantalla principal\"",
+      "step3": "Toca \"Agregar\" para confirmar"
+    }
+  },
+  "giftBox": {
+    "1": {
+      "name": "Caja de música",
+      "description": "Colgante en forma de escudo de oro y esmalte. Una cara representa una escena de granja con autómata y rueda de agua; la otra, una rosa sobre fondo rojo. Ambos lados están bordeados con medias perlas, muestra del arte decorativo del siglo XVIII."
+    },
+    "2": {
+      "name": "FLY Café",
+      "description": "Disfruta Fly Coffee con un 50% de descuento. En el local o para llevar, saborea el aroma de cada taza al mejor precio."
+    },
+    "3": {
+      "name": "Reloj de repetición",
+      "description": "Reloj de repetición de Francis Perigal (británico, activo 1741–67). Caja de oro parcialmente esmaltada; esfera de esmalte blanco con números negros y agujas de plata con diamantes; movimiento dorado. Cumbre de la relojería del siglo XVIII."
+    },
+    "4": {
+      "name": "Guitarra",
+      "description": "Guitarra cuyo fondo, aros, mástil y clavijero están revestidos de chevrones de carey, ébano y marfil, con volutas enmarcadas, rombos y cenefas geométricas. Una unión magistral de maderas y marquetería que revela la extraordinaria destreza de su autor."
+    },
+    "5": {
+      "name": "Caja de música",
+      "description": "Caja de música suiza de hacia 1820, con forma de mandolina. Elaborada con diversos materiales, combina el arte de las cajas de música europeas de principios del siglo XIX con la estética del instrumento."
+    },
+    "6": {
+      "name": "Guitarra",
+      "description": "Guitarra profusamente decorada de Giacomo (Jacob) Ertel, fines del siglo XVII. Abeto, ébano, maderas frutales, hueso, marfil, nácar y pergamino. El artefacto funde la pasión decorativa del artesano alemán con la tradición italiana de luthería."
+    },
+    "7": {
+      "name": "Mañana de invierno en el campo",
+      "description": "Litografía coloreada a mano del taller Currier & Ives, 1873. Muestra una escena rural nevada: un trineo tirado por dos caballos lleva a una pareja y cuatro grandes lecheras; a lo lejos, la granja. Típico género popular del XIX estadounidense."
+    },
+    "8": {
+      "name": "¡Dadme libertad o dadme muerte!",
+      "description": "Litografía coloreada a mano de Currier & Ives, 1876, \"¡Dadme libertad o dadme muerte!\". Retrata a Patrick Henry pronunciando su célebre discurso sobre los derechos de las colonias ante la Asamblea de Virginia reunida en Richmond, marzo de 1775."
+    },
+    "9": {
+      "name": "Caja de música",
+      "description": "Caja de música suiza oblonga de oro y esmalte, hacia 1820. Bordes esmaltados en azul y amarillo; la tapa lleva una miniatura clásica esmaltada rodeada por medias perlas. Síntesis perfecta entre el arte de la caja de música y la joyería."
+    },
+    "10": {
+      "name": "Caja de reloj",
+      "description": "Caja de reloj de George Harrison, hacia 1770. Oro parcialmente esmaltado; la caja exterior va engastada con diamantes que brillan intensamente, prueba del alto oficio de relojeros y joyeros británicos del siglo XVIII."
+    },
+    "11": {
+      "name": "Viola de división",
+      "description": "Viola de division de Richard Meares, hacia 1680. Abeto, ébano y arce. Las violas, los instrumentos de arco más estimados del Renacimiento tardío, fueron desplazadas gradualmente por el violín; un testimonio clave de la historia musical."
+    },
+    "12": {
+      "name": "Dragón",
+      "description": "Dragón de bronce de comienzos del siglo XVII, obra de Giacomo Laurenziani. En el momento de su adquisición se catalogó como grifo, pero James Parker lo reidentificó correctamente como dragón a partir de la década de 1950; pieza barroca de gran valor."
+    },
+    "13": {
+      "name": "Rosas y lirios",
+      "description": "Henri Fantin-Latour, 1888, óleo sobre lienzo. Esta obra, en excelente estado, muestra el virtuoso manejo del pigmento del pintor: utiliza no solo el pincel, sino también el extremo del mango, para modelar rosas y lirios con una luz y textura exquisitas."
+    },
+    "14": {
+      "name": "Reloj",
+      "description": "Reloj de F. L. Meybom, hacia 1670–75. Caja de oro, acero pavonado, cristal de roca y plata parcialmente dorada con diamantes; esfera en esmalte pintado y basse-taille sobre oro; movimiento de latón dorado y acero pavonado parcial."
+    },
+    "15": {
+      "name": "Broche de libélula",
+      "description": "Broche libélula Art Nouveau de Edgar Bense, hacia 1890. Oro, diamantes y esmalte. Sus alas delicadas en plique-à-jour coronan una libélula minuciosamente modelada, encarnando la moda y la joyería Art Nouveau y la estética naturalista."
+    },
+    "16": {
+      "name": "Brazalete",
+      "description": "Brazalete indio (bazuband), siglo XIX. Oro tejido con rubíes y un diamante tallado en rosa. Ejemplos similares aparecen en la tradición de joyería aristocrática de la India, heredera de la estética cortesana mogol."
+    },
+    "17": {
+      "name": "Guarnición de armadura de George Clifford",
+      "description": "Guarnición de armadura hecha por Jacob Halder en 1586 en la Real Armería de Greenwich para George Clifford. Acero, oro, cuero y tejido. Clifford (1558–1605) fue nombrado Campeón de la Reina en 1590 y Caballero de la Jarretera el mismo año."
+    },
+    "18": {
+      "name": "Broche en forma de cabeza de búho",
+      "description": "Broche con cabeza de búho de Castellani, hacia 1860. Oro y ágata. Esta pieza y el grupo al que pertenece (ver 2014.713.1–.10) reflejan el agudo interés del siglo XIX por los estilos históricos y encarnan la joyería de revival arqueológico."
+    },
+    "19": {
+      "name": "Reloj",
+      "description": "Reloj de Charles Bobinet, hacia 1655–60. Caja de ágata con montajes en oro esmaltado; esfera de esmalte blanco con aguja de oro; movimiento de latón dorado y acero pavonado. Muestra el alto oficio relojero europeo de mediados del XVII."
+    },
+    "20": {
+      "name": "Lirios",
+      "description": "Vincent van Gogh, 1890, óleo sobre lienzo. Los célebres Lirios. Una de las obras más emblemáticas de la etapa final del artista, que con su color exuberante y pincelada llena de vida rinde un profundo homenaje a la belleza de la naturaleza."
+    },
+    "21": {
+      "name": "Azucarero con tapa",
+      "description": "Azucarero con tapa de Giovacchino Belli, hacia 1811–22. Plata dorada. La versión Imperio de Belli resulta más relajada e íntima que la interpretación francesa contemporánea, suavizando las líneas neoclásicas con un sabor netamente italiano."
+    },
+    "22": {
+      "name": "Aguamanil",
+      "description": "Aguamanil de plata dorada y esmalte, hacia 1600. El cuerpo está decorado con un cortejo de figuras y animales, representando el Triunfo de César al regreso de Egipto o el de Escipión Africano tras derrotar a Aníbal; pieza metálica sobresaliente del Renacimiento tardío."
+    },
+    "23": {
+      "name": "El actor Asao Gakujūrō I como Mashiba Hisatsugu",
+      "description": "Grabado en madera de Shunkōsai Hokushū (Osaka), 1822. Nishiki-e sobre papel con tinta y color, formato ōban vertical japonés. Retrata al actor kabuki Asao Gakujūrō I en el papel de Mashiba Hisatsugu con mirada feroz y pose desafiante de gran dramatismo."
+    },
+    "24": {
+      "name": "Corona de los Andes",
+      "description": "\"Corona de los Andes\" — diadema hacia 1660 y arcos hacia 1770. Colombiana, de Popayán. Oro repujado y cincelado con esmeraldas. Una de las piezas de orfebrería más importantes del período colonial suramericano, síntesis creativa de técnicas europeas y americanas."
+    }
+  },
+  "components": {
+    "nicknameEditor": {
+      "title": "Cambiar apodo",
+      "placeholder": "Tu apodo",
+      "randomNickname": "Apodo aleatorio",
+      "generating": "GENERANDO...",
+      "firstChangeFee": "Tarifa de primer cambio",
+      "changeFeeN": "Tarifa de cambio (cambio #{{n}})",
+      "firstFeeNote": "El primer cambio de apodo cuesta 0,10 iUSD. Los cambios siguientes costarán 10,00 iUSD cada uno.",
+      "feeNote": "Cada cambio de apodo cuesta 10,00 iUSD.",
+      "idStays": "Tu ID de cuenta se mantiene igual",
+      "notUniqueAck": "Entiendo que los apodos no son únicos. Otras cuentas pueden usar el mismo apodo.",
+      "signing": "Firmando...",
+      "payAndSave": "Pagar {{fee}} iUSD y guardar",
+      "errEmpty": "El apodo no puede estar vacío",
+      "errFee": "No se pudo determinar la tarifa",
+      "errTxFailed": "Transacción fallida",
+      "errNoHash": "No se devolvió hash de transacción",
+      "errCancelled": "Transacción cancelada",
+      "errGeneric": "Error"
+    },
+    "mwc": {
+      "chooseMethod": "Elige método de conexión",
+      "checkWallet": "Revisa la app de tu wallet",
+      "approveRequest": "Aprueba la solicitud de conexión en la app de wallet",
+      "returnAfterApprove": "⚠️ Vuelve a esta página tras aprobar",
+      "tryAgain": "Reintentar",
+      "cancel": "Cancelar",
+      "openInWallet": "Abrir en wallet",
+      "best": "MEJOR",
+      "continueInBrowser": "Continuar en el navegador de {{name}}",
+      "signAndReturn": "Firmar y volver",
+      "approveAndReturn": "Aprueba en la app y vuelve aquí",
+      "directConnection": "Conexión directa • Sin servidores de relay",
+      "connectionFailed": "Conexión fallida",
+      "state": {
+        "initializing": "Inicializando...",
+        "generatingUri": "Conectando...",
+        "waitingApproval": "Aprueba en la app de wallet...",
+        "connected": "¡Conectado!",
+        "failed": "Error"
+      }
+    },
+    "quickLogin": {
+      "signing": "Firmando...",
+      "verifying": "Verificando...",
+      "processing": "Procesando...",
+      "signInTo": "Inicia sesión para {{action}}",
+      "walletTapToSignIn": "Wallet conectada. Toca para iniciar sesión.",
+      "almostThere": "¡Casi listo! Completa el registro para {{action}}.",
+      "redirecting": "Redirigiendo al registro...",
+      "connectionFailed": "Conexión fallida",
+      "tryAgain": "Reintentar",
+      "connecting": "Conectando...",
+      "connectTo": "Conectar para {{action}}",
+      "tapConnectHint": "Toca Conectar — tu wallet pedirá firmar",
+      "signInWith": "Inicia sesión con",
+      "orWallet": "O WALLET",
+      "other": "Otro",
+      "openInWalletBrowser": "Abre este enlace en el navegador de tu wallet",
+      "linkCopied": "Enlace copiado al portapapeles",
+      "dismiss": "Cerrar"
+    },
+    "identityCardBack": {
+      "idLabel": "ID:",
+      "deposit": "Depositar",
+      "withdraw": "Retirar",
+      "onlyOn": "Solo en",
+      "gas": "Gas",
+      "gasOk": "Gas OK",
+      "lowGas": "Gas bajo"
+    },
+    "qrScan": {
+      "scanQR": "Escanear QR",
+      "cameraUnavailable": "Cámara no disponible",
+      "turnFlashOff": "Apagar flash",
+      "turnFlashOn": "Encender flash",
+      "cancel": "Cancelar"
+    },
+    "errorBoundary": {
+      "updating": "Actualizando…",
+      "somethingWrong": "Algo salió mal",
+      "genericErr": "Un error inesperado impidió cargar esta página.",
+      "reload": "Recargar",
+      "resetReload": "Restablecer y recargar"
+    },
+    "identityCard": {
+      "validFrom": "VÁLIDA DESDE",
+      "status": "ESTADO",
+      "statusActive": "Activa",
+      "statusFrozen": "Congelada",
+      "statusDeactivated": "Desactivada",
+      "viewProfile": "Ver tarjeta de perfil",
+      "scanAndGift": "Escanea y regala ✨",
+      "share": "↗ Compartir",
+      "shareText": "¡Conseguí mi tarjeta iUSD Pay! Escanea y regala",
+      "copyLink": "Copiar enlace",
+      "copied": "¡Copiado!"
+    }
+  },
+  "soundStyles": {
+    "click": {
+      "keyboard": {
+        "name": "Teclado",
+        "desc": "Clic de teclado mecánico"
+      },
+      "pop": {
+        "name": "Pop suave",
+        "desc": "Burbuja estallando"
+      },
+      "tic": {
+        "name": "Tic",
+        "desc": "Tic agudo corto"
+      },
+      "chime": {
+        "name": "Campanilla",
+        "desc": "Ding suave"
+      },
+      "glass": {
+        "name": "Vidrio",
+        "desc": "Tintineo de cristal"
+      },
+      "coin": {
+        "name": "Moneda",
+        "desc": "Tintín metálico"
+      },
+      "digital": {
+        "name": "Digital",
+        "desc": "Bip de 8-bits"
+      },
+      "drip": {
+        "name": "Gota",
+        "desc": "Gota de agua"
+      },
+      "paper": {
+        "name": "Papel",
+        "desc": "Toque de papel"
+      },
+      "piano": {
+        "name": "Piano",
+        "desc": "Nota suave de piano"
+      },
+      "silent": {
+        "name": "Silencio",
+        "desc": "Sin clic"
+      }
+    },
+    "card": {
+      "breeze": {
+        "name": "Brisa",
+        "desc": "Viento suave"
+      },
+      "dream_bells": {
+        "name": "Campanas Oníricas",
+        "desc": "Brillo de cristales"
+      },
+      "page_turn": {
+        "name": "Cambio de página",
+        "desc": "Rumor de papel"
+      },
+      "whoosh": {
+        "name": "Whoosh",
+        "desc": "Movimiento rápido"
+      },
+      "soft_pop": {
+        "name": "Pop suave",
+        "desc": "Doble pop suave"
+      },
+      "silent": {
+        "name": "Silencio",
+        "desc": "Sin sonido de giro"
+      }
+    },
+    "gift": {
+      "celebration": {
+        "name": "Celebración",
+        "desc": "Acorde ascendente C-E-G-C"
+      },
+      "sparkle": {
+        "name": "Brillo",
+        "desc": "Notas titilantes"
+      },
+      "fanfare": {
+        "name": "Fanfarria",
+        "desc": "Ta-da metálico"
+      },
+      "bell_cascade": {
+        "name": "Cascada de campanas",
+        "desc": "Campanas descendentes"
+      },
+      "soft_bell": {
+        "name": "Campana suave",
+        "desc": "Una campana suave"
+      },
+      "silent": {
+        "name": "Silencio",
+        "desc": "Sin sonido de regalo"
+      }
+    },
+    "txn": {
+      "whoosh_up": {
+        "name": "Whoosh arriba",
+        "desc": "Swoosh ascendente"
+      },
+      "coin_drop": {
+        "name": "Caída de moneda",
+        "desc": "Moneda aterrizando"
+      },
+      "pneumatic": {
+        "name": "Neumático",
+        "desc": "Tubo retro"
+      },
+      "confirm_chime": {
+        "name": "Campanilla de confirmación",
+        "desc": "Doble tono"
+      },
+      "paper_slide": {
+        "name": "Deslizamiento de papel",
+        "desc": "Papel deslizándose"
+      },
+      "silent": {
+        "name": "Silencio",
+        "desc": "Sin sonido de transacción"
+      }
+    },
+    "menu": {
+      "slide": {
+        "name": "Deslizar",
+        "desc": "Panel deslizando"
+      },
+      "soft_pop": {
+        "name": "Pop suave",
+        "desc": "Apertura suave"
+      },
+      "swish": {
+        "name": "Swish",
+        "desc": "Silbido de aire"
+      },
+      "silent": {
+        "name": "Silencio",
+        "desc": "Sin sonido de menú"
+      }
+    }
+  },
+  "time": {
+    "justNow": "ahora",
+    "minutesAgo": "hace {{n}}m",
+    "hoursAgo": "hace {{n}}h",
+    "daysAgo": "hace {{n}}d"
+  },
+  "receiptView": {
+    "back": "← Atrás",
+    "paymentReceipt": "Recibo de Pago",
+    "receipt": "Recibo",
+    "noPaymentId": "Sin ID de pago",
+    "notFound": "Recibo no encontrado.",
+    "failedToLoad": "Error al cargar",
+    "fee": "Tarifa: {{amount}} iUSD",
+    "date": "Fecha",
+    "confirmedLabel": "Confirmado",
+    "verify": "Verificar",
+    "from": "De",
+    "to": "A",
+    "tx": "Tx: {{hash}}",
+    "id": "ID: {{id}}",
+    "statusPaid": "Pagado",
+    "statusConfirmed": "Confirmado",
+    "statusPending": "Pendiente",
+    "statusRevoked": "Revocado",
+    "statusRefunded": "Reembolsado",
+    "statusExpired": "Expirado",
+    "statusFailed": "Fallido",
+    "statusUnknown": "Desconocido",
+    "saveAsImage": "Guardar como imagen",
+    "printPdf": "Imprimir / Guardar PDF",
+    "openInSafariChrome": "Abrir en Safari o Chrome para guardar como PDF",
+    "errorPrefix": "Error: {{msg}}"
+  },
+  "update": {
+    "available": "Nueva versión disponible",
+    "reload": "Recargar"
+  }
+}

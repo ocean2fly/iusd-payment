@@ -1,0 +1,20 @@
+User-agent: *
+# Allow landing page for search engine discoverability
+Allow: /$
+Allow: /favicon
+Allow: /og-preview.png
+
+# Block everything else — private payment app
+Disallow: /app/
+Disallow: /g/
+Disallow: /gift/
+Disallow: /pay/
+Disallow: /pay-request/
+Disallow: /pr/
+Disallow: /invoice/
+Disallow: /receipt/
+Disallow: /profile/
+Disallow: /verify
+Disallow: /scan-relay/
+Disallow: /demo-seal
+Disallow: /demo-wallet

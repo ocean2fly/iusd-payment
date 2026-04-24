@@ -1,0 +1,1250 @@
+{
+  "popup": {
+    "title": "اسمح بالنوافذ المنبثقة من إعدادات المتصفح",
+    "subtitle": "متصفحك يحجب نافذة تسجيل الدخول المنبثقة. فعّلها من الإعدادات كما هو موضح.",
+    "next": "التالي",
+    "back": "رجوع",
+    "gotIt": "حسناً",
+    "continue": "متابعة",
+    "enableTitle": "تفعيل النوافذ المنبثقة",
+    "signinNeedsPopup": "يتطلب تسجيل الدخول نافذة منبثقة.",
+    "gotoMobile": "اذهب إلى الإعدادات ← المتصفح ← السماح بالنوافذ المنبثقة.",
+    "gotoDesktop": "اذهب إلى الإعدادات ← السماح بالنوافذ المنبثقة.",
+    "checkDetail": "عرض التفاصيل"
+  },
+  "auth": {
+    "connect": "اتصال",
+    "signIn": "← تسجيل الدخول",
+    "connecting": "جارٍ الاتصال…",
+    "signing": "جارٍ التوقيع…",
+    "checkWallet": "تحقق من محفظتك لطلب التوقيع…",
+    "settingUp": "جارٍ إعداد حسابك…",
+    "coinbaseConnected": "تم الاتصال بـ Coinbase Wallet!",
+    "walletConnected": "تم الاتصال بالمحفظة!",
+    "wcTimeout": "انتهت مهلة WalletConnect",
+    "restoring": "جارٍ استعادة جلسة المحفظة…",
+    "openingWindow": "جارٍ فتح نافذة تسجيل الدخول…",
+    "tapConnect": "انقر «اتصال» — ستطلب المحفظة التوقيع",
+    "signInWith": "تسجيل الدخول بـ",
+    "or": "أو",
+    "tryAgain": "حاول مرة أخرى",
+    "reconnect": "إعادة الاتصال بالمحفظة",
+    "popupBlockedMobile": "تم حجب النافذة المنبثقة. اذهب إلى الإعدادات ← المتصفح ← السماح بالنوافذ المنبثقة.",
+    "popupBlockedDesktop": "تم حجب النافذة المنبثقة. اذهب إلى الإعدادات ← السماح بالنوافذ المنبثقة.",
+    "signFailed": "فشل تسجيل الدخول. حاول مرة أخرى.",
+    "connectionLost": "انقطع الاتصال بالمحفظة. الرجاء إعادة الاتصال.",
+    "signatureCancelled": "تم إلغاء التوقيع.",
+    "networkBlocked": "تعذّر الوصول إلى API أو تم حجبه (شبكة/CORS). حاول من علامة تبويب جديدة."
+  },
+  "landing": {
+    "tagline": "الدفع بالعملات المستقرة على Initia",
+    "installAsApp": "تثبيت كتطبيق",
+    "forceRefresh": "تحديث إجباري",
+    "refresh": "تحديث",
+    "forceRefreshTip": "تحديث إجباري لحل مشاكل الصفحة المحلية"
+  },
+  "wallets": {
+    "openInWalletBrowser": "افتح في متصفح تطبيق المحفظة",
+    "pasteUrl": "الصق رابط iUSD pay (تم نسخه) وانتقل",
+    "done": "تم",
+    "other": "أخرى"
+  },
+  "common": {
+    "language": "اللغة",
+    "cancel": "إلغاء",
+    "save": "حفظ",
+    "saving": "جارٍ الحفظ…",
+    "saved": "تم الحفظ",
+    "close": "إغلاق",
+    "change": "تغيير",
+    "loading": "جارٍ التحميل…",
+    "view": "عرض",
+    "optional": "اختياري",
+    "on": "تشغيل",
+    "off": "إيقاف"
+  },
+  "welcome": {
+    "tagline": "الدفع بالعملات المستقرة على Initia",
+    "whatYouGet": "ما ستحصل عليه",
+    "features": {
+      "transfer": "حوّل واطلب بحرية عبر المسح",
+      "merchants": "تكامل سلس مع التجار",
+      "gifts": "أرسل هدايا للأصدقاء والمجموعات"
+    },
+    "agreePrefix": "أوافق على",
+    "and": "و",
+    "tos": "شروط الخدمة",
+    "privacy": "سياسة الخصوصية",
+    "experimentalNote": ". هذا التطبيق تجريبي على الشبكة الرئيسية.",
+    "getStarted": "ابدأ ←"
+  },
+  "dashboard": {
+    "tapEditNickname": "اضغط لتعديل الاسم المستعار",
+    "minGasHint": "يلزم 1 INIT أو 1 USDC على الأقل للغاز",
+    "refreshBalances": "تحديث الأرصدة",
+    "actions": {
+      "transfer": "تحويل",
+      "request": "طلب",
+      "gift": "هدية",
+      "inbox": "الوارد",
+      "contacts": "جهات الاتصال",
+      "scan": "مسح",
+      "history": "السجل",
+      "settings": "الإعدادات"
+    }
+  },
+  "settings": {
+    "title": "الإعدادات",
+    "account": {
+      "title": "الحساب",
+      "nickname": "الاسم المستعار",
+      "setNickname": "عيّن اسمًا مستعارًا",
+      "bio": "نبذة / شعار",
+      "bioPlaceholder": "مثال: امسحني وأهدني، أرد عليك بقبلة 💋",
+      "id": "المعرّف",
+      "wallet": "المحفظة",
+      "copied": "تم النسخ",
+      "ecosystem": "النظام البيئي",
+      "autoClaim": "تحصيل تلقائي"
+    },
+    "appearance": {
+      "title": "المظهر",
+      "auto": "تلقائي",
+      "light": "فاتح",
+      "dark": "داكن"
+    },
+    "sound": {
+      "title": "الصوت",
+      "desc": "نقرات واجهة، قلب البطاقة، الاحتفالات",
+      "muted": "مكتوم",
+      "on": "مفعل",
+      "styles": "أنماط الصوت",
+      "customize": "تخصيص",
+      "tapPreview": "اضغط على نمط للاستماع والاختيار",
+      "unmutePreview": "أزل الكتم بالأعلى للاستماع",
+      "cat": {
+        "click": "نقر",
+        "cardFlip": "قلب البطاقة",
+        "gift": "هدية",
+        "transaction": "معاملة",
+        "menu": "قائمة"
+      }
+    },
+    "receive": {
+      "title": "عنوان الاستلام",
+      "privacyProtection": "حماية الخصوصية",
+      "defaultWallet": "محفظتي (افتراضي)",
+      "change": "تغيير",
+      "modalTitle": "احمِ عنوان استلامك",
+      "modalDesc": "يمكنك تعيين محفظة منفصلة لتلقي مدفوعات iUSD، مع إبقاء محفظتك المتصلة خاصة. ستوجَّه المدفوعات تلقائيًا إلى هذا العنوان.",
+      "complianceHeader": "⚠ إشعار الامتثال",
+      "complianceDesc": "تظل جميع المعاملات قابلة للتدقيق وفق سياسات AML المعمول بها بصرف النظر عن التوجيه. يؤكد هذا التوقيع فهمك وموافقتك.",
+      "placeholder": "0x… أو init1… (فارغ = استخدم محفظتك)",
+      "signSave": "توقيع وحفظ",
+      "signing": "جارٍ التوقيع…"
+    },
+    "about": {
+      "title": "حول",
+      "iusdPay": "iUSD Pay",
+      "network": "الشبكة",
+      "contract": "العقد",
+      "tos": "شروط الخدمة",
+      "privacy": "سياسة الخصوصية",
+      "forceRefresh": "تحديث إجباري",
+      "community": "المجتمع"
+    },
+    "danger": {
+      "title": "منطقة الخطر",
+      "disconnect": "فصل المحفظة",
+      "disconnectTitle": "فصل المحفظة؟",
+      "disconnectDesc": "يمكنك إعادة الاتصال في أي وقت.",
+      "delete": "حذف الحساب",
+      "deleteConfirmWarn": "⚠ هذا يحذف حسابك نهائيًا",
+      "confirmDelete": "تأكيد الحذف",
+      "deleting": "جارٍ الحذف…"
+    }
+  },
+  "transfer": {
+    "title": "إرسال",
+    "paymentCodeTitle": "رمز الدفع",
+    "showToRecipient": "اعرض هذا الـ QR على المستلم.",
+    "scanAndEnter": "امسح وأدخل المبلغ لطلب الدفع.",
+    "waitingForRequest": "في انتظار الطلب…",
+    "sessionExpired": "انتهت الجلسة",
+    "generateNew": "إنشاء رمز جديد",
+    "generating": "جارٍ إنشاء رمز الدفع…",
+    "recipientPlaceholder": "الاسم المستعار أو معرّف الحساب",
+    "contacts": "جهات الاتصال",
+    "checking": "جارٍ التحقق…",
+    "noContactsMatch": "لا توجد جهات اتصال مطابقة لـ \"{{query}}\"",
+    "noContactsYet": "لا توجد جهات اتصال بعد",
+    "noContactsHint": "أرسل دفعة أو افتح السجل للبدء",
+    "amountLabel": "المبلغ",
+    "amountMin": "الحد الأدنى 0.1 iUSD",
+    "amountMax": "الحد الأقصى 1,000 iUSD لكل معاملة",
+    "memoLabel": "ملاحظة",
+    "memoPlaceholder": "ملاحظة اختيارية",
+    "fee": "رسوم: {{amount}} iUSD",
+    "feeCap": "(حد أقصى)",
+    "total": "الإجمالي: {{amount}} iUSD",
+    "autoSaveContact": "سيتم حفظ هذا الشخص تلقائيًا في جهات الاتصال",
+    "paymentQR": "رمز الدفع QR",
+    "building": "جارٍ الإنشاء…",
+    "confirming": "تأكيد…",
+    "send": "إرسال",
+    "sendAmount": "إرسال {{amount}} iUSD"
+  },
+  "request": {
+    "title": "طلب",
+    "modePersonal": "أنا",
+    "modeBusiness": "أعمال",
+    "tabNew": "جديد",
+    "tabInvoices": "الفواتير",
+    "empty": "لا توجد طلبات بعد",
+    "createFirst": "أنشئ أول طلب ←",
+    "share": "مشاركة ↗",
+    "amountLabel": "المبلغ",
+    "noteLabel": "ملاحظة",
+    "notePlaceholder": "وصف (اختياري)",
+    "taxNoLabel": "الرقم الضريبي",
+    "dueLabel": "الاستحقاق",
+    "invLabel": "فاتورة #",
+    "payerLabel": "الدافع",
+    "payerPlaceholder": "الاسم (اختياري)",
+    "status": {
+      "draft": "مسودة",
+      "sent": "بانتظار الدفع",
+      "paying": "بانتظار التأكيد",
+      "paid": "مدفوع",
+      "overdue": "متأخر",
+      "refunded": "مسترد",
+      "cancelled": "ملغى"
+    }
+  },
+  "scan": {
+    "title": "مسح QR",
+    "lookingUp": "جارٍ البحث عن الحساب…",
+    "paymentDetails": "تفاصيل الدفع",
+    "scannedContent": "المحتوى الممسوح",
+    "manualInput": "إدخال يدوي / صورة",
+    "pasteHint": "ألصق الرابط أو معرّف الحساب…",
+    "startCamera": "تشغيل الكاميرا",
+    "stopCamera": "إيقاف الكاميرا",
+    "flipCamera": "تبديل الكاميرا",
+    "retry": "إعادة المحاولة",
+    "scannedCheck": "تم المسح! تحقق من سطح المكتب.",
+    "scanAgain": "↩ مسح مجدد",
+    "tagInvoice": "🧾 فاتورة / طلب",
+    "tagIdentity": "👤 هوية",
+    "tagScanned": "🔗 تم المسح",
+    "due": "الاستحقاق",
+    "payRequest": "💸 ادفع هذا الطلب",
+    "payAmount": "💸 ادفع {{amount}} iUSD",
+    "contactSaved": "✅ تم حفظ جهة الاتصال!",
+    "reAddContactsTag": "👤 إعادة إضافة",
+    "addContactsTag": "👤 إضافة إلى جهات الاتصال",
+    "transfer": "تحويل",
+    "gift": "هدية",
+    "contactAlreadyAdded": "جهة الاتصال مضافة بالفعل",
+    "reAddToContacts": "إعادة إضافة",
+    "addToContacts": "إضافة إلى جهات الاتصال",
+    "visit": "زيارة →",
+    "clickToStart": "اضغط لبدء الكاميرا",
+    "pointPhone": "جارٍ المسح — وجه الهاتف نحو الرمز",
+    "disconnect": "✕ قطع الاتصال",
+    "go": "انتقل",
+    "dropToScan": "أفلت لمسح QR",
+    "chooseFromGallery": "اختر من المعرض",
+    "galleryHint": "اختر أو اسحب صورة رمز QR",
+    "cameraN": "الكاميرا {{n}}",
+    "err": {
+      "accessBlocked": "🔒 تم حظر الوصول إلى الكاميرا",
+      "permissionDesc": "تم رفض إذن الكاميرا. يجب إعادة تمكينه في إعدادات المتصفح.",
+      "chromeEdge": "🌐 Chrome / Edge",
+      "pasteInstructions": "انسخ هذا الرابط → الصقه في علامة تبويب جديدة → اضبط الكاميرا على",
+      "allow": "السماح",
+      "copy": "نسخ",
+      "firefoxHint": "اضغط رمز 🔒 الكاميرا في شريط العنوان → السماح",
+      "safariHint": "الإعدادات → Safari → الكاميرا → السماح",
+      "androidHint": "اضغط ⋮ → إعدادات الموقع → الكاميرا → السماح",
+      "retryAfter": "↺ أعد المحاولة بعد التمكين",
+      "noCamera": "📷 لم يتم العثور على كاميرا",
+      "noCameraDesc": "لم يتم اكتشاف كاميرا على هذا الجهاز.",
+      "useManualFull": "استخدم الإدخال اليدوي أدناه أو قم بتوصيل ماسح خارجي.",
+      "inUse": "📷 الكاميرا قيد الاستخدام",
+      "inUseDesc": "الكاميرا مستخدمة من قبل تطبيق آخر. أغلق التطبيقات الأخرى وأعد المحاولة.",
+      "flashNotSupported": "الفلاش غير مدعوم على هذا الجهاز",
+      "noQrInImage": "لم يتم العثور على رمز QR في الصورة",
+      "couldNotCreateRelay": "تعذر إنشاء جلسة الترحيل",
+      "cameraError": "خطأ في الكاميرا: {{msg}}",
+      "cameraDenied": "تم رفض الكاميرا: {{msg}}",
+      "connectionFailed": "فشل الاتصال. جرب الوضع الأساسي.",
+      "desktopNotReady": "سطح المكتب غير جاهز. أعد تحميل صفحة سطح المكتب.",
+      "failedToSend": "فشل الإرسال",
+      "invalidSession": "جلسة غير صالحة"
+    },
+    "relay": {
+      "gettingCamera": "جارٍ تشغيل الكاميرا…",
+      "connectingDesktop": "الاتصال بسطح المكتب…",
+      "liveCameraHeader": "📹 كاميرا مباشرة",
+      "qrScannerHeader": "📤 ماسح QR",
+      "liveBadge": "● مباشر",
+      "streamingDesktop": "📹 بث إلى سطح المكتب — يرى ما تراه",
+      "pointAtDesktop": "📤 وجّه نحو رمز QR على سطح المكتب",
+      "statusPrefix": "🔄 {{status}}"
+    }
+  },
+  "gift": {
+    "title": "هدية",
+    "message": "رسالة",
+    "quickPicks": "اختيارات سريعة",
+    "next": "التالي ←",
+    "recipient": "المستلم",
+    "shares": "الحصص",
+    "total": "الإجمالي",
+    "ready": "الهدية جاهزة!",
+    "shareAccessHint": "شارك رابط الوصول مع صديقك.",
+    "rightClickSave": "انقر بزر الفأرة الأيمن للحفظ · تم نسخ الرابط",
+    "dismiss": "تجاهل",
+    "viewDetails": "عرض تفاصيل الهدية ←",
+    "scanToOpen": "امسح لفتح الهدية",
+    "noReplies": "لا توجد ردود بعد",
+    "noViews": "لا توجد مشاهدات بعد",
+    "loadingHistory": "جارٍ تحميل السجل…",
+    "giftList": "قائمة الهدايا",
+    "historyTab": "السجل",
+    "newest": "الأحدث",
+    "oldest": "الأقدم",
+    "newestFirst": "الأحدث أولاً",
+    "oldestFirst": "الأقدم أولاً",
+    "noDescription": "لا يوجد وصف متاح.",
+    "allCollections": "كل المجموعات",
+    "collection": {
+      "flowers": "ورود",
+      "drinks": "مشروبات",
+      "food": "طعام",
+      "treats": "حلويات",
+      "tech": "تقنية",
+      "luxury": "فاخر",
+      "office": "مكتب",
+      "art": "فن",
+      "books": "كتب",
+      "games": "ألعاب",
+      "wellness": "عافية",
+      "travel": "سفر",
+      "fashion": "أزياء",
+      "kids": "أطفال",
+      "pets": "حيوانات أليفة",
+      "sports": "رياضة",
+      "other": "أخرى",
+      "painting": "لوحة",
+      "music_box": "صندوق موسيقى",
+      "instrument": "آلة موسيقية",
+      "sculpture": "تمثال",
+      "textile": "نسيج",
+      "ceramic": "خزف",
+      "watch": "ساعة",
+      "brooch": "بروش",
+      "armor": "درع",
+      "furniture": "أثاث",
+      "jewelry": "مجوهرات"
+    },
+    "flexible": "مرن",
+    "source": "المصدر ↗",
+    "progressPanel": {
+      "progress": "التقدم",
+      "inProgress": "قيد التنفيذ",
+      "completed": "مكتمل",
+      "expired": "منتهي",
+      "expiredRefunded": "منتهي · مسترجع",
+      "expiresIn": "ينتهي خلال {{label}}",
+      "endsIn": "ينتهي خلال {{label}}",
+      "claimedOf": "من {{total}} تم استلامها",
+      "claimsHeader": "المطالبات · {{count}}",
+      "replied": "💌 تم الرد",
+      "claimedChip": "✓ تم الاستلام",
+      "anon": "مجهول",
+      "allClaimed": "تم استلام جميع الأسهم.",
+      "refunded_one": "تم استرجاع {{count}} حصة غير مطالب بها",
+      "refunded_other": "تم استرجاع {{count}} حصص غير مطالب بها",
+      "refundedNote": "تم إعادة أموال الحصص غير المطالب بها تلقائياً إلى رصيدك عند انتهاء الهدية.",
+      "noClaimsYet": "لم يستلمها أحد بعد. شارك الرابط لإعلامهم.",
+      "daysHours": "{{days}} يوم {{hours}} ساعة",
+      "hoursMinutes": "{{hours}} ساعة {{minutes}} د",
+      "minutesOnly": "{{minutes}} د"
+    },
+    "back": "← رجوع",
+    "stepChoose": "اختر هدية",
+    "stepWrite": "اكتب رسالة",
+    "stepSendTo": "أرسل إلى",
+    "feePercent": "رسوم {{percent}}%",
+    "feeLabel": "رسوم ({{percent}}%)",
+    "more": "المزيد",
+    "browseAll": "تصفح كل الهدايا",
+    "writePlaceholder": "اكتب رسالة...",
+    "amountIusd": "المبلغ (iUSD)",
+    "amountRangePlaceholder": "0.1 ~ 1000 iUSD",
+    "tapToEdit": "✎ انقر للتعديل",
+    "amountInRange": "0.10 – 1,000 iUSD",
+    "anyoneGroup": "أي شخص (مجموعة)",
+    "anyoneCanClaim": "يمكن لأي شخص المطالبة",
+    "enterContact": "أدخل جهة اتصال أو ID",
+    "invalidRecipient": "اسم مستخدم أو ID غير صالح",
+    "usernameInactive": "اسم المستخدم غير نشط",
+    "recipientRequired": "المستلم مطلوب",
+    "sendFailed": "فشل الإرسال",
+    "missingTxParams": "معلمات المعاملة مفقودة",
+    "giftTxFailed": "فشلت معاملة الهدية",
+    "contactsHeader": "جهات الاتصال",
+    "fromHistory": "✨ من السجل",
+    "splitEqual": "متساوٍ",
+    "splitRandom": "عشوائي",
+    "balanceLine": "الرصيد: {{amount}} iUSD",
+    "wrapping": "جارٍ التغليف...",
+    "insufficientBalance": "الرصيد غير كافٍ",
+    "wrapGift": "🎁 تغليف الهدية",
+    "giftNumber": "هدية #{{id}}",
+    "fromName": "من {{name}}",
+    "anonymous": "مجهول",
+    "mysteryAwaits": "هدية غامضة تنتظرك",
+    "claimedAgo": "تم الاستلام {{time}}",
+    "claimed": "تم الاستلام",
+    "view": "عرض →",
+    "openCta": "🎁 فتح →",
+    "expiredChip": "منتهية",
+    "claimedOfShort": "{{claimed}}/{{total}} تم الاستلام",
+    "enjoyEmoji": "استمتع! 🎁",
+    "forYouEmoji": "بحب ❤️",
+    "happyBirthday": "عيد ميلاد سعيد! 🎂",
+    "thankYouEmoji": "شكراً! 🙏",
+    "cheersEmoji": "صحتين! 🥂",
+    "justBecause": "فقط لأن 🌟",
+    "deserveIt": "أنت تستحقه ✨",
+    "haveFun": "استمتع! 🎉",
+    "treatYourself": "عامل نفسك 💫",
+    "yourGiftReady": "هديتك جاهزة!",
+    "toLabel": "إلى",
+    "feeLabelShort": "الرسوم",
+    "notificationSent": "تم إرسال إشعار إلى {{name}}",
+    "fromSender": "من {{name}}",
+    "giftWaitingShort": "هدية تنتظرك",
+    "scanToOpenShort": "امسح لفتح",
+    "iusdPay": "iUSD Pay",
+    "copied": "تم النسخ!",
+    "copyLink": "نسخ الرابط",
+    "saveImage": "حفظ الصورة",
+    "shareLink": "مشاركة الرابط",
+    "backToQr": "← الرجوع لـ QR",
+    "closeShareLater": "يمكنك الإغلاق والمشاركة لاحقاً من سجل الهدايا.",
+    "preparing": "جارٍ التحضير...",
+    "imageSaved": "تم حفظ الصورة!",
+    "qrBtn": "QR",
+    "backBtn": "رجوع",
+    "hasAGiftForYou": "لديه هدية لك",
+    "sharesCount_one": "{{count}} حصة",
+    "sharesCount_other": "{{count}} حصص",
+    "openedCount": "{{count}}/{{total}} مفتوحة",
+    "viewsCount": "{{count}} مشاهدة",
+    "someone": "شخص ما",
+    "shareTitle": "هدية {{name}}",
+    "featured": "⭐ مميز"
+  },
+  "giftClaim": {
+    "loading": "جارٍ تحميل الهدية…",
+    "goHome": "الرئيسية",
+    "youReceived": "لقد استلمت",
+    "from": "من",
+    "reply": "رد ←",
+    "alreadyClaimed": "تم الاستلام",
+    "scanProfile": "امسح الملف الشخصي",
+    "thankPresets": {
+      "thankBoss": "شكرًا أيها الرئيس!",
+      "appreciated": "ممتن جدًا!",
+      "soKind": "كم أنت لطيف!",
+      "madeMyDay": "أسعدت يومي!",
+      "youreBest": "أنت الأفضل!",
+      "whatSurprise": "يا لها من مفاجأة!",
+      "loveYou": "أحبك!",
+      "sweetest": "أنت ألطف!",
+      "heartFull": "قلبي مليء!",
+      "bestBirthday": "أفضل عيد ميلاد!",
+      "bestGift": "أفضل هدية!",
+      "cheersYou": "نخبك!"
+    },
+    "iGotLabel": "★ حصلت على",
+    "onlyOneShare": "حصة واحدة فقط",
+    "sharesCountLabel_one": "{{count}} حصة",
+    "sharesCountLabel_other": "{{count}} حصص",
+    "fromSenderOverlay": "من {{name}}",
+    "detailsBtn": "تفاصيل",
+    "claimedLabel": "مستلم",
+    "viewedLabel": "مشاهدات",
+    "chasedLabel": "حصلوا",
+    "moreBtn": "[المزيد]",
+    "membersHeader": "الأعضاء · {{count}}",
+    "lettersHeader": "الرسائل · {{count}}",
+    "replyBtn": "رد",
+    "replyToPlaceholder": "الرد على {{name}}…",
+    "loveWhatYouSee": "★ أعجبك ما ترى؟",
+    "giftThemLine": "أعطِ {{name}} إكرامية",
+    "scanOrOpenProfile": "افتح ملفي الشخصي →",
+    "scanOr": "امسح أو",
+    "postToPlaceholder": "نشر إلى {{name}}…",
+    "postBtn": "نشر",
+    "sentWithLoveBy": "أُرسِل بحب من",
+    "giftReceivedChip": "استُلمت الهدية!",
+    "anonName": "هم",
+    "errInvalidLink": "رابط الهدية غير صالح",
+    "errNotFound": "الهدية غير موجودة",
+    "errClaimFailed": "فشل الاستلام",
+    "errFailed": "فشل",
+    "errSignInFirst": "يرجى تسجيل الدخول أولاً",
+    "errInvalidClaimLink": "رابط الاستلام غير صالح",
+    "signInToSave": "سجّل الدخول لحفظ جهات الاتصال",
+    "failedSaveContact": "فشل حفظ جهة الاتصال",
+    "shareTitle": "هدية من {{name}}"
+  },
+  "history": {
+    "title": "السجل",
+    "paymentJourney": "رحلة الدفع",
+    "expires": "ينتهي",
+    "noInvoices": "لا توجد فواتير بعد",
+    "noActivity": "لا يوجد نشاط بعد",
+    "tabs": {
+      "all": "الكل",
+      "sent": "مُرسل",
+      "received": "مُستلَم",
+      "gift": "هدية",
+      "invoices": "فاتورة",
+      "stats": "إحصاءات"
+    },
+    "payStatus": {
+      "sent": {
+        "pending": "بانتظار التأكيد",
+        "confirmed": "مؤكد",
+        "revoked": "ملغى",
+        "refunded": "مسترد",
+        "expired": "منتهي",
+        "unknown": "غير معروف"
+      },
+      "received": {
+        "claimable": "قابل للاستلام",
+        "received": "مستلم",
+        "cancelled": "ملغى",
+        "refunded": "مسترد",
+        "expired": "منتهي",
+        "unknown": "غير معروف"
+      }
+    },
+    "paymentId": "معرّف الدفع",
+    "sortNewest": "فرز: الأحدث أولاً (انقر للأقدم)",
+    "sortOldest": "فرز: الأقدم أولاً (انقر للأحدث)",
+    "loadMore": "تحميل المزيد",
+    "invoicePayment": "دفع الفاتورة",
+    "sentTo": "أُرسل إلى",
+    "receivedFrom": "مستلم من",
+    "cancelInvoice": "إلغاء الفاتورة",
+    "cancelInvoiceConfirm": "إلغاء هذه الفاتورة؟",
+    "cancelFailed": "فشل الإلغاء: {{msg}}",
+    "timeline": {
+      "created": "أُنشئ",
+      "fee": "رسوم {{amount}}",
+      "pendingClaim": "بانتظار الاستلام",
+      "awaitingRecipient": "بانتظار المستلم",
+      "autoClaimed": "سيُستلم تلقائيًا",
+      "confirmed": "مؤكد",
+      "received": "مستلم",
+      "expiresOn": "ينتهي {{date}}",
+      "revoked": "ملغى",
+      "returnedToSender": "المبلغ رُدّ للمرسل",
+      "claimed": "مستلم",
+      "refunded": "مسترد",
+      "returnedToClaimer": "رُدّ للمطالِب",
+      "expired": "منتهي"
+    },
+    "stats": {
+      "accounting": "المحاسبة",
+      "giftsSent": "الهدايا المُرسلة",
+      "giftsReceived": "الهدايا المستلمة",
+      "paid": "مدفوع",
+      "received": "مستلم",
+      "moneyIn": "الداخل",
+      "moneyOut": "الخارج",
+      "net": "الصافي",
+      "pending": "قيد الانتظار",
+      "thisMonth": "هذا الشهر"
+    },
+    "noGiftHistory": "لا يوجد سجل هدايا بعد",
+    "receivedSection": "مستلم · {{count}}",
+    "sentSection": "مرسل · {{count}}",
+    "loadingMore": "جارٍ التحميل…",
+    "loadMoreReceived": "تحميل المزيد من المستلم",
+    "loadMoreSent": "تحميل المزيد من المرسل",
+    "refreshTitle": "تحديث",
+    "exportCsv": "تصدير السجل CSV",
+    "revokeFailed": "فشل الإبطال",
+    "refundFailed": "فشل الاسترداد: {{msg}}",
+    "refundConfirm": "استرداد هذا الدفع للمرسل؟",
+    "anyone": "أي شخص",
+    "direct": "مباشر",
+    "fromLabel": "من",
+    "toLabel": "إلى",
+    "copySaveTitle": "نسخ shortId + حفظ في جهات الاتصال",
+    "due": "الاستحقاق",
+    "noSentTransactions": "لا توجد معاملات مُرسلة",
+    "noReceivedTransactions": "لا توجد معاملات مستلمة",
+    "noTransactionsYet": "لا توجد معاملات بعد — ستظهر الإحصائيات عند إجراء المعاملات.",
+    "detailSent": "↑ مُرسل",
+    "detailReceived": "↓ مستلم",
+    "copyBtn": "📋 نسخ",
+    "receiptPdf": "↓ إيصال PDF",
+    "invoicePdf": "↓ فاتورة PDF",
+    "revokeBtn": "↩ إبطال",
+    "refundBtn": "↩ استرداد"
+  },
+  "inbox": {
+    "title": "الوارد",
+    "claimed": "تم الاستلام!",
+    "feePaid": "الرسوم مدفوعة",
+    "anonymous": "مجهول",
+    "claimTo": "استلم إلى:",
+    "autoClaimFuture": "استلام المدفوعات المستقبلية تلقائيًا",
+    "autoExpires": "تنتهي تلقائيًا إذا لم تُستلم",
+    "loadingReplies": "جارٍ تحميل الردود…",
+    "filter": {
+      "all": "الكل",
+      "payment": "دفع",
+      "gift": "هدية",
+      "reply": "رد"
+    },
+    "replyCount_one": "{{count}} رد",
+    "replyCount_other": "{{count}} ردود",
+    "refresh": "↻ تحديث",
+    "historyLabel": "السجل · {{count}}",
+    "statusReceived": "مستلم",
+    "statusCancelled": "ملغى",
+    "statusRefunded": "مسترد",
+    "statusExpired": "منتهي",
+    "statusDone": "تم",
+    "businessInvoice": "🏪 فاتورة تجارية",
+    "personalPayment": "👤 دفع شخصي",
+    "fromId": "من {{id}}",
+    "fromLabel": "من",
+    "receipt": "إيصال",
+    "invoice": "فاتورة",
+    "refund": "↩ استرداد",
+    "refundConfirm": "استرداد هذا الدفع للمرسل؟",
+    "refundFailed": "فشل الاسترداد: {{msg}}",
+    "noRepliesHint": "لا ردود بعد. شكر الهدايا سيظهر هنا.",
+    "alreadyClaimedRefreshed": "تم استلام هذا الدفع تلقائياً. تم تحديث صندوق الوارد.",
+    "alreadyClaimedRemoved": "مستلم — تمت الإزالة من صندوق الوارد.",
+    "newGiftsSection": "هدايا جديدة · {{count}}",
+    "giftsSection": "هدايا · {{count}}",
+    "sentSection": "مُرسل · {{count}}",
+    "loadMoreReplies": "تحميل المزيد من الردود"
+  },
+  "contacts": {
+    "noResults": "لا توجد نتائج",
+    "autoSavedHint": "يتم حفظ الأشخاص الذين ترسل إليهم تلقائيًا",
+    "importFromHistory": "✨ استيراد من السجل",
+    "importFromHistoryTitle": "استيراد الأطراف المقابلة من سجل الدفع + الهدايا الأخير",
+    "searchPlaceholder": "البحث بالاسم أو ID..."
+  },
+  "merchant": {
+    "title": "ملف الأعمال",
+    "preview": "معاينة",
+    "businessName": "اسم النشاط *",
+    "businessNamePlaceholder": "مثل: مقهى جاك",
+    "companyLogo": "شعار الشركة (اختياري)",
+    "uploadJpgPng": "رفع JPG / PNG",
+    "remove": "إزالة",
+    "logoHint": "JPG/PNG · الحد الأقصى 500 KB · مخزن بأمان",
+    "maxFileSize": "الحد الأقصى لحجم الملف 500 KB",
+    "clearConfirm": "مسح ملف الشركة؟",
+    "brandColor": "لون العلامة",
+    "tagline": "شعار / وصف (اختياري)",
+    "taglinePlaceholder": "مثل: أفضل قهوة في المدينة",
+    "businessFont": "خط اسم النشاط",
+    "contactInfo": "معلومات الاتصال",
+    "email": "البريد",
+    "phone": "الهاتف",
+    "website": "الموقع",
+    "emailPlaceholder": "contact@example.com",
+    "phonePlaceholder": "+966 50 000 0000",
+    "websitePlaceholder": "https://example.com",
+    "addressLegal": "العنوان والقانوني",
+    "address": "العنوان",
+    "addressPlaceholder": "شارع الملك فهد، الرياض",
+    "taxIdLabel": "الرقم الضريبي / السجل التجاري",
+    "taxIdPlaceholder": "مثل: SA-1234567890",
+    "invoiceNumbering": "ترقيم الفواتير",
+    "prefix": "بادئة",
+    "startingNo": "رقم البدء",
+    "startingFrom": "البدء من: {{sample}} (تلقائي على الخادم)",
+    "save": "حفظ ملف الشركة",
+    "saved": "✓ تم الحفظ!",
+    "clear": "مسح",
+    "storedLocally1": "يتم تخزين هذا الملف محلياً على جهازك.",
+    "storedLocally2": "انتقل إلى الوضع التجاري في صفحة الطلب لاستخدامه.",
+    "setUpProfile": "🏢 أعد ملف النشاط التجاري →"
+  },
+  "invoices": {
+    "title": "المحاسبة",
+    "protocolFees": "رسوم البروتوكول المدفوعة"
+  },
+  "payRequest": {
+    "title": "طلب دفع",
+    "requestSent": "تم إرسال الطلب!",
+    "error": "خطأ"
+  },
+  "receipt": {
+    "paymentSent": "تم إرسال الدفع.",
+    "home": "الرئيسية",
+    "viewInvoice": "عرض الفاتورة",
+    "loading": "جارٍ تحميل الإيصال…"
+  },
+  "install": {
+    "addToHome": "إضافة إلى الشاشة الرئيسية",
+    "tapShare": "انقر مشاركة",
+    "tapMenu": "انقر القائمة",
+    "installTitle": "تثبيت iUSD Pay",
+    "install": "تثبيت"
+  },
+  "deposit": {
+    "balance": "الرصيد",
+    "youReceive": "ستستلم",
+    "rate": "السعر",
+    "estTime": "الوقت التقديري",
+    "depositTitle": "إيداع {{label}}",
+    "withdrawTitle": "سحب {{label}}",
+    "from": "من",
+    "to": "إلى",
+    "selectFrom": "اختر الأصل للإيداع",
+    "selectTo": "اختر الوجهة",
+    "loadingAssets": "جارٍ التحميل...",
+    "noAssets": "لا توجد أصول برصيد",
+    "noDestinations": "لم يتم العثور على سلاسل وجهة",
+    "onChain": "على {{chain}}",
+    "current": "الحالي",
+    "max": "الحد الأقصى",
+    "gasFee": "رسوم الغاز",
+    "estimatedByWallet": "مُقدرة من المحفظة",
+    "relayFee": "رسوم الترحيل",
+    "route": "المسار",
+    "fetchingRoute": "جلب المسار...",
+    "insufficient": "رصيد غير كافٍ — لديك {{balance}} {{symbol}}",
+    "preparingTx": "جارٍ تحضير المعاملة...",
+    "confirmInWallet": "يرجى التأكيد في محفظتك",
+    "tryAgain": "حاول مجدداً",
+    "submitted": "تم إرسال المعاملة",
+    "done": "تم",
+    "txCancelled": "تم إلغاء المعاملة",
+    "noEvmWallet": "لم يتم العثور على محفظة EVM. يرجى تثبيت MetaMask.",
+    "unsupportedTx": "نوع معاملة غير مدعوم"
+  },
+  "promoBanner": {
+    "coffee": {
+      "title": "اشترِ لصديق قهوة",
+      "subtitle": "هدية قهوة دافئة"
+    },
+    "rose": {
+      "title": "أرسل وردة",
+      "subtitle": "لشخص مميز"
+    },
+    "boss": {
+      "title": "كن الرئيس، قدّم المزايا",
+      "subtitle": "أظهر كرمك"
+    }
+  },
+  "register": {
+    "title": "إنشاء حساب",
+    "chooseNickname": "اختر اسمًا مستعارًا لعنوان الدفع",
+    "nicknamePlaceholder": "مثال: alice · 小明 · 🦊",
+    "nicknameHint": "أي لغة · 1–12 حرفًا · 🎲 عشوائي",
+    "randomNickname": "اسم مستعار عشوائي",
+    "creating": "جارٍ الإنشاء…",
+    "submit": "إنشاء حساب ←"
+  },
+  "registered": {
+    "openWallet": "افتح المحفظة ←",
+    "wow": "رائع! حصلت على",
+    "wowCard": "بطاقة دفع iUSD رائعة!",
+    "tapCard": "انقر البطاقة",
+    "shareText": "أرسل لي هدايا iUSD — امسح رمز بطاقتي! 🎁"
+  },
+  "toast": {
+    "thatsYou": "هذا أنت!",
+    "copied": "تم نسخ {{value}}",
+    "addedToContacts": "تمت إضافة {{name}} إلى جهات الاتصال",
+    "linkCopied": "تم نسخ الرابط",
+    "paymentNotLinked": "لم يُربط الدفع بعد — حاول بعد ثوانٍ",
+    "claimFailed": "فشل الاستلام",
+    "claimQueued": "الاستلام في قائمة الانتظار",
+    "networkError": "خطأ في الشبكة: {{msg}}",
+    "noNewContactsInHistory": "لا توجد جهات اتصال جديدة في السجل",
+    "importedFromHistory_one": "تم استيراد {{count}} جهة اتصال من السجل",
+    "importedFromHistory_other": "تم استيراد {{count}} جهة اتصال من السجل",
+    "noNewImport": "لا توجد جهات اتصال جديدة للاستيراد",
+    "importFailed": "فشل الاستيراد: {{msg}}"
+  },
+  "nav": {
+    "dashboard": "لوحة",
+    "home": "الرئيسية",
+    "more": "المزيد"
+  },
+  "payLink": {
+    "resolving": "جارٍ حل رابط الدفع…",
+    "invoiceDetails": "تفاصيل الفاتورة",
+    "status": "الحالة",
+    "invoiceId": "رقم الفاتورة",
+    "recipient": "المستلم",
+    "dueDate": "تاريخ الاستحقاق",
+    "paymentProof": "إثبات الدفع",
+    "invalidLink": "رابط غير صالح",
+    "claimed": "تم الاستلام",
+    "paymentComplete": "اكتمل الدفع",
+    "receivedByName": "استلم {{name}} مبلغ {{amount}} iUSD",
+    "paymentSent": "تم إرسال الدفع",
+    "processingAuto": "{{amount}} iUSD · معالجة تلقائية",
+    "claimWithinMinutes": "يكتمل الاستلام عادةً في 1–2 دقيقة",
+    "goToDashboard": "إلى لوحة التحكم"
+  },
+  "verify": {
+    "title": "التحقق من الدفع",
+    "verifying": "جارٍ التحقق من الدفع…",
+    "noPid": "لم يتم توفير معرّف الدفع.",
+    "notFound": "لم يتم العثور على الدفع",
+    "error": "خطأ: {{msg}}",
+    "verification": "التحقق",
+    "to": "إلى",
+    "platformFee": "رسوم المنصة",
+    "txHash": "هاش المعاملة",
+    "goHomepage": "إلى الصفحة الرئيسية"
+  },
+  "profile": {
+    "defaultSlogan": "أنت تجعل يومي ✨",
+    "copyFullId": "نسخ المعرّف الكامل",
+    "contactAlreadyAdded": "تمت إضافته مسبقًا",
+    "addToContacts": "إضافة إلى جهات الاتصال"
+  },
+  "invoiceView": {
+    "title": "فاتورة",
+    "billFrom": "المُصدر",
+    "billTo": "المرسَل إليه",
+    "issueDate": "تاريخ الإصدار",
+    "dueDate": "تاريخ الاستحقاق",
+    "invoiceAmount": "مبلغ الفاتورة",
+    "recipientGets": "يستلم المستلم",
+    "payLink": "رابط الدفع",
+    "taxId": "الرقم الضريبي: {{id}}",
+    "noteLabel": "ملاحظة: {{note}}",
+    "platformFeeLabel": "رسوم المنصة (0.5%{{cap}})",
+    "platformFeeCapped": ", محدود",
+    "paidStatus": "✓ مدفوع في {{date}}",
+    "noToken": "لا يوجد رمز",
+    "failedToLoad": "فشل التحميل",
+    "notFound": "الفاتورة غير موجودة.",
+    "unavailable": "الفاتورة غير متاحة.",
+    "saveAsImage": "حفظ كصورة",
+    "printPdf": "طباعة / حفظ PDF",
+    "openInSafariChrome": "افتح في Safari أو Chrome لحفظ كـ PDF",
+    "close": "إغلاق"
+  },
+  "notFound": {
+    "title": "الصفحة غير موجودة",
+    "desc": "الصفحة التي تبحث عنها غير موجودة أو تم نقلها."
+  },
+  "installGuide": {
+    "alreadyInstalled": "مثبّت مسبقًا!",
+    "usingStandalone": "أنت تستخدم iUSD Pay كتطبيق مستقل.",
+    "installApp": "تثبيت التطبيق",
+    "androidHint": "افتح هذه الصفحة في Chrome واضغط على القائمة (⋮) ← \"إضافة إلى الشاشة الرئيسية\"",
+    "desktopHint": "في Chrome، اضغط أيقونة التثبيت (⊕) في شريط العناوين، أو القائمة ← \"تثبيت التطبيق\"",
+    "skip": "تخطّي الآن",
+    "ios": {
+      "step1": "اضغط زر المشاركة أسفل Safari",
+      "step2": "مرّر للأسفل واضغط \"إضافة إلى الشاشة الرئيسية\"",
+      "step3": "اضغط \"إضافة\" للتأكيد"
+    }
+  },
+  "giftBox": {
+    "1": {
+      "name": "صندوق موسيقى",
+      "description": "قلادة على شكل درع مصنوعة من الذهب والمينا. أحد جانبيها يصور مشهد مزرعة آلية (أوتوماتون) مع ساقية، والآخر وردة على خلفية حمراء. كلا الجانبين مُؤطَّر بأنصاف لآلئ، شاهدة على فن الزخرفة في القرن الثامن عشر."
+    },
+    "2": {
+      "name": "قهوة FLY",
+      "description": "استمتع بـ Fly Coffee بخصم 50%. سواء في المقهى أو للوجبات السفرية، تذوّق عبق كل فنجان بأفضل الأسعار."
+    },
+    "3": {
+      "name": "ساعة مكررة",
+      "description": "ساعة ذات آلية مكررة من إبداع الساعاتي الإنجليزي الشهير Francis Perigal (نشط 1741–67). علبة ذهبية جزئية المينا؛ ميناء من المينا البيضاء بأرقام سوداء وعقارب فضية مرصعة بالماس؛ حركة مطلية بالذهب. قمة فن صناعة الساعات في القرن الثامن عشر."
+    },
+    "4": {
+      "name": "قيثارة",
+      "description": "غيتار يُكسى ظهره وجوانبه ورقبته ورأسه بشرائط شيفرون من قشر السلحفاة والأبنوس والعاج، مع تضفيرات ملفوفة ومعينات وحواف هندسية. مزج بارع للأخشاب والتطعيم يكشف عن مهارة صانعه الاستثنائية."
+    },
+    "5": {
+      "name": "صندوق موسيقى",
+      "description": "صندوق موسيقى سويسري يعود إلى نحو 1820، على هيئة الماندولين. صُنع من مواد متعددة بحرفية عالية، ويمزج بين فن صناديق الموسيقى الأوروبية في مطلع القرن التاسع عشر وبين الجمالية الخاصة بآلة الماندولين."
+    },
+    "6": {
+      "name": "قيثارة",
+      "description": "غيتار فاخر الزخرفة من إبداع Giacomo (Jacob) Ertel في نهاية القرن السابع عشر. خشب التنّوب والأبنوس وأخشاب الفاكهة والعظم والعاج والصَّدَف والرق. يجمع العمل بين شغف الحرفي الألماني بالزخرفة وتقاليد صناعة الغيتار الإيطالية."
+    },
+    "7": {
+      "name": "صباح شتوي في الريف",
+      "description": "طبعة حجرية ملوّنة يدويًا من ورشة Currier & Ives، 1873. مشهد ريفي مغطى بالثلوج: مزلجة يجرها حصانان تحمل زوجين وأربعة كُوبٍ كبيرة للحليب، وفي الخلفية مزرعة. نموذج أمريكي بارز لفن الحياة اليومية في القرن التاسع عشر."
+    },
+    "8": {
+      "name": "أعطني الحرية أو أعطني الموت!",
+      "description": "طبعة حجرية ملوّنة يدويًا من Currier & Ives عام 1876 بعنوان \"أعطني الحرية أو أعطني الموت!\". تصوّر Patrick Henry وهو يلقي خطابه الشهير حول حقوق المستعمرات أمام جمعية فرجينيا في ريتشموند، مارس 1775."
+    },
+    "9": {
+      "name": "صندوق موسيقى",
+      "description": "صندوق موسيقى سويسري مستطيل من الذهب والمينا، نحو 1820. الحواف مزينة بالمينا الزرقاء والصفراء؛ يحمل الغطاء منمنمة كلاسيكية مينائية محاطة بأنصاف لآلئ. تلاقٍ مثالي بين فن صناديق الموسيقى وفن صياغة الحلي."
+    },
+    "10": {
+      "name": "علبة ساعة",
+      "description": "علبة ساعة من صنع George Harrison نحو 1770. ذهب مزيّن جزئيًا بالمينا؛ وتحتوي العلبة الخارجية على ألماس بارز اللمعان، دلالة على مهارة عالية لصنّاع الساعات والمجوهرات البريطانيين في القرن الثامن عشر."
+    },
+    "11": {
+      "name": "آلة الديفيجن فيول",
+      "description": "فيول تقسيمي من صنع Richard Meares نحو 1680. من التنّوب والأبنوس والقيقب. كانت آلات الفيول أبرز الآلات الوترية المقوَّسة في أواخر عصر النهضة، ثم حلّت محلها الكمانات تدريجيًا في القرن السابع عشر. شاهد هام على تاريخ الموسيقى."
+    },
+    "12": {
+      "name": "تنين",
+      "description": "تنين برونزي يعود إلى مطلع القرن السابع عشر من إبداع Giacomo Laurenziani. صُنِّف عند شرائه بوصفه عنقاء، ثم أعاد James Parker تحديده تنينًا بدءًا من خمسينيات القرن العشرين؛ تحفة نحت باروكية."
+    },
+    "13": {
+      "name": "ورود وزنابق",
+      "description": "Henri Fantin-Latour، 1888، زيت على قماش. هذا العمل الذي يحتفظ بحالة ممتازة يُظهر براعة الرسام في التعامل مع الصبغات: لا يستعمل الفرشاة فحسب، بل طرف مقبضها أيضًا ليُشكّل الورود والزنابق بأضواء وملمس بالغي الرقة."
+    },
+    "14": {
+      "name": "ساعة",
+      "description": "ساعة من صنع F. L. Meybom نحو 1670–75. العلبة من الذهب والفولاذ الأزرق والبلور الصخري والفضة المطلية جزئيًا مع ألماس؛ ميناء بمينا مطلية وأسلوب basse-taille على الذهب؛ حركة من نحاس مطلي بالذهب وفولاذ أزرق جزئيًا."
+    },
+    "15": {
+      "name": "بروش اليعسوب",
+      "description": "بروش يعسوب بأسلوب آرت نوفو من إبداع Edgar Bense نحو 1890. ذهب وألماس ومينا. الأجنحة الدقيقة بأسلوب plique-à-jour تُتوّج يعسوبًا مشكلاً بدقة بالغة، ويجسد العمل أناقة الآرت نوفو والجمالية الطبيعية."
+    },
+    "16": {
+      "name": "سوار ذراع",
+      "description": "سوار هندي (bazuband) من القرن التاسع عشر. ذهب مجدول مرصع بالياقوت وألماسة وردية القَطْع. تُوجد أمثلة مماثلة في تقاليد صياغة الحلي الأرستقراطية الهندية التي ورثت الجمالية البلاطية المغولية."
+    },
+    "17": {
+      "name": "مجموعة درع جورج كليفورد",
+      "description": "طقم درع صنعه Jacob Halder في مستودع الأسلحة الملكي في غرينتش عام 1586 للسيد George Clifford. فولاذ وذهب وجلد ومنسوجات. عُيِّن Clifford (1558–1605) بطل الملكة عام 1590 ومُنح وسام الرَّباط في العام نفسه."
+    },
+    "18": {
+      "name": "بروش على شكل رأس بومة",
+      "description": "بروش على هيئة رأس بومة من إبداع Castellani نحو 1860. ذهب وعقيق. تعكس هذه القطعة والمجموعة التي تنتمي إليها (انظر 2014.713.1–.10) الشغف الأوروبي في القرن التاسع عشر بالأساليب التاريخية، وتجسّد مجوهرات الإحياء الأثري."
+    },
+    "19": {
+      "name": "ساعة",
+      "description": "ساعة من صنع Charles Bobinet نحو 1655–60. علبة من عقيق بمُركّبات ذهب مينائي؛ ميناء مينا بيضاء بعقرب ذهبي؛ حركة من نحاس مطلي وفولاذ أزرق جزئيًا. شاهدة على حرفة صناعة الساعات الأوروبية في منتصف القرن السابع عشر."
+    },
+    "20": {
+      "name": "الزنابق",
+      "description": "فنسنت فان جوخ، 1890، زيت على قماش. لوحة السوسن الشهيرة. من أبرز أعمال المرحلة الأخيرة للفنان؛ بألوانها الغنية ولمساتها الحيّة تُبدي تكريمه العميق لجمال الطبيعة."
+    },
+    "21": {
+      "name": "وعاء سكر بغطاء",
+      "description": "سكرية ذات غطاء من صنع Giovacchino Belli نحو 1811–22. فضة مطلية بالذهب. تبدو قراءة Belli للطراز الإمبراطوري أكثر استرخاءً وحميمية من تفسيرات الفرنسيين المعاصرين، إذ تخفف الخطوط الكلاسيكية الصارمة بطابع إيطالي مميّز."
+    },
+    "22": {
+      "name": "إبريق",
+      "description": "إبريق (ewer) من فضة مطلية ومينا نحو 1600. يُزين جسمه موكب من الأشخاص والحيوانات يمثل انتصار قيصر عند عودته من مصر أو انتصار سكيبيو الإفريقي بعد هزيمة حنّبعل؛ قطعة معدنية بارزة من أواخر عصر النهضة."
+    },
+    "23": {
+      "name": "الممثل Asao Gakujūrō I بدور Mashiba Hisatsugu",
+      "description": "طبعة خشبية من إبداع Shunkōsai Hokushū (أوساكا) عام 1822. Nishiki-e على ورق بحبر وألوان، بتنسيق ōban الياباني العمودي. يصوّر الممثل الكابوكي الأوساكي Asao Gakujūrō I في دور Mashiba Hisatsugu بنظرة حادة ووضعية تحدٍ مفعمة بالدراما."
+    },
+    "24": {
+      "name": "تاج جبال الأنديز",
+      "description": "\"تاج الأنديز\" — الإكليل نحو 1660 والأقواس نحو 1770. كولومبي من Popayán. ذهب مطروق ومحفور مرصع بالزمرد. من أهم أعمال الصياغة في العصر الاستعماري لأمريكا الجنوبية، تجسيد إبداعي لدمج تقنيات أوروبية ومحلية."
+    }
+  },
+  "components": {
+    "nicknameEditor": {
+      "title": "تغيير اللقب",
+      "placeholder": "لقبك",
+      "randomNickname": "لقب عشوائي",
+      "generating": "جاري الإنشاء...",
+      "firstChangeFee": "رسوم أول تغيير",
+      "changeFeeN": "رسوم التغيير (تغيير رقم {{n}})",
+      "firstFeeNote": "أول تغيير للقب يكلف 0.10 iUSD. التغييرات اللاحقة ستكلف 10.00 iUSD لكل منها.",
+      "feeNote": "كل تغيير للقب يكلف 10.00 iUSD.",
+      "idStays": "يظل معرف حسابك كما هو",
+      "notUniqueAck": "أفهم أن الألقاب ليست فريدة. يمكن لحسابات أخرى استخدام نفس اللقب.",
+      "signing": "جارٍ التوقيع...",
+      "payAndSave": "ادفع {{fee}} iUSD واحفظ",
+      "errEmpty": "لا يمكن ترك اللقب فارغاً",
+      "errFee": "تعذر تحديد الرسوم",
+      "errTxFailed": "فشلت المعاملة",
+      "errNoHash": "لم يتم إرجاع تجزئة المعاملة",
+      "errCancelled": "تم إلغاء المعاملة",
+      "errGeneric": "فشل"
+    },
+    "mwc": {
+      "chooseMethod": "اختر طريقة الاتصال",
+      "checkWallet": "تحقق من تطبيق المحفظة",
+      "approveRequest": "اعتمد طلب الاتصال في تطبيق المحفظة",
+      "returnAfterApprove": "⚠️ عد إلى هذه الصفحة بعد الموافقة",
+      "tryAgain": "حاول مجدداً",
+      "cancel": "إلغاء",
+      "openInWallet": "افتح في المحفظة",
+      "best": "الأفضل",
+      "continueInBrowser": "تابع في متصفح {{name}}",
+      "signAndReturn": "وقّع وعُد",
+      "approveAndReturn": "اعتمد في التطبيق وعد إلى هنا",
+      "directConnection": "اتصال مباشر • بدون خوادم ريليه",
+      "connectionFailed": "فشل الاتصال",
+      "state": {
+        "initializing": "تهيئة...",
+        "generatingUri": "جارٍ الاتصال...",
+        "waitingApproval": "اعتمد في تطبيق المحفظة...",
+        "connected": "تم الاتصال!",
+        "failed": "فشل"
+      }
+    },
+    "quickLogin": {
+      "signing": "جارٍ التوقيع...",
+      "verifying": "جارٍ التحقق...",
+      "processing": "جارٍ المعالجة...",
+      "signInTo": "سجّل الدخول إلى {{action}}",
+      "walletTapToSignIn": "المحفظة متصلة. اضغط لتسجيل الدخول.",
+      "almostThere": "كدت تنتهي! أكمل التسجيل لـ {{action}}.",
+      "redirecting": "جارٍ التحويل للتسجيل...",
+      "connectionFailed": "فشل الاتصال",
+      "tryAgain": "حاول مجدداً",
+      "connecting": "جارٍ الاتصال...",
+      "connectTo": "اتصل لـ {{action}}",
+      "tapConnectHint": "اضغط اتصال — ستطلب المحفظة توقيعاً",
+      "signInWith": "سجل الدخول بـ",
+      "orWallet": "أو محفظة",
+      "other": "أخرى",
+      "openInWalletBrowser": "افتح هذا الرابط في متصفح محفظتك",
+      "linkCopied": "تم نسخ الرابط",
+      "dismiss": "إغلاق"
+    },
+    "identityCardBack": {
+      "idLabel": "ID:",
+      "deposit": "إيداع",
+      "withdraw": "سحب",
+      "onlyOn": "فقط على",
+      "gas": "Gas",
+      "gasOk": "Gas جيد",
+      "lowGas": "Gas منخفض"
+    },
+    "qrScan": {
+      "scanQR": "مسح QR",
+      "cameraUnavailable": "الكاميرا غير متاحة",
+      "turnFlashOff": "إطفاء الفلاش",
+      "turnFlashOn": "تشغيل الفلاش",
+      "cancel": "إلغاء"
+    },
+    "errorBoundary": {
+      "updating": "جارٍ التحديث…",
+      "somethingWrong": "حدث خطأ ما",
+      "genericErr": "حدث خطأ غير متوقع منع تحميل هذه الصفحة.",
+      "reload": "إعادة تحميل",
+      "resetReload": "إعادة تعيين وإعادة تحميل"
+    },
+    "identityCard": {
+      "validFrom": "ساري من",
+      "status": "الحالة",
+      "statusActive": "نشطة",
+      "statusFrozen": "مجمدة",
+      "statusDeactivated": "معطلة",
+      "viewProfile": "عرض بطاقة الملف الشخصي",
+      "scanAndGift": "امسح وأهدِ ✨",
+      "share": "↗ مشاركة",
+      "shareText": "حصلت على بطاقة iUSD Pay! امسح وأهدِ",
+      "copyLink": "نسخ الرابط",
+      "copied": "تم النسخ!"
+    }
+  },
+  "soundStyles": {
+    "click": {
+      "keyboard": {
+        "name": "لوحة المفاتيح",
+        "desc": "نقرة لوحة مفاتيح ميكانيكية"
+      },
+      "pop": {
+        "name": "طقطقة ناعمة",
+        "desc": "فقاعة تنفجر"
+      },
+      "tic": {
+        "name": "تيك",
+        "desc": "تيك حاد قصير"
+      },
+      "chime": {
+        "name": "جرس",
+        "desc": "رنين جرس ناعم"
+      },
+      "glass": {
+        "name": "زجاج",
+        "desc": "طنين زجاج"
+      },
+      "coin": {
+        "name": "عملة",
+        "desc": "طنين معدني"
+      },
+      "digital": {
+        "name": "رقمي",
+        "desc": "بليب 8-بت"
+      },
+      "drip": {
+        "name": "قطرة",
+        "desc": "قطرة ماء"
+      },
+      "paper": {
+        "name": "ورق",
+        "desc": "نقرة ورق"
+      },
+      "piano": {
+        "name": "بيانو",
+        "desc": "نغمة بيانو ناعمة"
+      },
+      "silent": {
+        "name": "صامت",
+        "desc": "لا صوت للنقر"
+      }
+    },
+    "card": {
+      "breeze": {
+        "name": "نسيم",
+        "desc": "ريح ناعمة تمر"
+      },
+      "dream_bells": {
+        "name": "أجراس الحلم",
+        "desc": "وميض أجراس زجاجية"
+      },
+      "page_turn": {
+        "name": "قلب الصفحة",
+        "desc": "حفيف الورق"
+      },
+      "whoosh": {
+        "name": "ووش",
+        "desc": "سووش سريع"
+      },
+      "soft_pop": {
+        "name": "طقطقة ناعمة",
+        "desc": "طقطقة مزدوجة ناعمة"
+      },
+      "silent": {
+        "name": "صامت",
+        "desc": "لا صوت للقلب"
+      }
+    },
+    "gift": {
+      "celebration": {
+        "name": "احتفال",
+        "desc": "وتر صاعد C-E-G-C"
+      },
+      "sparkle": {
+        "name": "بريق",
+        "desc": "نغمات بريق عالية"
+      },
+      "fanfare": {
+        "name": "بوق",
+        "desc": "تا-دا نحاسي"
+      },
+      "bell_cascade": {
+        "name": "أجراس متتالية",
+        "desc": "أجراس هابطة"
+      },
+      "soft_bell": {
+        "name": "جرس ناعم",
+        "desc": "جرس ناعم واحد"
+      },
+      "silent": {
+        "name": "صامت",
+        "desc": "لا صوت للهدية"
+      }
+    },
+    "txn": {
+      "whoosh_up": {
+        "name": "ووش للأعلى",
+        "desc": "سووش صاعد"
+      },
+      "coin_drop": {
+        "name": "سقوط عملة",
+        "desc": "هبوط عملة معدنية"
+      },
+      "pneumatic": {
+        "name": "هوائي",
+        "desc": "أنبوب قديم"
+      },
+      "confirm_chime": {
+        "name": "جرس التأكيد",
+        "desc": "نبرة مزدوجة"
+      },
+      "paper_slide": {
+        "name": "انزلاق ورق",
+        "desc": "انزلاق الورق"
+      },
+      "silent": {
+        "name": "صامت",
+        "desc": "لا صوت للمعاملة"
+      }
+    },
+    "menu": {
+      "slide": {
+        "name": "انزلاق",
+        "desc": "لوحة تنزلق"
+      },
+      "soft_pop": {
+        "name": "طقطقة ناعمة",
+        "desc": "فتح ناعم"
+      },
+      "swish": {
+        "name": "سويش",
+        "desc": "سويش هواء"
+      },
+      "silent": {
+        "name": "صامت",
+        "desc": "لا صوت للقائمة"
+      }
+    }
+  },
+  "time": {
+    "justNow": "الآن",
+    "minutesAgo": "قبل {{n}} دقيقة",
+    "hoursAgo": "قبل {{n}} ساعة",
+    "daysAgo": "قبل {{n}} يوم"
+  },
+  "receiptView": {
+    "back": "← رجوع",
+    "paymentReceipt": "إيصال الدفع",
+    "receipt": "إيصال",
+    "noPaymentId": "لا يوجد معرف دفع",
+    "notFound": "الإيصال غير موجود.",
+    "failedToLoad": "فشل التحميل",
+    "fee": "الرسوم: {{amount}} iUSD",
+    "date": "التاريخ",
+    "confirmedLabel": "تم التأكيد",
+    "verify": "تحقق",
+    "from": "من",
+    "to": "إلى",
+    "tx": "Tx: {{hash}}",
+    "id": "ID: {{id}}",
+    "statusPaid": "مدفوع",
+    "statusConfirmed": "مؤكد",
+    "statusPending": "معلق",
+    "statusRevoked": "ملغى",
+    "statusRefunded": "مسترجع",
+    "statusExpired": "منتهي",
+    "statusFailed": "فشل",
+    "statusUnknown": "غير معروف",
+    "saveAsImage": "حفظ كصورة",
+    "printPdf": "طباعة / حفظ PDF",
+    "openInSafariChrome": "افتح في Safari أو Chrome لحفظ كـ PDF",
+    "errorPrefix": "خطأ: {{msg}}"
+  },
+  "update": {
+    "available": "إصدار جديد متاح",
+    "reload": "إعادة تحميل"
+  }
+}

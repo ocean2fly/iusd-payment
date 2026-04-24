@@ -1,0 +1,151 @@
+name: Deploy Admin
+
+permissions:
+  contents: read
+  actions: read
+
+on:
+  workflow_dispatch:
+    inputs:
+      target_environment:
+        description: 'GitHub Environment (mainnet|sandbox)'
+        required: false
+        default: mainnet
+        type: string
+      artifact_run_id:
+        description: "Optional CI run id for admin-dist"
+        required: false
+        default: ""
+        type: string
+
+  workflow_call:
+    inputs:
+      target_environment:
+        required: false
+        type: string
+        default: mainnet
+      artifact_run_id:
+        required: false
+        type: string
+        default: ""
+
+
+concurrency:
+  group: deploy-admin
+  cancel-in-progress: true
+
+jobs:
+  deploy-admin:
+    name: Admin Panel
+    runs-on: [self-hosted, ipay]
+    environment: ${{ inputs.target_environment || 'mainnet' }}
+
+    steps:
+      - name: Validate required config
+        env:
+          DEPLOY_HOST: ${{ vars.DEPLOY_HOST }}
+          DEPLOY_USER: ${{ vars.DEPLOY_USER }}
+          DEPLOY_BASE_DIR: ${{ vars.DEPLOY_BASE_DIR }}
+          DEPLOY_SSH_PRIVATE_KEY: ${{ secrets.DEPLOY_SSH_PRIVATE_KEY }}
+        run: |
+          [ -n "$DEPLOY_HOST" ] || { echo "❌ Missing vars.DEPLOY_HOST"; exit 1; }
+          [ -n "$DEPLOY_USER" ] || { echo "❌ Missing vars.DEPLOY_USER"; exit 1; }
+          [ -n "$DEPLOY_BASE_DIR" ] || { echo "❌ Missing vars.DEPLOY_BASE_DIR"; exit 1; }
+          [ -n "$DEPLOY_SSH_PRIVATE_KEY" ] || { echo "❌ Missing secrets.DEPLOY_SSH_PRIVATE_KEY"; exit 1; }
+          echo "✅ Admin deployment config present"
+
+      - name: Resolve artifact run id
+        id: artifact_run
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const explicit = `${{ inputs.artifact_run_id || '' }}`.trim();
+            if (explicit) {
+              core.setOutput('run_id', explicit);
+              return;
+            }
+            const { owner, repo } = context.repo;
+            const res = await github.rest.actions.listWorkflowRuns({
+              owner,
+              repo,
+              workflow_id: 'ci.yml',
+              branch: 'main',
+              status: 'completed',
+              per_page: 20,
+            });
+            const run = res.data.workflow_runs.find((item) => item.conclusion === 'success');
+            if (!run) {
+              core.setFailed('No successful CI run found for ci.yml on main');
+              return;
+            }
+            core.setOutput('run_id', String(run.id));
+
+      - name: Download admin artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: admin-dist
+          path: .deploy-admin
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          run-id: ${{ steps.artifact_run.outputs.run_id }}
+
+      - name: Verify artifact
+        run: |
+          if [ ! -f ".deploy-admin/index.html" ]; then
+            echo "❌ Admin artifact missing index.html"
+            exit 1
+          fi
+          echo "✅ Admin artifact ready"
+          ls -la .deploy-admin/
+
+      - name: Prepare SSH key
+        run: |
+          mkdir -p ~/.ssh
+          chmod 700 ~/.ssh
+          printf '%s\n' '${{ secrets.DEPLOY_SSH_PRIVATE_KEY }}' > ~/.ssh/ipay_deploy
+          chmod 600 ~/.ssh/ipay_deploy
+          ssh-keyscan -H "${{ vars.DEPLOY_HOST }}" >> ~/.ssh/known_hosts
+
+      - name: Deploy to server
+        env:
+          DEPLOY_HOST: ${{ vars.DEPLOY_HOST }}
+          DEPLOY_USER: ${{ vars.DEPLOY_USER }}
+          DEPLOY_BASE_DIR: ${{ vars.DEPLOY_BASE_DIR }}
+        run: |
+          ADMIN_DIR="${{ vars.ADMIN_RUNTIME_DIR || format('{0}/admin', vars.DEPLOY_BASE_DIR || '/srv/ipay') }}"
+          ADMIN_SRC_DIR="$DEPLOY_BASE_DIR/repo/.deploy-admin"
+          ssh -i ~/.ssh/ipay_deploy "$DEPLOY_USER@$DEPLOY_HOST" "mkdir -p '$DEPLOY_BASE_DIR/repo/scripts/deploy'"
+          rsync -az -e "ssh -i ~/.ssh/ipay_deploy" scripts/deploy/ "$DEPLOY_USER@$DEPLOY_HOST:$DEPLOY_BASE_DIR/repo/scripts/deploy/"
+          ssh -i ~/.ssh/ipay_deploy "$DEPLOY_USER@$DEPLOY_HOST" "mkdir -p '$ADMIN_DIR' '$ADMIN_SRC_DIR'"
+          rsync -az --delete -e "ssh -i ~/.ssh/ipay_deploy" .deploy-admin/ "$DEPLOY_USER@$DEPLOY_HOST:$ADMIN_SRC_DIR/"
+          ssh -i ~/.ssh/ipay_deploy "$DEPLOY_USER@$DEPLOY_HOST" "set -e; ADMIN_RUNTIME_DIR='$ADMIN_DIR' ADMIN_PORT='3203' bash '$DEPLOY_BASE_DIR/repo/scripts/deploy/deploy-admin-static.sh' '$ADMIN_SRC_DIR' '$ADMIN_DIR'"
+
+      - name: Health check
+        env:
+          DEPLOY_HOST: ${{ vars.DEPLOY_HOST }}
+          DEPLOY_USER: ${{ vars.DEPLOY_USER }}
+        run: |
+          echo "Waiting for admin panel on port 3203..."
+          for i in $(seq 1 10); do
+            LOCAL_STATUS=$(ssh -i ~/.ssh/ipay_deploy "$DEPLOY_USER@$DEPLOY_HOST" "curl -s -o /dev/null -w '%{http_code}' '${{ vars.ADMIN_LOCAL_URL || 'http://127.0.0.1:3203/' }}'" 2>/dev/null || echo "000")
+            if [ "$LOCAL_STATUS" = "200" ]; then
+              echo "✅ Admin health check passed (attempt $i)"
+              break
+            fi
+            echo "  attempt $i/10: HTTP $LOCAL_STATUS — retrying in 2s..."
+            sleep 2
+          done
+
+          if [ "$LOCAL_STATUS" != "200" ]; then
+            echo "❌ Admin health check failed after 10 attempts"
+            exit 1
+          fi
+
+          echo "✅ Admin panel deployed"
+
+      - name: Summary
+        run: |
+          echo "## Admin Panel Deployed" >> $GITHUB_STEP_SUMMARY
+          echo "- Artifact run id: \`${{ steps.artifact_run.outputs.run_id }}\`" >> $GITHUB_STEP_SUMMARY
+          echo "- URL: ${{ vars.ADMIN_URL }}" >> $GITHUB_STEP_SUMMARY
+          echo "- Environment: ${{ inputs.target_environment || 'mainnet' }}" >> $GITHUB_STEP_SUMMARY
+          echo "- Runtime dir: ${{ vars.ADMIN_RUNTIME_DIR || format('{0}/admin', vars.DEPLOY_BASE_DIR || '/srv/ipay') }}" >> $GITHUB_STEP_SUMMARY

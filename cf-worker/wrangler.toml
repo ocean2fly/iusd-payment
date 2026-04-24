@@ -1,0 +1,16 @@
+name = "ipay-claim-og"
+main = "claim-og.js"
+compatibility_date = "2024-01-01"
+account_id = "33f9ba5e55b95e50127d67e5e7f8b0cb"
+
+routes = [
+  { pattern = "iusd-pay.xyz/pay/*",     zone_name = "iusd-pay.xyz" },
+  { pattern = "iusd-pay.xyz/claim/*",   zone_name = "iusd-pay.xyz" },
+  { pattern = "iusd-pay.xyz/g/*",       zone_name = "iusd-pay.xyz" },
+  { pattern = "iusd-pay.xyz/profile/*", zone_name = "iusd-pay.xyz" },
+  { pattern = "iusd-pay.xyz/invoice/*", zone_name = "iusd-pay.xyz" },
+  { pattern = "iusd-pay.xyz/receipt/*", zone_name = "iusd-pay.xyz" },
+  { pattern = "iusd-pay.xyz/gift/claim*", zone_name = "iusd-pay.xyz" },
+  { pattern = "iusd-pay.xyz/gift/show*",  zone_name = "iusd-pay.xyz" },
+  { pattern = "iusd-pay.xyz/app/send",  zone_name = "iusd-pay.xyz" },
+]

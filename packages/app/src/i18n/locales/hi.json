@@ -1,0 +1,1250 @@
+{
+  "popup": {
+    "title": "ब्राउज़र सेटिंग्स में पॉप-अप की अनुमति दें",
+    "subtitle": "आपका ब्राउज़र साइन-इन पॉप-अप को ब्लॉक कर रहा है। दिखाए अनुसार सेटिंग्स में सक्षम करें।",
+    "next": "अगला",
+    "back": "वापस",
+    "gotIt": "समझ गए",
+    "continue": "जारी रखें",
+    "enableTitle": "पॉप-अप सक्षम करें",
+    "signinNeedsPopup": "साइन-इन के लिए पॉप-अप विंडो आवश्यक है।",
+    "gotoMobile": "सेटिंग्स → ब्राउज़र → पॉप-अप की अनुमति दें पर जाएँ।",
+    "gotoDesktop": "सेटिंग्स → पॉप-अप की अनुमति दें पर जाएँ।",
+    "checkDetail": "विवरण देखें"
+  },
+  "auth": {
+    "connect": "कनेक्ट करें",
+    "signIn": "साइन इन →",
+    "connecting": "कनेक्ट हो रहा है…",
+    "signing": "हस्ताक्षर हो रहा है…",
+    "checkWallet": "हस्ताक्षर अनुरोध के लिए अपने वॉलेट की जाँच करें…",
+    "settingUp": "आपका खाता सेट किया जा रहा है…",
+    "coinbaseConnected": "Coinbase Wallet कनेक्ट हो गया!",
+    "walletConnected": "वॉलेट कनेक्ट हो गया!",
+    "wcTimeout": "WalletConnect का समय समाप्त हो गया",
+    "restoring": "वॉलेट सत्र पुनर्स्थापित हो रहा है…",
+    "openingWindow": "साइन-इन विंडो खुल रही है…",
+    "tapConnect": "Connect पर टैप करें — वॉलेट हस्ताक्षर के लिए कहेगा",
+    "signInWith": "इनसे साइन इन करें",
+    "or": "या",
+    "tryAgain": "पुनः प्रयास करें",
+    "reconnect": "वॉलेट पुनः कनेक्ट करें",
+    "popupBlockedMobile": "पॉप-अप ब्लॉक कर दिया गया। सेटिंग्स → ब्राउज़र → पॉप-अप की अनुमति दें पर जाएँ।",
+    "popupBlockedDesktop": "पॉप-अप ब्लॉक कर दिया गया। सेटिंग्स → पॉप-अप की अनुमति दें पर जाएँ।",
+    "signFailed": "साइन-इन विफल। कृपया पुनः प्रयास करें।",
+    "connectionLost": "वॉलेट कनेक्शन टूट गया। कृपया पुनः कनेक्ट करें।",
+    "signatureCancelled": "हस्ताक्षर रद्द कर दिया गया।",
+    "networkBlocked": "API पहुँच से बाहर या ब्लॉक है (नेटवर्क/CORS)। कृपया एक नए टैब में पुनः प्रयास करें।"
+  },
+  "landing": {
+    "tagline": "Initia पर स्टेबलकॉइन भुगतान",
+    "installAsApp": "ऐप के रूप में इंस्टॉल करें",
+    "forceRefresh": "बलपूर्वक रिफ्रेश",
+    "refresh": "रिफ्रेश",
+    "forceRefreshTip": "स्थानीय पेज समस्याओं को हल करने के लिए बलपूर्वक रिफ्रेश करें"
+  },
+  "wallets": {
+    "openInWalletBrowser": "वॉलेट ऐप ब्राउज़र में खोलें",
+    "pasteUrl": "iUSD pay URL (कॉपी की गई) पेस्ट करें और जाएँ",
+    "done": "पूर्ण",
+    "other": "अन्य"
+  },
+  "common": {
+    "language": "भाषा",
+    "cancel": "रद्द करें",
+    "save": "सहेजें",
+    "saving": "सहेज रहा है…",
+    "saved": "सहेजा गया",
+    "close": "बंद करें",
+    "change": "बदलें",
+    "loading": "लोड हो रहा है…",
+    "view": "देखें",
+    "optional": "वैकल्पिक",
+    "on": "चालू",
+    "off": "बंद"
+  },
+  "welcome": {
+    "tagline": "Initia पर स्टेबलकॉइन भुगतान",
+    "whatYouGet": "आपको क्या मिलता है",
+    "features": {
+      "transfer": "Scan से स्वतंत्र रूप से भेजें और अनुरोध करें",
+      "merchants": "व्यापारियों के साथ सहज एकीकरण",
+      "gifts": "दोस्तों और समूहों को उपहार भेजें"
+    },
+    "agreePrefix": "मैं सहमत हूं",
+    "and": "और",
+    "tos": "सेवा की शर्तें",
+    "privacy": "गोपनीयता नीति",
+    "experimentalNote": "। यह ऐप मेननेट पर प्रायोगिक है।",
+    "getStarted": "शुरू करें →"
+  },
+  "dashboard": {
+    "tapEditNickname": "उपनाम संपादित करने के लिए टैप करें",
+    "minGasHint": "गैस के लिए न्यूनतम 1 INIT या 1 USDC",
+    "refreshBalances": "शेष राशि रीफ्रेश करें",
+    "actions": {
+      "transfer": "भेजें",
+      "request": "अनुरोध",
+      "gift": "उपहार",
+      "inbox": "इनबॉक्स",
+      "contacts": "संपर्क",
+      "scan": "स्कैन",
+      "history": "इतिहास",
+      "settings": "सेटिंग्स"
+    }
+  },
+  "settings": {
+    "title": "सेटिंग्स",
+    "account": {
+      "title": "खाता",
+      "nickname": "उपनाम",
+      "setNickname": "उपनाम सेट करें",
+      "bio": "बायो / नारा",
+      "bioPlaceholder": "उदा. स्कैन करें और उपहार दें, मैं एक चुंबन वापस भेजूंगा 💋",
+      "id": "ID",
+      "wallet": "वॉलेट",
+      "copied": "कॉपी किया गया",
+      "ecosystem": "इकोसिस्टम",
+      "autoClaim": "स्वतः दावा"
+    },
+    "appearance": {
+      "title": "रूप",
+      "auto": "स्वतः",
+      "light": "हल्का",
+      "dark": "गहरा"
+    },
+    "sound": {
+      "title": "ध्वनि",
+      "desc": "UI क्लिक, कार्ड फ्लिप, उत्सव",
+      "muted": "मौन",
+      "on": "चालू",
+      "styles": "ध्वनि शैली",
+      "customize": "अनुकूलित करें",
+      "tapPreview": "पूर्वावलोकन करने और चुनने के लिए किसी भी शैली पर टैप करें",
+      "unmutePreview": "पूर्वावलोकन सुनने के लिए ऊपर से मौन हटाएं",
+      "cat": {
+        "click": "क्लिक",
+        "cardFlip": "कार्ड फ्लिप",
+        "gift": "उपहार",
+        "transaction": "लेन-देन",
+        "menu": "मेन्यू"
+      }
+    },
+    "receive": {
+      "title": "प्राप्ति पता",
+      "privacyProtection": "गोपनीयता सुरक्षा",
+      "defaultWallet": "मेरा वॉलेट (डिफ़ॉल्ट)",
+      "change": "बदलें",
+      "modalTitle": "अपने प्राप्ति पते की रक्षा करें",
+      "modalDesc": "आप iUSD भुगतान प्राप्त करने के लिए एक अलग वॉलेट सेट कर सकते हैं, अपने कनेक्टेड वॉलेट को निजी रखते हुए। भुगतान स्वचालित रूप से इस पते पर भेजे जाएंगे।",
+      "complianceHeader": "⚠ अनुपालन सूचना",
+      "complianceDesc": "पते की रूटिंग के बावजूद, सभी लेन-देन लागू AML नीतियों के तहत ऑडिट योग्य बने रहते हैं। यह हस्ताक्षर आपकी समझ और सहमति की पुष्टि करता है।",
+      "placeholder": "0x… या init1… (खाली = अपना वॉलेट उपयोग करें)",
+      "signSave": "हस्ताक्षर करें और सहेजें",
+      "signing": "हस्ताक्षर कर रहा है…"
+    },
+    "about": {
+      "title": "जानकारी",
+      "iusdPay": "iUSD Pay",
+      "network": "नेटवर्क",
+      "contract": "अनुबंध",
+      "tos": "सेवा की शर्तें",
+      "privacy": "गोपनीयता नीति",
+      "forceRefresh": "बलपूर्वक रीफ्रेश",
+      "community": "समुदाय"
+    },
+    "danger": {
+      "title": "खतरा क्षेत्र",
+      "disconnect": "वॉलेट डिस्कनेक्ट",
+      "disconnectTitle": "वॉलेट डिस्कनेक्ट करें?",
+      "disconnectDesc": "आप कभी भी पुनः कनेक्ट कर सकते हैं।",
+      "delete": "खाता हटाएं",
+      "deleteConfirmWarn": "⚠ यह आपके खाते को स्थायी रूप से हटा देता है",
+      "confirmDelete": "हटाने की पुष्टि करें",
+      "deleting": "हटा रहा है…"
+    }
+  },
+  "transfer": {
+    "title": "भेजें",
+    "paymentCodeTitle": "भुगतान कोड",
+    "showToRecipient": "यह QR प्राप्तकर्ता को दिखाएं।",
+    "scanAndEnter": "स्कैन करें और राशि दर्ज करके भुगतान का अनुरोध करें।",
+    "waitingForRequest": "अनुरोध का इंतज़ार…",
+    "sessionExpired": "सत्र समाप्त",
+    "generateNew": "नया कोड उत्पन्न करें",
+    "generating": "भुगतान कोड उत्पन्न हो रहा है…",
+    "recipientPlaceholder": "उपनाम या खाता ID",
+    "contacts": "संपर्क",
+    "checking": "जाँच हो रही है…",
+    "noContactsMatch": "\"{{query}}\" से मिलता कोई संपर्क नहीं",
+    "noContactsYet": "अभी कोई संपर्क नहीं",
+    "noContactsHint": "शुरू करने के लिए भुगतान भेजें या इतिहास देखें",
+    "amountLabel": "राशि",
+    "amountMin": "न्यूनतम 0.1 iUSD",
+    "amountMax": "प्रति लेन-देन अधिकतम 1,000 iUSD",
+    "memoLabel": "मेमो",
+    "memoPlaceholder": "वैकल्पिक मेमो",
+    "fee": "शुल्क: {{amount}} iUSD",
+    "feeCap": "(सीमा)",
+    "total": "कुल: {{amount}} iUSD",
+    "autoSaveContact": "यह व्यक्ति आपके संपर्कों में स्वचालित रूप से सहेजा जाएगा",
+    "paymentQR": "भुगतान QR",
+    "building": "बनाया जा रहा है…",
+    "confirming": "पुष्टि…",
+    "send": "भेजें",
+    "sendAmount": "{{amount}} iUSD भेजें"
+  },
+  "request": {
+    "title": "अनुरोध",
+    "modePersonal": "मैं",
+    "modeBusiness": "व्यवसाय",
+    "tabNew": "नया",
+    "tabInvoices": "चालान",
+    "empty": "अभी कोई अनुरोध नहीं",
+    "createFirst": "पहला अनुरोध बनाएं →",
+    "share": "शेयर ↗",
+    "amountLabel": "राशि",
+    "noteLabel": "मेमो",
+    "notePlaceholder": "विवरण (वैकल्पिक)",
+    "taxNoLabel": "कर नं.",
+    "dueLabel": "देय",
+    "invLabel": "चालान #",
+    "payerLabel": "भुगतानकर्ता",
+    "payerPlaceholder": "नाम (वैकल्पिक)",
+    "status": {
+      "draft": "मसौदा",
+      "sent": "भुगतान प्रतीक्षित",
+      "paying": "पुष्टि प्रतीक्षित",
+      "paid": "भुगतान हुआ",
+      "overdue": "अतिदेय",
+      "refunded": "वापस किया",
+      "cancelled": "रद्द"
+    }
+  },
+  "scan": {
+    "title": "QR स्कैन",
+    "lookingUp": "खाता खोजा जा रहा है…",
+    "paymentDetails": "भुगतान विवरण",
+    "scannedContent": "स्कैन की गई सामग्री",
+    "manualInput": "मैन्युअल इनपुट / चित्र",
+    "pasteHint": "URL या खाता ID चिपकाएं…",
+    "startCamera": "कैमरा शुरू करें",
+    "stopCamera": "कैमरा बंद करें",
+    "flipCamera": "कैमरा बदलें",
+    "retry": "पुनः प्रयास",
+    "scannedCheck": "स्कैन हो गया! अपना डेस्कटॉप देखें।",
+    "scanAgain": "↩ फिर से स्कैन करें",
+    "tagInvoice": "🧾 चालान / अनुरोध",
+    "tagIdentity": "👤 पहचान",
+    "tagScanned": "🔗 स्कैन किया गया",
+    "due": "देय",
+    "payRequest": "💸 यह अनुरोध चुकाएं",
+    "payAmount": "💸 {{amount}} iUSD चुकाएं",
+    "contactSaved": "✅ संपर्क सहेजा गया!",
+    "reAddContactsTag": "👤 फिर से संपर्क में जोड़ें",
+    "addContactsTag": "👤 संपर्कों में जोड़ें",
+    "transfer": "स्थानांतरण",
+    "gift": "उपहार",
+    "contactAlreadyAdded": "संपर्क पहले से जोड़ा गया",
+    "reAddToContacts": "फिर से जोड़ें",
+    "addToContacts": "संपर्कों में जोड़ें",
+    "visit": "जाएं →",
+    "clickToStart": "कैमरा शुरू करने के लिए क्लिक करें",
+    "pointPhone": "स्कैन हो रहा है — फ़ोन को QR पर लगाएँ",
+    "disconnect": "✕ डिस्कनेक्ट",
+    "go": "जाएं",
+    "dropToScan": "QR स्कैन करने के लिए छोड़ें",
+    "chooseFromGallery": "गैलरी से चुनें",
+    "galleryHint": "QR कोड छवि चुनें या खींचें",
+    "cameraN": "कैमरा {{n}}",
+    "err": {
+      "accessBlocked": "🔒 कैमरा एक्सेस ब्लॉक है",
+      "permissionDesc": "कैमरे की अनुमति अस्वीकार की गई। ब्राउज़र सेटिंग्स में इसे फिर से सक्षम करें।",
+      "chromeEdge": "🌐 Chrome / Edge",
+      "pasteInstructions": "यह URL कॉपी करें → नए टैब में पेस्ट करें → कैमरा सेट करें",
+      "allow": "अनुमति दें",
+      "copy": "कॉपी",
+      "firefoxHint": "एड्रेस बार में कैमरा 🔒 आइकन क्लिक → अनुमति दें",
+      "safariHint": "सेटिंग्स → Safari → कैमरा → अनुमति दें",
+      "androidHint": "⋮ टैप करें → साइट सेटिंग्स → कैमरा → अनुमति दें",
+      "retryAfter": "↺ सक्षम करने के बाद पुनः",
+      "noCamera": "📷 कोई कैमरा नहीं मिला",
+      "noCameraDesc": "इस डिवाइस पर कोई कैमरा नहीं मिला।",
+      "useManualFull": "नीचे मैन्युअल इनपुट का उपयोग करें या बाहरी स्कैनर कनेक्ट करें।",
+      "inUse": "📷 कैमरा उपयोग में",
+      "inUseDesc": "कैमरा किसी अन्य ऐप द्वारा उपयोग में है। अन्य ऐप्स बंद करें और पुनः प्रयास करें।",
+      "flashNotSupported": "इस डिवाइस पर फ्लैश समर्थित नहीं",
+      "noQrInImage": "छवि में कोई QR कोड नहीं मिला",
+      "couldNotCreateRelay": "रिले सत्र नहीं बनाया जा सका",
+      "cameraError": "कैमरा त्रुटि: {{msg}}",
+      "cameraDenied": "कैमरा अस्वीकृत: {{msg}}",
+      "connectionFailed": "कनेक्शन विफल। बेसिक मोड आज़माएं।",
+      "desktopNotReady": "डेस्कटॉप तैयार नहीं। डेस्कटॉप पेज पुनः लोड करें।",
+      "failedToSend": "भेजने में विफल",
+      "invalidSession": "अमान्य सत्र"
+    },
+    "relay": {
+      "gettingCamera": "कैमरा प्राप्त हो रहा है…",
+      "connectingDesktop": "डेस्कटॉप से कनेक्ट हो रहा है…",
+      "liveCameraHeader": "📹 लाइव कैमरा",
+      "qrScannerHeader": "📤 QR स्कैनर",
+      "liveBadge": "● लाइव",
+      "streamingDesktop": "📹 डेस्कटॉप पर स्ट्रीम हो रहा है — वे वही देखते हैं जो आप देखते हैं",
+      "pointAtDesktop": "📤 डेस्कटॉप पर QR कोड पर लगाएँ",
+      "statusPrefix": "🔄 {{status}}"
+    }
+  },
+  "gift": {
+    "title": "उपहार",
+    "message": "संदेश",
+    "quickPicks": "त्वरित चयन",
+    "next": "आगे →",
+    "recipient": "प्राप्तकर्ता",
+    "shares": "हिस्से",
+    "total": "कुल",
+    "ready": "उपहार तैयार है!",
+    "shareAccessHint": "अपने दोस्त के साथ एक्सेस लिंक साझा करें।",
+    "rightClickSave": "सहेजने के लिए चित्र पर राइट-क्लिक · लिंक कॉपी किया गया",
+    "dismiss": "खारिज",
+    "viewDetails": "उपहार विवरण देखें →",
+    "scanToOpen": "उपहार खोलने के लिए स्कैन",
+    "noReplies": "अभी कोई जवाब नहीं",
+    "noViews": "अभी कोई दृश्य नहीं",
+    "loadingHistory": "इतिहास लोड हो रहा है…",
+    "giftList": "उपहार सूची",
+    "historyTab": "इतिहास",
+    "newest": "नवीनतम",
+    "oldest": "पुराना",
+    "newestFirst": "नवीनतम पहले",
+    "oldestFirst": "पुराना पहले",
+    "noDescription": "कोई विवरण उपलब्ध नहीं।",
+    "allCollections": "सभी संग्रह",
+    "collection": {
+      "flowers": "फूल",
+      "drinks": "पेय",
+      "food": "भोजन",
+      "treats": "मिठाई",
+      "tech": "टेक",
+      "luxury": "लक्जरी",
+      "office": "ऑफिस",
+      "art": "कला",
+      "books": "किताबें",
+      "games": "गेम",
+      "wellness": "स्वास्थ्य",
+      "travel": "यात्रा",
+      "fashion": "फैशन",
+      "kids": "बच्चे",
+      "pets": "पालतू",
+      "sports": "खेल",
+      "other": "अन्य",
+      "painting": "चित्रकला",
+      "music_box": "संगीत बॉक्स",
+      "instrument": "वाद्य",
+      "sculpture": "मूर्तिकला",
+      "textile": "वस्त्र",
+      "ceramic": "सिरेमिक",
+      "watch": "घड़ी",
+      "brooch": "ब्रोच",
+      "armor": "कवच",
+      "furniture": "फर्नीचर",
+      "jewelry": "आभूषण"
+    },
+    "flexible": "लचीला",
+    "source": "स्रोत ↗",
+    "progressPanel": {
+      "progress": "प्रगति",
+      "inProgress": "प्रगति में",
+      "completed": "पूर्ण",
+      "expired": "समाप्त",
+      "expiredRefunded": "समाप्त · धनवापसी",
+      "expiresIn": "{{label}} में समाप्त",
+      "endsIn": "{{label}} में समाप्ति",
+      "claimedOf": "कुल {{total}} में से दावा किया",
+      "claimsHeader": "दावे · {{count}}",
+      "replied": "💌 उत्तर दिया",
+      "claimedChip": "✓ प्राप्त",
+      "anon": "अज्ञात",
+      "allClaimed": "सभी शेयरों का दावा किया जा चुका है।",
+      "refunded_one": "{{count}} अदावाकृत शेयर वापस किया गया",
+      "refunded_other": "{{count}} अदावाकृत शेयर वापस किए गए",
+      "refundedNote": "उपहार समाप्त होने पर अदावाकृत शेयरों की राशि स्वचालित रूप से आपके बैलेंस में वापस कर दी गई।",
+      "noClaimsYet": "अभी तक किसी ने दावा नहीं किया। लिंक साझा कर सूचित करें।",
+      "daysHours": "{{days}} दिन {{hours}} घंटे",
+      "hoursMinutes": "{{hours}} घंटे {{minutes}} मिनट",
+      "minutesOnly": "{{minutes}} मिनट"
+    },
+    "back": "← वापस",
+    "stepChoose": "उपहार चुनें",
+    "stepWrite": "संदेश लिखें",
+    "stepSendTo": "भेजें",
+    "feePercent": "शुल्क {{percent}}%",
+    "feeLabel": "शुल्क ({{percent}}%)",
+    "more": "और",
+    "browseAll": "सभी उपहार देखें",
+    "writePlaceholder": "संदेश लिखें...",
+    "amountIusd": "राशि (iUSD)",
+    "amountRangePlaceholder": "0.1 ~ 1000 iUSD",
+    "tapToEdit": "✎ संपादित करने के लिए टैप करें",
+    "amountInRange": "0.10 – 1,000 iUSD",
+    "anyoneGroup": "कोई भी (समूह)",
+    "anyoneCanClaim": "कोई भी दावा कर सकता है",
+    "enterContact": "संपर्क या ID दर्ज करें",
+    "invalidRecipient": "अमान्य उपयोगकर्ता नाम या ID",
+    "usernameInactive": "उपयोगकर्ता निष्क्रिय",
+    "recipientRequired": "प्राप्तकर्ता आवश्यक",
+    "sendFailed": "भेजने में विफल",
+    "missingTxParams": "लेनदेन पैरामीटर अनुपस्थित",
+    "giftTxFailed": "उपहार लेनदेन विफल",
+    "contactsHeader": "संपर्क",
+    "fromHistory": "✨ इतिहास से",
+    "splitEqual": "समान",
+    "splitRandom": "यादृच्छिक",
+    "balanceLine": "बैलेंस: {{amount}} iUSD",
+    "wrapping": "लपेट रहा है...",
+    "insufficientBalance": "बैलेंस अपर्याप्त",
+    "wrapGift": "🎁 उपहार लपेटें",
+    "giftNumber": "उपहार #{{id}}",
+    "fromName": "{{name}} से",
+    "anonymous": "अज्ञात",
+    "mysteryAwaits": "रहस्यमय उपहार प्रतीक्षारत है",
+    "claimedAgo": "{{time}} प्राप्त",
+    "claimed": "प्राप्त",
+    "view": "देखें →",
+    "openCta": "🎁 खोलें →",
+    "expiredChip": "समाप्त",
+    "claimedOfShort": "{{claimed}}/{{total}} प्राप्त",
+    "enjoyEmoji": "आनंद लें! 🎁",
+    "forYouEmoji": "प्यार के साथ ❤️",
+    "happyBirthday": "जन्मदिन मुबारक! 🎂",
+    "thankYouEmoji": "धन्यवाद! 🙏",
+    "cheersEmoji": "चीयर्स! 🥂",
+    "justBecause": "बस यूँ ही 🌟",
+    "deserveIt": "आप हकदार हैं ✨",
+    "haveFun": "मज़े करें! 🎉",
+    "treatYourself": "खुद को ख़ुश करें 💫",
+    "yourGiftReady": "आपका उपहार तैयार है!",
+    "toLabel": "को",
+    "feeLabelShort": "शुल्क",
+    "notificationSent": "{{name}} को अधिसूचना भेजी गई",
+    "fromSender": "{{name}} से",
+    "giftWaitingShort": "एक उपहार आपका इंतज़ार कर रहा है",
+    "scanToOpenShort": "खोलने के लिए स्कैन करें",
+    "iusdPay": "iUSD Pay",
+    "copied": "कॉपी किया!",
+    "copyLink": "लिंक कॉपी",
+    "saveImage": "छवि सहेजें",
+    "shareLink": "लिंक साझा करें",
+    "backToQr": "← QR पर वापस",
+    "closeShareLater": "बंद करके बाद में उपहार इतिहास से साझा कर सकते हैं।",
+    "preparing": "तैयार हो रहा है...",
+    "imageSaved": "छवि सहेजी गई!",
+    "qrBtn": "QR",
+    "backBtn": "वापस",
+    "hasAGiftForYou": "के पास आपके लिए एक उपहार है",
+    "sharesCount_one": "{{count}} हिस्सा",
+    "sharesCount_other": "{{count}} हिस्से",
+    "openedCount": "{{count}}/{{total}} खुले",
+    "viewsCount": "{{count}} बार देखा गया",
+    "someone": "कोई",
+    "shareTitle": "{{name}} उपहार",
+    "featured": "⭐ विशेष"
+  },
+  "giftClaim": {
+    "loading": "उपहार लोड हो रहा है…",
+    "goHome": "होम",
+    "youReceived": "आपको प्राप्त",
+    "from": "की ओर से",
+    "reply": "जवाब →",
+    "alreadyClaimed": "पहले ही प्राप्त",
+    "scanProfile": "प्रोफ़ाइल स्कैन",
+    "thankPresets": {
+      "thankBoss": "धन्यवाद बॉस!",
+      "appreciated": "बहुत आभार!",
+      "soKind": "कितने दयालु हो!",
+      "madeMyDay": "आज का दिन बना दिया!",
+      "youreBest": "तुम सर्वश्रेष्ठ हो!",
+      "whatSurprise": "क्या सरप्राइज है!",
+      "loveYou": "प्यार करता हूँ!",
+      "sweetest": "तुम सबसे प्यारे!",
+      "heartFull": "दिल भरा हुआ!",
+      "bestBirthday": "सबसे अच्छा जन्मदिन!",
+      "bestGift": "सबसे अच्छा उपहार!",
+      "cheersYou": "तुम्हारे नाम!"
+    },
+    "iGotLabel": "★ मुझे मिला",
+    "onlyOneShare": "सिर्फ़ 1 हिस्सा",
+    "sharesCountLabel_one": "{{count}} हिस्सा",
+    "sharesCountLabel_other": "{{count}} हिस्से",
+    "fromSenderOverlay": "{{name}} से",
+    "detailsBtn": "विवरण",
+    "claimedLabel": "प्राप्त",
+    "viewedLabel": "देखा",
+    "chasedLabel": "पकड़ा",
+    "moreBtn": "[अधिक]",
+    "membersHeader": "सदस्य · {{count}}",
+    "lettersHeader": "पत्र · {{count}}",
+    "replyBtn": "जवाब",
+    "replyToPlaceholder": "{{name}} को जवाब…",
+    "loveWhatYouSee": "★ पसंद है?",
+    "giftThemLine": "{{name}} को टिप दें",
+    "scanOrOpenProfile": "मेरी प्रोफ़ाइल खोलें →",
+    "scanOr": "स्कैन या",
+    "postToPlaceholder": "{{name}} को पोस्ट…",
+    "postBtn": "पोस्ट",
+    "sentWithLoveBy": "प्यार से भेजा",
+    "giftReceivedChip": "उपहार मिला!",
+    "anonName": "उनको",
+    "errInvalidLink": "अमान्य उपहार लिंक",
+    "errNotFound": "उपहार नहीं मिला",
+    "errClaimFailed": "दावा विफल",
+    "errFailed": "विफल",
+    "errSignInFirst": "कृपया पहले साइन इन करें",
+    "errInvalidClaimLink": "अमान्य दावा लिंक",
+    "signInToSave": "संपर्क सहेजने के लिए साइन इन",
+    "failedSaveContact": "संपर्क सहेजने में विफल",
+    "shareTitle": "{{name}} की ओर से उपहार"
+  },
+  "history": {
+    "title": "इतिहास",
+    "paymentJourney": "भुगतान यात्रा",
+    "expires": "समाप्त",
+    "noInvoices": "अभी कोई चालान नहीं",
+    "noActivity": "अभी कोई गतिविधि नहीं",
+    "tabs": {
+      "all": "सभी",
+      "sent": "भेजा",
+      "received": "प्राप्त",
+      "gift": "उपहार",
+      "invoices": "चालान",
+      "stats": "आँकड़े"
+    },
+    "payStatus": {
+      "sent": {
+        "pending": "पुष्टि प्रतीक्षित",
+        "confirmed": "पुष्टि हुई",
+        "revoked": "रद्द",
+        "refunded": "वापस",
+        "expired": "समाप्त",
+        "unknown": "अज्ञात"
+      },
+      "received": {
+        "claimable": "प्राप्य",
+        "received": "प्राप्त",
+        "cancelled": "रद्द",
+        "refunded": "वापस",
+        "expired": "समाप्त",
+        "unknown": "अज्ञात"
+      }
+    },
+    "paymentId": "भुगतान आईडी",
+    "sortNewest": "क्रम: नवीनतम पहले (क्लिक करें पुराने के लिए)",
+    "sortOldest": "क्रम: पुराने पहले (क्लिक करें नवीनतम के लिए)",
+    "loadMore": "और लोड करें",
+    "invoicePayment": "चालान भुगतान",
+    "sentTo": "भेजा गया",
+    "receivedFrom": "से प्राप्त",
+    "cancelInvoice": "चालान रद्द करें",
+    "cancelInvoiceConfirm": "इस चालान को रद्द करें?",
+    "cancelFailed": "रद्द विफल: {{msg}}",
+    "timeline": {
+      "created": "बनाया गया",
+      "fee": "शुल्क {{amount}}",
+      "pendingClaim": "दावा लंबित",
+      "awaitingRecipient": "प्राप्तकर्ता की प्रतीक्षा",
+      "autoClaimed": "स्वतः दावा किया जाएगा",
+      "confirmed": "पुष्टि हुई",
+      "received": "प्राप्त",
+      "expiresOn": "समाप्त {{date}}",
+      "revoked": "रद्द",
+      "returnedToSender": "प्रेषक को वापस",
+      "claimed": "दावा किया",
+      "refunded": "वापस",
+      "returnedToClaimer": "दावाकर्ता को वापस",
+      "expired": "समाप्त"
+    },
+    "stats": {
+      "accounting": "लेखा",
+      "giftsSent": "भेजे उपहार",
+      "giftsReceived": "प्राप्त उपहार",
+      "paid": "चुकाया",
+      "received": "प्राप्त",
+      "moneyIn": "आय",
+      "moneyOut": "व्यय",
+      "net": "शुद्ध",
+      "pending": "लंबित",
+      "thisMonth": "इस महीने"
+    },
+    "noGiftHistory": "अभी तक कोई उपहार इतिहास नहीं",
+    "receivedSection": "प्राप्त · {{count}}",
+    "sentSection": "भेजा · {{count}}",
+    "loadingMore": "लोड हो रहा है…",
+    "loadMoreReceived": "और प्राप्त लोड करें",
+    "loadMoreSent": "और भेजा लोड करें",
+    "refreshTitle": "रीफ्रेश",
+    "exportCsv": "इतिहास CSV निर्यात करें",
+    "revokeFailed": "रद्द विफल",
+    "refundFailed": "धनवापसी विफल: {{msg}}",
+    "refundConfirm": "यह भुगतान प्रेषक को धनवापसी करें?",
+    "anyone": "कोई भी",
+    "direct": "सीधे",
+    "fromLabel": "से",
+    "toLabel": "को",
+    "copySaveTitle": "shortId कॉपी + संपर्कों में सहेजें",
+    "due": "देय",
+    "noSentTransactions": "भेजे गए लेनदेन नहीं",
+    "noReceivedTransactions": "प्राप्त लेनदेन नहीं",
+    "noTransactionsYet": "अभी कोई लेनदेन नहीं — लेनदेन करने पर आँकड़े भर जाएंगे।",
+    "detailSent": "↑ भेजा",
+    "detailReceived": "↓ प्राप्त",
+    "copyBtn": "📋 कॉपी",
+    "receiptPdf": "↓ रसीद PDF",
+    "invoicePdf": "↓ चालान PDF",
+    "revokeBtn": "↩ रद्द",
+    "refundBtn": "↩ धनवापसी"
+  },
+  "inbox": {
+    "title": "इनबॉक्स",
+    "claimed": "प्राप्त हुआ!",
+    "feePaid": "शुल्क चुकाया",
+    "anonymous": "अनाम",
+    "claimTo": "यहाँ प्राप्त करें:",
+    "autoClaimFuture": "भविष्य के भुगतान स्वतः प्राप्त",
+    "autoExpires": "दावा न करने पर स्वतः समाप्त",
+    "loadingReplies": "उत्तर लोड हो रहे हैं…",
+    "filter": {
+      "all": "सभी",
+      "payment": "भुगतान",
+      "gift": "उपहार",
+      "reply": "उत्तर"
+    },
+    "replyCount_one": "{{count}} उत्तर",
+    "replyCount_other": "{{count}} उत्तर",
+    "refresh": "↻ रीफ्रेश",
+    "historyLabel": "इतिहास · {{count}}",
+    "statusReceived": "प्राप्त",
+    "statusCancelled": "रद्द",
+    "statusRefunded": "धनवापसी",
+    "statusExpired": "समाप्त",
+    "statusDone": "पूर्ण",
+    "businessInvoice": "🏪 व्यावसायिक चालान",
+    "personalPayment": "👤 व्यक्तिगत भुगतान",
+    "fromId": "{{id}} से",
+    "fromLabel": "से",
+    "receipt": "रसीद",
+    "invoice": "चालान",
+    "refund": "↩ धनवापसी",
+    "refundConfirm": "यह भुगतान प्रेषक को धनवापसी करें?",
+    "refundFailed": "धनवापसी विफल: {{msg}}",
+    "noRepliesHint": "अभी तक कोई उत्तर नहीं। उपहार धन्यवाद यहाँ दिखेंगे।",
+    "alreadyClaimedRefreshed": "यह भुगतान पहले से स्वचालित रूप से प्राप्त हो चुका है। इनबॉक्स रीफ्रेश किया गया।",
+    "alreadyClaimedRemoved": "पहले से प्राप्त — इनबॉक्स से हटाया गया।",
+    "newGiftsSection": "नए उपहार · {{count}}",
+    "giftsSection": "उपहार · {{count}}",
+    "sentSection": "भेजा · {{count}}",
+    "loadMoreReplies": "और जवाब लोड करें"
+  },
+  "contacts": {
+    "noResults": "कोई परिणाम नहीं",
+    "autoSavedHint": "जिन्हें आप भेजते हैं वे स्वतः सहेजे जाते हैं",
+    "importFromHistory": "✨ इतिहास से आयात",
+    "importFromHistoryTitle": "हाल के भुगतान + उपहार इतिहास से प्रतिपक्ष आयात करें",
+    "searchPlaceholder": "नाम या ID से खोजें..."
+  },
+  "merchant": {
+    "title": "व्यवसाय प्रोफ़ाइल",
+    "preview": "प्रीव्यू",
+    "businessName": "व्यवसाय का नाम *",
+    "businessNamePlaceholder": "जैसे: जैक की कॉफ़ी",
+    "companyLogo": "कंपनी लोगो (वैकल्पिक)",
+    "uploadJpgPng": "JPG / PNG अपलोड",
+    "remove": "हटाएं",
+    "logoHint": "JPG/PNG · अधिकतम 500 KB · सुरक्षित संग्रहित",
+    "maxFileSize": "फ़ाइल का आकार 500 KB से अधिक न हो",
+    "clearConfirm": "व्यवसाय प्रोफ़ाइल साफ़ करें?",
+    "brandColor": "ब्रांड रंग",
+    "tagline": "टैगलाइन / विवरण (वैकल्पिक)",
+    "taglinePlaceholder": "जैसे: शहर की सबसे अच्छी कॉफ़ी",
+    "businessFont": "व्यवसाय नाम फ़ॉन्ट",
+    "contactInfo": "संपर्क जानकारी",
+    "email": "ईमेल",
+    "phone": "फ़ोन",
+    "website": "वेबसाइट",
+    "emailPlaceholder": "contact@example.com",
+    "phonePlaceholder": "+91 98765 43210",
+    "websitePlaceholder": "https://example.com",
+    "addressLegal": "पता और कानूनी",
+    "address": "पता",
+    "addressPlaceholder": "123 मुख्य मार्ग, शहर",
+    "taxIdLabel": "जीएसटी / पंजीकरण सं",
+    "taxIdPlaceholder": "जैसे: IN-12-3456789",
+    "invoiceNumbering": "चालान संख्या",
+    "prefix": "उपसर्ग",
+    "startingNo": "प्रारंभिक सं",
+    "startingFrom": "प्रारंभ: {{sample}} (सर्वर पर स्वतः बढ़ता है)",
+    "save": "व्यवसाय प्रोफ़ाइल सहेजें",
+    "saved": "✓ सहेजा गया!",
+    "clear": "साफ़",
+    "storedLocally1": "यह प्रोफ़ाइल आपके डिवाइस पर स्थानीय रूप से संग्रहित है।",
+    "storedLocally2": "Request पेज पर Business मोड पर स्विच करके उपयोग करें।",
+    "setUpProfile": "🏢 अपना व्यवसाय प्रोफ़ाइल सेट करें →"
+  },
+  "invoices": {
+    "title": "लेखा",
+    "protocolFees": "चुकाए गए प्रोटोकॉल शुल्क"
+  },
+  "payRequest": {
+    "title": "भुगतान अनुरोध",
+    "requestSent": "अनुरोध भेजा गया!",
+    "error": "त्रुटि"
+  },
+  "receipt": {
+    "paymentSent": "भुगतान भेजा गया।",
+    "home": "होम",
+    "viewInvoice": "चालान देखें",
+    "loading": "रसीद लोड हो रही है…"
+  },
+  "install": {
+    "addToHome": "होम स्क्रीन पर जोड़ें",
+    "tapShare": "शेयर टैप करें",
+    "tapMenu": "मेनू टैप करें",
+    "installTitle": "iUSD Pay इंस्टॉल करें",
+    "install": "इंस्टॉल"
+  },
+  "deposit": {
+    "balance": "शेष",
+    "youReceive": "आपको प्राप्त",
+    "rate": "दर",
+    "estTime": "अनुमानित समय",
+    "depositTitle": "{{label}} जमा करें",
+    "withdrawTitle": "{{label}} निकालें",
+    "from": "से",
+    "to": "पर",
+    "selectFrom": "जमा करने के लिए संपत्ति चुनें",
+    "selectTo": "गंतव्य चुनें",
+    "loadingAssets": "लोड हो रहा है...",
+    "noAssets": "बैलेंस वाली कोई संपत्ति नहीं मिली",
+    "noDestinations": "कोई गंतव्य चेन नहीं मिली",
+    "onChain": "{{chain}} पर",
+    "current": "वर्तमान",
+    "max": "अधिकतम",
+    "gasFee": "गैस शुल्क",
+    "estimatedByWallet": "वॉलेट द्वारा अनुमानित",
+    "relayFee": "रिले शुल्क",
+    "route": "मार्ग",
+    "fetchingRoute": "मार्ग प्राप्त हो रहा है...",
+    "insufficient": "बैलेंस कम — आपके पास {{balance}} {{symbol}}",
+    "preparingTx": "लेनदेन तैयार हो रहा है...",
+    "confirmInWallet": "अपने वॉलेट में पुष्टि करें",
+    "tryAgain": "पुनः प्रयास",
+    "submitted": "लेनदेन जमा",
+    "done": "हो गया",
+    "txCancelled": "लेनदेन रद्द",
+    "noEvmWallet": "EVM वॉलेट नहीं मिला। MetaMask इंस्टॉल करें।",
+    "unsupportedTx": "असमर्थित लेनदेन प्रकार"
+  },
+  "promoBanner": {
+    "coffee": {
+      "title": "किसी को कॉफी पिलाएँ",
+      "subtitle": "एक गर्म कॉफी उपहार भेजें"
+    },
+    "rose": {
+      "title": "एक गुलाब भेजें",
+      "subtitle": "किसी विशेष के लिए"
+    },
+    "boss": {
+      "title": "बॉस बनें, उपहार दें",
+      "subtitle": "अपनी उदारता दिखाएँ"
+    }
+  },
+  "register": {
+    "title": "खाता बनाएँ",
+    "chooseNickname": "अपने भुगतान पते के लिए उपनाम चुनें",
+    "nicknamePlaceholder": "जैसे alice · 小明 · 🦊",
+    "nicknameHint": "कोई भी भाषा · 1–12 अक्षर · 🎲 रैंडम",
+    "randomNickname": "रैंडम उपनाम",
+    "creating": "बना रहा है…",
+    "submit": "खाता बनाएँ →"
+  },
+  "registered": {
+    "openWallet": "वॉलेट खोलें →",
+    "wow": "वाह! आपको मिला",
+    "wowCard": "iUSD पेमेंट कार्ड!",
+    "tapCard": "कार्ड टैप करें",
+    "shareText": "मेरा QR स्कैन करके मुझे iUSD गिफ्ट भेजें! 🎁"
+  },
+  "toast": {
+    "thatsYou": "ये आप ही हैं!",
+    "copied": "{{value}} कॉपी किया",
+    "addedToContacts": "{{name}} को संपर्कों में जोड़ा",
+    "linkCopied": "लिंक कॉपी किया",
+    "paymentNotLinked": "भुगतान अभी जुड़ा नहीं — कुछ सेकंड बाद पुनः प्रयास करें",
+    "claimFailed": "दावा विफल",
+    "claimQueued": "दावा कतार में",
+    "networkError": "नेटवर्क त्रुटि: {{msg}}",
+    "noNewContactsInHistory": "इतिहास में कोई नया संपर्क नहीं",
+    "importedFromHistory_one": "इतिहास से {{count}} संपर्क आयात किया",
+    "importedFromHistory_other": "इतिहास से {{count}} संपर्क आयात किए",
+    "noNewImport": "आयात करने के लिए कोई नया संपर्क नहीं",
+    "importFailed": "आयात विफल: {{msg}}"
+  },
+  "nav": {
+    "dashboard": "डैशबोर्ड",
+    "home": "होम",
+    "more": "और"
+  },
+  "payLink": {
+    "resolving": "भुगतान लिंक हल हो रहा है…",
+    "invoiceDetails": "चालान विवरण",
+    "status": "स्थिति",
+    "invoiceId": "चालान ID",
+    "recipient": "प्राप्तकर्ता",
+    "dueDate": "देय तिथि",
+    "paymentProof": "भुगतान प्रमाण",
+    "invalidLink": "अमान्य लिंक",
+    "claimed": "प्राप्त",
+    "paymentComplete": "भुगतान पूर्ण",
+    "receivedByName": "{{name}} को {{amount}} iUSD प्राप्त",
+    "paymentSent": "भुगतान भेजा",
+    "processingAuto": "{{amount}} iUSD · स्वतः संसाधित",
+    "claimWithinMinutes": "दावा आमतौर पर 1–2 मिनट में पूर्ण",
+    "goToDashboard": "डैशबोर्ड पर जाएँ"
+  },
+  "verify": {
+    "title": "भुगतान सत्यापन",
+    "verifying": "भुगतान सत्यापित हो रहा है…",
+    "noPid": "कोई भुगतान ID नहीं दिया।",
+    "notFound": "भुगतान नहीं मिला",
+    "error": "त्रुटि: {{msg}}",
+    "verification": "सत्यापन",
+    "to": "को",
+    "platformFee": "प्लेटफ़ॉर्म शुल्क",
+    "txHash": "लेन-देन हैश",
+    "goHomepage": "होमपेज पर जाएँ"
+  },
+  "profile": {
+    "defaultSlogan": "तुम मेरा दिन बनाते हो ✨",
+    "copyFullId": "पूरा ID कॉपी करें",
+    "contactAlreadyAdded": "संपर्क पहले से जोड़ा",
+    "addToContacts": "संपर्कों में जोड़ें"
+  },
+  "invoiceView": {
+    "title": "चालान",
+    "billFrom": "बिल भेजने वाला",
+    "billTo": "बिल प्राप्त करने वाला",
+    "issueDate": "जारी तिथि",
+    "dueDate": "देय तिथि",
+    "invoiceAmount": "चालान राशि",
+    "recipientGets": "प्राप्तकर्ता को प्राप्त",
+    "payLink": "भुगतान लिंक",
+    "taxId": "GSTIN: {{id}}",
+    "noteLabel": "नोट: {{note}}",
+    "platformFeeLabel": "प्लेटफ़ॉर्म शुल्क (0.5%{{cap}})",
+    "platformFeeCapped": ", सीमा",
+    "paidStatus": "✓ {{date}} को भुगतान",
+    "noToken": "कोई टोकन नहीं",
+    "failedToLoad": "लोड विफल",
+    "notFound": "चालान नहीं मिला।",
+    "unavailable": "चालान अनुपलब्ध।",
+    "saveAsImage": "छवि के रूप में सहेजें",
+    "printPdf": "प्रिंट / PDF सहेजें",
+    "openInSafariChrome": "PDF के लिए Safari या Chrome में खोलें",
+    "close": "बंद करें"
+  },
+  "notFound": {
+    "title": "पृष्ठ नहीं मिला",
+    "desc": "आप जो पृष्ठ खोज रहे हैं वह मौजूद नहीं है या हटा दिया गया है।"
+  },
+  "installGuide": {
+    "alreadyInstalled": "पहले से इंस्टॉल!",
+    "usingStandalone": "आप iUSD Pay को स्टैंडअलोन ऐप के रूप में उपयोग कर रहे हैं।",
+    "installApp": "ऐप इंस्टॉल करें",
+    "androidHint": "इस पृष्ठ को Chrome में खोलें, फिर मेनू (⋮) → \"होम स्क्रीन पर जोड़ें\"",
+    "desktopHint": "Chrome में, एड्रेस बार में इंस्टॉल आइकन (⊕) पर क्लिक करें, या मेनू → \"ऐप इंस्टॉल करें\"",
+    "skip": "अभी छोड़ें",
+    "ios": {
+      "step1": "Safari के नीचे शेयर बटन पर टैप करें",
+      "step2": "नीचे स्क्रॉल करें और \"होम स्क्रीन पर जोड़ें\" टैप करें",
+      "step3": "पुष्टि के लिए \"जोड़ें\" टैप करें"
+    }
+  },
+  "giftBox": {
+    "1": {
+      "name": "संगीत बॉक्स",
+      "description": "सोने और मीनाकारी का ढाल-आकार का पेंडेंट। एक ओर जल-चक्की के साथ स्वचालित खेत (ऑटोमेटोन) का दृश्य, दूसरी ओर लाल पृष्ठभूमि पर गुलाब। दोनों किनारों पर आधी मोतियाँ लगी हैं, 18वीं सदी की सजावटी कला का उत्कृष्ट नमूना।"
+    },
+    "2": {
+      "name": "FLY कॉफ़ी",
+      "description": "Fly Coffee का आनंद 50% छूट के साथ लें। कैफे में बैठकर या पैक करवाकर — हर कप की खुशबू का बेहतरीन कीमत पर लुत्फ़ उठाएँ।"
+    },
+    "3": {
+      "name": "रिपीटिंग घड़ी",
+      "description": "प्रसिद्ध ब्रिटिश घड़ीसाज़ Francis Perigal (1741–67 में सक्रिय) द्वारा बनी रिपीटर घड़ी। आंशिक मीनाकारी वाला सोने का केस; सफ़ेद मीनाकारी डायल पर काले अंक और हीरे जड़ी चाँदी की सुइयाँ; गिल्ट मूवमेंट। 18वीं सदी की घड़ीसाज़ी का शिखर।"
+    },
+    "4": {
+      "name": "गिटार",
+      "description": "एक गिटार जिसकी पीठ, भुजाएँ, गर्दन और सिर कछुए के खोल, आबनूस और हाथी-दाँत की शेवरॉन पट्टियों से जड़े हैं — साथ में घुमावदार, रोम्बस और ज्यामितीय किनारियाँ। यह लकड़ी और जड़ाऊ कला का अद्भुत संगम है जो निर्माता की कुशलता दिखाता है।"
+    },
+    "5": {
+      "name": "संगीत बॉक्स",
+      "description": "लगभग 1820 का स्विस म्यूज़िक बॉक्स, जो मैंडोलिन के आकार में बना है। विविध सामग्रियों से तैयार यह 19वीं सदी के प्रारंभिक यूरोपीय म्यूज़िक बॉक्स शिल्प और मैंडोलिन वाद्य की सौंदर्यशास्त्रीय परंपरा का संगम है।"
+    },
+    "6": {
+      "name": "गिटार",
+      "description": "17वीं सदी के अंत में Giacomo (Jacob) Ertel द्वारा बना अत्यंत अलंकृत गिटार। स्प्रूस, आबनूस, फलदार वृक्ष, हड्डी, हाथी-दाँत, सीप और चर्मपत्र। यह जर्मन कारीगर के सज्जा के जुनून और इटली की गिटार-निर्माण परंपरा का संगम है।"
+    },
+    "7": {
+      "name": "गाँव की सर्द सुबह",
+      "description": "Currier & Ives स्टूडियो की 1873 की हस्त-रंजित लिथोग्राफ़। बर्फीला ग्रामीण दृश्य: दो घोड़ों की खींची स्लेज पर दम्पति और चार बड़े दूध के कनस्तर; दूर खेत-घर। 19वीं सदी के अमेरिकी लोकप्रिय कला का विशिष्ट उदाहरण।"
+    },
+    "8": {
+      "name": "मुझे स्वतंत्रता दो या मृत्यु!",
+      "description": "Currier & Ives की 1876 की हस्त-रंजित लिथोग्राफ़ \"मुझे स्वतंत्रता दो या मृत्यु!\"। मार्च 1775 में रिचमंड में वर्जीनिया की विधानसभा के सम्मुख Patrick Henry के उपनिवेशों के अधिकारों पर दिए प्रसिद्ध भाषण का चित्रण।"
+    },
+    "9": {
+      "name": "संगीत बॉक्स",
+      "description": "लगभग 1820 का स्विस आयताकार सोने और मीनाकारी का म्यूज़िक बॉक्स। किनारों पर नीली और पीली मीनाकारी; ढक्कन पर शास्त्रीय मीनाकारी लघुचित्र, जिसे आधी मोतियों से जड़ा गया है। म्यूज़िक बॉक्स कला और आभूषण-कला का सर्वोत्तम संगम।"
+    },
+    "10": {
+      "name": "घड़ी का केस",
+      "description": "George Harrison द्वारा निर्मित घड़ी का केस, लगभग 1770। आंशिक मीनाकारी वाला सोना; बाहरी केस हीरे जड़ित। 18वीं सदी के ब्रिटिश घड़ीसाज़ और ज्वैलरों के बेजोड़ हुनर का प्रमाण।"
+    },
+    "11": {
+      "name": "डिविज़न वायोल",
+      "description": "Richard Meares द्वारा लगभग 1680 में बनाया गया डिवीज़न वायोल। स्प्रूस, आबनूस, मेपल। उत्तर-पुनर्जागरण काल के सबसे सम्मानित धनु-वाद्य वायोल, 17वीं सदी में धीरे-धीरे वायलिन द्वारा प्रतिस्थापित हो गए। संगीत-इतिहास का महत्त्वपूर्ण साक्ष्य।"
+    },
+    "12": {
+      "name": "ड्रैगन",
+      "description": "17वीं सदी के प्रारंभिक काल का Giacomo Laurenziani कृत कांस्य ड्रैगन। खरीद के समय इसे ग्रिफ़िन बताया गया था, लेकिन 1950 के दशक के बाद James Parker ने सही पहचान की कि यह ड्रैगन है — बारोक मूर्तिकला का एक बेहतरीन उदाहरण।"
+    },
+    "13": {
+      "name": "गुलाब और लिली",
+      "description": "Henri Fantin-Latour, 1888, कैनवास पर तैलचित्र। उत्कृष्ट संरक्षित यह रचना चित्रकार की परिपक्व चित्रकला तकनीक दर्शाती है: वह न केवल तूलिका से, बल्कि तूलिका के हत्थे के सिरे से भी रंग को गूँथकर गुलाब और लिली को विलक्षण प्रकाश-छाया और बनावट देते हैं।"
+    },
+    "14": {
+      "name": "घड़ी",
+      "description": "F. L. Meybom की लगभग 1670–75 की पॉकेट घड़ी। केस सोने, नीले इस्पात, स्फटिक और आंशिक रूप से गिल्ट चाँदी तथा हीरों से बना; चित्रित मीनाकारी और बास-ताई मीनाकारी सोने पर; गिल्ट पीतल और आंशिक रूप से नीले इस्पात की मूवमेंट।"
+    },
+    "15": {
+      "name": "ड्रैगनफ्लाई ब्रोच",
+      "description": "Edgar Bense की लगभग 1890 की आर्ट नूवो शैली की ड्रैगनफ़्लाई ब्रोच। सोना, हीरे और मीनाकारी। नाज़ुक प्लिक-अ-जूर मीनाकारी पंख वाली यह सूक्ष्मता से गढ़ी ड्रैगनफ़्लाई आर्ट नूवो फ़ैशन तथा प्रकृतिवादी सौंदर्यशास्त्र का उत्कृष्ट प्रतिनिधित्व है।"
+    },
+    "16": {
+      "name": "बाजूबंद",
+      "description": "19वीं सदी का भारतीय बाज़ूबंद। बुने हुए सोने पर माणिक और एक रोज़-कट हीरा जड़ित। मुग़ल दरबार की सौंदर्यशास्त्रीय परंपरा को वारिस मानते हुए भारतीय अभिजात आभूषण-परंपरा में ऐसे ही उदाहरण पाए जाते हैं।"
+    },
+    "17": {
+      "name": "जॉर्ज क्लिफोर्ड का कवच सेट",
+      "description": "Jacob Halder द्वारा 1586 में ग्रीनविच की राजकीय आयुधशाला में George Clifford के लिए निर्मित कवच। इस्पात, सोना, चर्म और वस्त्र। Clifford (1558–1605) को 1590 में महारानी के रक्षक नियुक्त किया गया और उसी वर्ष गार्टर ऑर्डर मिला।"
+    },
+    "18": {
+      "name": "उल्लू के सिर के आकार का ब्रोच",
+      "description": "Castellani द्वारा लगभग 1860 की उल्लू-सिर आकार की ब्रोच। सोना और अगेट। यह रचना और इसका समूह (2014.713.1–.10 देखें) 19वीं सदी के यूरोप में ऐतिहासिक शैलियों में गहरी रुचि को दर्शाता है और पुरातात्त्विक पुनरुद्धार शैली के आभूषणों का प्रतिनिधित्व करता है।"
+    },
+    "19": {
+      "name": "घड़ी",
+      "description": "Charles Bobinet की लगभग 1655–60 की पॉकेट घड़ी। अगेट के केस पर मीनाकारी सोने की मांउटिंग; सफ़ेद मीनाकारी डायल पर सोने की सुई; गिल्ट पीतल और आंशिक रूप से नीले इस्पात की मूवमेंट। 17वीं सदी मध्य की यूरोपीय घड़ीसाज़ी का उत्कृष्ट प्रमाण।"
+    },
+    "20": {
+      "name": "आइरिस",
+      "description": "विंसेंट वैन गॉग, 1890, कैनवास पर तैलचित्र। प्रसिद्ध \"आइरिसेज़\"। कलाकार के अंतिम चरण की सबसे प्रतिनिधिक रचनाओं में से एक, जिसमें भरपूर रंग और जीवंत तूलिका-घात के साथ उन्होंने प्रकृति के सौंदर्य के प्रति गहन श्रद्धांजलि अर्पित की।"
+    },
+    "21": {
+      "name": "ढक्कन वाला चीनी का कटोरा",
+      "description": "Giovacchino Belli की लगभग 1811–22 की ढक्कन वाली शक्कर-कटोरी। सोने पर चाँदी। Belli की साम्राज्य शैली समकालीन फ्रांसीसी व्याख्याओं की तुलना में अधिक सहज और आत्मीय है; कड़ी नवशास्त्रीय रेखाओं को नरम करके यह ख़ास इतालवी रंग देती है।"
+    },
+    "22": {
+      "name": "पानी का पात्र",
+      "description": "लगभग 1600 की रजत-स्वर्ण और मीनाकारी गगरी (ewer)। इसके शरीर पर लोगों और जानवरों की जुलूस नक़्काशी है, जो संभवतः मिस्र से लौटे कैसर की जीत या हैनिबल को हराने के बाद स्किपियो अफ्रीकानस की जीत को दर्शाती है — उत्तर-पुनर्जागरण की भव्य धातुकला।"
+    },
+    "23": {
+      "name": "अभिनेता Asao Gakujūrō I मशिबा हिसाtsुगु के रूप में",
+      "description": "Shunkōsai Hokushū (ओसाका) की 1822 की काष्ठ-मुद्रण कला (निशिकी-ए)। काग़ज़ पर स्याही और रंग से, जापानी बड़े आकार के लंबवत रूप में। ओसाका काबुकी अभिनेता Asao Gakujūrō I का Mashiba Hisatsugu की भूमिका में उग्र दृष्टि और ललकारती मुद्रा दर्शाने वाला नाटकीय चित्रण।"
+    },
+    "24": {
+      "name": "एंडीज का ताज",
+      "description": "\"एंडीज़ का मुकुट\" — मुकुट-पट्टा लगभग 1660, चापें लगभग 1770। कोलंबियाई, पोपायन से। स्वर्ण रेपौसे और चेज़्ड, पन्ने जड़ित। दक्षिण अमेरिका के औपनिवेशिक काल की सबसे महत्त्वपूर्ण स्वर्णकार-रचनाओं में से एक, जो यूरोपीय और मूल कौशल का रचनात्मक संश्लेषण है।"
+    }
+  },
+  "components": {
+    "nicknameEditor": {
+      "title": "उपनाम बदलें",
+      "placeholder": "आपका उपनाम",
+      "randomNickname": "रैंडम उपनाम",
+      "generating": "बन रहा है...",
+      "firstChangeFee": "पहली बार बदलाव शुल्क",
+      "changeFeeN": "बदलाव शुल्क (बदलाव #{{n}})",
+      "firstFeeNote": "पहली बार उपनाम बदलने पर 0.10 iUSD शुल्क है। आगे के बदलावों पर 10.00 iUSD शुल्क होगा।",
+      "feeNote": "हर उपनाम बदलाव पर 10.00 iUSD शुल्क है।",
+      "idStays": "आपकी अकाउंट ID वही रहेगी",
+      "notUniqueAck": "मैं समझता/समझती हूँ कि उपनाम यूनीक नहीं हैं। दूसरे अकाउंट भी वही उपनाम इस्तेमाल कर सकते हैं।",
+      "signing": "साइन कर रहा है...",
+      "payAndSave": "{{fee}} iUSD चुकाएं व सेव करें",
+      "errEmpty": "उपनाम खाली नहीं हो सकता",
+      "errFee": "शुल्क तय नहीं किया जा सका",
+      "errTxFailed": "लेनदेन विफल",
+      "errNoHash": "कोई लेनदेन हैश नहीं मिला",
+      "errCancelled": "लेनदेन रद्द",
+      "errGeneric": "विफल"
+    },
+    "mwc": {
+      "chooseMethod": "कनेक्शन तरीका चुनें",
+      "checkWallet": "अपना वॉलेट ऐप देखें",
+      "approveRequest": "वॉलेट ऐप में कनेक्शन रिक्वेस्ट स्वीकार करें",
+      "returnAfterApprove": "⚠️ स्वीकार करने के बाद इस पेज पर वापस आएं",
+      "tryAgain": "पुनः प्रयास",
+      "cancel": "रद्द करें",
+      "openInWallet": "वॉलेट में खोलें",
+      "best": "सर्वश्रेष्ठ",
+      "continueInBrowser": "{{name}} के ब्राउज़र में जारी रखें",
+      "signAndReturn": "साइन करें और वापस आएं",
+      "approveAndReturn": "ऐप में स्वीकार करें, यहाँ वापस आएं",
+      "directConnection": "सीधा कनेक्शन • कोई रिले सर्वर नहीं",
+      "connectionFailed": "कनेक्शन विफल",
+      "state": {
+        "initializing": "शुरू हो रहा है...",
+        "generatingUri": "कनेक्ट हो रहा है...",
+        "waitingApproval": "वॉलेट ऐप में स्वीकृति दें...",
+        "connected": "कनेक्टेड!",
+        "failed": "विफल"
+      }
+    },
+    "quickLogin": {
+      "signing": "साइन हो रहा है...",
+      "verifying": "सत्यापन...",
+      "processing": "प्रक्रिया में...",
+      "signInTo": "{{action}} के लिए साइन इन",
+      "walletTapToSignIn": "वॉलेट कनेक्टेड। साइन इन करने हेतु टैप करें।",
+      "almostThere": "लगभग हो गया! {{action}} के लिए पंजीकरण पूरा करें।",
+      "redirecting": "पंजीकरण पर जा रहे हैं...",
+      "connectionFailed": "कनेक्शन विफल",
+      "tryAgain": "पुनः प्रयास",
+      "connecting": "कनेक्ट हो रहा है...",
+      "connectTo": "{{action}} के लिए कनेक्ट",
+      "tapConnectHint": "कनेक्ट टैप करें — आपका वॉलेट साइन मांगेगा",
+      "signInWith": "इसके साथ साइन इन",
+      "orWallet": "या वॉलेट",
+      "other": "अन्य",
+      "openInWalletBrowser": "यह लिंक अपने वॉलेट के ब्राउज़र में खोलें",
+      "linkCopied": "लिंक कॉपी किया गया",
+      "dismiss": "बंद करें"
+    },
+    "identityCardBack": {
+      "idLabel": "ID:",
+      "deposit": "जमा",
+      "withdraw": "निकालें",
+      "onlyOn": "केवल पर",
+      "gas": "Gas",
+      "gasOk": "Gas ठीक",
+      "lowGas": "Gas कम"
+    },
+    "qrScan": {
+      "scanQR": "QR स्कैन",
+      "cameraUnavailable": "कैमरा उपलब्ध नहीं",
+      "turnFlashOff": "फ्लैश बंद",
+      "turnFlashOn": "फ्लैश चालू",
+      "cancel": "रद्द करें"
+    },
+    "errorBoundary": {
+      "updating": "अपडेट हो रहा है…",
+      "somethingWrong": "कुछ गलत हुआ",
+      "genericErr": "अनपेक्षित त्रुटि के कारण यह पेज लोड नहीं हो सका।",
+      "reload": "फिर लोड करें",
+      "resetReload": "रीसेट और फिर लोड"
+    },
+    "identityCard": {
+      "validFrom": "मान्य प्रारंभ",
+      "status": "स्थिति",
+      "statusActive": "सक्रिय",
+      "statusFrozen": "जमा",
+      "statusDeactivated": "निष्क्रिय",
+      "viewProfile": "प्रोफ़ाइल कार्ड देखें",
+      "scanAndGift": "स्कैन करें और उपहार दें ✨",
+      "share": "↗ साझा",
+      "shareText": "मेरा iUSD Pay कार्ड! स्कैन करें और उपहार दें",
+      "copyLink": "लिंक कॉपी",
+      "copied": "कॉपी किया!"
+    }
+  },
+  "soundStyles": {
+    "click": {
+      "keyboard": {
+        "name": "कीबोर्ड",
+        "desc": "मैकेनिकल कीबोर्ड क्लिक"
+      },
+      "pop": {
+        "name": "कोमल पॉप",
+        "desc": "बुलबुला फूटना"
+      },
+      "tic": {
+        "name": "टिक",
+        "desc": "छोटा ऊँचा टिक"
+      },
+      "chime": {
+        "name": "झनकार",
+        "desc": "मृदु घंटी"
+      },
+      "glass": {
+        "name": "ग्लास",
+        "desc": "कांच की टिंग"
+      },
+      "coin": {
+        "name": "सिक्का",
+        "desc": "धातु की चिंग"
+      },
+      "digital": {
+        "name": "डिजिटल",
+        "desc": "8-बिट ब्लिप"
+      },
+      "drip": {
+        "name": "बूंद",
+        "desc": "पानी की बूंद"
+      },
+      "paper": {
+        "name": "कागज़",
+        "desc": "कागज़ टैप"
+      },
+      "piano": {
+        "name": "पियानो",
+        "desc": "कोमल पियानो स्वर"
+      },
+      "silent": {
+        "name": "मौन",
+        "desc": "क्लिक ध्वनि नहीं"
+      }
+    },
+    "card": {
+      "breeze": {
+        "name": "हवा",
+        "desc": "हल्की हवा"
+      },
+      "dream_bells": {
+        "name": "स्वप्न घंटी",
+        "desc": "कांच विंड चाइम झिलमिलाहट"
+      },
+      "page_turn": {
+        "name": "पन्ना पलटना",
+        "desc": "कागज़ की सरसराहट"
+      },
+      "whoosh": {
+        "name": "वूश",
+        "desc": "तेज़ स्वूश"
+      },
+      "soft_pop": {
+        "name": "कोमल पॉप",
+        "desc": "कोमल डबल पॉप"
+      },
+      "silent": {
+        "name": "मौन",
+        "desc": "पलटने की ध्वनि नहीं"
+      }
+    },
+    "gift": {
+      "celebration": {
+        "name": "उत्सव",
+        "desc": "बढ़ता कॉर्ड C-E-G-C"
+      },
+      "sparkle": {
+        "name": "चमक",
+        "desc": "उच्च झिलमिलाहट"
+      },
+      "fanfare": {
+        "name": "फैनफेयर",
+        "desc": "पीतल ता-दा"
+      },
+      "bell_cascade": {
+        "name": "घंटी कैस्केड",
+        "desc": "उतरती घंटियाँ"
+      },
+      "soft_bell": {
+        "name": "कोमल घंटी",
+        "desc": "एक कोमल घंटी"
+      },
+      "silent": {
+        "name": "मौन",
+        "desc": "उपहार ध्वनि नहीं"
+      }
+    },
+    "txn": {
+      "whoosh_up": {
+        "name": "वूश ऊपर",
+        "desc": "बढ़ता स्वूश"
+      },
+      "coin_drop": {
+        "name": "सिक्का गिरना",
+        "desc": "धातु सिक्का उतरना"
+      },
+      "pneumatic": {
+        "name": "न्यूमैटिक",
+        "desc": "रेट्रो ट्यूब"
+      },
+      "confirm_chime": {
+        "name": "पुष्टि झनकार",
+        "desc": "डबल टोन पुष्टि"
+      },
+      "paper_slide": {
+        "name": "कागज़ फिसलन",
+        "desc": "कागज़ फिसलता"
+      },
+      "silent": {
+        "name": "मौन",
+        "desc": "लेनदेन ध्वनि नहीं"
+      }
+    },
+    "menu": {
+      "slide": {
+        "name": "स्लाइड",
+        "desc": "पैनल स्लाइड इन"
+      },
+      "soft_pop": {
+        "name": "कोमल पॉप",
+        "desc": "कोमल खुलना"
+      },
+      "swish": {
+        "name": "स्विश",
+        "desc": "हवा स्विश"
+      },
+      "silent": {
+        "name": "मौन",
+        "desc": "मेनू ध्वनि नहीं"
+      }
+    }
+  },
+  "time": {
+    "justNow": "अभी",
+    "minutesAgo": "{{n}} मिनट पहले",
+    "hoursAgo": "{{n}} घंटे पहले",
+    "daysAgo": "{{n}} दिन पहले"
+  },
+  "receiptView": {
+    "back": "← वापस",
+    "paymentReceipt": "भुगतान रसीद",
+    "receipt": "रसीद",
+    "noPaymentId": "कोई भुगतान ID नहीं",
+    "notFound": "रसीद नहीं मिली।",
+    "failedToLoad": "लोड विफल",
+    "fee": "शुल्क: {{amount}} iUSD",
+    "date": "तारीख",
+    "confirmedLabel": "पुष्टि हुई",
+    "verify": "सत्यापित करें",
+    "from": "से",
+    "to": "को",
+    "tx": "Tx: {{hash}}",
+    "id": "ID: {{id}}",
+    "statusPaid": "भुगतान",
+    "statusConfirmed": "पुष्ट",
+    "statusPending": "लंबित",
+    "statusRevoked": "रद्द",
+    "statusRefunded": "धनवापसी",
+    "statusExpired": "समाप्त",
+    "statusFailed": "विफल",
+    "statusUnknown": "अज्ञात",
+    "saveAsImage": "छवि के रूप में सहेजें",
+    "printPdf": "प्रिंट / PDF सहेजें",
+    "openInSafariChrome": "PDF सहेजने के लिए Safari या Chrome में खोलें",
+    "errorPrefix": "त्रुटि: {{msg}}"
+  },
+  "update": {
+    "available": "नया वर्शन उपलब्ध है",
+    "reload": "फिर लोड करें"
+  }
+}

@@ -1,0 +1,13 @@
+[package]
+name = "ipay"
+version = "7.0.0"
+upgrade_policy = "compatible"
+
+[addresses]
+ipay = "0xf00595999f7ab114672838315b6a5be4f335a9c8"
+initia_std = "0x1"
+minitia_std = "0x1"
+
+[dependencies]
+InitiaStdlib = { git = "https://github.com/initia-labs/move-natives.git", subdir = "initia_stdlib", rev = "main" }
+MoveStdlib = { git = "https://github.com/initia-labs/move-natives.git", subdir = "move_stdlib", rev = "main" }

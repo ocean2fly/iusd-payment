@@ -1,0 +1,1250 @@
+{
+  "popup": {
+    "title": "ブラウザ設定でポップアップを許可してください",
+    "subtitle": "ブラウザがサインインのポップアップをブロックしています。下記の通り設定で許可してください。",
+    "next": "次へ",
+    "back": "戻る",
+    "gotIt": "了解しました",
+    "continue": "続行",
+    "enableTitle": "ポップアップを有効にする",
+    "signinNeedsPopup": "サインインにはポップアップウィンドウが必要です。",
+    "gotoMobile": "「設定」→ ブラウザ → ポップアップを許可してください。",
+    "gotoDesktop": "「設定」→ ポップアップを許可してください。",
+    "checkDetail": "詳細を見る"
+  },
+  "auth": {
+    "connect": "接続",
+    "signIn": "サインイン →",
+    "connecting": "接続中…",
+    "signing": "署名中…",
+    "checkWallet": "ウォレットで署名リクエストを確認してください…",
+    "settingUp": "アカウントを設定しています…",
+    "coinbaseConnected": "Coinbase Wallet に接続しました！",
+    "walletConnected": "ウォレットに接続しました！",
+    "wcTimeout": "WalletConnect がタイムアウトしました",
+    "restoring": "ウォレットセッションを復元しています…",
+    "openingWindow": "サインインウィンドウを開いています…",
+    "tapConnect": "「接続」をタップ — ウォレットが署名を要求します",
+    "signInWith": "サインイン方法",
+    "or": "または",
+    "tryAgain": "再試行",
+    "reconnect": "ウォレットを再接続",
+    "popupBlockedMobile": "ポップアップがブロックされました。「設定」→ ブラウザ → ポップアップを許可してください。",
+    "popupBlockedDesktop": "ポップアップがブロックされました。「設定」→ ポップアップを許可してください。",
+    "signFailed": "サインインに失敗しました。もう一度お試しください。",
+    "connectionLost": "ウォレット接続が切断されました。再接続してください。",
+    "signatureCancelled": "署名がキャンセルされました。",
+    "networkBlocked": "API にアクセスできないか、ブロックされています（ネットワーク/CORS）。新しいタブで再試行してください。"
+  },
+  "landing": {
+    "tagline": "Initia 上のステーブルコイン決済",
+    "installAsApp": "アプリとしてインストール",
+    "forceRefresh": "強制更新",
+    "refresh": "更新",
+    "forceRefreshTip": "ローカルページの問題を解決するため強制更新します"
+  },
+  "wallets": {
+    "openInWalletBrowser": "ウォレットアプリのブラウザで開く",
+    "pasteUrl": "iUSD pay の URL（コピー済み）を貼り付けて移動",
+    "done": "完了",
+    "other": "その他"
+  },
+  "common": {
+    "language": "言語",
+    "cancel": "キャンセル",
+    "save": "保存",
+    "saving": "保存中…",
+    "saved": "保存しました",
+    "close": "閉じる",
+    "change": "変更",
+    "loading": "読み込み中…",
+    "view": "表示",
+    "optional": "任意",
+    "on": "オン",
+    "off": "オフ"
+  },
+  "welcome": {
+    "tagline": "Initia 上のステーブルコイン決済",
+    "whatYouGet": "できること",
+    "features": {
+      "transfer": "スキャンで自由に送金・請求",
+      "merchants": "加盟店とのスムーズな連携",
+      "gifts": "友人やグループにギフト送信"
+    },
+    "agreePrefix": "以下に同意します：",
+    "and": "および",
+    "tos": "利用規約",
+    "privacy": "プライバシーポリシー",
+    "experimentalNote": "。本アプリはメインネット上の実験版です。",
+    "getStarted": "始める →"
+  },
+  "dashboard": {
+    "tapEditNickname": "タップしてニックネーム編集",
+    "minGasHint": "ガスには最低 1 INIT または 1 USDC が必要です",
+    "refreshBalances": "残高を更新",
+    "actions": {
+      "transfer": "送金",
+      "request": "請求",
+      "gift": "ギフト",
+      "inbox": "受信箱",
+      "contacts": "連絡先",
+      "scan": "スキャン",
+      "history": "履歴",
+      "settings": "設定"
+    }
+  },
+  "settings": {
+    "title": "設定",
+    "account": {
+      "title": "アカウント",
+      "nickname": "ニックネーム",
+      "setNickname": "ニックネームを設定",
+      "bio": "自己紹介 / スローガン",
+      "bioPlaceholder": "例：スキャンしてギフトください、キスで返します 💋",
+      "id": "ID",
+      "wallet": "ウォレット",
+      "copied": "コピー済み",
+      "ecosystem": "エコシステム",
+      "autoClaim": "自動受領"
+    },
+    "appearance": {
+      "title": "外観",
+      "auto": "自動",
+      "light": "ライト",
+      "dark": "ダーク"
+    },
+    "sound": {
+      "title": "サウンド",
+      "desc": "UIクリック、カードめくり、お祝い音",
+      "muted": "ミュート",
+      "on": "オン",
+      "styles": "サウンドスタイル",
+      "customize": "カスタマイズ",
+      "tapPreview": "プレビューして選択するにはタップ",
+      "unmutePreview": "プレビューを聞くには上のミュートを解除",
+      "cat": {
+        "click": "クリック",
+        "cardFlip": "カードめくり",
+        "gift": "ギフト",
+        "transaction": "取引",
+        "menu": "メニュー"
+      }
+    },
+    "receive": {
+      "title": "受取アドレス",
+      "privacyProtection": "プライバシー保護",
+      "defaultWallet": "このウォレット（既定）",
+      "change": "変更",
+      "modalTitle": "受取アドレスを保護",
+      "modalDesc": "iUSDを受け取るウォレットを別途設定し、接続中のウォレットを非公開にできます。入金はこのアドレスへ自動送信されます。",
+      "complianceHeader": "⚠ コンプライアンス通知",
+      "complianceDesc": "アドレスの振替に関わらず、全取引は該当のAML方針下で監査可能です。この署名は理解と同意の確認となります。",
+      "placeholder": "0x… または init1…（空欄で自身のウォレット使用）",
+      "signSave": "署名して保存",
+      "signing": "署名中…"
+    },
+    "about": {
+      "title": "概要",
+      "iusdPay": "iUSD Pay",
+      "network": "ネットワーク",
+      "contract": "コントラクト",
+      "tos": "利用規約",
+      "privacy": "プライバシーポリシー",
+      "forceRefresh": "強制更新",
+      "community": "コミュニティ"
+    },
+    "danger": {
+      "title": "危険ゾーン",
+      "disconnect": "ウォレット切断",
+      "disconnectTitle": "ウォレットを切断しますか？",
+      "disconnectDesc": "いつでも再接続できます。",
+      "delete": "アカウント削除",
+      "deleteConfirmWarn": "⚠ この操作はアカウントを永久に削除します",
+      "confirmDelete": "削除を確認",
+      "deleting": "削除中…"
+    }
+  },
+  "transfer": {
+    "title": "送金",
+    "paymentCodeTitle": "決済コード",
+    "showToRecipient": "このQRを受取人に見せてください。",
+    "scanAndEnter": "スキャンして金額を入力し支払いを要求します。",
+    "waitingForRequest": "リクエスト待機中…",
+    "sessionExpired": "セッションの有効期限切れ",
+    "generateNew": "新しいコードを生成",
+    "generating": "決済コードを生成中…",
+    "recipientPlaceholder": "ニックネームまたはアカウントID",
+    "contacts": "連絡先",
+    "checking": "確認中…",
+    "noContactsMatch": "「{{query}}」に一致する連絡先がありません",
+    "noContactsYet": "連絡先がまだありません",
+    "noContactsHint": "送金または履歴から開始してください",
+    "amountLabel": "金額",
+    "amountMin": "最小 0.1 iUSD",
+    "amountMax": "1回あたり最大 1,000 iUSD",
+    "memoLabel": "メモ",
+    "memoPlaceholder": "任意のメモ",
+    "fee": "手数料: {{amount}} iUSD",
+    "feeCap": "(上限)",
+    "total": "合計: {{amount}} iUSD",
+    "autoSaveContact": "この相手は連絡先に自動保存されます",
+    "paymentQR": "決済QR",
+    "building": "構築中…",
+    "confirming": "確認…",
+    "send": "送信",
+    "sendAmount": "{{amount}} iUSD を送信"
+  },
+  "request": {
+    "title": "請求",
+    "modePersonal": "個人",
+    "modeBusiness": "ビジネス",
+    "tabNew": "新規",
+    "tabInvoices": "請求書",
+    "empty": "まだ請求はありません",
+    "createFirst": "最初の請求を作成 →",
+    "share": "共有 ↗",
+    "amountLabel": "金額",
+    "noteLabel": "メモ",
+    "notePlaceholder": "説明（任意）",
+    "taxNoLabel": "税番号",
+    "dueLabel": "期日",
+    "invLabel": "請求書番号",
+    "payerLabel": "支払人",
+    "payerPlaceholder": "名前（任意）",
+    "status": {
+      "draft": "下書き",
+      "sent": "支払い待ち",
+      "paying": "確認待ち",
+      "paid": "支払い済み",
+      "overdue": "期限超過",
+      "refunded": "返金済み",
+      "cancelled": "キャンセル"
+    }
+  },
+  "scan": {
+    "title": "QRスキャン",
+    "lookingUp": "アカウントを検索中…",
+    "paymentDetails": "支払い詳細",
+    "scannedContent": "スキャン内容",
+    "manualInput": "手動入力 / 画像",
+    "pasteHint": "URLまたはアカウントIDを貼り付け…",
+    "startCamera": "カメラ開始",
+    "stopCamera": "カメラ停止",
+    "flipCamera": "カメラ切替",
+    "retry": "再試行",
+    "scannedCheck": "スキャン完了！デスクトップをご確認ください。",
+    "scanAgain": "↩ もう一度スキャン",
+    "tagInvoice": "🧾 請求書 / リクエスト",
+    "tagIdentity": "👤 アイデンティティ",
+    "tagScanned": "🔗 スキャン済み",
+    "due": "期限",
+    "payRequest": "💸 このリクエストを支払う",
+    "payAmount": "💸 {{amount}} iUSD を支払う",
+    "contactSaved": "✅ 連絡先を保存しました!",
+    "reAddContactsTag": "👤 連絡先に再追加",
+    "addContactsTag": "👤 連絡先に追加",
+    "transfer": "送金",
+    "gift": "ギフト",
+    "contactAlreadyAdded": "連絡先は既に追加済み",
+    "reAddToContacts": "連絡先に再追加",
+    "addToContacts": "連絡先に追加",
+    "visit": "アクセス →",
+    "clickToStart": "クリックしてカメラを起動",
+    "pointPhone": "スキャン中 — QRコードにカメラを向けて",
+    "disconnect": "✕ 切断",
+    "go": "移動",
+    "dropToScan": "ドロップしてQRをスキャン",
+    "chooseFromGallery": "ギャラリーから選択",
+    "galleryHint": "QRコード画像を選択するかドラッグ",
+    "cameraN": "カメラ {{n}}",
+    "err": {
+      "accessBlocked": "🔒 カメラアクセスがブロックされています",
+      "permissionDesc": "カメラの権限が拒否されました。ブラウザ設定で再度許可してください。",
+      "chromeEdge": "🌐 Chrome / Edge",
+      "pasteInstructions": "このURLをコピー → 新しいタブに貼り付け → カメラを",
+      "allow": "許可",
+      "copy": "コピー",
+      "firefoxHint": "アドレスバーのカメラ🔒アイコン → 許可",
+      "safariHint": "設定 → Safari → カメラ → 許可",
+      "androidHint": "⋮ → サイトの設定 → カメラ → 許可",
+      "retryAfter": "↺ 有効化後に再試行",
+      "noCamera": "📷 カメラが見つかりません",
+      "noCameraDesc": "このデバイスでカメラが検出されません。",
+      "useManualFull": "下の手動入力を使用するか、外部スキャナを接続してください。",
+      "inUse": "📷 カメラが使用中",
+      "inUseDesc": "カメラは他のアプリで使用されています。他のアプリを閉じて再試行してください。",
+      "flashNotSupported": "このデバイスはフラッシュをサポートしていません",
+      "noQrInImage": "画像内にQRコードが見つかりません",
+      "couldNotCreateRelay": "リレーセッションを作成できませんでした",
+      "cameraError": "カメラエラー: {{msg}}",
+      "cameraDenied": "カメラが拒否されました: {{msg}}",
+      "connectionFailed": "接続失敗。基本モードを試してください。",
+      "desktopNotReady": "デスクトップが準備できていません。デスクトップページを再読み込みしてください。",
+      "failedToSend": "送信に失敗しました",
+      "invalidSession": "無効なセッション"
+    },
+    "relay": {
+      "gettingCamera": "カメラ取得中…",
+      "connectingDesktop": "デスクトップに接続中…",
+      "liveCameraHeader": "📹 ライブカメラ",
+      "qrScannerHeader": "📤 QRスキャナー",
+      "liveBadge": "● LIVE",
+      "streamingDesktop": "📹 デスクトップにストリーミング中 — 同じ映像が見えます",
+      "pointAtDesktop": "📤 デスクトップのQRコードに向けてください",
+      "statusPrefix": "🔄 {{status}}"
+    }
+  },
+  "gift": {
+    "title": "ギフト",
+    "message": "メッセージ",
+    "quickPicks": "クイック選択",
+    "next": "次へ →",
+    "recipient": "受取人",
+    "shares": "シェア数",
+    "total": "合計",
+    "ready": "ギフト準備完了！",
+    "shareAccessHint": "友達にアクセスリンクを共有してください。",
+    "rightClickSave": "画像を右クリックで保存 · リンクコピー済み",
+    "dismiss": "閉じる",
+    "viewDetails": "ギフトの詳細を見る →",
+    "scanToOpen": "スキャンしてギフトを開く",
+    "noReplies": "返信はまだありません",
+    "noViews": "閲覧はまだありません",
+    "loadingHistory": "履歴読み込み中…",
+    "giftList": "ギフト一覧",
+    "historyTab": "履歴",
+    "newest": "新しい順",
+    "oldest": "古い順",
+    "newestFirst": "新しい順",
+    "oldestFirst": "古い順",
+    "noDescription": "説明がありません。",
+    "allCollections": "すべてのコレクション",
+    "collection": {
+      "flowers": "花",
+      "drinks": "ドリンク",
+      "food": "食品",
+      "treats": "お菓子",
+      "tech": "テック",
+      "luxury": "ラグジュアリー",
+      "office": "オフィス",
+      "art": "アート",
+      "books": "書籍",
+      "games": "ゲーム",
+      "wellness": "ウェルネス",
+      "travel": "旅行",
+      "fashion": "ファッション",
+      "kids": "キッズ",
+      "pets": "ペット",
+      "sports": "スポーツ",
+      "other": "その他",
+      "painting": "絵画",
+      "music_box": "オルゴール",
+      "instrument": "楽器",
+      "sculpture": "彫刻",
+      "textile": "織物",
+      "ceramic": "陶磁器",
+      "watch": "時計",
+      "brooch": "ブローチ",
+      "armor": "鎧",
+      "furniture": "家具",
+      "jewelry": "宝飾品"
+    },
+    "flexible": "自由",
+    "source": "出典 ↗",
+    "progressPanel": {
+      "progress": "進捗",
+      "inProgress": "進行中",
+      "completed": "完了",
+      "expired": "期限切れ",
+      "expiredRefunded": "期限切れ · 返金",
+      "expiresIn": "{{label}} で期限切れ",
+      "endsIn": "残り {{label}}",
+      "claimedOf": "/ {{total}} 受取済み",
+      "claimsHeader": "受取 · {{count}}",
+      "replied": "💌 返信済み",
+      "claimedChip": "✓ 受取済み",
+      "anon": "匿名",
+      "allClaimed": "全てのシェアが受け取られました。",
+      "refunded_one": "未受取の {{count}} シェアが返金されました",
+      "refunded_other": "未受取の {{count}} シェアが返金されました",
+      "refundedNote": "ギフトの期限切れ時、未受取シェアの金額は自動的に残高に返金されました。",
+      "noClaimsYet": "まだ誰も受け取っていません。リンクを共有して通知しましょう。",
+      "daysHours": "{{days}}日 {{hours}}時間",
+      "hoursMinutes": "{{hours}}時間 {{minutes}}分",
+      "minutesOnly": "{{minutes}}分"
+    },
+    "back": "← 戻る",
+    "stepChoose": "ギフトを選ぶ",
+    "stepWrite": "メッセージを書く",
+    "stepSendTo": "送信先",
+    "feePercent": "手数料 {{percent}}%",
+    "feeLabel": "手数料 ({{percent}}%)",
+    "more": "もっと",
+    "browseAll": "すべてのギフトを見る",
+    "writePlaceholder": "メッセージを書く...",
+    "amountIusd": "金額 (iUSD)",
+    "amountRangePlaceholder": "0.1 ~ 1000 iUSD",
+    "tapToEdit": "✎ タップして編集",
+    "amountInRange": "0.10 – 1,000 iUSD",
+    "anyoneGroup": "誰でも (グループ)",
+    "anyoneCanClaim": "誰でも受け取り可",
+    "enterContact": "連絡先または ID を入力",
+    "invalidRecipient": "無効なユーザー名または ID",
+    "usernameInactive": "ユーザー名が無効",
+    "recipientRequired": "受取人が必要です",
+    "sendFailed": "送信失敗",
+    "missingTxParams": "トランザクションパラメータがありません",
+    "giftTxFailed": "ギフトトランザクション失敗",
+    "contactsHeader": "連絡先",
+    "fromHistory": "✨ 履歴から",
+    "splitEqual": "均等",
+    "splitRandom": "ランダム",
+    "balanceLine": "残高: {{amount}} iUSD",
+    "wrapping": "ラッピング中...",
+    "insufficientBalance": "残高不足",
+    "wrapGift": "🎁 ギフトを包む",
+    "giftNumber": "ギフト #{{id}}",
+    "fromName": "{{name}} より",
+    "anonymous": "匿名",
+    "mysteryAwaits": "謎のギフトが待っています",
+    "claimedAgo": "{{time}}受取",
+    "claimed": "受取済み",
+    "view": "見る →",
+    "openCta": "🎁 開く →",
+    "expiredChip": "期限切れ",
+    "claimedOfShort": "{{claimed}}/{{total}} 受取済み",
+    "enjoyEmoji": "お楽しみください! 🎁",
+    "forYouEmoji": "愛を込めて ❤️",
+    "happyBirthday": "お誕生日おめでとう! 🎂",
+    "thankYouEmoji": "ありがとう! 🙏",
+    "cheersEmoji": "乾杯! 🥂",
+    "justBecause": "いつもありがとう 🌟",
+    "deserveIt": "あなたにふさわしい ✨",
+    "haveFun": "楽しんで! 🎉",
+    "treatYourself": "自分へのご褒美 💫",
+    "yourGiftReady": "ギフトの準備ができました！",
+    "toLabel": "送信先",
+    "feeLabelShort": "手数料",
+    "notificationSent": "{{name}} に通知を送信しました",
+    "fromSender": "{{name}} より",
+    "giftWaitingShort": "ギフトが届いています",
+    "scanToOpenShort": "スキャンして開く",
+    "iusdPay": "iUSD Pay",
+    "copied": "コピー済み！",
+    "copyLink": "リンクをコピー",
+    "saveImage": "画像を保存",
+    "shareLink": "リンクを共有",
+    "backToQr": "← QRに戻る",
+    "closeShareLater": "閉じて、後でギフト履歴から共有できます。",
+    "preparing": "準備中...",
+    "imageSaved": "画像を保存しました！",
+    "qrBtn": "QR",
+    "backBtn": "戻る",
+    "hasAGiftForYou": "があなたにギフトを贈りました",
+    "sharesCount_one": "{{count}} 分",
+    "sharesCount_other": "{{count}} 分",
+    "openedCount": "{{count}}/{{total}} 開封済み",
+    "viewsCount": "{{count}} 件表示",
+    "someone": "誰か",
+    "shareTitle": "{{name}} ギフト",
+    "featured": "⭐ おすすめ"
+  },
+  "giftClaim": {
+    "loading": "ギフト読み込み中…",
+    "goHome": "ホームへ",
+    "youReceived": "受け取りました",
+    "from": "送信者",
+    "reply": "返信 →",
+    "alreadyClaimed": "受け取り済み",
+    "scanProfile": "プロフィールをスキャン",
+    "thankPresets": {
+      "thankBoss": "ボス、ありがとう！",
+      "appreciated": "感謝します！",
+      "soKind": "とても親切！",
+      "madeMyDay": "最高の一日！",
+      "youreBest": "君が一番！",
+      "whatSurprise": "びっくり！",
+      "loveYou": "大好き！",
+      "sweetest": "本当に優しい！",
+      "heartFull": "胸が一杯！",
+      "bestBirthday": "最高の誕生日！",
+      "bestGift": "最高のギフト！",
+      "cheersYou": "乾杯！"
+    },
+    "iGotLabel": "★ ゲット",
+    "onlyOneShare": "1 シェアのみ",
+    "sharesCountLabel_one": "{{count}} シェア",
+    "sharesCountLabel_other": "{{count}} シェア",
+    "fromSenderOverlay": "{{name}} より",
+    "detailsBtn": "詳細",
+    "claimedLabel": "受取済",
+    "viewedLabel": "閲覧",
+    "chasedLabel": "獲得",
+    "moreBtn": "[さらに]",
+    "membersHeader": "メンバー · {{count}}",
+    "lettersHeader": "レター · {{count}}",
+    "replyBtn": "返信",
+    "replyToPlaceholder": "{{name}} に返信…",
+    "loveWhatYouSee": "★ 気に入りましたか？",
+    "giftThemLine": "{{name}} にチップを贈る",
+    "scanOrOpenProfile": "プロフィールを開く →",
+    "scanOr": "スキャン、または",
+    "postToPlaceholder": "{{name}} へ投稿…",
+    "postBtn": "送信",
+    "sentWithLoveBy": "愛を込めて送信、",
+    "giftReceivedChip": "ギフト受取済！",
+    "anonName": "相手",
+    "errInvalidLink": "無効なギフトリンク",
+    "errNotFound": "ギフトが見つかりません",
+    "errClaimFailed": "受取失敗",
+    "errFailed": "失敗",
+    "errSignInFirst": "先にサインインしてください",
+    "errInvalidClaimLink": "無効な受取リンク",
+    "signInToSave": "連絡先を保存するにはサインイン",
+    "failedSaveContact": "連絡先の保存失敗",
+    "shareTitle": "{{name}} からのギフト"
+  },
+  "history": {
+    "title": "履歴",
+    "paymentJourney": "支払いの流れ",
+    "expires": "期限",
+    "noInvoices": "まだ請求書はありません",
+    "noActivity": "まだアクティビティはありません",
+    "tabs": {
+      "all": "全て",
+      "sent": "送信",
+      "received": "受取",
+      "gift": "ギフト",
+      "invoices": "請求",
+      "stats": "統計"
+    },
+    "payStatus": {
+      "sent": {
+        "pending": "確認待ち",
+        "confirmed": "確認済み",
+        "revoked": "取消",
+        "refunded": "返金済",
+        "expired": "期限切れ",
+        "unknown": "不明"
+      },
+      "received": {
+        "claimable": "受取可能",
+        "received": "受取済",
+        "cancelled": "キャンセル",
+        "refunded": "返金済",
+        "expired": "期限切れ",
+        "unknown": "不明"
+      }
+    },
+    "paymentId": "支払い ID",
+    "sortNewest": "並び替え：新しい順（クリックで古い順）",
+    "sortOldest": "並び替え：古い順（クリックで新しい順）",
+    "loadMore": "さらに読み込む",
+    "invoicePayment": "請求書支払い",
+    "sentTo": "送信先",
+    "receivedFrom": "受信元",
+    "cancelInvoice": "請求書をキャンセル",
+    "cancelInvoiceConfirm": "この請求書をキャンセルしますか？",
+    "cancelFailed": "キャンセル失敗: {{msg}}",
+    "timeline": {
+      "created": "作成済み",
+      "fee": "手数料 {{amount}}",
+      "pendingClaim": "受取待ち",
+      "awaitingRecipient": "受取人待ち",
+      "autoClaimed": "自動的に受領されます",
+      "confirmed": "確認済み",
+      "received": "受領済み",
+      "expiresOn": "期限 {{date}}",
+      "revoked": "取消済み",
+      "returnedToSender": "送信者へ返金",
+      "claimed": "受領完了",
+      "refunded": "返金済み",
+      "returnedToClaimer": "受取人へ返金",
+      "expired": "期限切れ"
+    },
+    "stats": {
+      "accounting": "会計",
+      "giftsSent": "送信ギフト",
+      "giftsReceived": "受領ギフト",
+      "paid": "支払い済み",
+      "received": "受領",
+      "moneyIn": "入金",
+      "moneyOut": "出金",
+      "net": "差引",
+      "pending": "保留",
+      "thisMonth": "今月"
+    },
+    "noGiftHistory": "ギフト履歴なし",
+    "receivedSection": "受取 · {{count}}",
+    "sentSection": "送信 · {{count}}",
+    "loadingMore": "読み込み中…",
+    "loadMoreReceived": "さらに受取を読み込む",
+    "loadMoreSent": "さらに送信を読み込む",
+    "refreshTitle": "更新",
+    "exportCsv": "履歴を CSV に出力",
+    "revokeFailed": "取り消し失敗",
+    "refundFailed": "返金失敗: {{msg}}",
+    "refundConfirm": "この支払いを送信者に返金しますか？",
+    "anyone": "誰でも",
+    "direct": "直接",
+    "fromLabel": "送信者",
+    "toLabel": "受信者",
+    "copySaveTitle": "shortId をコピー + 連絡先に保存",
+    "due": "期限",
+    "noSentTransactions": "送信済みの取引はありません",
+    "noReceivedTransactions": "受信済みの取引はありません",
+    "noTransactionsYet": "取引はまだありません — 取引すると統計に表示されます。",
+    "detailSent": "↑ 送信",
+    "detailReceived": "↓ 受信",
+    "copyBtn": "📋 コピー",
+    "receiptPdf": "↓ レシート PDF",
+    "invoicePdf": "↓ 請求書 PDF",
+    "revokeBtn": "↩ 取消",
+    "refundBtn": "↩ 返金"
+  },
+  "inbox": {
+    "title": "受信箱",
+    "claimed": "受け取りました！",
+    "feePaid": "手数料済み",
+    "anonymous": "匿名",
+    "claimTo": "受取先:",
+    "autoClaimFuture": "今後の支払いを自動受領",
+    "autoExpires": "未受領で自動期限切れ",
+    "loadingReplies": "返信を読み込み中…",
+    "filter": {
+      "all": "全て",
+      "payment": "支払い",
+      "gift": "ギフト",
+      "reply": "返信"
+    },
+    "replyCount_one": "{{count}} 件の返信",
+    "replyCount_other": "{{count}} 件の返信",
+    "refresh": "↻ 更新",
+    "historyLabel": "履歴 · {{count}}",
+    "statusReceived": "受信",
+    "statusCancelled": "キャンセル",
+    "statusRefunded": "返金済",
+    "statusExpired": "期限切れ",
+    "statusDone": "完了",
+    "businessInvoice": "🏪 法人請求書",
+    "personalPayment": "👤 個人支払い",
+    "fromId": "{{id}} より",
+    "fromLabel": "送信者",
+    "receipt": "レシート",
+    "invoice": "請求書",
+    "refund": "↩ 返金",
+    "refundConfirm": "この支払いを送信者に返金しますか？",
+    "refundFailed": "返金失敗: {{msg}}",
+    "noRepliesHint": "まだ返信がありません。ギフトのお礼メッセージがここに表示されます。",
+    "alreadyClaimedRefreshed": "この支払いは自動受取済みです。受信箱を更新しました。",
+    "alreadyClaimedRemoved": "受取済み — 受信箱から削除しました。",
+    "newGiftsSection": "新しいギフト · {{count}}",
+    "giftsSection": "ギフト · {{count}}",
+    "sentSection": "送信済み · {{count}}",
+    "loadMoreReplies": "返信をさらに読み込む"
+  },
+  "contacts": {
+    "noResults": "結果なし",
+    "autoSavedHint": "送金した相手は自動保存されます",
+    "importFromHistory": "✨ 履歴からインポート",
+    "importFromHistoryTitle": "最近の支払い + ギフト履歴から相手をインポート",
+    "searchPlaceholder": "名前または ID で検索..."
+  },
+  "merchant": {
+    "title": "ビジネスプロフィール",
+    "preview": "プレビュー",
+    "businessName": "会社名 *",
+    "businessNamePlaceholder": "例: ジャックのコーヒー",
+    "companyLogo": "会社ロゴ（任意）",
+    "uploadJpgPng": "JPG / PNG アップロード",
+    "remove": "削除",
+    "logoHint": "JPG/PNG · 最大 500 KB · 安全に保管",
+    "maxFileSize": "ファイルサイズは 500 KB 以下",
+    "clearConfirm": "ビジネスプロフィールをクリアしますか？",
+    "brandColor": "ブランドカラー",
+    "tagline": "キャッチフレーズ / 説明（任意）",
+    "taglinePlaceholder": "例: 街一番のコーヒー",
+    "businessFont": "会社名のフォント",
+    "contactInfo": "連絡先",
+    "email": "メール",
+    "phone": "電話",
+    "website": "ウェブサイト",
+    "emailPlaceholder": "contact@example.com",
+    "phonePlaceholder": "+81 90 1234 5678",
+    "websitePlaceholder": "https://example.com",
+    "addressLegal": "住所と法定情報",
+    "address": "住所",
+    "addressPlaceholder": "〒100-0000 東京都 ...",
+    "taxIdLabel": "税番号 / 法人登録番号",
+    "taxIdPlaceholder": "例: JP-12-3456789",
+    "invoiceNumbering": "請求書番号",
+    "prefix": "プレフィックス",
+    "startingNo": "開始番号",
+    "startingFrom": "開始: {{sample}}（サーバ側で自動採番）",
+    "save": "ビジネスプロフィールを保存",
+    "saved": "✓ 保存しました！",
+    "clear": "クリア",
+    "storedLocally1": "このプロフィールはデバイス上にローカル保存されます。",
+    "storedLocally2": "リクエスト画面でビジネスモードに切替えて使用します。",
+    "setUpProfile": "🏢 ビジネスプロフィールを設定 →"
+  },
+  "invoices": {
+    "title": "会計",
+    "protocolFees": "支払い済みプロトコル手数料"
+  },
+  "payRequest": {
+    "title": "支払いリクエスト",
+    "requestSent": "リクエスト送信！",
+    "error": "エラー"
+  },
+  "receipt": {
+    "paymentSent": "支払い送信済み。",
+    "home": "ホーム",
+    "viewInvoice": "請求書を表示",
+    "loading": "領収書を読み込み中…"
+  },
+  "install": {
+    "addToHome": "ホーム画面に追加",
+    "tapShare": "共有をタップ",
+    "tapMenu": "メニューをタップ",
+    "installTitle": "iUSD Pay をインストール",
+    "install": "インストール"
+  },
+  "deposit": {
+    "balance": "残高",
+    "youReceive": "受取",
+    "rate": "レート",
+    "estTime": "所要時間",
+    "depositTitle": "{{label}} を入金",
+    "withdrawTitle": "{{label}} を出金",
+    "from": "送信元",
+    "to": "送信先",
+    "selectFrom": "入金元資産を選択",
+    "selectTo": "送信先を選択",
+    "loadingAssets": "読み込み中...",
+    "noAssets": "残高のある資産がありません",
+    "noDestinations": "送信先チェーンが見つかりません",
+    "onChain": "{{chain}} 上",
+    "current": "現在",
+    "max": "最大",
+    "gasFee": "ガス料金",
+    "estimatedByWallet": "ウォレットで見積もり",
+    "relayFee": "リレー料金",
+    "route": "ルート",
+    "fetchingRoute": "ルート取得中...",
+    "insufficient": "残高不足 — {{balance}} {{symbol}} 利用可能",
+    "preparingTx": "トランザクション準備中...",
+    "confirmInWallet": "ウォレットで確認してください",
+    "tryAgain": "もう一度",
+    "submitted": "トランザクション送信済み",
+    "done": "完了",
+    "txCancelled": "トランザクションをキャンセルしました",
+    "noEvmWallet": "EVMウォレットが見つかりません。MetaMaskをインストールしてください。",
+    "unsupportedTx": "サポートされていないトランザクションタイプ"
+  },
+  "promoBanner": {
+    "coffee": {
+      "title": "友達にコーヒーを",
+      "subtitle": "温かいコーヒーギフト"
+    },
+    "rose": {
+      "title": "バラを贈る",
+      "subtitle": "特別な人に"
+    },
+    "boss": {
+      "title": "上司になって特典を",
+      "subtitle": "気前の良さを見せよう"
+    }
+  },
+  "register": {
+    "title": "アカウント作成",
+    "chooseNickname": "支払いアドレスのニックネームを選んでください",
+    "nicknamePlaceholder": "例：alice · 小明 · 🦊",
+    "nicknameHint": "任意の言語 · 1–12 文字 · 🎲 でランダム",
+    "randomNickname": "ランダムニックネーム",
+    "creating": "作成中…",
+    "submit": "アカウント作成 →"
+  },
+  "registered": {
+    "openWallet": "ウォレットを開く →",
+    "wow": "やった！クールな",
+    "wowCard": "iUSD 決済カード獲得！",
+    "tapCard": "カードをタップ",
+    "shareText": "カードのQRをスキャンしてiUSDギフトを送ってね！🎁"
+  },
+  "toast": {
+    "thatsYou": "それはあなたです！",
+    "copied": "{{value}} をコピー",
+    "addedToContacts": "{{name}} を連絡先に追加",
+    "linkCopied": "リンクをコピーしました",
+    "paymentNotLinked": "支払いがまだ紐付いていません — 数秒後に再試行",
+    "claimFailed": "受取失敗",
+    "claimQueued": "受取キュー登録済み",
+    "networkError": "ネットワークエラー: {{msg}}",
+    "noNewContactsInHistory": "履歴に新しい連絡先なし",
+    "importedFromHistory_one": "履歴から連絡先 {{count}} 件インポート",
+    "importedFromHistory_other": "履歴から連絡先 {{count}} 件インポート",
+    "noNewImport": "インポート可能な新しい連絡先なし",
+    "importFailed": "インポート失敗: {{msg}}"
+  },
+  "nav": {
+    "dashboard": "ホーム",
+    "home": "ホーム",
+    "more": "その他"
+  },
+  "payLink": {
+    "resolving": "決済リンクを解決中…",
+    "invoiceDetails": "請求書詳細",
+    "status": "ステータス",
+    "invoiceId": "請求書 ID",
+    "recipient": "受取人",
+    "dueDate": "期日",
+    "paymentProof": "支払い証明",
+    "invalidLink": "無効なリンク",
+    "claimed": "受領済み",
+    "paymentComplete": "支払い完了",
+    "receivedByName": "{{name}} が {{amount}} iUSD を受領",
+    "paymentSent": "支払い送信",
+    "processingAuto": "{{amount}} iUSD · 自動処理中",
+    "claimWithinMinutes": "通常 1–2 分以内に受領完了",
+    "goToDashboard": "ダッシュボードへ"
+  },
+  "verify": {
+    "title": "支払い検証",
+    "verifying": "支払いを検証中…",
+    "noPid": "支払い ID が指定されていません。",
+    "notFound": "支払いが見つかりません",
+    "error": "エラー: {{msg}}",
+    "verification": "検証",
+    "to": "宛先",
+    "platformFee": "プラットフォーム手数料",
+    "txHash": "トランザクションハッシュ",
+    "goHomepage": "ホームへ"
+  },
+  "profile": {
+    "defaultSlogan": "あなたは私の1日を輝かせる ✨",
+    "copyFullId": "フル ID をコピー",
+    "contactAlreadyAdded": "連絡先に追加済み",
+    "addToContacts": "連絡先に追加"
+  },
+  "invoiceView": {
+    "title": "請求書",
+    "billFrom": "請求元",
+    "billTo": "請求先",
+    "issueDate": "発行日",
+    "dueDate": "期日",
+    "invoiceAmount": "請求金額",
+    "recipientGets": "受取人が受領",
+    "payLink": "支払いリンク",
+    "taxId": "税番号: {{id}}",
+    "noteLabel": "メモ: {{note}}",
+    "platformFeeLabel": "プラットフォーム手数料 (0.5%{{cap}})",
+    "platformFeeCapped": ", 上限",
+    "paidStatus": "✓ {{date}} 支払済み",
+    "noToken": "トークンなし",
+    "failedToLoad": "読み込み失敗",
+    "notFound": "請求書が見つかりません。",
+    "unavailable": "請求書を利用できません。",
+    "saveAsImage": "画像として保存",
+    "printPdf": "印刷 / PDF 保存",
+    "openInSafariChrome": "Safari または Chrome で開いて PDF 保存",
+    "close": "閉じる"
+  },
+  "notFound": {
+    "title": "ページが見つかりません",
+    "desc": "お探しのページは存在しないか移動されました。"
+  },
+  "installGuide": {
+    "alreadyInstalled": "インストール済み！",
+    "usingStandalone": "iUSD Pay をスタンドアロンアプリとして使用中です。",
+    "installApp": "アプリをインストール",
+    "androidHint": "Chrome でこのページを開き、メニュー (⋮) → \"ホーム画面に追加\"",
+    "desktopHint": "Chrome でアドレスバーのインストールアイコン (⊕) をクリック、またはメニュー → \"アプリをインストール\"",
+    "skip": "後で",
+    "ios": {
+      "step1": "Safari 下部の共有ボタンをタップ",
+      "step2": "下にスクロールして \"ホーム画面に追加\" をタップ",
+      "step3": "\"追加\" をタップして確定"
+    }
+  },
+  "giftBox": {
+    "1": {
+      "name": "オルゴール",
+      "description": "金とエナメルによる盾形ペンダント。一面には水車付きの自動人形式の農場シーン、もう一面は赤地に描かれたバラ。両面とも縁に半真珠が精巧に施され、18世紀の装飾工芸の粋を示します。"
+    },
+    "2": {
+      "name": "FLY コーヒー",
+      "description": "FLY コーヒーを 50% OFF でお楽しみください。店内でもテイクアウトでも、ひとつひとつのカップの香り高い味わいをお得にご堪能いただけます。"
+    },
+    "3": {
+      "name": "リピーター時計",
+      "description": "イギリスの著名な時計師 Francis Perigal（1741–67 活躍）作のリピーター時計。部分エナメルの金製ケース、白エナメル文字盤に黒の数字、ダイヤモンド装飾の銀製針、鍍金ムーブメント。18 世紀時計工芸の頂点。"
+    },
+    "4": {
+      "name": "ギター",
+      "description": "背板・側板・ネック・ヘッドに鼈甲・黒檀・象牙のシェブロン文様、渦巻模様・菱形・幾何学文様の縁取りが施された楽器。木材と象嵌工芸が織りなす奢華な装飾美が、制作者の卓越した技量を物語ります。"
+    },
+    "5": {
+      "name": "オルゴール",
+      "description": "1820 年頃のスイス製オルゴール、マンドリン型。複数の素材で精巧に作られ、19 世紀初頭ヨーロッパのオルゴール工芸とマンドリンという楽器の造形美が融合しています。"
+    },
+    "6": {
+      "name": "ギター",
+      "description": "Giacomo（別名 Jacob）Ertel が 17 世紀末に制作した極めて華麗なギター。杉・黒檀・果樹材・骨・象牙・真珠母・羊皮紙を使用。ドイツ工人の装飾への情熱とイタリアの製琴伝統が一体となった逸品です。"
+    },
+    "7": {
+      "name": "田舎の冬の朝",
+      "description": "Currier & Ives 工房 1873 年発行の手彩色リトグラフ。雪景色のなかの田園：二頭立ての橇に夫婦と四つの大きなミルク缶が乗り、遠景には農家。19 世紀アメリカの典型的な風俗画で、牧歌的な生活を描写しています。"
+    },
+    "8": {
+      "name": "自由か、然らずんば死を！",
+      "description": "Currier & Ives 工房 1876 年発行の手彩色リトグラフ「自由を与えよ、然らずんば死を！」。1775 年 3 月リッチモンドのバージニア議会で、パトリック・ヘンリーが植民地の権利について演説する歴史的場面を描いた独立運動の象徴的図像。"
+    },
+    "9": {
+      "name": "オルゴール",
+      "description": "スイス製 1820 年頃の長方形金エナメル・オルゴール。縁は青と黄のエナメルで装飾され、蓋には古典的なエナメル細密画が嵌められ、周囲を半真珠で繊細に縁取ります。オルゴール工芸と宝飾工芸が見事に融合した作品。"
+    },
+    "10": {
+      "name": "時計ケース",
+      "description": "George Harrison 作、1770 年頃の時計ケース。部分エナメルの金製、外装はダイヤモンドを散りばめて輝きを放ちます。18 世紀英国の時計師と宝飾職人の卓越した技術が結集した作品。"
+    },
+    "11": {
+      "name": "ディヴィジョン・ヴィオール",
+      "description": "Richard Meares 1680 年頃作のディビジョン・ヴィオル。杉・黒檀・楓を使用。ディビジョン・ヴィオルはルネサンス末期の最も尊ばれた弓奏楽器で、17 世紀を通じて徐々にヴァイオリンに取って代わられた、音楽史上の重要な証言。"
+    },
+    "12": {
+      "name": "ドラゴン",
+      "description": "17 世紀初頭、Giacomo Laurenziani 作の青銅のドラゴン。購入当時はグリフィンに分類されていましたが、1950 年代以降 James Parker によってドラゴンとして正しく再同定された、バロック彫刻の秀作。"
+    },
+    "13": {
+      "name": "バラとユリ",
+      "description": "Henri Fantin-Latour 1888 年作、キャンバスに油彩。保存状態の極めて良いこの作品は、画家の卓越した絵画技法を示しています。筆だけでなく筆の柄も用いて絵の具を操る繊細な手つきで、バラとユリを巧みに描き出しました。"
+    },
+    "14": {
+      "name": "時計",
+      "description": "F. L. Meybom 1670–75 年頃作の懐中時計。ケースは黄金・青焼き鋼・水晶・部分鍍金銀とダイヤモンドで構成。金地に描かれたペインテッド・エナメルとバッセ＝タイユ・エナメルの文字盤、鍍金真鍮と部分青焼鋼のムーブメント。"
+    },
+    "15": {
+      "name": "トンボのブローチ",
+      "description": "Edgar Bense 1890 年頃作のアールヌーヴォー様式トンボ型ブローチ。金・ダイヤモンド・エナメルで制作。精巧に造形されたトンボに、繊細なプリカ＝ジュール・エナメルの羽が添えられ、自然主義的な美学を体現する宝飾の傑作。"
+    },
+    "16": {
+      "name": "腕輪",
+      "description": "19 世紀インドの腕飾り（バズバンド）。編まれた金線にルビーとローズカット・ダイヤモンドを鏤めた装飾。ムガル宮廷の美学を継承する貴族階級の宝飾伝統の中に、類似の作例を見ることができます。"
+    },
+    "17": {
+      "name": "ジョージ・クリフォードの鎧一式",
+      "description": "Jacob Halder が 1586 年にグリニッジ王立武器庫で George Clifford のために制作した鎧一式。鋼・金・皮革・織物。Clifford（1558–1605）は 1590 年に女王の擁護者に任命され、同年ガーター勲章を受章、エリザベス朝騎士道の象徴です。"
+    },
+    "18": {
+      "name": "フクロウの頭の形のブローチ",
+      "description": "Castellani 1860 年頃作のフクロウ頭型ブローチ。金と瑪瑙製。この作品および所属するグループ（2014.713.1–.10 参照）は、19 世紀ヨーロッパの考古学的復興様式への強い関心を反映する宝飾の好例です。"
+    },
+    "19": {
+      "name": "時計",
+      "description": "Charles Bobinet 1655–60 年頃作の懐中時計。瑪瑙のケースにエナメル金の装飾、白エナメルの文字盤に金製の針、鍍金真鍮と部分青焼鋼のムーブメント。17 世紀中葉ヨーロッパの時計工芸の高い技術を示します。"
+    },
+    "20": {
+      "name": "アイリス",
+      "description": "フィンセント・ファン・ゴッホ 1890 年作、キャンバスに油彩。有名な「アイリス」。ゴッホ晩年期の代表作の一つで、豊かな色彩と生命力あふれる筆致で、自然の美への深い敬意を表現しています。"
+    },
+    "21": {
+      "name": "蓋付き砂糖入れ",
+      "description": "Giovacchino Belli 1811–22 年頃作の蓋付き砂糖壺。銀鍍金。Belli のエンパイア様式表現は、同時代のフランス解釈よりもはるかに寛いで親しみやすく、厳格な新古典主義のラインを和らげたイタリアらしい趣を備えています。"
+    },
+    "22": {
+      "name": "水差し",
+      "description": "1600 年頃作の銀鍍金エナメルのエーワー（水差し）。器体には人物と動物の行列浮彫が施され、エジプトから凱旋するカエサル、あるいはハンニバルを破ったスキピオ・アフリカヌスの凱旋を描く、ルネサンス末期金属工芸の壮麗な一品。"
+    },
+    "23": {
+      "name": "真柴久次を演じる初代浅尾奥十郎",
+      "description": "春好斎北洲（大阪）1822 年作の木版浮世絵（錦絵）。紙本墨画着色、日本の大判縦型。大阪歌舞伎の浅尾岳十郎 I が馬柴久次を演じる姿を描く。目を剥き挑みかかる見得のポーズが、劇的緊張感を漂わせます。"
+    },
+    "24": {
+      "name": "アンデスの王冠",
+      "description": "「アンデスの王冠」——冠帯は 1660 年頃、アーチは 1770 年頃。コロンビア、ポパヤン。金の打出しと彫金によりエメラルドが嵌め込まれた、南米植民地期を代表する貴金属工芸品。旧大陸と新大陸の技法が創造的に融合した作例です。"
+    }
+  },
+  "components": {
+    "nicknameEditor": {
+      "title": "ニックネームを変更",
+      "placeholder": "ニックネーム",
+      "randomNickname": "ランダムニックネーム",
+      "generating": "生成中...",
+      "firstChangeFee": "初回変更手数料",
+      "changeFeeN": "変更手数料(#{{n}}回目)",
+      "firstFeeNote": "初回のニックネーム変更は 0.10 iUSD。以降は各 10.00 iUSD です。",
+      "feeNote": "ニックネーム変更は各 10.00 iUSD です。",
+      "idStays": "アカウントIDはそのままです",
+      "notUniqueAck": "ニックネームは一意ではありません。他のアカウントと同じになる可能性があることに同意します。",
+      "signing": "署名中...",
+      "payAndSave": "{{fee}} iUSD を支払って保存",
+      "errEmpty": "ニックネームを入力してください",
+      "errFee": "手数料を取得できません",
+      "errTxFailed": "トランザクション失敗",
+      "errNoHash": "トランザクションハッシュが取得できません",
+      "errCancelled": "トランザクションをキャンセルしました",
+      "errGeneric": "失敗"
+    },
+    "mwc": {
+      "chooseMethod": "接続方法を選択",
+      "checkWallet": "ウォレットアプリを確認",
+      "approveRequest": "ウォレットアプリで接続リクエストを承認",
+      "returnAfterApprove": "⚠️ 承認後このページに戻ってください",
+      "tryAgain": "もう一度",
+      "cancel": "キャンセル",
+      "openInWallet": "ウォレットで開く",
+      "best": "おすすめ",
+      "continueInBrowser": "{{name}} のブラウザで続行",
+      "signAndReturn": "署名して戻る",
+      "approveAndReturn": "アプリで承認してここに戻る",
+      "directConnection": "直接接続 • リレーサーバ無し",
+      "connectionFailed": "接続失敗",
+      "state": {
+        "initializing": "初期化中...",
+        "generatingUri": "接続中...",
+        "waitingApproval": "ウォレットアプリで承認...",
+        "connected": "接続完了！",
+        "failed": "失敗"
+      }
+    },
+    "quickLogin": {
+      "signing": "署名中...",
+      "verifying": "確認中...",
+      "processing": "処理中...",
+      "signInTo": "{{action}} にサインイン",
+      "walletTapToSignIn": "ウォレット接続済み。タップしてサインイン。",
+      "almostThere": "もうすぐ！{{action}} するには登録を完了してください。",
+      "redirecting": "登録ページへ移動中...",
+      "connectionFailed": "接続失敗",
+      "tryAgain": "もう一度",
+      "connecting": "接続中...",
+      "connectTo": "{{action}} に接続",
+      "tapConnectHint": "接続をタップ — ウォレットが署名を求めます",
+      "signInWith": "サインイン",
+      "orWallet": "または ウォレット",
+      "other": "その他",
+      "openInWalletBrowser": "このリンクをウォレットのブラウザで開いてください",
+      "linkCopied": "リンクをコピーしました",
+      "dismiss": "閉じる"
+    },
+    "identityCardBack": {
+      "idLabel": "ID:",
+      "deposit": "入金",
+      "withdraw": "出金",
+      "onlyOn": "利用可能",
+      "gas": "Gas",
+      "gasOk": "Gas OK",
+      "lowGas": "Gas 不足"
+    },
+    "qrScan": {
+      "scanQR": "QRスキャン",
+      "cameraUnavailable": "カメラを利用できません",
+      "turnFlashOff": "フラッシュをオフ",
+      "turnFlashOn": "フラッシュをオン",
+      "cancel": "キャンセル"
+    },
+    "errorBoundary": {
+      "updating": "更新中…",
+      "somethingWrong": "エラーが発生しました",
+      "genericErr": "予期しないエラーでページを表示できません。",
+      "reload": "リロード",
+      "resetReload": "リセットしてリロード"
+    },
+    "identityCard": {
+      "validFrom": "有効期限開始",
+      "status": "ステータス",
+      "statusActive": "有効",
+      "statusFrozen": "凍結",
+      "statusDeactivated": "無効化",
+      "viewProfile": "プロフィールカードを表示",
+      "scanAndGift": "スキャンしてギフト ✨",
+      "share": "↗ 共有",
+      "shareText": "iUSD Pay カードを取得！スキャンしてギフト",
+      "copyLink": "リンクをコピー",
+      "copied": "コピー済み！"
+    }
+  },
+  "soundStyles": {
+    "click": {
+      "keyboard": {
+        "name": "キーボード",
+        "desc": "メカニカルキーボードのクリック"
+      },
+      "pop": {
+        "name": "ソフトポップ",
+        "desc": "バブルポップ"
+      },
+      "tic": {
+        "name": "チク",
+        "desc": "短く高いチク音"
+      },
+      "chime": {
+        "name": "チャイム",
+        "desc": "柔らかなベル音"
+      },
+      "glass": {
+        "name": "グラス",
+        "desc": "グラスの音"
+      },
+      "coin": {
+        "name": "コイン",
+        "desc": "金属的なチン"
+      },
+      "digital": {
+        "name": "デジタル",
+        "desc": "8-bit ブリップ"
+      },
+      "drip": {
+        "name": "ドリップ",
+        "desc": "水滴の音"
+      },
+      "paper": {
+        "name": "ペーパー",
+        "desc": "紙のタップ"
+      },
+      "piano": {
+        "name": "ピアノ",
+        "desc": "優しいピアノ音"
+      },
+      "silent": {
+        "name": "サイレント",
+        "desc": "クリック音なし"
+      }
+    },
+    "card": {
+      "breeze": {
+        "name": "そよ風",
+        "desc": "そよ風が通り過ぎる"
+      },
+      "dream_bells": {
+        "name": "ドリームベル",
+        "desc": "ガラス風鈴の煌めき"
+      },
+      "page_turn": {
+        "name": "ページめくり",
+        "desc": "紙の擦れる音"
+      },
+      "whoosh": {
+        "name": "ウーシュ",
+        "desc": "素早いスウッシュ"
+      },
+      "soft_pop": {
+        "name": "ソフトポップ",
+        "desc": "優しいダブルポップ"
+      },
+      "silent": {
+        "name": "サイレント",
+        "desc": "フリップ音なし"
+      }
+    },
+    "gift": {
+      "celebration": {
+        "name": "セレブレーション",
+        "desc": "上昇する C-E-G-C コード"
+      },
+      "sparkle": {
+        "name": "スパークル",
+        "desc": "高いきらめき音"
+      },
+      "fanfare": {
+        "name": "ファンファーレ",
+        "desc": "金管のタダー"
+      },
+      "bell_cascade": {
+        "name": "ベルカスケード",
+        "desc": "下降するベル"
+      },
+      "soft_bell": {
+        "name": "ソフトベル",
+        "desc": "優しい単音ベル"
+      },
+      "silent": {
+        "name": "サイレント",
+        "desc": "ギフト音なし"
+      }
+    },
+    "txn": {
+      "whoosh_up": {
+        "name": "ウーシュアップ",
+        "desc": "上昇するスウッシュ"
+      },
+      "coin_drop": {
+        "name": "コインドロップ",
+        "desc": "金属コインの着地"
+      },
+      "pneumatic": {
+        "name": "ニューマチック",
+        "desc": "レトロな気送管"
+      },
+      "confirm_chime": {
+        "name": "確認チャイム",
+        "desc": "ダブルトーン確認音"
+      },
+      "paper_slide": {
+        "name": "ペーパースライド",
+        "desc": "紙のスライド音"
+      },
+      "silent": {
+        "name": "サイレント",
+        "desc": "取引音なし"
+      }
+    },
+    "menu": {
+      "slide": {
+        "name": "スライド",
+        "desc": "パネルがスライドイン"
+      },
+      "soft_pop": {
+        "name": "ソフトポップ",
+        "desc": "優しく開くポップ"
+      },
+      "swish": {
+        "name": "スウィッシュ",
+        "desc": "空気のスウィッシュ"
+      },
+      "silent": {
+        "name": "サイレント",
+        "desc": "メニュー音なし"
+      }
+    }
+  },
+  "time": {
+    "justNow": "たった今",
+    "minutesAgo": "{{n}}分前",
+    "hoursAgo": "{{n}}時間前",
+    "daysAgo": "{{n}}日前"
+  },
+  "receiptView": {
+    "back": "← 戻る",
+    "paymentReceipt": "支払レシート",
+    "receipt": "レシート",
+    "noPaymentId": "支払 ID がありません",
+    "notFound": "レシートが見つかりません。",
+    "failedToLoad": "読み込み失敗",
+    "fee": "手数料: {{amount}} iUSD",
+    "date": "日付",
+    "confirmedLabel": "確認済み",
+    "verify": "検証",
+    "from": "送信者",
+    "to": "受信者",
+    "tx": "Tx: {{hash}}",
+    "id": "ID: {{id}}",
+    "statusPaid": "支払済",
+    "statusConfirmed": "確認済",
+    "statusPending": "処理中",
+    "statusRevoked": "取消",
+    "statusRefunded": "返金済",
+    "statusExpired": "期限切れ",
+    "statusFailed": "失敗",
+    "statusUnknown": "不明",
+    "saveAsImage": "画像として保存",
+    "printPdf": "印刷 / PDF 保存",
+    "openInSafariChrome": "Safari または Chrome で開いて PDF 保存",
+    "errorPrefix": "エラー: {{msg}}"
+  },
+  "update": {
+    "available": "新しいバージョンがあります",
+    "reload": "再読み込み"
+  }
+}

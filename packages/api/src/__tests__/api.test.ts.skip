@@ -1,0 +1,940 @@
+import { describe, it, expect, beforeAll, afterAll } from 'vitest'
+import type { FastifyInstance } from 'fastify'
+import { buildApp } from '../index'
+import { STATUS_LABEL, isRevocable, type PaymentStatus } from '../paymentStateMachine'
+import { getDb, closeDb } from '../db/index'
+import path from 'path'
+import fs from 'fs'
+
+let app: FastifyInstance
+
+beforeAll(async () => {
+  // Close any existing singleton DB and delete the file for a clean test run
+  closeDb()
+  const dbDir  = process.env.DB_DIR ?? path.join(process.cwd(), 'data')
+  const dbPath = path.join(dbDir, 'ipay.db')
+  if (fs.existsSync(dbPath)) fs.unlinkSync(dbPath)
+
+  app = await buildApp()
+  await app.ready()
+})
+
+afterAll(async () => {
+  await app.close()
+})
+
+// ── /health ────────────────────────────────────────────────────────────────
+describe('GET /health', () => {
+  it('returns ok', async () => {
+    const res = await app.inject({ method: 'GET', url: '/health' })
+    expect(res.statusCode).toBe(200)
+    const body = JSON.parse(res.body)
+    expect(body.status).toBe('ok')
+    expect(body.version).toBe('1.0.0')
+  })
+})
+
+// ── /v1/chains ─────────────────────────────────────────────────────────────
+describe('GET /v1/chains', () => {
+  it('returns array of chains', async () => {
+    const res = await app.inject({ method: 'GET', url: '/v1/chains' })
+    expect(res.statusCode).toBe(200)
+    const body = JSON.parse(res.body)
+    expect(Array.isArray(body)).toBe(true)
+    expect(body.length).toBeGreaterThan(0)
+  })
+})
+
+// ── /v1/address/resolve ────────────────────────────────────────────────────
+describe('GET /v1/address/resolve', () => {
+  it('resolves a bech32 init address', async () => {
+    const res = await app.inject({
+      method: 'GET',
+      url: '/v1/address/resolve?address=init1qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqpqr5e3d',
+    })
+    expect(res.statusCode).toBe(200)
+    const body = JSON.parse(res.body)
+    expect(body.original).toBe('init1qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqpqr5e3d')
+    expect(body.resolved).toBeDefined()
+  })
+
+  it('returns 400 when address missing', async () => {
+    const res = await app.inject({ method: 'GET', url: '/v1/address/resolve' })
+    expect(res.statusCode).toBe(400)
+  })
+
+  it('returns 400 for invalid address', async () => {
+    const res = await app.inject({
+      method: 'GET',
+      url: '/v1/address/resolve?address=not-valid',
+    })
+    expect(res.statusCode).toBe(400)
+    const body = JSON.parse(res.body)
+    expect(body.error).toBe('INVALID_ADDRESS')
+  })
+})
+
+// 测试专用请求头（绕过 sanctions 中间件的 ToS 检查）
+const TOS_HEADERS = {
+  'X-IPay-ToS-Accepted': '1',
+  'X-Wallet-Address': 'init1qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqpqr5e3d',
+  'Content-Type': 'application/json',
+}
+
+// ── /v1/payments ───────────────────────────────────────────────────────────
+describe('POST /v1/payments', () => {
+  it('creates a payment request', async () => {
+    const res = await app.inject({
+      method: 'POST',
+      url: '/v1/payments',
+      headers: TOS_HEADERS,
+      payload: {
+        recipient: 'init1qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqpqr5e3d',
+        chain: 'interwoven-1',
+        amount: '100.00',
+        reference: 'order-001',
+      },
+    })
+    expect(res.statusCode).toBe(201)
+    const body = JSON.parse(res.body)
+    expect(body.paymentId).toMatch(/^iPay-/)
+    expect(body.version).toBe('1')
+    expect(body.amount).toBe('100.000000')
+    expect(body.token).toBe('iUSD')
+    expect(body.status).toBe('created')
+    expect(body.paymentUrl).toContain('iusd-pay.xyz/pay/')
+  })
+
+  it('returns 400 for unsupported chain', async () => {
+    const res = await app.inject({
+      method: 'POST',
+      url: '/v1/payments',
+      headers: TOS_HEADERS,
+      payload: {
+        recipient: 'init1qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqpqr5e3d',
+        chain: 'evm-bad',
+        amount: '10.00',
+      },
+    })
+    expect(res.statusCode).toBe(400)
+    const body = JSON.parse(res.body)
+    expect(body.error).toBe('UNSUPPORTED_CHAIN')
+  })
+
+  it('returns 400 for missing recipient', async () => {
+    const res = await app.inject({
+      method: 'POST',
+      url: '/v1/payments',
+      headers: TOS_HEADERS,
+      payload: { chain: 'interwoven-1', amount: '10.00' },
+    })
+    expect(res.statusCode).toBe(400)
+  })
+
+  it('returns 400 for invalid amount', async () => {
+    const res = await app.inject({
+      method: 'POST',
+      url: '/v1/payments',
+      headers: TOS_HEADERS,
+      payload: {
+        recipient: 'init1qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqpqr5e3d',
+        chain: 'interwoven-1',
+        amount: '-5',
+      },
+    })
+    expect(res.statusCode).toBe(400)
+  })
+})
+
+describe('GET /v1/payments/:id', () => {
+  it('retrieves created payment', async () => {
+    const create = await app.inject({
+      method: 'POST',
+      url: '/v1/payments',
+      headers: TOS_HEADERS,
+      payload: {
+        recipient: 'init1qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqpqr5e3d',
+        chain: 'interwoven-1',
+        amount: '50.00',
+      },
+    })
+    const { paymentId } = JSON.parse(create.body)
+
+    const get = await app.inject({ method: 'GET', url: `/v1/payments/${paymentId}/status` })
+    expect(get.statusCode).toBe(200)
+    const body = JSON.parse(get.body)
+    expect(body.paymentId).toBe(paymentId)
+    expect(body.status).toBe('created')
+  })
+
+  it('returns 404 for unknown id', async () => {
+    const res = await app.inject({ method: 'GET', url: '/v1/payments/does-not-exist/status' })
+    expect(res.statusCode).toBe(404)
+    expect(JSON.parse(res.body).error).toBe('NOT_FOUND')
+  })
+})
+
+// ── /v1/support/tickets ────────────────────────────────────────────────────
+describe('POST /v1/support/tickets', () => {
+  it('creates a support ticket', async () => {
+    const res = await app.inject({
+      method: 'POST',
+      url: '/v1/support/tickets',
+      payload: {
+        order_id:         'iPay-abc12345',
+        issue_type:       'payment_not_received',
+        description:      'Sent 100 iUSD but recipient did not receive.',
+        disclosure_level: 1,
+      },
+    })
+    expect(res.statusCode).toBe(201)
+    const body = JSON.parse(res.body)
+    expect(body.ticket_id).toMatch(/^TICK-/)
+    expect(body.status).toBe('open')
+  })
+})
+
+describe('GET /v1/support/tickets/:id', () => {
+  it('retrieves ticket by id', async () => {
+    const create = await app.inject({
+      method: 'POST',
+      url: '/v1/support/tickets',
+      payload: {
+        order_id:         'iPay-xyz99999',
+        issue_type:       'other',
+        description:      'Test description for retrieval.',
+        disclosure_level: 1,
+      },
+    })
+    const { ticket_id } = JSON.parse(create.body)
+
+    const get = await app.inject({ method: 'GET', url: `/v1/support/tickets/${ticket_id}` })
+    expect(get.statusCode).toBe(200)
+    expect(JSON.parse(get.body).ticket_id).toBe(ticket_id)
+  })
+})
+
+// ── /v1/audit/packages ─────────────────────────────────────────────────────
+describe('POST /v1/audit/packages', () => {
+  it('generates an audit package', async () => {
+    const res = await app.inject({
+      method: 'POST',
+      url: '/v1/audit/packages',
+      payload: {
+        subject_address: 'init1qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqpqr5e3d',
+        authorization_sig: 'mock-sig-abc123',
+        grant_level: 'standard',
+        scope: 'all',
+        period_from: 1700000000,
+        period_to: 1741996800,
+        auditor_name: 'Test Auditor',
+      },
+    })
+    expect(res.statusCode).toBe(201)
+    const body = JSON.parse(res.body)
+    expect(body.audit_id).toMatch(/^AUDIT-/)
+    expect(body.package?.grant_level).toBe('standard')
+    expect(body.package_hash).toBeDefined()
+  })
+})
+
+// ── 404 handler ─────────────────────────────────────────────────────────────
+describe('404 handler', () => {
+  it('returns NOT_FOUND for unknown routes', async () => {
+    const res = await app.inject({ method: 'GET', url: '/v1/nonexistent' })
+    expect(res.statusCode).toBe(404)
+    expect(JSON.parse(res.body).error).toBe('NOT_FOUND')
+  })
+})
+
+// ── /v1/invoices ─────────────────────────────────────────────────────────────
+describe('POST /v1/invoices', () => {
+  it('creates an invoice', async () => {
+    const res = await app.inject({
+      method: 'POST',
+      url: '/v1/invoices',
+      headers: TOS_HEADERS,
+      payload: {
+        merchant_address: 'init1qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqpqr5e3d',
+        amount: '250.00',
+        description: 'Web design services',
+        chain: 'interwoven-1',
+      },
+    })
+    expect(res.statusCode).toBe(201)
+    const body = JSON.parse(res.body)
+    expect(body.invoice_id).toMatch(/^INV-/)
+    expect(body.status).toBe('unpaid')
+    expect(body.payment_url).toContain('iusd-pay.xyz/pay/')
+  })
+
+  it('returns 400 for missing merchant_address', async () => {
+    const res = await app.inject({
+      method: 'POST',
+      url: '/v1/invoices',
+      headers: TOS_HEADERS,
+      payload: { amount: '100', description: 'Test' },
+    })
+    expect(res.statusCode).toBe(400)
+  })
+})
+
+describe('GET /v1/invoices/:id', () => {
+  it('retrieves invoice and marks expired when past due', async () => {
+    const create = await app.inject({
+      method: 'POST',
+      url: '/v1/invoices',
+      headers: TOS_HEADERS,
+      payload: {
+        merchant_address: 'init1qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqpqr5e3d',
+        amount: '50.00',
+        description: 'Lookup test',
+        chain: 'interwoven-1',
+      },
+    })
+    const { invoice_id } = JSON.parse(create.body)
+    const get = await app.inject({ method: 'GET', url: `/v1/invoices/${invoice_id}` })
+    expect(get.statusCode).toBe(200)
+    expect(JSON.parse(get.body).invoice_id).toBe(invoice_id)
+  })
+})
+
+describe('POST /v1/invoices/:id/pay', () => {
+  it('confirms invoice payment', async () => {
+    const create = await app.inject({
+      method: 'POST',
+      url: '/v1/invoices',
+      headers: TOS_HEADERS,
+      payload: {
+        merchant_address: 'init1qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqpqr5e3d',
+        amount: '100.00',
+        description: 'Pay test',
+        chain: 'interwoven-1',
+      },
+    })
+    const { invoice_id } = JSON.parse(create.body)
+
+    const pay = await app.inject({
+      method: 'POST',
+      url: `/v1/invoices/${invoice_id}/pay`,
+      payload: {
+        nullifier: 'abc123def456',
+        proof: { pi_a: 'a', pi_b: 'b', pi_c: 'c' },
+      },
+    })
+    expect(pay.statusCode).toBe(200)
+    const body = JSON.parse(pay.body)
+    expect(body.status).toBe('paid')
+    expect(body.nullifier).toBe('abc123def456')
+  })
+})
+
+// ── /v1/gifts (Chocolate Box) ─────────────────────────────────────────────────
+describe('POST /v1/gifts', () => {
+  it('creates a gift box (equal mode)', async () => {
+    const res = await app.inject({
+      method: 'POST',
+      url: '/v1/gifts',
+      payload: {
+        creator_address: 'init1qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqpqr5e3d',
+        total_amount: '100.00',
+        slot_count: 10,
+        mode: 'equal',
+        access: 'open',
+        message: 'Happy holidays!',
+      },
+    })
+    expect(res.statusCode).toBe(201)
+    const body = JSON.parse(res.body)
+    expect(body.box_id).toMatch(/^GP-/)
+    expect(body.slot_count).toBe(10)
+    expect(body.mode).toBe('equal')
+    expect(body.claim_url).toContain('/gift/GP-')
+  })
+
+  it('returns 400 for empty whitelist when access=whitelist', async () => {
+    const res = await app.inject({
+      method: 'POST',
+      url: '/v1/gifts',
+      payload: {
+        creator_address: 'init1qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqpqr5e3d',
+        total_amount: '50.00',
+        slot_count: 5,
+        access: 'whitelist',
+        whitelist: [],
+      },
+    })
+    expect(res.statusCode).toBe(400)
+    expect(JSON.parse(res.body).error).toBe('WHITELIST_EMPTY')
+  })
+})
+
+describe('POST /v1/gifts/:id/claim', () => {
+  it('allows valid ZK claim', async () => {
+    const create = await app.inject({
+      method: 'POST',
+      url: '/v1/gifts',
+      payload: {
+        creator_address: 'init1qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqpqr5e3d',
+        total_amount: '50.00',
+        slot_count: 5,
+        mode: 'equal',
+        access: 'open',
+      },
+    })
+    const { box_id } = JSON.parse(create.body)
+
+    const claim = await app.inject({
+      method: 'POST',
+      url: `/v1/gifts/${box_id}/claim`,
+      payload: {
+        claimer_address: 'init1abc123def456abc123def456abc123def456a1b2c3',
+        nullifier: 'unique-nullifier-abc123',
+        proof: { pi_a: 'a', pi_b: 'b', pi_c: 'c' },
+      },
+    })
+    expect(claim.statusCode).toBe(200)
+    const body = JSON.parse(claim.body)
+    expect(body.claim_id).toMatch(/^CLM-/)
+    expect(body.amount).toBe('10.000000')
+  })
+
+  it('prevents double-claim with same nullifier', async () => {
+    const create = await app.inject({
+      method: 'POST',
+      url: '/v1/gifts',
+      payload: {
+        creator_address: 'init1qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqpqr5e3d',
+        total_amount: '20.00',
+        slot_count: 4,
+        mode: 'equal',
+        access: 'open',
+      },
+    })
+    const { box_id } = JSON.parse(create.body)
+
+    const payload = {
+      claimer_address: 'init1dup000aaaaaaaaaaaaaaaaaaaaaaaaaaa1b2c3',
+      nullifier: 'dup-nullifier-xyz',
+      proof: { pi_a: 'a', pi_b: 'b', pi_c: 'c' },
+    }
+    await app.inject({ method: 'POST', url: `/v1/gifts/${box_id}/claim`, payload })
+    const second = await app.inject({ method: 'POST', url: `/v1/gifts/${box_id}/claim`, payload })
+    expect(second.statusCode).toBe(409)
+  })
+})
+
+// ── /v1/merchants ─────────────────────────────────────────────────────────────
+describe('POST /v1/merchants/register', () => {
+  it('registers a merchant', async () => {
+    const res = await app.inject({
+      method: 'POST',
+      url: '/v1/merchants/register',
+      payload: {
+        wallet_address: 'init1merchanttestaaaaaaaaaaaaaaaaaaaaaaaaa1b2',
+        display_name: 'Test Merchant Co.',
+        email: 'merchant@test.com',
+        website: 'https://testmerchant.com',
+      },
+    })
+    expect(res.statusCode).toBe(201)
+    const body = JSON.parse(res.body)
+    expect(body.merchant_id).toMatch(/^MER-/)
+    expect(body.display_name).toBe('Test Merchant Co.')
+    expect(body.profile_url).toContain('/merchant/MER-')
+  })
+
+  it('returns 409 for duplicate wallet', async () => {
+    const payload = {
+      wallet_address: 'init1dupmerchantaaaaaaaaaaaaaaaaaaaaaaaa1b2c',
+      display_name: 'Dup Merchant',
+    }
+    await app.inject({ method: 'POST', url: '/v1/merchants/register', payload })
+    const second = await app.inject({ method: 'POST', url: '/v1/merchants/register', payload })
+    expect(second.statusCode).toBe(409)
+  })
+})
+
+describe('GET /v1/merchants/:addr', () => {
+  it('returns public merchant profile', async () => {
+    const reg = await app.inject({
+      method: 'POST',
+      url: '/v1/merchants/register',
+      payload: {
+        wallet_address: 'init1getmerchantaaaaaaaaaaaaaaaaaaaaaaaa1b2c',
+        display_name: 'Get Me Merchant',
+      },
+    })
+    const { merchant_id, wallet_addr } = JSON.parse(reg.body)
+
+    const get = await app.inject({ method: 'GET', url: `/v1/merchants/${wallet_addr}` })
+    expect(get.statusCode).toBe(200)
+    expect(JSON.parse(get.body).merchant_id).toBe(merchant_id)
+  })
+})
+
+// ── /v1/travel-rule ─────────────────────────────────────────────────────────
+describe('POST /v1/travel-rule/check', () => {
+  it('returns requires=true for $1000+', async () => {
+    const res = await app.inject({
+      method: 'POST',
+      url: '/v1/travel-rule/check',
+      payload: { amount_usd: 1500 },
+    })
+    expect(res.statusCode).toBe(200)
+    const body = JSON.parse(res.body)
+    expect(body.requires_travel_rule).toBe(true)
+    expect(body.threshold_usd).toBe(1000)
+  })
+
+  it('returns requires=false for under threshold', async () => {
+    const res = await app.inject({
+      method: 'POST',
+      url: '/v1/travel-rule/check',
+      payload: { amount_usd: 500 },
+    })
+    expect(JSON.parse(res.body).requires_travel_rule).toBe(false)
+  })
+})
+
+describe('POST /v1/travel-rule/packets', () => {
+  it('generates IVMS101 packet for $1000+ transaction', async () => {
+    const res = await app.inject({
+      method: 'POST',
+      url: '/v1/travel-rule/packets',
+      payload: {
+        order_id:            'iPay-tr-test001',
+        amount_usd:          2500,
+        chain:               'interwoven-1',
+        originator_address:  'init1qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqpqr5e3d',
+        beneficiary_address: 'init1aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa',
+      },
+    })
+    expect(res.statusCode).toBe(201)
+    const body = JSON.parse(res.body)
+    expect(body.standard).toBe('IVMS101')
+    expect(body.packet.version).toBe('1.0')
+    expect(body.packet.transaction.order_id).toBe('iPay-tr-test001')
+  })
+
+  it('rejects packet for sub-threshold amount', async () => {
+    const res = await app.inject({
+      method: 'POST',
+      url: '/v1/travel-rule/packets',
+      payload: {
+        order_id: 'iPay-small',
+        amount_usd: 50,
+        chain: 'interwoven-1',
+        originator_address:  'init1qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqpqr5e3d',
+        beneficiary_address: 'init1aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa',
+      },
+    })
+    expect(res.statusCode).toBe(400)
+    expect(JSON.parse(res.body).error).toBe('TRAVEL_RULE_NOT_REQUIRED')
+  })
+})
+
+// ── /v1/history ───────────────────────────────────────────────────────────────
+describe('History routes', () => {
+  const VK_HASH = 'abc123def456abc123def456abc123de'
+
+  it('stores an encrypted note', async () => {
+    const res = await app.inject({
+      method: 'POST',
+      url: '/v1/history/notes',
+      payload: {
+        order_id:        'iPay-hist-test001',
+        owner_vk_hash:   VK_HASH,
+        ciphertext:      'base64encodedciphertext==',
+        instrument_type: 0,
+        chain:           'interwoven-1',
+      },
+    })
+    expect(res.statusCode).toBe(201)
+    const body = JSON.parse(res.body)
+    expect(body.note_id).toBe('NOTE-iPay-hist-test001')
+    expect(body.deletable_at).toBeGreaterThan(Math.floor(Date.now()/1000))
+  })
+
+  it('lists notes by vk_hash', async () => {
+    const res = await app.inject({
+      method: 'GET',
+      url: `/v1/history?vk_hash=${VK_HASH}`,
+    })
+    expect(res.statusCode).toBe(200)
+    const body = JSON.parse(res.body)
+    expect(Array.isArray(body.notes)).toBe(true)
+    expect(body.notes.length).toBeGreaterThan(0)
+    expect(body.notes[0].ciphertext).toBeDefined()
+  })
+
+  it('archives and unarchives a note', async () => {
+    const archive = await app.inject({
+      method: 'POST',
+      url: '/v1/history/iPay-hist-test001/archive',
+      payload: { vk_hash: VK_HASH },
+    })
+    expect(archive.statusCode).toBe(200)
+    expect(JSON.parse(archive.body).archived).toBe(true)
+
+    const unarchive = await app.inject({
+      method: 'POST',
+      url: '/v1/history/iPay-hist-test001/unarchive',
+      payload: { vk_hash: VK_HASH },
+    })
+    expect(JSON.parse(unarchive.body).archived).toBe(false)
+  })
+
+  it('blocks deletion during retention period', async () => {
+    const res = await app.inject({
+      method: 'DELETE',
+      url: '/v1/history/iPay-hist-test001',
+      payload: { vk_hash: VK_HASH },
+    })
+    expect(res.statusCode).toBe(403)
+    expect(JSON.parse(res.body).error).toBe('RETENTION_PERIOD_ACTIVE')
+  })
+
+  it('returns 401 without vk_hash', async () => {
+    const res = await app.inject({ method: 'GET', url: '/v1/history' })
+    expect(res.statusCode).toBe(401)
+  })
+})
+
+// ── /v1/subscriptions ─────────────────────────────────────────────────────────
+describe('Subscription routes', () => {
+  const PAYER    = 'init1payeraaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa1b2c'
+  const MERCHANT = 'init1merchantbbbbbbbbbbbbbbbbbbbbbbbbbbb1b2c'
+
+  it('creates a subscription', async () => {
+    const res = await app.inject({
+      method: 'POST',
+      url: '/v1/subscriptions',
+      payload: {
+        payer_address:    PAYER,
+        merchant_address: MERCHANT,
+        amount:           '9.99',
+        interval:         'monthly',
+        chain:            'interwoven-1',
+      },
+    })
+    expect(res.statusCode).toBe(201)
+    const body = JSON.parse(res.body)
+    expect(body.sub_id).toMatch(/^SUB-/)
+    expect(body.status).toBe('active')
+    expect(body.interval).toBe('monthly')
+  })
+
+  it('returns 400 for invalid interval', async () => {
+    const res = await app.inject({
+      method: 'POST',
+      url: '/v1/subscriptions',
+      payload: {
+        payer_address: PAYER, merchant_address: MERCHANT,
+        amount: '10', interval: 'daily',
+      },
+    })
+    expect(res.statusCode).toBe(400)
+    expect(JSON.parse(res.body).error).toBe('INVALID_INTERVAL')
+  })
+
+  it('can pause and resume a subscription', async () => {
+    const create = await app.inject({
+      method: 'POST',
+      url: '/v1/subscriptions',
+      payload: { payer_address: PAYER, merchant_address: MERCHANT, amount: '5', interval: 'monthly' },
+    })
+    const { sub_id } = JSON.parse(create.body)
+
+    const pause = await app.inject({
+      method: 'POST', url: `/v1/subscriptions/${sub_id}/pause`,
+      payload: { payer_address: PAYER },
+    })
+    expect(JSON.parse(pause.body).status).toBe('paused')
+
+    const resume = await app.inject({
+      method: 'POST', url: `/v1/subscriptions/${sub_id}/resume`,
+      payload: { payer_address: PAYER },
+    })
+    expect(JSON.parse(resume.body).status).toBe('active')
+  })
+
+  it('can cancel a subscription', async () => {
+    const create = await app.inject({
+      method: 'POST',
+      url: '/v1/subscriptions',
+      payload: { payer_address: PAYER, merchant_address: MERCHANT, amount: '20', interval: 'yearly' },
+    })
+    const { sub_id } = JSON.parse(create.body)
+
+    const cancel = await app.inject({
+      method: 'POST', url: `/v1/subscriptions/${sub_id}/cancel`,
+      payload: { payer_address: PAYER },
+    })
+    expect(JSON.parse(cancel.body).status).toBe('cancelled')
+  })
+})
+
+// ═══════════════════════════════════════════════════════════════════════════════
+// NEW TESTS — added per comprehensive test spec
+// ═══════════════════════════════════════════════════════════════════════════════
+
+// ── 2a. Status flow — GET reflects live DB status ────────────────────────────
+describe('GET /v1/payments/:id — reflects live DB status', () => {
+  it('returns processing after manual DB update', async () => {
+    const create = await app.inject({
+      method: 'POST',
+      url: '/v1/payments',
+      headers: TOS_HEADERS,
+      payload: {
+        recipient: 'init1qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqpqr5e3d',
+        chain: 'interwoven-1',
+        amount: '25.00',
+      },
+    })
+    expect(create.statusCode).toBe(201)
+    const { paymentId } = JSON.parse(create.body)
+
+    // Manually update DB to simulate state machine transition
+    getDb().prepare("UPDATE payments SET status = 'processing' WHERE payment_id = ?").run(paymentId)
+
+    const get = await app.inject({ method: 'GET', url: `/v1/payments/${paymentId}/status` })
+    expect(get.statusCode).toBe(200)
+    expect(JSON.parse(get.body).status).toBe('processing')
+  })
+
+  it('returns pending_claim after manual DB update', async () => {
+    const create = await app.inject({
+      method: 'POST',
+      url: '/v1/payments',
+      headers: TOS_HEADERS,
+      payload: {
+        recipient: 'init1qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqpqr5e3d',
+        chain: 'interwoven-1',
+        amount: '30.00',
+      },
+    })
+    const { paymentId } = JSON.parse(create.body)
+
+    getDb().prepare("UPDATE payments SET status = 'pending_claim' WHERE payment_id = ?").run(paymentId)
+
+    const get = await app.inject({ method: 'GET', url: `/v1/payments/${paymentId}/status` })
+    expect(get.statusCode).toBe(200)
+    expect(JSON.parse(get.body).status).toBe('pending_claim')
+  })
+
+  it('returns requires_action after manual DB update', async () => {
+    const create = await app.inject({
+      method: 'POST',
+      url: '/v1/payments',
+      headers: TOS_HEADERS,
+      payload: {
+        recipient: 'init1qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqpqr5e3d',
+        chain: 'interwoven-1',
+        amount: '15.00',
+      },
+    })
+    const { paymentId } = JSON.parse(create.body)
+
+    getDb().prepare("UPDATE payments SET status = 'requires_action' WHERE payment_id = ?").run(paymentId)
+
+    const get = await app.inject({ method: 'GET', url: `/v1/payments/${paymentId}/status` })
+    expect(get.statusCode).toBe(200)
+    expect(JSON.parse(get.body).status).toBe('requires_action')
+  })
+})
+
+// ── 2b. Event log — table exists and can be queried ──────────────────────────
+describe('event_log table — exists and is writable', () => {
+  it('event_log table exists in the DB', () => {
+    const db = getDb()
+    const tables = db.prepare(
+      "SELECT name FROM sqlite_master WHERE type='table' AND name='event_log'"
+    ).all() as { name: string }[]
+    expect(tables.length).toBe(1)
+    expect(tables[0].name).toBe('event_log')
+  })
+
+  it('can insert and query event_log rows', () => {
+    const db = getDb()
+    const now = new Date().toISOString()
+    db.prepare(`
+      INSERT INTO event_log (entity_type, entity_id, from_status, to_status, actor, created_at)
+      VALUES ('payment', 'iPay-evt-api-test', 'created', 'processing', 'test-actor', ?)
+    `).run(now)
+
+    const rows = db.prepare(
+      "SELECT * FROM event_log WHERE entity_id = 'iPay-evt-api-test'"
+    ).all() as any[]
+    expect(rows.length).toBeGreaterThan(0)
+    expect(rows[0].from_status).toBe('created')
+    expect(rows[0].to_status).toBe('processing')
+    expect(rows[0].actor).toBe('test-actor')
+  })
+
+  it('event_log accumulates entries for a real payment transitions', async () => {
+    const create = await app.inject({
+      method: 'POST',
+      url: '/v1/payments',
+      headers: TOS_HEADERS,
+      payload: {
+        recipient: 'init1qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqpqr5e3d',
+        chain: 'interwoven-1',
+        amount: '42.00',
+      },
+    })
+    const { paymentId } = JSON.parse(create.body)
+
+    // Manually log a transition to verify event_log works for real payment IDs
+    const db = getDb()
+    const now = new Date().toISOString()
+    db.prepare(`
+      INSERT INTO event_log (entity_type, entity_id, from_status, to_status, actor, created_at)
+      VALUES ('payment', ?, 'created', 'processing', 'relayer', ?)
+    `).run(paymentId, now)
+
+    const logs = db.prepare('SELECT * FROM event_log WHERE entity_id = ?').all(paymentId) as any[]
+    expect(logs.length).toBeGreaterThanOrEqual(1)
+    expect(logs.some((l: any) => l.to_status === 'processing')).toBe(true)
+  })
+})
+
+// ── 2c. POST /v1/payments — idempotency ──────────────────────────────────────
+describe('POST /v1/payments — idempotency_key behaviour', () => {
+  it('second call with same idempotency_key returns 200 with same paymentId', async () => {
+    const payload = {
+      recipient: 'init1qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqpqr5e3d',
+      chain: 'interwoven-1',
+      amount: '77.00',
+      idempotency_key: `idem-${Date.now()}-unique`,
+    }
+
+    const first = await app.inject({
+      method: 'POST',
+      url: '/v1/payments',
+      headers: TOS_HEADERS,
+      payload,
+    })
+    expect(first.statusCode).toBe(201)
+    const firstBody = JSON.parse(first.body)
+
+    const second = await app.inject({
+      method: 'POST',
+      url: '/v1/payments',
+      headers: TOS_HEADERS,
+      payload,
+    })
+    // Implementation returns 200 with same payment on duplicate idempotency_key
+    expect(second.statusCode).toBe(200)
+    const secondBody = JSON.parse(second.body)
+    expect(secondBody.paymentId).toBe(firstBody.paymentId)
+  })
+
+  it('different idempotency_keys create different payments', async () => {
+    const base = {
+      recipient: 'init1qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqpqr5e3d',
+      chain: 'interwoven-1',
+      amount: '5.00',
+    }
+
+    const ts = Date.now()
+    const first = await app.inject({
+      method: 'POST',
+      url: '/v1/payments',
+      headers: TOS_HEADERS,
+      payload: { ...base, idempotency_key: `idem-diff-${ts}-A` },
+    })
+    const second = await app.inject({
+      method: 'POST',
+      url: '/v1/payments',
+      headers: TOS_HEADERS,
+      payload: { ...base, idempotency_key: `idem-diff-${ts}-B` },
+    })
+    expect(first.statusCode).toBe(201)
+    expect(second.statusCode).toBe(201)
+    expect(JSON.parse(first.body).paymentId).not.toBe(JSON.parse(second.body).paymentId)
+  })
+
+  it('no idempotency_key allows duplicate requests (creates new payment each time)', async () => {
+    const payload = {
+      recipient: 'init1qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqpqr5e3d',
+      chain: 'interwoven-1',
+      amount: '8.00',
+    }
+
+    const first = await app.inject({ method: 'POST', url: '/v1/payments', headers: TOS_HEADERS, payload })
+    const second = await app.inject({ method: 'POST', url: '/v1/payments', headers: TOS_HEADERS, payload })
+    expect(first.statusCode).toBe(201)
+    expect(second.statusCode).toBe(201)
+    expect(JSON.parse(first.body).paymentId).not.toBe(JSON.parse(second.body).paymentId)
+  })
+})
+
+// ── 2d. STATUS_LABEL completeness ────────────────────────────────────────────
+describe('STATUS_LABEL — all 10 statuses have non-empty Chinese labels', () => {
+  const allStatuses: PaymentStatus[] = [
+    'created', 'processing', 'pending_claim', 'requires_action',
+    'confirmed', 'reject_pending', 'revoked', 'refunded', 'expired', 'failed',
+  ]
+
+  it('STATUS_LABEL has exactly 10 entries', () => {
+    expect(Object.keys(STATUS_LABEL).length).toBe(10)
+  })
+
+  allStatuses.forEach((status) => {
+    it(`STATUS_LABEL['${status}'] is a non-empty string`, () => {
+      const label = STATUS_LABEL[status]
+      expect(typeof label).toBe('string')
+      expect(label.length).toBeGreaterThan(0)
+    })
+  })
+
+  it('STATUS_LABEL values are distinct (no two states share the same label)', () => {
+    const labels = Object.values(STATUS_LABEL)
+    const uniqueLabels = new Set(labels)
+    expect(uniqueLabels.size).toBe(labels.length)
+  })
+})
+
+// ── 2e. REVOCABLE_STATES — both pending_claim and requires_action ─────────────
+describe('isRevocable() — covers critical states', () => {
+  it('pending_claim is revocable', () => {
+    expect(isRevocable('pending_claim')).toBe(true)
+  })
+
+  it('requires_action is revocable (critical — historical bug fix)', () => {
+    expect(isRevocable('requires_action')).toBe(true)
+  })
+
+  it('created is NOT revocable', () => {
+    expect(isRevocable('created')).toBe(false)
+  })
+
+  it('processing is NOT revocable', () => {
+    expect(isRevocable('processing')).toBe(false)
+  })
+
+  it('confirmed is NOT revocable (terminal)', () => {
+    expect(isRevocable('confirmed')).toBe(false)
+  })
+
+  it('reject_pending is NOT revocable', () => {
+    expect(isRevocable('reject_pending')).toBe(false)
+  })
+
+  it('revoked is NOT revocable (terminal)', () => {
+    expect(isRevocable('revoked')).toBe(false)
+  })
+
+  it('refunded is NOT revocable (terminal)', () => {
+    expect(isRevocable('refunded')).toBe(false)
+  })
+
+  it('expired is NOT revocable (terminal)', () => {
+    expect(isRevocable('expired')).toBe(false)
+  })
+
+  it('failed is NOT revocable (terminal)', () => {
+    expect(isRevocable('failed')).toBe(false)
+  })
+})

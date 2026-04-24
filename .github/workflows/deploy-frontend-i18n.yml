@@ -1,0 +1,111 @@
+name: Deploy Frontend (i18n preview)
+
+# Builds and deploys the i18n preview to https://i18n.iusd-pay.xyz.
+# Runs on the same self-hosted runner as prod, but writes to a separate
+# directory and PM2 process so prod stays untouched.
+
+permissions:
+  contents: read
+
+on:
+  push:
+    branches: [feat/i18n]
+    paths:
+      - 'packages/app/**'
+      - 'packages/shared/**'
+      - 'packages/sdk/**'
+      - 'scripts/deploy/**'
+      - 'scripts/patch-ik.sh'
+      - 'package.json'
+      - 'pnpm-lock.yaml'
+      - 'pnpm-workspace.yaml'
+      - '.github/workflows/deploy-frontend-i18n.yml'
+  workflow_dispatch:
+    inputs:
+      target_environment:
+        description: 'GitHub Environment for build vars (mainnet|sandbox|testnet)'
+        required: false
+        default: mainnet
+        type: string
+
+jobs:
+  build-and-deploy:
+    name: Build + Deploy i18n preview
+    runs-on: [self-hosted, ipay]
+    environment: ${{ inputs.target_environment || vars.CI_ENVIRONMENT || 'mainnet' }}
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v3
+        with: { version: 10 }
+      - uses: actions/setup-node@v4
+        with: { node-version: '22', cache: 'pnpm' }
+
+      - name: Install
+        run: pnpm install --no-frozen-lockfile
+
+      - name: Build frontend
+        env:
+          NODE_OPTIONS: --max-old-space-size=6144
+          CHAIN_ID: ${{ vars.CHAIN_ID }}
+          RPC_URL: ${{ vars.RPC_URL }}
+          REST_URL: ${{ vars.REST_URL }}
+          API_URL: ${{ vars.API_URL }}
+          APP_URL: ${{ vars.APP_URL }}
+          IPAY_POOL_ADDRESS: ${{ vars.IPAY_POOL_ADDRESS }}
+          GIFT_POOL_ADDRESS: ${{ vars.GIFT_POOL_ADDRESS }}
+          MODULE_ADDRESS: ${{ vars.MODULE_ADDRESS }}
+          IUSD_FA: ${{ vars.IUSD_FA }}
+          IUSD_DECIMALS: ${{ vars.IUSD_DECIMALS }}
+          EXPLORER_BASE: ${{ vars.EXPLORER_BASE }}
+          EXPLORER_TX_BASE: ${{ vars.EXPLORER_TX_BASE }}
+          INS_CONTRACT: ${{ vars.INS_CONTRACT }}
+          INIT_DENOM: ${{ vars.INIT_DENOM }}
+          WC_PROJECT_ID: ${{ vars.WC_PROJECT_ID }}
+          WC_CHAIN_ID: ${{ vars.WC_CHAIN_ID }}
+        run: bash scripts/deploy/build-frontend.sh
+
+      - name: Verify build output
+        run: |
+          if [ ! -f "packages/app/dist/index.html" ]; then
+            echo "❌ Build did not produce packages/app/dist/index.html"
+            exit 1
+          fi
+          echo "✅ Build artifact ready"
+
+      - name: Deploy to i18n runtime
+        env:
+          DEPLOY_BASE_DIR: ${{ vars.DEPLOY_BASE_DIR || '/home/jack_initia_xyz/ipay-deploy' }}
+          I18N_RUNTIME_DIR: ${{ vars.I18N_RUNTIME_DIR || format('{0}/frontend-i18n', vars.DEPLOY_BASE_DIR || '/home/jack_initia_xyz/ipay-deploy') }}
+          I18N_PORT: '3204'
+          I18N_PM2_NAME: ipay-app-i18n
+        run: |
+          TIMESTAMP=$(date +%s)
+          mkdir -p "$I18N_RUNTIME_DIR"
+          bash scripts/deploy/deploy-frontend-i18n.sh \
+            "packages/app/dist" \
+            "$I18N_RUNTIME_DIR" \
+            "$TIMESTAMP" \
+            "$I18N_PORT" \
+            "$I18N_PM2_NAME"
+
+      - name: Health check
+        run: |
+          for i in 1 2 3 4 5; do
+            if curl -fsS "http://127.0.0.1:3204" -o /dev/null; then
+              echo "✅ i18n preview responding on :3204"
+              exit 0
+            fi
+            echo "Waiting for :3204 (attempt $i/5)…"
+            sleep 2
+          done
+          echo "❌ i18n preview not responding on :3204"
+          pm2 logs ipay-app-i18n --nostream --lines 50 || true
+          exit 1
+
+      - name: Summary
+        run: |
+          echo "## i18n preview deployment" >> $GITHUB_STEP_SUMMARY
+          echo "- URL: https://i18n.iusd-pay.xyz" >> $GITHUB_STEP_SUMMARY
+          echo "- PM2 process: \`ipay-app-i18n\` on port 3204" >> $GITHUB_STEP_SUMMARY
+          echo "- Branch: \`${{ github.ref_name }}\` @ \`${{ github.sha }}\`" >> $GITHUB_STEP_SUMMARY

@@ -1,0 +1,224 @@
+name: Deploy DB
+
+permissions:
+  contents: read
+  actions: read
+
+on:
+  workflow_dispatch:
+    inputs:
+      target_environment:
+        description: "GitHub Environment"
+        required: false
+        default: mainnet
+        type: string
+      action:
+        description: "Database action"
+        required: true
+        default: migrate
+        type: choice
+        options:
+          - migrate
+          - backup
+          - reset
+      artifact_run_id:
+        description: "Optional CI run id for api-runtime-bundle"
+        required: false
+        default: ""
+        type: string
+  workflow_call:
+    inputs:
+      target_environment:
+        required: false
+        type: string
+        default: mainnet
+      action:
+        required: false
+        type: string
+        default: migrate
+      artifact_run_id:
+        required: false
+        type: string
+        default: ""
+
+jobs:
+  deploy-db:
+    name: Database - ${{ inputs.action || 'migrate' }}
+    runs-on: [self-hosted, ipay]
+    environment: ${{ inputs.target_environment || 'mainnet' }}
+
+    steps:
+      - name: Validate database config
+        env:
+          DEPLOY_HOST: ${{ vars.DEPLOY_HOST }}
+          DEPLOY_USER: ${{ vars.DEPLOY_USER }}
+          DEPLOY_BASE_DIR: ${{ vars.DEPLOY_BASE_DIR }}
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          DB_ENGINE: ${{ vars.DB_ENGINE }}
+          DEPLOY_SSH_PRIVATE_KEY: ${{ secrets.DEPLOY_SSH_PRIVATE_KEY }}
+        run: |
+          [ -n "$DEPLOY_HOST" ] || { echo "❌ Missing vars.DEPLOY_HOST"; exit 1; }
+          [ -n "$DEPLOY_USER" ] || { echo "❌ Missing vars.DEPLOY_USER"; exit 1; }
+          [ -n "$DEPLOY_BASE_DIR" ] || { echo "❌ Missing vars.DEPLOY_BASE_DIR"; exit 1; }
+          [ -n "$DATABASE_URL" ] || { echo "❌ Missing secrets.DATABASE_URL"; exit 1; }
+          [ "$DB_ENGINE" = "postgres" ] || { echo "❌ This workflow expects vars.DB_ENGINE=postgres"; exit 1; }
+          [ -n "$DEPLOY_SSH_PRIVATE_KEY" ] || { echo "❌ Missing secrets.DEPLOY_SSH_PRIVATE_KEY"; exit 1; }
+          echo "✅ PostgreSQL over SSH config present"
+
+      - name: Resolve artifact run id
+        id: artifact_run
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const explicit = `${{ inputs.artifact_run_id || '' }}`.trim();
+            if (explicit) {
+              core.setOutput('run_id', explicit);
+              return;
+            }
+            const { owner, repo } = context.repo;
+            const res = await github.rest.actions.listWorkflowRuns({
+              owner,
+              repo,
+              workflow_id: 'ci.yml',
+              branch: 'main',
+              status: 'completed',
+              per_page: 20,
+            });
+            const run = res.data.workflow_runs.find((item) => item.conclusion === 'success');
+            if (!run) {
+              core.setFailed('No successful CI run found for ci.yml on main');
+              return;
+            }
+            core.setOutput('run_id', String(run.id));
+
+      - name: Download runtime artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: api-runtime-bundle
+          path: .deploy-db
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          run-id: ${{ steps.artifact_run.outputs.run_id }}
+
+      - name: Prepare SSH key
+        run: |
+          mkdir -p ~/.ssh
+          chmod 700 ~/.ssh
+          printf '%s\n' '${{ secrets.DEPLOY_SSH_PRIVATE_KEY }}' > ~/.ssh/ipay_deploy
+          chmod 600 ~/.ssh/ipay_deploy
+          ssh-keyscan -H "${{ vars.DEPLOY_HOST }}" >> ~/.ssh/known_hosts
+
+      - name: Sync DB bundle to server
+        env:
+          DEPLOY_HOST: ${{ vars.DEPLOY_HOST }}
+          DEPLOY_USER: ${{ vars.DEPLOY_USER }}
+          DEPLOY_BASE_DIR: ${{ vars.DEPLOY_BASE_DIR }}
+        run: |
+          ssh -i ~/.ssh/ipay_deploy "$DEPLOY_USER@$DEPLOY_HOST" "mkdir -p '$DEPLOY_BASE_DIR/repo'"
+          rsync -az --delete --exclude='.env*' -e "ssh -i ~/.ssh/ipay_deploy" .deploy-db/ "$DEPLOY_USER@$DEPLOY_HOST:$DEPLOY_BASE_DIR/repo/"
+
+      - name: Write DB env on server
+        env:
+          DEPLOY_HOST: ${{ vars.DEPLOY_HOST }}
+          DEPLOY_USER: ${{ vars.DEPLOY_USER }}
+          DEPLOY_BASE_DIR: ${{ vars.DEPLOY_BASE_DIR }}
+          DB_ENGINE: ${{ vars.DB_ENGINE }}
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+        run: |
+          ssh -i ~/.ssh/ipay_deploy "$DEPLOY_USER@$DEPLOY_HOST" \
+            "printf '%s\n' \
+            'DB_ENGINE=$DB_ENGINE' \
+            'PG_SSL_MODE=no-verify' \
+            'DATABASE_URL=$DATABASE_URL' \
+            > '$DEPLOY_BASE_DIR/repo/packages/api/.env'"
+
+      - name: Install PostgreSQL client and runtime deps
+        env:
+          DEPLOY_HOST: ${{ vars.DEPLOY_HOST }}
+          DEPLOY_USER: ${{ vars.DEPLOY_USER }}
+          DEPLOY_BASE_DIR: ${{ vars.DEPLOY_BASE_DIR }}
+        run: |
+          ssh -i ~/.ssh/ipay_deploy "$DEPLOY_USER@$DEPLOY_HOST" "
+            if ! command -v psql >/dev/null 2>&1; then
+              if command -v apt-get >/dev/null 2>&1; then
+                sudo apt-get update && sudo apt-get install -y postgresql-client
+              elif command -v dnf >/dev/null 2>&1; then
+                sudo dnf install -y postgresql15
+              elif command -v yum >/dev/null 2>&1; then
+                sudo yum install -y postgresql15
+              else
+                echo '❌ No supported package manager found for installing psql'
+                exit 1
+              fi
+            fi
+            psql --version
+            cd '$DEPLOY_BASE_DIR/repo' && pnpm install --prod --no-frozen-lockfile
+          "
+
+      - name: Backup PostgreSQL
+        if: inputs.action == 'backup' || inputs.action == 'reset'
+        env:
+          DEPLOY_HOST: ${{ vars.DEPLOY_HOST }}
+          DEPLOY_USER: ${{ vars.DEPLOY_USER }}
+          DEPLOY_BASE_DIR: ${{ vars.DEPLOY_BASE_DIR }}
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+        run: |
+          ssh -i ~/.ssh/ipay_deploy "$DEPLOY_USER@$DEPLOY_HOST" "
+            set -e
+            TS=\$(date +%Y%m%d_%H%M%S)
+            BACKUP_DIR='$DEPLOY_BASE_DIR/db-backups'
+            mkdir -p \"\$BACKUP_DIR\"
+            pg_dump '$DATABASE_URL' -Fc -f \"\$BACKUP_DIR/ipay_\${TS}.dump\"
+            echo \"✅ Backup created: \$BACKUP_DIR/ipay_\${TS}.dump\"
+          "
+
+      - name: Reset PostgreSQL schema
+        if: inputs.action == 'reset'
+        env:
+          DEPLOY_HOST: ${{ vars.DEPLOY_HOST }}
+          DEPLOY_USER: ${{ vars.DEPLOY_USER }}
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+        run: |
+          ssh -i ~/.ssh/ipay_deploy "$DEPLOY_USER@$DEPLOY_HOST" "
+            set -e
+            psql '$DATABASE_URL' -v ON_ERROR_STOP=1 -c \"DROP SCHEMA IF EXISTS public CASCADE;\"
+            psql '$DATABASE_URL' -v ON_ERROR_STOP=1 -c \"CREATE SCHEMA public;\"
+            psql '$DATABASE_URL' -v ON_ERROR_STOP=1 -c \"GRANT ALL ON SCHEMA public TO CURRENT_USER;\"
+            psql '$DATABASE_URL' -v ON_ERROR_STOP=1 -c \"GRANT ALL ON SCHEMA public TO public;\"
+            echo '✅ PostgreSQL schema reset complete'
+          "
+
+      - name: Migrate / initialize schema
+        if: inputs.action == 'migrate' || inputs.action == 'reset'
+        env:
+          DEPLOY_HOST: ${{ vars.DEPLOY_HOST }}
+          DEPLOY_USER: ${{ vars.DEPLOY_USER }}
+          DEPLOY_BASE_DIR: ${{ vars.DEPLOY_BASE_DIR }}
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+        run: |
+          ssh -i ~/.ssh/ipay_deploy "$DEPLOY_USER@$DEPLOY_HOST" "
+            set -e
+            cd '$DEPLOY_BASE_DIR/repo'
+            timeout 60 bash -c 'DB_ENGINE=postgres PG_SSL_MODE=no-verify DATABASE_URL=\"$DATABASE_URL\" node packages/api/dist/db/initPostgres.js' || { echo '❌ Schema init timed out or failed'; exit 1; }
+            echo '✅ PostgreSQL schema initialized'
+          "
+
+      - name: Verify schema
+        if: inputs.action == 'migrate' || inputs.action == 'reset'
+        env:
+          DEPLOY_HOST: ${{ vars.DEPLOY_HOST }}
+          DEPLOY_USER: ${{ vars.DEPLOY_USER }}
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+        run: |
+          ssh -i ~/.ssh/ipay_deploy "$DEPLOY_USER@$DEPLOY_HOST" "
+            set -e
+            psql '$DATABASE_URL' -v ON_ERROR_STOP=1 -c \"SELECT current_database(), current_user;\"
+            psql '$DATABASE_URL' -v ON_ERROR_STOP=1 -c \"SELECT COUNT(*) AS table_count FROM information_schema.tables WHERE table_schema='public';\"
+          "
+
+      - name: Summary
+        run: |
+          echo "## DB deployment" >> "$GITHUB_STEP_SUMMARY"
+          echo "- Engine: postgres" >> "$GITHUB_STEP_SUMMARY"
+          echo "- Action: ${{ inputs.action || 'migrate' }}" >> "$GITHUB_STEP_SUMMARY"
+          echo "- Environment: ${{ inputs.target_environment || 'mainnet' }}" >> "$GITHUB_STEP_SUMMARY"
+          echo "- Executed from runner via SSH on host \`${{ vars.DEPLOY_HOST }}\`" >> "$GITHUB_STEP_SUMMARY"

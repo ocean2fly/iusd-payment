@@ -1,0 +1,1250 @@
+{
+  "popup": {
+    "title": "Izinkan pop-up di Pengaturan browser",
+    "subtitle": "Browser Anda memblokir pop-up masuk. Aktifkan di Pengaturan seperti yang ditunjukkan.",
+    "next": "Berikutnya",
+    "back": "Kembali",
+    "gotIt": "Mengerti",
+    "continue": "Lanjut",
+    "enableTitle": "Aktifkan pop-up",
+    "signinNeedsPopup": "Masuk memerlukan jendela pop-up.",
+    "gotoMobile": "Buka Pengaturan → browser → izinkan pop-up.",
+    "gotoDesktop": "Buka Pengaturan → izinkan pop-up.",
+    "checkDetail": "Lihat detail"
+  },
+  "auth": {
+    "connect": "Hubungkan",
+    "signIn": "Masuk →",
+    "connecting": "Menghubungkan…",
+    "signing": "Menandatangani…",
+    "checkWallet": "Periksa dompet Anda untuk permintaan tanda tangan…",
+    "settingUp": "Menyiapkan akun Anda…",
+    "coinbaseConnected": "Coinbase Wallet terhubung!",
+    "walletConnected": "Dompet terhubung!",
+    "wcTimeout": "WalletConnect waktunya habis",
+    "restoring": "Memulihkan sesi dompet…",
+    "openingWindow": "Membuka jendela masuk…",
+    "tapConnect": "Ketuk Hubungkan — dompet akan meminta tanda tangan",
+    "signInWith": "Masuk dengan",
+    "or": "atau",
+    "tryAgain": "Coba lagi",
+    "reconnect": "Hubungkan ulang dompet",
+    "popupBlockedMobile": "Pop-up diblokir. Buka Pengaturan → browser → izinkan pop-up.",
+    "popupBlockedDesktop": "Pop-up diblokir. Buka Pengaturan → izinkan pop-up.",
+    "signFailed": "Gagal masuk. Silakan coba lagi.",
+    "connectionLost": "Koneksi dompet terputus. Silakan hubungkan ulang.",
+    "signatureCancelled": "Tanda tangan dibatalkan.",
+    "networkBlocked": "API tidak terjangkau atau diblokir (jaringan/CORS). Coba di tab baru."
+  },
+  "landing": {
+    "tagline": "Pembayaran stablecoin di Initia",
+    "installAsApp": "Pasang sebagai aplikasi",
+    "forceRefresh": "Muat ulang paksa",
+    "refresh": "Muat ulang",
+    "forceRefreshTip": "Muat ulang paksa untuk menyelesaikan masalah halaman lokal"
+  },
+  "wallets": {
+    "openInWalletBrowser": "Buka di browser aplikasi dompet",
+    "pasteUrl": "Tempel URL iUSD pay (sudah disalin) dan pergi",
+    "done": "Selesai",
+    "other": "Lainnya"
+  },
+  "common": {
+    "language": "Bahasa",
+    "cancel": "Batal",
+    "save": "Simpan",
+    "saving": "Menyimpan…",
+    "saved": "Tersimpan",
+    "close": "Tutup",
+    "change": "Ubah",
+    "loading": "Memuat…",
+    "view": "Lihat",
+    "optional": "Opsional",
+    "on": "NYALA",
+    "off": "MATI"
+  },
+  "welcome": {
+    "tagline": "Pembayaran stablecoin di Initia",
+    "whatYouGet": "Yang Anda dapatkan",
+    "features": {
+      "transfer": "Transfer dan minta bebas dengan Scan",
+      "merchants": "Integrasi mulus dengan pedagang",
+      "gifts": "Kirim hadiah ke teman dan grup"
+    },
+    "agreePrefix": "Saya setuju dengan",
+    "and": "dan",
+    "tos": "Syarat Layanan",
+    "privacy": "Kebijakan Privasi",
+    "experimentalNote": ". Aplikasi ini eksperimental di mainnet.",
+    "getStarted": "Mulai →"
+  },
+  "dashboard": {
+    "tapEditNickname": "Ketuk untuk edit julukan",
+    "minGasHint": "Min 1 INIT atau 1 USDC untuk gas",
+    "refreshBalances": "Muat ulang saldo",
+    "actions": {
+      "transfer": "Kirim",
+      "request": "Minta",
+      "gift": "Hadiah",
+      "inbox": "Kotak masuk",
+      "contacts": "Kontak",
+      "scan": "Pindai",
+      "history": "Riwayat",
+      "settings": "Pengaturan"
+    }
+  },
+  "settings": {
+    "title": "Pengaturan",
+    "account": {
+      "title": "Akun",
+      "nickname": "Julukan",
+      "setNickname": "Tetapkan julukan",
+      "bio": "Bio / Slogan",
+      "bioPlaceholder": "mis. Pindai saya dan beri hadiah, saya balas dengan ciuman 💋",
+      "id": "ID",
+      "wallet": "Dompet",
+      "copied": "Disalin",
+      "ecosystem": "Ekosistem",
+      "autoClaim": "Klaim otomatis"
+    },
+    "appearance": {
+      "title": "Tampilan",
+      "auto": "Auto",
+      "light": "Terang",
+      "dark": "Gelap"
+    },
+    "sound": {
+      "title": "Suara",
+      "desc": "Klik UI, balik kartu, perayaan",
+      "muted": "Bisu",
+      "on": "Aktif",
+      "styles": "Gaya Suara",
+      "customize": "Sesuaikan",
+      "tapPreview": "Ketuk gaya untuk mendengar dan memilih",
+      "unmutePreview": "Aktifkan suara di atas untuk mendengar",
+      "cat": {
+        "click": "Klik",
+        "cardFlip": "Balik Kartu",
+        "gift": "Hadiah",
+        "transaction": "Transaksi",
+        "menu": "Menu"
+      }
+    },
+    "receive": {
+      "title": "Alamat Penerimaan",
+      "privacyProtection": "Perlindungan Privasi",
+      "defaultWallet": "Dompet saya (default)",
+      "change": "Ubah",
+      "modalTitle": "Lindungi alamat penerimaan Anda",
+      "modalDesc": "Anda dapat menetapkan dompet terpisah untuk menerima pembayaran iUSD, menjaga dompet yang terhubung tetap privat. Pembayaran akan diarahkan otomatis ke alamat ini.",
+      "complianceHeader": "⚠ Pemberitahuan Kepatuhan",
+      "complianceDesc": "Semua transaksi tetap dapat diaudit di bawah kebijakan AML yang berlaku terlepas dari rute. Tanda tangan ini menegaskan pemahaman dan persetujuan Anda.",
+      "placeholder": "0x… atau init1… (kosong = pakai dompet sendiri)",
+      "signSave": "Tanda tangani & Simpan",
+      "signing": "Menandatangani…"
+    },
+    "about": {
+      "title": "Tentang",
+      "iusdPay": "iUSD Pay",
+      "network": "Jaringan",
+      "contract": "Kontrak",
+      "tos": "Syarat Layanan",
+      "privacy": "Kebijakan Privasi",
+      "forceRefresh": "Muat ulang paksa",
+      "community": "Komunitas"
+    },
+    "danger": {
+      "title": "Zona Bahaya",
+      "disconnect": "Putuskan Dompet",
+      "disconnectTitle": "Putuskan dompet?",
+      "disconnectDesc": "Anda bisa menyambung kembali kapan saja.",
+      "delete": "Hapus Akun",
+      "deleteConfirmWarn": "⚠ Ini menghapus akun Anda permanen",
+      "confirmDelete": "Konfirmasi Hapus",
+      "deleting": "Menghapus…"
+    }
+  },
+  "transfer": {
+    "title": "Kirim",
+    "paymentCodeTitle": "Kode Pembayaran",
+    "showToRecipient": "Tunjukkan QR ini ke penerima.",
+    "scanAndEnter": "Pindai dan masukkan jumlah untuk meminta pembayaran.",
+    "waitingForRequest": "Menunggu permintaan…",
+    "sessionExpired": "Sesi berakhir",
+    "generateNew": "Buat Kode Baru",
+    "generating": "Membuat kode pembayaran…",
+    "recipientPlaceholder": "Julukan atau ID Akun",
+    "contacts": "Kontak",
+    "checking": "Memeriksa…",
+    "noContactsMatch": "Tidak ada kontak yang cocok dengan \"{{query}}\"",
+    "noContactsYet": "Belum ada kontak",
+    "noContactsHint": "Kirim pembayaran atau buka Riwayat untuk mulai",
+    "amountLabel": "Jumlah",
+    "amountMin": "Min 0.1 iUSD",
+    "amountMax": "Maks 1.000 iUSD per transaksi",
+    "memoLabel": "Memo",
+    "memoPlaceholder": "Memo opsional",
+    "fee": "Biaya: {{amount}} iUSD",
+    "feeCap": "(batas)",
+    "total": "Total: {{amount}} iUSD",
+    "autoSaveContact": "Orang ini akan otomatis disimpan ke Kontak",
+    "paymentQR": "QR Pembayaran",
+    "building": "Membangun…",
+    "confirming": "Konfirmasi…",
+    "send": "Kirim",
+    "sendAmount": "Kirim {{amount}} iUSD"
+  },
+  "request": {
+    "title": "Minta",
+    "modePersonal": "Saya",
+    "modeBusiness": "Bisnis",
+    "tabNew": "Baru",
+    "tabInvoices": "Tagihan",
+    "empty": "Belum ada permintaan",
+    "createFirst": "Buat permintaan pertama →",
+    "share": "Bagikan ↗",
+    "amountLabel": "Jumlah",
+    "noteLabel": "Memo",
+    "notePlaceholder": "Deskripsi (opsional)",
+    "taxNoLabel": "No. Pajak",
+    "dueLabel": "Jatuh Tempo",
+    "invLabel": "Tagihan #",
+    "payerLabel": "Pembayar",
+    "payerPlaceholder": "Nama (opsional)",
+    "status": {
+      "draft": "Draf",
+      "sent": "Menunggu Pembayaran",
+      "paying": "Menunggu Konfirmasi",
+      "paid": "Lunas",
+      "overdue": "Terlambat",
+      "refunded": "Dikembalikan",
+      "cancelled": "Dibatalkan"
+    }
+  },
+  "scan": {
+    "title": "Pindai QR",
+    "lookingUp": "Mencari akun…",
+    "paymentDetails": "DETAIL PEMBAYARAN",
+    "scannedContent": "ISI PINDAI",
+    "manualInput": "INPUT MANUAL / GAMBAR",
+    "pasteHint": "Tempel URL atau ID Akun…",
+    "startCamera": "Mulai Kamera",
+    "stopCamera": "Stop Kamera",
+    "flipCamera": "Balik Kamera",
+    "retry": "Coba lagi",
+    "scannedCheck": "Terpindai! Periksa desktop Anda.",
+    "scanAgain": "↩ Pindai lagi",
+    "tagInvoice": "🧾 Faktur / Permintaan",
+    "tagIdentity": "👤 Identitas",
+    "tagScanned": "🔗 Dipindai",
+    "due": "Jatuh tempo",
+    "payRequest": "💸 Bayar permintaan ini",
+    "payAmount": "💸 Bayar {{amount}} iUSD",
+    "contactSaved": "✅ Kontak tersimpan!",
+    "reAddContactsTag": "👤 Tambah lagi",
+    "addContactsTag": "👤 Tambah ke kontak",
+    "transfer": "Transfer",
+    "gift": "Hadiah",
+    "contactAlreadyAdded": "Kontak sudah ditambahkan",
+    "reAddToContacts": "Tambah lagi",
+    "addToContacts": "Tambah ke kontak",
+    "visit": "Kunjungi →",
+    "clickToStart": "Klik untuk memulai kamera",
+    "pointPhone": "Memindai — arahkan ponsel ke QR",
+    "disconnect": "✕ Putuskan",
+    "go": "Pergi",
+    "dropToScan": "Jatuhkan untuk pindai QR",
+    "chooseFromGallery": "Pilih dari galeri",
+    "galleryHint": "Pilih atau seret gambar QR",
+    "cameraN": "Kamera {{n}}",
+    "err": {
+      "accessBlocked": "🔒 Akses kamera diblokir",
+      "permissionDesc": "Izin kamera ditolak. Anda perlu mengaktifkannya kembali di pengaturan browser.",
+      "chromeEdge": "🌐 Chrome / Edge",
+      "pasteInstructions": "Salin URL ini → tempel di tab baru → atur Kamera ke",
+      "allow": "Izinkan",
+      "copy": "Salin",
+      "firefoxHint": "Klik ikon 🔒 kamera di bilah alamat → Izinkan",
+      "safariHint": "Pengaturan → Safari → Kamera → Izinkan",
+      "androidHint": "Ketuk ⋮ → Pengaturan situs → Kamera → Izinkan",
+      "retryAfter": "↺ Coba lagi setelah mengaktifkan",
+      "noCamera": "📷 Kamera tidak ditemukan",
+      "noCameraDesc": "Tidak ada kamera terdeteksi di perangkat ini.",
+      "useManualFull": "Gunakan input manual di bawah atau hubungkan pemindai eksternal.",
+      "inUse": "📷 Kamera sedang digunakan",
+      "inUseDesc": "Kamera sedang digunakan oleh aplikasi lain. Tutup aplikasi lain dan coba lagi.",
+      "flashNotSupported": "Lampu flash tidak didukung di perangkat ini",
+      "noQrInImage": "Tidak ada QR code ditemukan di gambar",
+      "couldNotCreateRelay": "Tidak dapat membuat sesi relay",
+      "cameraError": "Error kamera: {{msg}}",
+      "cameraDenied": "Kamera ditolak: {{msg}}",
+      "connectionFailed": "Koneksi gagal. Coba mode Basic.",
+      "desktopNotReady": "Desktop belum siap. Muat ulang halaman desktop.",
+      "failedToSend": "Gagal mengirim",
+      "invalidSession": "Sesi tidak valid"
+    },
+    "relay": {
+      "gettingCamera": "Mendapatkan kamera…",
+      "connectingDesktop": "Menghubungkan ke desktop…",
+      "liveCameraHeader": "📹 Kamera langsung",
+      "qrScannerHeader": "📤 Pemindai QR",
+      "liveBadge": "● LANGSUNG",
+      "streamingDesktop": "📹 Streaming ke desktop — mereka melihat apa yang Anda lihat",
+      "pointAtDesktop": "📤 Arahkan ke QR code di desktop",
+      "statusPrefix": "🔄 {{status}}"
+    }
+  },
+  "gift": {
+    "title": "Hadiah",
+    "message": "Pesan",
+    "quickPicks": "Pilihan cepat",
+    "next": "Lanjut →",
+    "recipient": "Penerima",
+    "shares": "Bagian",
+    "total": "Total",
+    "ready": "Hadiah siap!",
+    "shareAccessHint": "Bagikan tautan akses ke teman Anda.",
+    "rightClickSave": "Klik kanan gambar untuk simpan · Tautan disalin",
+    "dismiss": "Tutup",
+    "viewDetails": "Lihat detail hadiah →",
+    "scanToOpen": "Pindai untuk buka",
+    "noReplies": "Belum ada balasan",
+    "noViews": "Belum ada tampilan",
+    "loadingHistory": "Memuat riwayat…",
+    "giftList": "Daftar hadiah",
+    "historyTab": "Riwayat",
+    "newest": "Terbaru",
+    "oldest": "Terlama",
+    "newestFirst": "Terbaru dulu",
+    "oldestFirst": "Terlama dulu",
+    "noDescription": "Tidak ada deskripsi.",
+    "allCollections": "Semua koleksi",
+    "collection": {
+      "flowers": "Bunga",
+      "drinks": "Minuman",
+      "food": "Makanan",
+      "treats": "Manisan",
+      "tech": "Teknologi",
+      "luxury": "Mewah",
+      "office": "Kantor",
+      "art": "Seni",
+      "books": "Buku",
+      "games": "Permainan",
+      "wellness": "Kesehatan",
+      "travel": "Perjalanan",
+      "fashion": "Fashion",
+      "kids": "Anak",
+      "pets": "Hewan",
+      "sports": "Olahraga",
+      "other": "Lainnya",
+      "painting": "Lukisan",
+      "music_box": "Kotak musik",
+      "instrument": "Instrumen",
+      "sculpture": "Patung",
+      "textile": "Tekstil",
+      "ceramic": "Keramik",
+      "watch": "Jam",
+      "brooch": "Bros",
+      "armor": "Baju zirah",
+      "furniture": "Furnitur",
+      "jewelry": "Perhiasan"
+    },
+    "flexible": "Fleksibel",
+    "source": "Sumber ↗",
+    "progressPanel": {
+      "progress": "Kemajuan",
+      "inProgress": "Sedang berlangsung",
+      "completed": "Selesai",
+      "expired": "Kedaluwarsa",
+      "expiredRefunded": "Kedaluwarsa · dikembalikan",
+      "expiresIn": "Kedaluwarsa dalam {{label}}",
+      "endsIn": "Berakhir dalam {{label}}",
+      "claimedOf": "dari {{total}} diklaim",
+      "claimsHeader": "Klaim · {{count}}",
+      "replied": "💌 DIBALAS",
+      "claimedChip": "✓ DIKLAIM",
+      "anon": "Anon",
+      "allClaimed": "Semua bagian telah diklaim.",
+      "refunded_one": "{{count}} bagian tidak diklaim dikembalikan",
+      "refunded_other": "{{count}} bagian tidak diklaim dikembalikan",
+      "refundedNote": "Dana untuk bagian yang tidak diklaim dikembalikan ke saldo Anda secara otomatis saat hadiah kedaluwarsa.",
+      "noClaimsYet": "Belum ada yang klaim. Bagikan tautan untuk memberi tahu mereka.",
+      "daysHours": "{{days}}hr {{hours}}j",
+      "hoursMinutes": "{{hours}}j {{minutes}}m",
+      "minutesOnly": "{{minutes}}m"
+    },
+    "back": "← Kembali",
+    "stepChoose": "Pilih hadiah",
+    "stepWrite": "Tulis pesan",
+    "stepSendTo": "Kirim ke",
+    "feePercent": "biaya {{percent}}%",
+    "feeLabel": "Biaya ({{percent}}%)",
+    "more": "lainnya",
+    "browseAll": "Lihat semua hadiah",
+    "writePlaceholder": "Tulis pesan...",
+    "amountIusd": "Jumlah (iUSD)",
+    "amountRangePlaceholder": "0.1 ~ 1000 iUSD",
+    "tapToEdit": "✎ ketuk untuk edit",
+    "amountInRange": "0,10 – 1.000 iUSD",
+    "anyoneGroup": "Siapa saja (grup)",
+    "anyoneCanClaim": "Siapa saja bisa klaim",
+    "enterContact": "Masukkan kontak atau ID",
+    "invalidRecipient": "Nama pengguna atau ID tidak valid",
+    "usernameInactive": "Nama pengguna nonaktif",
+    "recipientRequired": "Penerima diperlukan",
+    "sendFailed": "Kirim gagal",
+    "missingTxParams": "Parameter transaksi hilang",
+    "giftTxFailed": "Transaksi hadiah gagal",
+    "contactsHeader": "Kontak",
+    "fromHistory": "✨ Dari Riwayat",
+    "splitEqual": "Sama",
+    "splitRandom": "Acak",
+    "balanceLine": "Saldo: {{amount}} iUSD",
+    "wrapping": "Membungkus...",
+    "insufficientBalance": "Saldo tidak cukup",
+    "wrapGift": "🎁 Bungkus hadiah",
+    "giftNumber": "Hadiah #{{id}}",
+    "fromName": "Dari {{name}}",
+    "anonymous": "Anonim",
+    "mysteryAwaits": "Hadiah misteri menunggu",
+    "claimedAgo": "Diklaim {{time}}",
+    "claimed": "Diklaim",
+    "view": "Lihat →",
+    "openCta": "🎁 Buka →",
+    "expiredChip": "Kedaluwarsa",
+    "claimedOfShort": "{{claimed}}/{{total}} diklaim",
+    "enjoyEmoji": "Nikmati! 🎁",
+    "forYouEmoji": "Dengan cinta ❤️",
+    "happyBirthday": "Selamat ulang tahun! 🎂",
+    "thankYouEmoji": "Terima kasih! 🙏",
+    "cheersEmoji": "Bersulang! 🥂",
+    "justBecause": "Begitu saja 🌟",
+    "deserveIt": "Kamu layak ✨",
+    "haveFun": "Bersenang-senanglah! 🎉",
+    "treatYourself": "Manjakan dirimu 💫",
+    "yourGiftReady": "Hadiahmu sudah siap!",
+    "toLabel": "Kepada",
+    "feeLabelShort": "Biaya",
+    "notificationSent": "Notifikasi dikirim ke {{name}}",
+    "fromSender": "DARI {{name}}",
+    "giftWaitingShort": "Sebuah hadiah menantimu",
+    "scanToOpenShort": "Pindai untuk buka",
+    "iusdPay": "iUSD Pay",
+    "copied": "Disalin!",
+    "copyLink": "Salin tautan",
+    "saveImage": "Simpan gambar",
+    "shareLink": "Bagikan tautan",
+    "backToQr": "← Kembali ke QR",
+    "closeShareLater": "Kamu bisa tutup dan bagikan nanti dari Riwayat Hadiah.",
+    "preparing": "Menyiapkan...",
+    "imageSaved": "Gambar disimpan!",
+    "qrBtn": "QR",
+    "backBtn": "Kembali",
+    "hasAGiftForYou": "punya hadiah untukmu",
+    "sharesCount_one": "{{count}} bagian",
+    "sharesCount_other": "{{count}} bagian",
+    "openedCount": "{{count}}/{{total}} dibuka",
+    "viewsCount": "{{count}} dilihat",
+    "someone": "Seseorang",
+    "shareTitle": "Hadiah {{name}}",
+    "featured": "⭐ Unggulan"
+  },
+  "giftClaim": {
+    "loading": "Memuat hadiah…",
+    "goHome": "Beranda",
+    "youReceived": "Anda menerima",
+    "from": "Dari",
+    "reply": "Balas →",
+    "alreadyClaimed": "Sudah Diambil",
+    "scanProfile": "Pindai profil",
+    "thankPresets": {
+      "thankBoss": "Makasih bos!",
+      "appreciated": "Sangat dihargai!",
+      "soKind": "Baik sekali!",
+      "madeMyDay": "Membuat hariku!",
+      "youreBest": "Kamu yang terbaik!",
+      "whatSurprise": "Kejutan banget!",
+      "loveYou": "Sayang kamu!",
+      "sweetest": "Kamu paling manis!",
+      "heartFull": "Hatiku penuh!",
+      "bestBirthday": "Ulang tahun terbaik!",
+      "bestGift": "Hadiah terbaik!",
+      "cheersYou": "Salud untukmu!"
+    },
+    "iGotLabel": "★ SAYA DAPAT",
+    "onlyOneShare": "Hanya 1 bagian",
+    "sharesCountLabel_one": "{{count}} bagian",
+    "sharesCountLabel_other": "{{count}} bagian",
+    "fromSenderOverlay": "dari {{name}}",
+    "detailsBtn": "detail",
+    "claimedLabel": "diklaim",
+    "viewedLabel": "dilihat",
+    "chasedLabel": "didapat",
+    "moreBtn": "[lainnya]",
+    "membersHeader": "ANGGOTA · {{count}}",
+    "lettersHeader": "SURAT · {{count}}",
+    "replyBtn": "Balas",
+    "replyToPlaceholder": "Balas {{name}}…",
+    "loveWhatYouSee": "★ Suka yang Anda lihat?",
+    "giftThemLine": "Beri tip ke {{name}}",
+    "scanOrOpenProfile": "Buka profil saya →",
+    "scanOr": "Pindai atau",
+    "postToPlaceholder": "Posting ke {{name}}…",
+    "postBtn": "Posting",
+    "sentWithLoveBy": "Dikirim dengan cinta oleh",
+    "giftReceivedChip": "Hadiah diterima!",
+    "anonName": "mereka",
+    "errInvalidLink": "Tautan hadiah tidak valid",
+    "errNotFound": "Hadiah tidak ditemukan",
+    "errClaimFailed": "Klaim gagal",
+    "errFailed": "Gagal",
+    "errSignInFirst": "Masuk terlebih dahulu",
+    "errInvalidClaimLink": "Tautan klaim tidak valid",
+    "signInToSave": "Masuk untuk simpan kontak",
+    "failedSaveContact": "Gagal simpan kontak",
+    "shareTitle": "Hadiah dari {{name}}"
+  },
+  "history": {
+    "title": "Riwayat",
+    "paymentJourney": "Perjalanan Pembayaran",
+    "expires": "Kedaluwarsa",
+    "noInvoices": "Belum ada tagihan",
+    "noActivity": "Belum ada aktivitas",
+    "tabs": {
+      "all": "Semua",
+      "sent": "Kirim",
+      "received": "Terima",
+      "gift": "Hadiah",
+      "invoices": "Tagihan",
+      "stats": "Statis."
+    },
+    "payStatus": {
+      "sent": {
+        "pending": "Menunggu Konf.",
+        "confirmed": "Terkonfirmasi",
+        "revoked": "Dibatalkan",
+        "refunded": "Dikembalikan",
+        "expired": "Kedaluwarsa",
+        "unknown": "Tidak Dikenal"
+      },
+      "received": {
+        "claimable": "Dapat Diambil",
+        "received": "Diterima",
+        "cancelled": "Dibatalkan",
+        "refunded": "Dikembalikan",
+        "expired": "Kedaluwarsa",
+        "unknown": "Tidak Dikenal"
+      }
+    },
+    "paymentId": "ID PEMBAYARAN",
+    "sortNewest": "Urutkan: Terbaru dulu (klik untuk terlama)",
+    "sortOldest": "Urutkan: Terlama dulu (klik untuk terbaru)",
+    "loadMore": "Muat lebih",
+    "invoicePayment": "Pembayaran Tagihan",
+    "sentTo": "Dikirim ke",
+    "receivedFrom": "Diterima dari",
+    "cancelInvoice": "Batalkan Tagihan",
+    "cancelInvoiceConfirm": "Batalkan tagihan ini?",
+    "cancelFailed": "Pembatalan gagal: {{msg}}",
+    "timeline": {
+      "created": "Dibuat",
+      "fee": "biaya {{amount}}",
+      "pendingClaim": "Menunggu klaim",
+      "awaitingRecipient": "Menunggu penerima",
+      "autoClaimed": "Akan diklaim otomatis",
+      "confirmed": "Terkonfirmasi",
+      "received": "Diterima",
+      "expiresOn": "Kedaluwarsa {{date}}",
+      "revoked": "Dibatalkan",
+      "returnedToSender": "Dana dikembalikan ke pengirim",
+      "claimed": "Diklaim",
+      "refunded": "Dikembalikan",
+      "returnedToClaimer": "Dikembalikan ke pengklaim",
+      "expired": "Kedaluwarsa"
+    },
+    "stats": {
+      "accounting": "PEMBUKUAN",
+      "giftsSent": "Hadiah Dikirim",
+      "giftsReceived": "Hadiah Diterima",
+      "paid": "Dibayar",
+      "received": "Diterima",
+      "moneyIn": "Masuk",
+      "moneyOut": "Keluar",
+      "net": "Bersih",
+      "pending": "Tertunda",
+      "thisMonth": "BULAN INI"
+    },
+    "noGiftHistory": "Belum ada riwayat hadiah",
+    "receivedSection": "Diterima · {{count}}",
+    "sentSection": "Dikirim · {{count}}",
+    "loadingMore": "Memuat…",
+    "loadMoreReceived": "Muat lebih diterima",
+    "loadMoreSent": "Muat lebih dikirim",
+    "refreshTitle": "Segarkan",
+    "exportCsv": "Ekspor riwayat CSV",
+    "revokeFailed": "Pembatalan gagal",
+    "refundFailed": "Pengembalian gagal: {{msg}}",
+    "refundConfirm": "Kembalikan pembayaran ini ke pengirim?",
+    "anyone": "Siapa saja",
+    "direct": "langsung",
+    "fromLabel": "DARI",
+    "toLabel": "KE",
+    "copySaveTitle": "Salin shortId + simpan ke kontak",
+    "due": "Jatuh tempo",
+    "noSentTransactions": "Tidak ada transaksi terkirim",
+    "noReceivedTransactions": "Tidak ada transaksi diterima",
+    "noTransactionsYet": "Belum ada transaksi — statistik akan terisi saat Anda bertransaksi.",
+    "detailSent": "↑ Terkirim",
+    "detailReceived": "↓ Diterima",
+    "copyBtn": "📋 Salin",
+    "receiptPdf": "↓ Kwitansi PDF",
+    "invoicePdf": "↓ Faktur PDF",
+    "revokeBtn": "↩ Batalkan",
+    "refundBtn": "↩ Kembalikan"
+  },
+  "inbox": {
+    "title": "Kotak Masuk",
+    "claimed": "Diambil!",
+    "feePaid": "Biaya dibayar",
+    "anonymous": "Anonim",
+    "claimTo": "Ambil ke:",
+    "autoClaimFuture": "Ambil otomatis pembayaran mendatang",
+    "autoExpires": "Kedaluwarsa otomatis jika belum diambil",
+    "loadingReplies": "Memuat balasan…",
+    "filter": {
+      "all": "Semua",
+      "payment": "Bayar",
+      "gift": "Hadiah",
+      "reply": "Balas"
+    },
+    "replyCount_one": "{{count}} balasan",
+    "replyCount_other": "{{count}} balasan",
+    "refresh": "↻ Segarkan",
+    "historyLabel": "RIWAYAT · {{count}}",
+    "statusReceived": "Diterima",
+    "statusCancelled": "Dibatalkan",
+    "statusRefunded": "Dikembalikan",
+    "statusExpired": "Kedaluwarsa",
+    "statusDone": "Selesai",
+    "businessInvoice": "🏪 Faktur Bisnis",
+    "personalPayment": "👤 Pembayaran Pribadi",
+    "fromId": "Dari {{id}}",
+    "fromLabel": "Dari",
+    "receipt": "Kuitansi",
+    "invoice": "Faktur",
+    "refund": "↩ Kembalikan",
+    "refundConfirm": "Kembalikan pembayaran ini ke pengirim?",
+    "refundFailed": "Pengembalian gagal: {{msg}}",
+    "noRepliesHint": "Belum ada balasan. Terima kasih hadiah akan muncul di sini.",
+    "alreadyClaimedRefreshed": "Pembayaran ini sudah diklaim otomatis. Kotak masuk disegarkan.",
+    "alreadyClaimedRemoved": "Sudah diklaim — dihapus dari kotak masuk.",
+    "newGiftsSection": "HADIAH BARU · {{count}}",
+    "giftsSection": "HADIAH · {{count}}",
+    "sentSection": "DIKIRIM · {{count}}",
+    "loadMoreReplies": "Muat balasan lain"
+  },
+  "contacts": {
+    "noResults": "Tidak ada hasil",
+    "autoSavedHint": "Orang yang Anda kirim akan disimpan otomatis",
+    "importFromHistory": "✨ Impor dari Riwayat",
+    "importFromHistoryTitle": "Impor pihak lawan dari riwayat pembayaran + hadiah terbaru",
+    "searchPlaceholder": "Cari berdasarkan nama atau ID..."
+  },
+  "merchant": {
+    "title": "Profil Bisnis",
+    "preview": "Pratinjau",
+    "businessName": "Nama Bisnis *",
+    "businessNamePlaceholder": "cth. Jack's Coffee",
+    "companyLogo": "Logo Perusahaan (opsional)",
+    "uploadJpgPng": "Unggah JPG / PNG",
+    "remove": "Hapus",
+    "logoHint": "JPG/PNG · maks 500 KB · disimpan aman",
+    "maxFileSize": "Ukuran file maks 500 KB",
+    "clearConfirm": "Hapus profil bisnis?",
+    "brandColor": "Warna Merek",
+    "tagline": "Slogan / Deskripsi (opsional)",
+    "taglinePlaceholder": "cth. Kopi terbaik di kota",
+    "businessFont": "Font Nama Bisnis",
+    "contactInfo": "Informasi Kontak",
+    "email": "EMAIL",
+    "phone": "TELEPON",
+    "website": "WEBSITE",
+    "emailPlaceholder": "contact@example.com",
+    "phonePlaceholder": "+62 812 3456 7890",
+    "websitePlaceholder": "https://example.com",
+    "addressLegal": "Alamat & Hukum",
+    "address": "ALAMAT",
+    "addressPlaceholder": "Jl. Sudirman 123, Jakarta",
+    "taxIdLabel": "NPWP / NIB",
+    "taxIdPlaceholder": "cth. ID-12-3456789",
+    "invoiceNumbering": "Penomoran Faktur",
+    "prefix": "AWALAN",
+    "startingNo": "NO. AWAL",
+    "startingFrom": "Mulai dari: {{sample}} (auto-incremen di server)",
+    "save": "Simpan Profil Bisnis",
+    "saved": "✓ Tersimpan!",
+    "clear": "Hapus",
+    "storedLocally1": "Profil ini disimpan secara lokal di perangkat Anda.",
+    "storedLocally2": "Beralih ke mode Bisnis di halaman Permintaan untuk menggunakannya.",
+    "setUpProfile": "🏢 Atur profil bisnis Anda →"
+  },
+  "invoices": {
+    "title": "Pembukuan",
+    "protocolFees": "Biaya Protokol yang Dibayar"
+  },
+  "payRequest": {
+    "title": "Permintaan Pembayaran",
+    "requestSent": "Permintaan terkirim!",
+    "error": "Kesalahan"
+  },
+  "receipt": {
+    "paymentSent": "Pembayaran terkirim.",
+    "home": "Beranda",
+    "viewInvoice": "Lihat Tagihan",
+    "loading": "Memuat tanda terima…"
+  },
+  "install": {
+    "addToHome": "Tambah ke Layar Utama",
+    "tapShare": "Ketuk Bagikan",
+    "tapMenu": "Ketuk menu",
+    "installTitle": "Pasang iUSD Pay",
+    "install": "Pasang"
+  },
+  "deposit": {
+    "balance": "Saldo",
+    "youReceive": "Anda akan terima",
+    "rate": "Kurs",
+    "estTime": "Perkiraan waktu",
+    "depositTitle": "Setor {{label}}",
+    "withdrawTitle": "Tarik {{label}}",
+    "from": "Dari",
+    "to": "Ke",
+    "selectFrom": "Pilih aset untuk disetor",
+    "selectTo": "Pilih tujuan",
+    "loadingAssets": "Memuat...",
+    "noAssets": "Tidak ada aset dengan saldo",
+    "noDestinations": "Tidak ada chain tujuan",
+    "onChain": "di {{chain}}",
+    "current": "saat ini",
+    "max": "MAKS",
+    "gasFee": "Biaya gas",
+    "estimatedByWallet": "Diperkirakan oleh dompet",
+    "relayFee": "Biaya relay",
+    "route": "Rute",
+    "fetchingRoute": "Mengambil rute...",
+    "insufficient": "Saldo tidak cukup — Anda punya {{balance}} {{symbol}}",
+    "preparingTx": "Menyiapkan transaksi...",
+    "confirmInWallet": "Konfirmasi di dompet Anda",
+    "tryAgain": "Coba lagi",
+    "submitted": "Transaksi dikirim",
+    "done": "Selesai",
+    "txCancelled": "Transaksi dibatalkan",
+    "noEvmWallet": "Dompet EVM tidak ditemukan. Instal MetaMask.",
+    "unsupportedTx": "Tipe transaksi tidak didukung"
+  },
+  "promoBanner": {
+    "coffee": {
+      "title": "Belikan teman kopi",
+      "subtitle": "Kirim hadiah kopi hangat"
+    },
+    "rose": {
+      "title": "Kirim mawar",
+      "subtitle": "Untuk seseorang yang istimewa"
+    },
+    "boss": {
+      "title": "Jadi bos, tawarkan benefit",
+      "subtitle": "Tunjukkan kedermawanan"
+    }
+  },
+  "register": {
+    "title": "Buat akun",
+    "chooseNickname": "Pilih julukan untuk alamat pembayaran Anda",
+    "nicknamePlaceholder": "mis. alice · 小明 · 🦊",
+    "nicknameHint": "Bahasa apa saja · 1–12 karakter · 🎲 acak",
+    "randomNickname": "Julukan acak",
+    "creating": "Membuat…",
+    "submit": "Buat akun →"
+  },
+  "registered": {
+    "openWallet": "Buka dompet →",
+    "wow": "WOW! Kamu punya kartu",
+    "wowCard": "Pembayaran iUSD keren!",
+    "tapCard": "KETUK KARTU",
+    "shareText": "Kirim iUSD — pindai QR kartuku! 🎁"
+  },
+  "toast": {
+    "thatsYou": "Itu Anda!",
+    "copied": "Disalin {{value}}",
+    "addedToContacts": "{{name}} ditambahkan ke kontak",
+    "linkCopied": "Tautan disalin ke clipboard",
+    "paymentNotLinked": "Pembayaran belum ditautkan — coba lagi beberapa detik",
+    "claimFailed": "Klaim gagal",
+    "claimQueued": "Klaim dalam antrean",
+    "networkError": "Kesalahan jaringan: {{msg}}",
+    "noNewContactsInHistory": "Tidak ada kontak baru di riwayat",
+    "importedFromHistory_one": "Mengimpor {{count}} kontak dari riwayat",
+    "importedFromHistory_other": "Mengimpor {{count}} kontak dari riwayat",
+    "noNewImport": "Tidak ada kontak baru untuk diimpor",
+    "importFailed": "Impor gagal: {{msg}}"
+  },
+  "nav": {
+    "dashboard": "Dasbor",
+    "home": "Beranda",
+    "more": "Lainnya"
+  },
+  "payLink": {
+    "resolving": "Memproses tautan pembayaran…",
+    "invoiceDetails": "DETAIL TAGIHAN",
+    "status": "Status",
+    "invoiceId": "ID Tagihan",
+    "recipient": "Penerima",
+    "dueDate": "Jatuh Tempo",
+    "paymentProof": "BUKTI PEMBAYARAN",
+    "invalidLink": "Tautan Tidak Valid",
+    "claimed": "Diambil",
+    "paymentComplete": "Pembayaran Selesai",
+    "receivedByName": "{{name}} menerima {{amount}} iUSD",
+    "paymentSent": "Pembayaran Terkirim",
+    "processingAuto": "{{amount}} iUSD · diproses otomatis",
+    "claimWithinMinutes": "Klaim biasanya selesai dalam 1–2 menit",
+    "goToDashboard": "Ke Dasbor"
+  },
+  "verify": {
+    "title": "Verifikasi Pembayaran",
+    "verifying": "Memverifikasi pembayaran…",
+    "noPid": "Tidak ada ID pembayaran.",
+    "notFound": "Pembayaran tidak ditemukan",
+    "error": "Kesalahan: {{msg}}",
+    "verification": "Verifikasi",
+    "to": "KE",
+    "platformFee": "Biaya Platform",
+    "txHash": "Transaction Hash",
+    "goHomepage": "Ke Beranda"
+  },
+  "profile": {
+    "defaultSlogan": "Kamu bikin hariku ✨",
+    "copyFullId": "Salin ID lengkap",
+    "contactAlreadyAdded": "Sudah ada di kontak",
+    "addToContacts": "Tambah ke kontak"
+  },
+  "invoiceView": {
+    "title": "TAGIHAN",
+    "billFrom": "Dari",
+    "billTo": "Kepada",
+    "issueDate": "Tanggal Terbit",
+    "dueDate": "Jatuh Tempo",
+    "invoiceAmount": "Jumlah Tagihan",
+    "recipientGets": "Penerima mendapat",
+    "payLink": "Tautan Pembayaran",
+    "taxId": "NPWP: {{id}}",
+    "noteLabel": "Catatan: {{note}}",
+    "platformFeeLabel": "Biaya Platform (0,5%{{cap}})",
+    "platformFeeCapped": ", batas",
+    "paidStatus": "✓ Dibayar pada {{date}}",
+    "noToken": "Tanpa token",
+    "failedToLoad": "Gagal memuat",
+    "notFound": "Faktur tidak ditemukan.",
+    "unavailable": "Faktur tidak tersedia.",
+    "saveAsImage": "Simpan sebagai gambar",
+    "printPdf": "Cetak / Simpan PDF",
+    "openInSafariChrome": "Buka di Safari atau Chrome untuk simpan sebagai PDF",
+    "close": "Tutup"
+  },
+  "notFound": {
+    "title": "Halaman tidak ditemukan",
+    "desc": "Halaman yang Anda cari tidak ada atau telah dipindahkan."
+  },
+  "installGuide": {
+    "alreadyInstalled": "Sudah terpasang!",
+    "usingStandalone": "Anda menggunakan iUSD Pay sebagai aplikasi mandiri.",
+    "installApp": "Pasang Aplikasi",
+    "androidHint": "Buka halaman ini di Chrome dan ketuk menu (⋮) → \"Tambah ke Layar Utama\"",
+    "desktopHint": "Di Chrome, klik ikon install (⊕) di bilah alamat, atau Menu → \"Pasang aplikasi\"",
+    "skip": "Lewati dulu",
+    "ios": {
+      "step1": "Ketuk tombol Bagikan di bawah Safari",
+      "step2": "Gulir dan ketuk \"Tambah ke Layar Utama\"",
+      "step3": "Ketuk \"Tambah\" untuk konfirmasi"
+    }
+  },
+  "giftBox": {
+    "1": {
+      "name": "Kotak musik",
+      "description": "Liontin berbentuk perisai dari emas dan enamel. Satu sisi menampilkan adegan peternakan otomaton dengan kincir air; sisi lain mawar di atas latar merah. Kedua sisi dibingkai mutiara separuh, contoh istimewa seni dekoratif abad ke-18."
+    },
+    "2": {
+      "name": "FLY Kopi",
+      "description": "Nikmati Fly Coffee dengan diskon 50%. Di kafe atau dibawa pulang, rasakan aroma setiap cangkir dengan harga terbaik."
+    },
+    "3": {
+      "name": "Jam pengulang",
+      "description": "Jam pengulang buatan Francis Perigal, pembuat jam terkemuka Inggris (aktif 1741–67). Casing emas sebagian berenamel; dial enamel putih dengan angka hitam dan jarum perak bertatah berlian; mekanisme berlapis emas. Puncak seni jam abad ke-18."
+    },
+    "4": {
+      "name": "Gitar",
+      "description": "Gitar yang punggungnya, sisi, leher, dan kepalanya dilapisi pola chevron dari cangkang kura-kura, kayu eboni, dan gading, dengan lengkungan berbingkai, belah ketupat, dan pinggiran geometris. Paduan kayu dan seni inlay yang memperlihatkan keahlian luar biasa pembuatnya."
+    },
+    "5": {
+      "name": "Kotak musik",
+      "description": "Kotak musik Swiss sekitar 1820 berbentuk mandolin. Dibuat dari berbagai bahan secara teliti, memadukan seni kotak musik Eropa awal abad ke-19 dengan estetika mandolin sebagai alat musik."
+    },
+    "6": {
+      "name": "Gitar",
+      "description": "Gitar mewah karya Giacomo (Jacob) Ertel, akhir abad ke-17. Cemara, eboni, kayu buah, tulang, gading, mutiara, dan perkamen. Karya ini memadukan hasrat dekoratif pengrajin Jerman dengan tradisi pembuatan gitar Italia."
+    },
+    "7": {
+      "name": "Pagi Musim Dingin di Desa",
+      "description": "Litograf yang diwarnai tangan dari studio Currier & Ives, 1873. Pemandangan pedesaan bersalju: kereta luncur ditarik dua kuda membawa pasangan dan empat kaleng susu besar; jauh di belakang terlihat peternakan. Contoh klasik seni rakyat Amerika abad ke-19."
+    },
+    "8": {
+      "name": "Beri Aku Kebebasan atau Kematian!",
+      "description": "Litograf yang diwarnai tangan Currier & Ives, 1876, \"Beri aku kebebasan atau beri aku kematian!\". Menggambarkan Patrick Henry menyampaikan pidato terkenalnya tentang hak-hak koloni di Majelis Virginia di Richmond, Maret 1775."
+    },
+    "9": {
+      "name": "Kotak musik",
+      "description": "Kotak musik Swiss persegi panjang dari emas dan enamel, sekitar 1820. Pinggiran berenamel biru dan kuning; tutupnya berisi miniatur enamel klasik yang dikelilingi mutiara separuh. Paduan sempurna antara seni kotak musik dan pembuatan perhiasan."
+    },
+    "10": {
+      "name": "Kotak jam",
+      "description": "Casing jam buatan George Harrison, sekitar 1770. Emas sebagian berenamel; casing luarnya bertatah berlian yang berkilauan, bukti keahlian tinggi para pembuat jam dan perhiasan Inggris abad ke-18."
+    },
+    "11": {
+      "name": "Division Viol",
+      "description": "Division viol Richard Meares, sekitar 1680. Cemara, eboni, maple. Viol, instrumen gesek yang paling dihormati pada akhir masa Renaissance, secara bertahap digantikan oleh biola pada abad ke-17; saksi penting sejarah musik."
+    },
+    "12": {
+      "name": "Naga",
+      "description": "Naga perunggu awal abad ke-17 karya Giacomo Laurenziani. Saat diperoleh, dikatalogkan sebagai griffin; sejak tahun 1950-an, James Parker dengan tepat mengidentifikasinya kembali sebagai naga; contoh luar biasa patung Barok."
+    },
+    "13": {
+      "name": "Mawar dan bunga lili",
+      "description": "Henri Fantin-Latour, 1888, cat minyak di atas kanvas. Karya yang terawetkan dengan baik ini menunjukkan penguasaan pigmen yang mahir dari sang pelukis: ia tidak hanya menggunakan kuas, tetapi juga ujung gagangnya untuk membentuk mawar dan lili dengan cahaya dan tekstur halus."
+    },
+    "14": {
+      "name": "Jam",
+      "description": "Jam F. L. Meybom, sekitar 1670–75. Casing dari emas, baja biru, kristal batu, dan perak berlapis emas sebagian dengan berlian; dial dengan enamel lukis dan basse-taille pada emas; mekanisme kuningan berlapis emas dan baja sebagian biru."
+    },
+    "15": {
+      "name": "Bros capung",
+      "description": "Bros capung gaya Art Nouveau karya Edgar Bense, sekitar 1890. Emas, berlian, dan enamel. Sayap halusnya dalam teknik plique-à-jour memahkotai capung yang dipahat dengan detail, mencerminkan mode dan seni perhiasan Art Nouveau serta estetika naturalistik."
+    },
+    "16": {
+      "name": "Gelang lengan",
+      "description": "Gelang lengan India (bazuband), abad ke-19. Emas anyaman bertatah ruby dan satu berlian potongan rose. Contoh serupa terdapat dalam tradisi perhiasan aristokrat India, pewaris estetika istana Mughal."
+    },
+    "17": {
+      "name": "Set Baju Zirah George Clifford",
+      "description": "Set zirah yang dibuat oleh Jacob Halder pada 1586 di Gudang Senjata Kerajaan Greenwich untuk George Clifford. Baja, emas, kulit, dan tekstil. Clifford (1558–1605) diangkat sebagai Juara Ratu pada 1590 dan dianugerahi Pangkat Garter di tahun yang sama."
+    },
+    "18": {
+      "name": "Bros berbentuk kepala burung hantu",
+      "description": "Bros berbentuk kepala burung hantu karya Castellani, sekitar 1860. Emas dan batu akik. Karya ini dan kelompok yang dimilikinya (lihat 2014.713.1–.10) mencerminkan minat besar Eropa abad ke-19 terhadap gaya-gaya sejarah dan mewakili perhiasan kebangkitan arkeologis."
+    },
+    "19": {
+      "name": "Jam",
+      "description": "Jam Charles Bobinet, sekitar 1655–60. Casing akik dengan dudukan emas berenamel; dial enamel putih dengan jarum emas; mekanisme kuningan berlapis emas dan baja sebagian biru. Menyaksikan keahlian pembuatan jam Eropa pertengahan abad ke-17."
+    },
+    "20": {
+      "name": "Iris",
+      "description": "Vincent van Gogh, 1890, cat minyak di atas kanvas. Lukisan Irises yang terkenal. Salah satu karya paling ikonik pada fase akhir sang seniman; dengan warna yang kaya dan sapuan kuas yang hidup, ia memberi penghormatan mendalam pada keindahan alam."
+    },
+    "21": {
+      "name": "Mangkuk gula bertutup",
+      "description": "Mangkuk gula bertutup karya Giovacchino Belli, sekitar 1811–22. Perak berlapis emas. Tafsir gaya Empire Belli lebih santai dan intim dibandingkan interpretasi Prancis pada zamannya, melembutkan garis neoklasik yang tegas dengan sentuhan Italia yang khas."
+    },
+    "22": {
+      "name": "Teko air",
+      "description": "Kendi perak berlapis emas dan enamel, sekitar 1600. Badannya dihiasi arak-arakan sosok dan hewan yang menggambarkan Kemenangan Caesar saat kembali dari Mesir atau kemenangan Scipio Africanus setelah mengalahkan Hannibal; karya logam gemilang akhir Renaissance."
+    },
+    "23": {
+      "name": "Aktor Asao Gakujūrō I sebagai Mashiba Hisatsugu",
+      "description": "Cetakan kayu Shunkōsai Hokushū (Osaka), 1822. Nishiki-e di atas kertas dengan tinta dan warna, format ōban vertikal Jepang. Menggambarkan aktor kabuki Osaka Asao Gakujūrō I dalam peran Mashiba Hisatsugu dengan tatapan garang dan pose menantang yang sangat dramatis."
+    },
+    "24": {
+      "name": "Mahkota Andes",
+      "description": "\"Mahkota Andes\" — diadem sekitar 1660 dan lengkungan sekitar 1770. Kolombia, Popayán. Emas repoussé dan ukir bertatah zamrud. Salah satu karya emas terpenting masa kolonial Amerika Selatan, sintesis kreatif teknik Eropa dan pribumi."
+    }
+  },
+  "components": {
+    "nicknameEditor": {
+      "title": "Ubah nama panggilan",
+      "placeholder": "Nama panggilan Anda",
+      "randomNickname": "Nama acak",
+      "generating": "MEMBUAT...",
+      "firstChangeFee": "Biaya ubah pertama",
+      "changeFeeN": "Biaya ubah (perubahan #{{n}})",
+      "firstFeeNote": "Perubahan nama pertama dikenakan 0,10 iUSD. Perubahan selanjutnya dikenakan 10,00 iUSD per perubahan.",
+      "feeNote": "Setiap perubahan nama dikenakan 10,00 iUSD.",
+      "idStays": "ID akun Anda tetap sama",
+      "notUniqueAck": "Saya mengerti nama panggilan tidak unik. Akun lain bisa memakai nama yang sama.",
+      "signing": "Menandatangani...",
+      "payAndSave": "Bayar {{fee}} iUSD & simpan",
+      "errEmpty": "Nama panggilan tidak boleh kosong",
+      "errFee": "Tidak bisa menentukan biaya",
+      "errTxFailed": "Transaksi gagal",
+      "errNoHash": "Tidak ada hash transaksi yang dikembalikan",
+      "errCancelled": "Transaksi dibatalkan",
+      "errGeneric": "Gagal"
+    },
+    "mwc": {
+      "chooseMethod": "Pilih metode koneksi",
+      "checkWallet": "Periksa aplikasi dompet Anda",
+      "approveRequest": "Setujui permintaan koneksi di aplikasi dompet",
+      "returnAfterApprove": "⚠️ Kembali ke halaman ini setelah menyetujui",
+      "tryAgain": "Coba lagi",
+      "cancel": "Batal",
+      "openInWallet": "Buka di dompet",
+      "best": "TERBAIK",
+      "continueInBrowser": "Lanjutkan di browser {{name}}",
+      "signAndReturn": "Tanda tangan & kembali",
+      "approveAndReturn": "Setujui di aplikasi dan kembali ke sini",
+      "directConnection": "Koneksi langsung • Tanpa server relay",
+      "connectionFailed": "Koneksi gagal",
+      "state": {
+        "initializing": "Menginisialisasi...",
+        "generatingUri": "Menghubungkan...",
+        "waitingApproval": "Setujui di aplikasi dompet...",
+        "connected": "Terhubung!",
+        "failed": "Gagal"
+      }
+    },
+    "quickLogin": {
+      "signing": "Menandatangani...",
+      "verifying": "Memverifikasi...",
+      "processing": "Memproses...",
+      "signInTo": "Masuk untuk {{action}}",
+      "walletTapToSignIn": "Dompet terhubung. Ketuk untuk masuk.",
+      "almostThere": "Hampir selesai! Selesaikan pendaftaran untuk {{action}}.",
+      "redirecting": "Mengalihkan ke pendaftaran...",
+      "connectionFailed": "Koneksi gagal",
+      "tryAgain": "Coba lagi",
+      "connecting": "Menghubungkan...",
+      "connectTo": "Hubungkan untuk {{action}}",
+      "tapConnectHint": "Ketuk Hubungkan — dompet akan meminta tanda tangan",
+      "signInWith": "Masuk dengan",
+      "orWallet": "ATAU DOMPET",
+      "other": "Lainnya",
+      "openInWalletBrowser": "Buka tautan ini di browser dompet Anda",
+      "linkCopied": "Tautan disalin ke clipboard",
+      "dismiss": "Tutup"
+    },
+    "identityCardBack": {
+      "idLabel": "ID:",
+      "deposit": "Setor",
+      "withdraw": "Tarik",
+      "onlyOn": "Hanya di",
+      "gas": "Gas",
+      "gasOk": "Gas OK",
+      "lowGas": "Gas rendah"
+    },
+    "qrScan": {
+      "scanQR": "Pindai QR",
+      "cameraUnavailable": "Kamera tidak tersedia",
+      "turnFlashOff": "Matikan lampu kilat",
+      "turnFlashOn": "Nyalakan lampu kilat",
+      "cancel": "Batal"
+    },
+    "errorBoundary": {
+      "updating": "Memperbarui…",
+      "somethingWrong": "Ada yang salah",
+      "genericErr": "Kesalahan tak terduga mencegah halaman ini dimuat.",
+      "reload": "Muat ulang",
+      "resetReload": "Atur ulang & muat ulang"
+    },
+    "identityCard": {
+      "validFrom": "BERLAKU DARI",
+      "status": "STATUS",
+      "statusActive": "Aktif",
+      "statusFrozen": "Beku",
+      "statusDeactivated": "Dinonaktifkan",
+      "viewProfile": "Lihat kartu profil",
+      "scanAndGift": "Pindai dan Beri Hadiah ✨",
+      "share": "↗ Bagikan",
+      "shareText": "Saya punya kartu iUSD Pay! Pindai dan beri hadiah",
+      "copyLink": "Salin tautan",
+      "copied": "Disalin!"
+    }
+  },
+  "soundStyles": {
+    "click": {
+      "keyboard": {
+        "name": "Keyboard",
+        "desc": "Klik keyboard mekanik"
+      },
+      "pop": {
+        "name": "Pop Lembut",
+        "desc": "Gelembung pecah"
+      },
+      "tic": {
+        "name": "Tik",
+        "desc": "Tik tajam pendek"
+      },
+      "chime": {
+        "name": "Lonceng",
+        "desc": "Ding lembut"
+      },
+      "glass": {
+        "name": "Gelas",
+        "desc": "Denting gelas"
+      },
+      "coin": {
+        "name": "Koin",
+        "desc": "Denting logam"
+      },
+      "digital": {
+        "name": "Digital",
+        "desc": "Blip 8-bit"
+      },
+      "drip": {
+        "name": "Tetesan",
+        "desc": "Tetesan air"
+      },
+      "paper": {
+        "name": "Kertas",
+        "desc": "Ketukan kertas"
+      },
+      "piano": {
+        "name": "Piano",
+        "desc": "Nada piano lembut"
+      },
+      "silent": {
+        "name": "Hening",
+        "desc": "Tanpa bunyi klik"
+      }
+    },
+    "card": {
+      "breeze": {
+        "name": "Angin sepoi",
+        "desc": "Angin lembut lewat"
+      },
+      "dream_bells": {
+        "name": "Lonceng Mimpi",
+        "desc": "Kilauan lonceng kaca"
+      },
+      "page_turn": {
+        "name": "Buka halaman",
+        "desc": "Gemerisik kertas"
+      },
+      "whoosh": {
+        "name": "Whoosh",
+        "desc": "Swoosh cepat"
+      },
+      "soft_pop": {
+        "name": "Pop Lembut",
+        "desc": "Pop ganda lembut"
+      },
+      "silent": {
+        "name": "Hening",
+        "desc": "Tanpa bunyi balik"
+      }
+    },
+    "gift": {
+      "celebration": {
+        "name": "Perayaan",
+        "desc": "Akord naik C-E-G-C"
+      },
+      "sparkle": {
+        "name": "Kilau",
+        "desc": "Nada berkilau tinggi"
+      },
+      "fanfare": {
+        "name": "Fanfare",
+        "desc": "Ta-da kuningan"
+      },
+      "bell_cascade": {
+        "name": "Kaskade Lonceng",
+        "desc": "Lonceng menurun"
+      },
+      "soft_bell": {
+        "name": "Lonceng Lembut",
+        "desc": "Lonceng lembut tunggal"
+      },
+      "silent": {
+        "name": "Hening",
+        "desc": "Tanpa bunyi hadiah"
+      }
+    },
+    "txn": {
+      "whoosh_up": {
+        "name": "Whoosh Naik",
+        "desc": "Swoosh naik"
+      },
+      "coin_drop": {
+        "name": "Koin jatuh",
+        "desc": "Koin logam mendarat"
+      },
+      "pneumatic": {
+        "name": "Pneumatik",
+        "desc": "Tabung retro"
+      },
+      "confirm_chime": {
+        "name": "Lonceng Konfirmasi",
+        "desc": "Dua nada konfirmasi"
+      },
+      "paper_slide": {
+        "name": "Geser Kertas",
+        "desc": "Kertas meluncur"
+      },
+      "silent": {
+        "name": "Hening",
+        "desc": "Tanpa bunyi transaksi"
+      }
+    },
+    "menu": {
+      "slide": {
+        "name": "Geser",
+        "desc": "Panel meluncur masuk"
+      },
+      "soft_pop": {
+        "name": "Pop Lembut",
+        "desc": "Pembukaan lembut"
+      },
+      "swish": {
+        "name": "Swish",
+        "desc": "Swish udara"
+      },
+      "silent": {
+        "name": "Hening",
+        "desc": "Tanpa bunyi menu"
+      }
+    }
+  },
+  "time": {
+    "justNow": "baru saja",
+    "minutesAgo": "{{n}}m lalu",
+    "hoursAgo": "{{n}}j lalu",
+    "daysAgo": "{{n}}h lalu"
+  },
+  "receiptView": {
+    "back": "← Kembali",
+    "paymentReceipt": "Kwitansi Pembayaran",
+    "receipt": "Kwitansi",
+    "noPaymentId": "Tidak ada ID pembayaran",
+    "notFound": "Kwitansi tidak ditemukan.",
+    "failedToLoad": "Gagal memuat",
+    "fee": "Biaya: {{amount}} iUSD",
+    "date": "Tanggal",
+    "confirmedLabel": "Dikonfirmasi",
+    "verify": "Verifikasi",
+    "from": "Dari",
+    "to": "Ke",
+    "tx": "Tx: {{hash}}",
+    "id": "ID: {{id}}",
+    "statusPaid": "Dibayar",
+    "statusConfirmed": "Dikonfirmasi",
+    "statusPending": "Tertunda",
+    "statusRevoked": "Dibatalkan",
+    "statusRefunded": "Dikembalikan",
+    "statusExpired": "Kedaluwarsa",
+    "statusFailed": "Gagal",
+    "statusUnknown": "Tidak diketahui",
+    "saveAsImage": "Simpan sebagai gambar",
+    "printPdf": "Cetak / Simpan PDF",
+    "openInSafariChrome": "Buka di Safari atau Chrome untuk simpan sebagai PDF",
+    "errorPrefix": "Kesalahan: {{msg}}"
+  },
+  "update": {
+    "available": "Versi baru tersedia",
+    "reload": "Muat ulang"
+  }
+}

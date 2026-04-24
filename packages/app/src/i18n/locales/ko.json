@@ -1,0 +1,1250 @@
+{
+  "popup": {
+    "title": "브라우저 설정에서 팝업을 허용해 주세요",
+    "subtitle": "브라우저가 로그인 팝업을 차단하고 있습니다. 아래 그림과 같이 설정에서 활성화해 주세요.",
+    "next": "다음",
+    "back": "이전",
+    "gotIt": "확인",
+    "continue": "계속",
+    "enableTitle": "팝업 허용",
+    "signinNeedsPopup": "로그인하려면 팝업 창이 필요합니다.",
+    "gotoMobile": "「설정」→ 브라우저 → 팝업 허용으로 이동하세요.",
+    "gotoDesktop": "「설정」→ 팝업 허용으로 이동하세요.",
+    "checkDetail": "자세히 보기"
+  },
+  "auth": {
+    "connect": "연결",
+    "signIn": "로그인 →",
+    "connecting": "연결 중…",
+    "signing": "서명 중…",
+    "checkWallet": "지갑에서 서명 요청을 확인해 주세요…",
+    "settingUp": "계정을 설정하고 있습니다…",
+    "coinbaseConnected": "Coinbase Wallet에 연결되었습니다!",
+    "walletConnected": "지갑에 연결되었습니다!",
+    "wcTimeout": "WalletConnect 시간이 초과되었습니다",
+    "restoring": "지갑 세션을 복원하고 있습니다…",
+    "openingWindow": "로그인 창을 여는 중…",
+    "tapConnect": "「연결」을 탭하세요 — 지갑이 서명을 요청합니다",
+    "signInWith": "로그인 방식",
+    "or": "또는",
+    "tryAgain": "다시 시도",
+    "reconnect": "지갑 재연결",
+    "popupBlockedMobile": "팝업이 차단되었습니다.「설정」→ 브라우저 → 팝업 허용으로 이동하세요.",
+    "popupBlockedDesktop": "팝업이 차단되었습니다.「설정」→ 팝업 허용으로 이동하세요.",
+    "signFailed": "로그인에 실패했습니다. 다시 시도해 주세요.",
+    "connectionLost": "지갑 연결이 끊어졌습니다. 다시 연결해 주세요.",
+    "signatureCancelled": "서명이 취소되었습니다.",
+    "networkBlocked": "API에 접근할 수 없거나 차단되었습니다(네트워크/CORS). 새 탭에서 다시 시도해 주세요."
+  },
+  "landing": {
+    "tagline": "Initia 위의 스테이블코인 결제",
+    "installAsApp": "앱으로 설치",
+    "forceRefresh": "강제 새로고침",
+    "refresh": "새로고침",
+    "forceRefreshTip": "로컬 페이지 문제를 해결하기 위해 강제 새로고침"
+  },
+  "wallets": {
+    "openInWalletBrowser": "지갑 앱 브라우저에서 열기",
+    "pasteUrl": "iUSD pay URL(복사됨)을 붙여넣고 이동",
+    "done": "완료",
+    "other": "기타"
+  },
+  "common": {
+    "language": "언어",
+    "cancel": "취소",
+    "save": "저장",
+    "saving": "저장 중…",
+    "saved": "저장됨",
+    "close": "닫기",
+    "change": "변경",
+    "loading": "로딩 중…",
+    "view": "보기",
+    "optional": "선택",
+    "on": "켜기",
+    "off": "끄기"
+  },
+  "welcome": {
+    "tagline": "Initia 위의 스테이블코인 결제",
+    "whatYouGet": "이런 것을 제공합니다",
+    "features": {
+      "transfer": "스캔으로 자유로운 송금 및 요청",
+      "merchants": "가맹점과 원활한 연동",
+      "gifts": "친구와 그룹에게 선물 보내기"
+    },
+    "agreePrefix": "다음에 동의합니다",
+    "and": "및",
+    "tos": "서비스 약관",
+    "privacy": "개인정보 처리방침",
+    "experimentalNote": ". 본 앱은 메인넷에서의 실험 버전입니다.",
+    "getStarted": "시작하기 →"
+  },
+  "dashboard": {
+    "tapEditNickname": "탭하여 닉네임 편집",
+    "minGasHint": "가스로 최소 1 INIT 또는 1 USDC 필요",
+    "refreshBalances": "잔액 새로고침",
+    "actions": {
+      "transfer": "송금",
+      "request": "요청",
+      "gift": "선물",
+      "inbox": "받은함",
+      "contacts": "연락처",
+      "scan": "스캔",
+      "history": "기록",
+      "settings": "설정"
+    }
+  },
+  "settings": {
+    "title": "설정",
+    "account": {
+      "title": "계정",
+      "nickname": "닉네임",
+      "setNickname": "닉네임 설정",
+      "bio": "소개 / 슬로건",
+      "bioPlaceholder": "예: 스캔하고 선물 주세요, 키스로 답장할게요 💋",
+      "id": "ID",
+      "wallet": "지갑",
+      "copied": "복사됨",
+      "ecosystem": "생태계",
+      "autoClaim": "자동 수령"
+    },
+    "appearance": {
+      "title": "외관",
+      "auto": "자동",
+      "light": "라이트",
+      "dark": "다크"
+    },
+    "sound": {
+      "title": "사운드",
+      "desc": "UI 클릭, 카드 뒤집기, 축하",
+      "muted": "음소거",
+      "on": "켜짐",
+      "styles": "사운드 스타일",
+      "customize": "사용자화",
+      "tapPreview": "스타일을 탭해 미리 듣고 선택",
+      "unmutePreview": "미리 듣기 위해 위에서 음소거 해제",
+      "cat": {
+        "click": "클릭",
+        "cardFlip": "카드 뒤집기",
+        "gift": "선물",
+        "transaction": "거래",
+        "menu": "메뉴"
+      }
+    },
+    "receive": {
+      "title": "수신 주소",
+      "privacyProtection": "프라이버시 보호",
+      "defaultWallet": "내 지갑 (기본)",
+      "change": "변경",
+      "modalTitle": "수신 주소 보호",
+      "modalDesc": "iUSD 결제를 받을 별도의 지갑을 설정하여 연결된 지갑을 비공개로 유지할 수 있습니다. 결제는 이 주소로 자동 라우팅됩니다.",
+      "complianceHeader": "⚠ 규제 안내",
+      "complianceDesc": "주소 라우팅과 관계없이 모든 거래는 해당 AML 정책 아래 감사 가능합니다. 이 서명은 귀하의 이해와 동의를 확인합니다.",
+      "placeholder": "0x… 또는 init1… (비워두면 본인 지갑 사용)",
+      "signSave": "서명 및 저장",
+      "signing": "서명 중…"
+    },
+    "about": {
+      "title": "정보",
+      "iusdPay": "iUSD Pay",
+      "network": "네트워크",
+      "contract": "계약",
+      "tos": "서비스 약관",
+      "privacy": "개인정보 처리방침",
+      "forceRefresh": "강제 새로고침",
+      "community": "커뮤니티"
+    },
+    "danger": {
+      "title": "위험 구역",
+      "disconnect": "지갑 연결 해제",
+      "disconnectTitle": "지갑 연결 해제하시겠습니까?",
+      "disconnectDesc": "언제든 다시 연결할 수 있습니다.",
+      "delete": "계정 삭제",
+      "deleteConfirmWarn": "⚠ 이 작업은 계정을 영구적으로 삭제합니다",
+      "confirmDelete": "삭제 확인",
+      "deleting": "삭제 중…"
+    }
+  },
+  "transfer": {
+    "title": "송금",
+    "paymentCodeTitle": "결제 코드",
+    "showToRecipient": "이 QR을 수취인에게 보여주세요.",
+    "scanAndEnter": "스캔하고 금액을 입력해 결제를 요청하세요.",
+    "waitingForRequest": "요청 대기 중…",
+    "sessionExpired": "세션이 만료되었습니다",
+    "generateNew": "새 코드 생성",
+    "generating": "결제 코드 생성 중…",
+    "recipientPlaceholder": "닉네임 또는 계정 ID",
+    "contacts": "연락처",
+    "checking": "확인 중…",
+    "noContactsMatch": "'{{query}}'에 일치하는 연락처 없음",
+    "noContactsYet": "아직 연락처 없음",
+    "noContactsHint": "결제를 보내거나 기록에서 시작하세요",
+    "amountLabel": "금액",
+    "amountMin": "최소 0.1 iUSD",
+    "amountMax": "1건당 최대 1,000 iUSD",
+    "memoLabel": "메모",
+    "memoPlaceholder": "선택 메모",
+    "fee": "수수료: {{amount}} iUSD",
+    "feeCap": "(상한)",
+    "total": "합계: {{amount}} iUSD",
+    "autoSaveContact": "이 사람은 연락처에 자동 저장됩니다",
+    "paymentQR": "결제 QR",
+    "building": "빌드 중…",
+    "confirming": "확인…",
+    "send": "보내기",
+    "sendAmount": "{{amount}} iUSD 보내기"
+  },
+  "request": {
+    "title": "요청",
+    "modePersonal": "개인",
+    "modeBusiness": "비즈",
+    "tabNew": "새로 만들기",
+    "tabInvoices": "청구서",
+    "empty": "요청이 아직 없습니다",
+    "createFirst": "첫 요청 만들기 →",
+    "share": "공유 ↗",
+    "amountLabel": "금액",
+    "noteLabel": "메모",
+    "notePlaceholder": "설명(선택)",
+    "taxNoLabel": "세금 번호",
+    "dueLabel": "기한",
+    "invLabel": "청구서 #",
+    "payerLabel": "결제자",
+    "payerPlaceholder": "이름(선택)",
+    "status": {
+      "draft": "초안",
+      "sent": "결제 대기",
+      "paying": "확인 대기",
+      "paid": "결제 완료",
+      "overdue": "연체",
+      "refunded": "환불",
+      "cancelled": "취소"
+    }
+  },
+  "scan": {
+    "title": "QR 스캔",
+    "lookingUp": "계정을 찾는 중…",
+    "paymentDetails": "결제 세부",
+    "scannedContent": "스캔 내용",
+    "manualInput": "수동 입력 / 이미지",
+    "pasteHint": "URL 또는 계정 ID 붙여넣기…",
+    "startCamera": "카메라 시작",
+    "stopCamera": "카메라 중지",
+    "flipCamera": "카메라 전환",
+    "retry": "다시 시도",
+    "scannedCheck": "스캔 완료! 데스크톱을 확인하세요.",
+    "scanAgain": "↩ 다시 스캔",
+    "tagInvoice": "🧾 청구서 / 요청",
+    "tagIdentity": "👤 신원",
+    "tagScanned": "🔗 스캔됨",
+    "due": "기한",
+    "payRequest": "💸 이 요청 결제",
+    "payAmount": "💸 {{amount}} iUSD 결제",
+    "contactSaved": "✅ 연락처 저장됨!",
+    "reAddContactsTag": "👤 연락처에 다시 추가",
+    "addContactsTag": "👤 연락처에 추가",
+    "transfer": "송금",
+    "gift": "선물",
+    "contactAlreadyAdded": "이미 연락처에 추가됨",
+    "reAddToContacts": "연락처에 다시 추가",
+    "addToContacts": "연락처에 추가",
+    "visit": "방문 →",
+    "clickToStart": "클릭하여 카메라 시작",
+    "pointPhone": "스캔 중 — QR 코드에 휴대폰을 향해 주세요",
+    "disconnect": "✕ 연결 해제",
+    "go": "이동",
+    "dropToScan": "놓아서 QR 스캔",
+    "chooseFromGallery": "갤러리에서 선택",
+    "galleryHint": "QR 코드 이미지를 선택하거나 드래그",
+    "cameraN": "카메라 {{n}}",
+    "err": {
+      "accessBlocked": "🔒 카메라 접근 차단됨",
+      "permissionDesc": "카메라 권한이 거부되었습니다. 브라우저 설정에서 다시 허용해 주세요.",
+      "chromeEdge": "🌐 Chrome / Edge",
+      "pasteInstructions": "이 URL 복사 → 새 탭에 붙여넣기 → 카메라를",
+      "allow": "허용",
+      "copy": "복사",
+      "firefoxHint": "주소창의 카메라 🔒 아이콘 클릭 → 허용",
+      "safariHint": "설정 → Safari → 카메라 → 허용",
+      "androidHint": "⋮ 탭 → 사이트 설정 → 카메라 → 허용",
+      "retryAfter": "↺ 활성화 후 재시도",
+      "noCamera": "📷 카메라를 찾을 수 없음",
+      "noCameraDesc": "이 기기에서 카메라가 감지되지 않았습니다.",
+      "useManualFull": "아래 수동 입력을 사용하거나 외부 스캐너를 연결하세요.",
+      "inUse": "📷 카메라 사용 중",
+      "inUseDesc": "다른 앱이 카메라를 사용 중입니다. 다른 앱을 닫고 다시 시도하세요.",
+      "flashNotSupported": "이 기기는 플래시를 지원하지 않습니다",
+      "noQrInImage": "이미지에서 QR 코드를 찾을 수 없음",
+      "couldNotCreateRelay": "릴레이 세션을 만들 수 없습니다",
+      "cameraError": "카메라 오류: {{msg}}",
+      "cameraDenied": "카메라 거부됨: {{msg}}",
+      "connectionFailed": "연결 실패. 기본 모드를 시도하세요.",
+      "desktopNotReady": "데스크톱 준비되지 않음. 데스크톱 페이지를 다시 로드하세요.",
+      "failedToSend": "전송 실패",
+      "invalidSession": "유효하지 않은 세션"
+    },
+    "relay": {
+      "gettingCamera": "카메라 가져오는 중…",
+      "connectingDesktop": "데스크톱에 연결 중…",
+      "liveCameraHeader": "📹 실시간 카메라",
+      "qrScannerHeader": "📤 QR 스캐너",
+      "liveBadge": "● LIVE",
+      "streamingDesktop": "📹 데스크톱으로 스트리밍 중 — 같은 화면이 보입니다",
+      "pointAtDesktop": "📤 데스크톱의 QR 코드에 맞춰 주세요",
+      "statusPrefix": "🔄 {{status}}"
+    }
+  },
+  "gift": {
+    "title": "선물",
+    "message": "메시지",
+    "quickPicks": "빠른 선택",
+    "next": "다음 →",
+    "recipient": "수취인",
+    "shares": "수량",
+    "total": "합계",
+    "ready": "선물 준비 완료!",
+    "shareAccessHint": "친구에게 접근 링크를 공유하세요.",
+    "rightClickSave": "이미지 우클릭으로 저장 · 링크 복사됨",
+    "dismiss": "닫기",
+    "viewDetails": "선물 세부 보기 →",
+    "scanToOpen": "스캔하여 선물 열기",
+    "noReplies": "아직 답장 없음",
+    "noViews": "아직 조회 없음",
+    "loadingHistory": "기록 로드 중…",
+    "giftList": "선물 목록",
+    "historyTab": "기록",
+    "newest": "최신",
+    "oldest": "오래된",
+    "newestFirst": "최신순",
+    "oldestFirst": "오래된순",
+    "noDescription": "설명이 없습니다.",
+    "allCollections": "모든 컬렉션",
+    "collection": {
+      "flowers": "꽃",
+      "drinks": "음료",
+      "food": "음식",
+      "treats": "간식",
+      "tech": "테크",
+      "luxury": "럭셔리",
+      "office": "오피스",
+      "art": "아트",
+      "books": "책",
+      "games": "게임",
+      "wellness": "웰니스",
+      "travel": "여행",
+      "fashion": "패션",
+      "kids": "키즈",
+      "pets": "반려동물",
+      "sports": "스포츠",
+      "other": "기타",
+      "painting": "회화",
+      "music_box": "오르골",
+      "instrument": "악기",
+      "sculpture": "조각",
+      "textile": "직물",
+      "ceramic": "도자기",
+      "watch": "시계",
+      "brooch": "브로치",
+      "armor": "갑옷",
+      "furniture": "가구",
+      "jewelry": "보석"
+    },
+    "flexible": "자유",
+    "source": "출처 ↗",
+    "progressPanel": {
+      "progress": "진행상황",
+      "inProgress": "진행 중",
+      "completed": "완료",
+      "expired": "만료됨",
+      "expiredRefunded": "만료됨 · 환불",
+      "expiresIn": "{{label}} 후 만료",
+      "endsIn": "{{label}} 후 종료",
+      "claimedOf": "/ {{total}} 수령",
+      "claimsHeader": "수령 · {{count}}",
+      "replied": "💌 답장함",
+      "claimedChip": "✓ 수령",
+      "anon": "익명",
+      "allClaimed": "모든 몫이 수령되었습니다.",
+      "refunded_one": "미수령 {{count}}개 몫이 환불됨",
+      "refunded_other": "미수령 {{count}}개 몫이 환불됨",
+      "refundedNote": "선물 만료 시 미수령 몫의 금액이 자동으로 잔액에 환불되었습니다.",
+      "noClaimsYet": "아직 수령자가 없습니다. 링크를 공유하여 알리세요.",
+      "daysHours": "{{days}}일 {{hours}}시간",
+      "hoursMinutes": "{{hours}}시간 {{minutes}}분",
+      "minutesOnly": "{{minutes}}분"
+    },
+    "back": "← 뒤로",
+    "stepChoose": "선물 선택",
+    "stepWrite": "메시지 작성",
+    "stepSendTo": "받는 사람",
+    "feePercent": "수수료 {{percent}}%",
+    "feeLabel": "수수료 ({{percent}}%)",
+    "more": "더보기",
+    "browseAll": "모든 선물 보기",
+    "writePlaceholder": "메시지 작성...",
+    "amountIusd": "금액 (iUSD)",
+    "amountRangePlaceholder": "0.1 ~ 1000 iUSD",
+    "tapToEdit": "✎ 탭하여 편집",
+    "amountInRange": "0.10 – 1,000 iUSD",
+    "anyoneGroup": "누구나 (그룹)",
+    "anyoneCanClaim": "누구나 받을 수 있음",
+    "enterContact": "연락처 또는 ID 입력",
+    "invalidRecipient": "유효하지 않은 사용자명 또는 ID",
+    "usernameInactive": "사용자명 비활성",
+    "recipientRequired": "받는 사람 필요",
+    "sendFailed": "전송 실패",
+    "missingTxParams": "트랜잭션 파라미터 없음",
+    "giftTxFailed": "선물 트랜잭션 실패",
+    "contactsHeader": "연락처",
+    "fromHistory": "✨ 기록에서",
+    "splitEqual": "균등",
+    "splitRandom": "랜덤",
+    "balanceLine": "잔액: {{amount}} iUSD",
+    "wrapping": "포장 중...",
+    "insufficientBalance": "잔액 부족",
+    "wrapGift": "🎁 선물 포장",
+    "giftNumber": "선물 #{{id}}",
+    "fromName": "{{name}}(으)로부터",
+    "anonymous": "익명",
+    "mysteryAwaits": "미스터리 선물이 기다립니다",
+    "claimedAgo": "{{time}} 수령",
+    "claimed": "수령됨",
+    "view": "보기 →",
+    "openCta": "🎁 열기 →",
+    "expiredChip": "만료됨",
+    "claimedOfShort": "{{claimed}}/{{total}} 수령",
+    "enjoyEmoji": "즐기세요! 🎁",
+    "forYouEmoji": "사랑을 담아 ❤️",
+    "happyBirthday": "생일 축하해요! 🎂",
+    "thankYouEmoji": "고마워요! 🙏",
+    "cheersEmoji": "건배! 🥂",
+    "justBecause": "그냥 🌟",
+    "deserveIt": "당신은 자격이 있어요 ✨",
+    "haveFun": "재미있게! 🎉",
+    "treatYourself": "자신에게 선물 💫",
+    "yourGiftReady": "선물이 준비되었습니다!",
+    "toLabel": "받는 사람",
+    "feeLabelShort": "수수료",
+    "notificationSent": "{{name}}에게 알림이 전송되었습니다",
+    "fromSender": "{{name}}로부터",
+    "giftWaitingShort": "선물이 기다리고 있어요",
+    "scanToOpenShort": "스캔하여 열기",
+    "iusdPay": "iUSD Pay",
+    "copied": "복사됨!",
+    "copyLink": "링크 복사",
+    "saveImage": "이미지 저장",
+    "shareLink": "링크 공유",
+    "backToQr": "← QR로 돌아가기",
+    "closeShareLater": "닫고 나중에 선물 기록에서 공유할 수 있어요.",
+    "preparing": "준비 중...",
+    "imageSaved": "이미지 저장됨!",
+    "qrBtn": "QR",
+    "backBtn": "뒤로",
+    "hasAGiftForYou": "가 선물을 드립니다",
+    "sharesCount_one": "{{count}}개",
+    "sharesCount_other": "{{count}}개",
+    "openedCount": "{{count}}/{{total}} 개봉됨",
+    "viewsCount": "{{count}}회 조회",
+    "someone": "누군가",
+    "shareTitle": "{{name}} 선물",
+    "featured": "⭐ 추천"
+  },
+  "giftClaim": {
+    "loading": "선물 로드 중…",
+    "goHome": "홈으로",
+    "youReceived": "받았습니다",
+    "from": "보낸 사람",
+    "reply": "답장 →",
+    "alreadyClaimed": "이미 받음",
+    "scanProfile": "프로필 스캔",
+    "thankPresets": {
+      "thankBoss": "감사합니다 보스!",
+      "appreciated": "정말 감사해요!",
+      "soKind": "너무 친절해요!",
+      "madeMyDay": "하루가 행복!",
+      "youreBest": "최고예요!",
+      "whatSurprise": "완전 서프라이즈!",
+      "loveYou": "사랑해요!",
+      "sweetest": "정말 다정해요!",
+      "heartFull": "가슴이 벅차요!",
+      "bestBirthday": "최고의 생일!",
+      "bestGift": "최고의 선물!",
+      "cheersYou": "건배!"
+    },
+    "iGotLabel": "★ 받았어요",
+    "onlyOneShare": "1 몫만",
+    "sharesCountLabel_one": "{{count}}개",
+    "sharesCountLabel_other": "{{count}}개",
+    "fromSenderOverlay": "{{name}}(으)로부터",
+    "detailsBtn": "상세",
+    "claimedLabel": "수령",
+    "viewedLabel": "조회",
+    "chasedLabel": "획득",
+    "moreBtn": "[더보기]",
+    "membersHeader": "멤버 · {{count}}",
+    "lettersHeader": "편지 · {{count}}",
+    "replyBtn": "답장",
+    "replyToPlaceholder": "{{name}}에게 답장…",
+    "loveWhatYouSee": "★ 마음에 드세요?",
+    "giftThemLine": "{{name}}에게 팁 주기",
+    "scanOrOpenProfile": "프로필 열기 →",
+    "scanOr": "스캔 또는",
+    "postToPlaceholder": "{{name}}에게 게시…",
+    "postBtn": "게시",
+    "sentWithLoveBy": "사랑을 담아",
+    "giftReceivedChip": "선물 받음!",
+    "anonName": "상대",
+    "errInvalidLink": "유효하지 않은 선물 링크",
+    "errNotFound": "선물을 찾을 수 없음",
+    "errClaimFailed": "수령 실패",
+    "errFailed": "실패",
+    "errSignInFirst": "먼저 로그인해 주세요",
+    "errInvalidClaimLink": "유효하지 않은 수령 링크",
+    "signInToSave": "연락처 저장하려면 로그인",
+    "failedSaveContact": "연락처 저장 실패",
+    "shareTitle": "{{name}}에게서 온 선물"
+  },
+  "history": {
+    "title": "기록",
+    "paymentJourney": "결제 여정",
+    "expires": "만료",
+    "noInvoices": "청구서 없음",
+    "noActivity": "활동 없음",
+    "tabs": {
+      "all": "전체",
+      "sent": "송금",
+      "received": "수신",
+      "gift": "선물",
+      "invoices": "청구서",
+      "stats": "통계"
+    },
+    "payStatus": {
+      "sent": {
+        "pending": "확인 대기",
+        "confirmed": "확인됨",
+        "revoked": "취소됨",
+        "refunded": "환불",
+        "expired": "만료",
+        "unknown": "알수없음"
+      },
+      "received": {
+        "claimable": "수령가능",
+        "received": "수령됨",
+        "cancelled": "취소",
+        "refunded": "환불",
+        "expired": "만료",
+        "unknown": "알수없음"
+      }
+    },
+    "paymentId": "결제 ID",
+    "sortNewest": "정렬: 최신 먼저 (클릭시 오래된순)",
+    "sortOldest": "정렬: 오래된 먼저 (클릭시 최신순)",
+    "loadMore": "더 불러오기",
+    "invoicePayment": "청구서 결제",
+    "sentTo": "받는이",
+    "receivedFrom": "보낸이",
+    "cancelInvoice": "청구서 취소",
+    "cancelInvoiceConfirm": "이 청구서를 취소하시겠습니까?",
+    "cancelFailed": "취소 실패: {{msg}}",
+    "timeline": {
+      "created": "생성됨",
+      "fee": "수수료 {{amount}}",
+      "pendingClaim": "수령 대기",
+      "awaitingRecipient": "수신자 대기",
+      "autoClaimed": "자동으로 수령됩니다",
+      "confirmed": "확인됨",
+      "received": "수령됨",
+      "expiresOn": "만료 {{date}}",
+      "revoked": "취소됨",
+      "returnedToSender": "발신자에게 반환",
+      "claimed": "수령 완료",
+      "refunded": "환불됨",
+      "returnedToClaimer": "수취인에게 반환",
+      "expired": "만료됨"
+    },
+    "stats": {
+      "accounting": "회계",
+      "giftsSent": "보낸 선물",
+      "giftsReceived": "받은 선물",
+      "paid": "결제됨",
+      "received": "수신",
+      "moneyIn": "수입",
+      "moneyOut": "지출",
+      "net": "순액",
+      "pending": "대기",
+      "thisMonth": "이번 달"
+    },
+    "noGiftHistory": "아직 선물 기록이 없습니다",
+    "receivedSection": "받음 · {{count}}",
+    "sentSection": "보냄 · {{count}}",
+    "loadingMore": "불러오는 중…",
+    "loadMoreReceived": "더 많은 받음 불러오기",
+    "loadMoreSent": "더 많은 보냄 불러오기",
+    "refreshTitle": "새로고침",
+    "exportCsv": "기록 CSV 내보내기",
+    "revokeFailed": "취소 실패",
+    "refundFailed": "환불 실패: {{msg}}",
+    "refundConfirm": "이 결제를 발신자에게 환불하시겠습니까?",
+    "anyone": "누구나",
+    "direct": "직접",
+    "fromLabel": "보낸 사람",
+    "toLabel": "받는 사람",
+    "copySaveTitle": "shortId 복사 + 연락처에 저장",
+    "due": "만기",
+    "noSentTransactions": "보낸 거래 없음",
+    "noReceivedTransactions": "받은 거래 없음",
+    "noTransactionsYet": "거래가 없습니다 — 거래 시 통계가 채워집니다.",
+    "detailSent": "↑ 보냄",
+    "detailReceived": "↓ 받음",
+    "copyBtn": "📋 복사",
+    "receiptPdf": "↓ 영수증 PDF",
+    "invoicePdf": "↓ 청구서 PDF",
+    "revokeBtn": "↩ 취소",
+    "refundBtn": "↩ 환불"
+  },
+  "inbox": {
+    "title": "받은함",
+    "claimed": "받았습니다!",
+    "feePaid": "수수료 지불됨",
+    "anonymous": "익명",
+    "claimTo": "받는 주소:",
+    "autoClaimFuture": "향후 결제 자동 수령",
+    "autoExpires": "미수령시 자동 만료",
+    "loadingReplies": "답장 로딩 중…",
+    "filter": {
+      "all": "전체",
+      "payment": "결제",
+      "gift": "선물",
+      "reply": "답장"
+    },
+    "replyCount_one": "답장 {{count}}개",
+    "replyCount_other": "답장 {{count}}개",
+    "refresh": "↻ 새로고침",
+    "historyLabel": "기록 · {{count}}",
+    "statusReceived": "받음",
+    "statusCancelled": "취소됨",
+    "statusRefunded": "환불됨",
+    "statusExpired": "만료됨",
+    "statusDone": "완료",
+    "businessInvoice": "🏪 사업자 청구서",
+    "personalPayment": "👤 개인 결제",
+    "fromId": "{{id}}(으)로부터",
+    "fromLabel": "보낸 사람",
+    "receipt": "영수증",
+    "invoice": "청구서",
+    "refund": "↩ 환불",
+    "refundConfirm": "이 결제를 발신자에게 환불하시겠습니까?",
+    "refundFailed": "환불 실패: {{msg}}",
+    "noRepliesHint": "아직 답장이 없습니다. 선물 감사 메시지가 여기에 표시됩니다.",
+    "alreadyClaimedRefreshed": "이 결제는 이미 자동으로 수령되었습니다. 받은편지함이 새로고침되었습니다.",
+    "alreadyClaimedRemoved": "이미 수령 — 받은편지함에서 제거.",
+    "newGiftsSection": "새 선물 · {{count}}",
+    "giftsSection": "선물 · {{count}}",
+    "sentSection": "보낸 선물 · {{count}}",
+    "loadMoreReplies": "답장 더 불러오기"
+  },
+  "contacts": {
+    "noResults": "결과 없음",
+    "autoSavedHint": "송금한 상대는 자동 저장됩니다",
+    "importFromHistory": "✨ 기록에서 가져오기",
+    "importFromHistoryTitle": "최근 결제 + 선물 기록에서 상대방 가져오기",
+    "searchPlaceholder": "이름 또는 ID로 검색..."
+  },
+  "merchant": {
+    "title": "비즈니스 프로필",
+    "preview": "미리보기",
+    "businessName": "사업체명 *",
+    "businessNamePlaceholder": "예: 잭 커피",
+    "companyLogo": "회사 로고 (선택)",
+    "uploadJpgPng": "JPG / PNG 업로드",
+    "remove": "제거",
+    "logoHint": "JPG/PNG · 최대 500 KB · 안전하게 저장",
+    "maxFileSize": "파일 크기는 500 KB 이하",
+    "clearConfirm": "사업자 프로필 지우기?",
+    "brandColor": "브랜드 색상",
+    "tagline": "슬로건 / 설명 (선택)",
+    "taglinePlaceholder": "예: 동네 최고의 커피",
+    "businessFont": "사업체명 폰트",
+    "contactInfo": "연락처",
+    "email": "이메일",
+    "phone": "전화",
+    "website": "웹사이트",
+    "emailPlaceholder": "contact@example.com",
+    "phonePlaceholder": "+82 10 1234 5678",
+    "websitePlaceholder": "https://example.com",
+    "addressLegal": "주소 및 법정정보",
+    "address": "주소",
+    "addressPlaceholder": "서울시 ...",
+    "taxIdLabel": "사업자번호 / 법인등록번호",
+    "taxIdPlaceholder": "예: KR-12-3456789",
+    "invoiceNumbering": "청구서 번호",
+    "prefix": "접두사",
+    "startingNo": "시작 번호",
+    "startingFrom": "시작: {{sample}} (서버에서 자동 증가)",
+    "save": "사업자 프로필 저장",
+    "saved": "✓ 저장됨!",
+    "clear": "지우기",
+    "storedLocally1": "이 프로필은 기기에 로컬 저장됩니다.",
+    "storedLocally2": "Request 페이지에서 Business 모드로 전환하여 사용.",
+    "setUpProfile": "🏢 사업자 프로필 설정 →"
+  },
+  "invoices": {
+    "title": "회계",
+    "protocolFees": "지불된 프로토콜 수수료"
+  },
+  "payRequest": {
+    "title": "결제 요청",
+    "requestSent": "요청 전송됨!",
+    "error": "오류"
+  },
+  "receipt": {
+    "paymentSent": "결제 전송됨.",
+    "home": "홈",
+    "viewInvoice": "청구서 보기",
+    "loading": "영수증 로딩 중…"
+  },
+  "install": {
+    "addToHome": "홈 화면에 추가",
+    "tapShare": "공유 탭",
+    "tapMenu": "메뉴 탭",
+    "installTitle": "iUSD Pay 설치",
+    "install": "설치"
+  },
+  "deposit": {
+    "balance": "잔액",
+    "youReceive": "받을 금액",
+    "rate": "환율",
+    "estTime": "예상 시간",
+    "depositTitle": "{{label}} 입금",
+    "withdrawTitle": "{{label}} 출금",
+    "from": "보내는 곳",
+    "to": "받는 곳",
+    "selectFrom": "입금할 자산 선택",
+    "selectTo": "대상 선택",
+    "loadingAssets": "불러오는 중...",
+    "noAssets": "잔액이 있는 자산 없음",
+    "noDestinations": "대상 체인 없음",
+    "onChain": "{{chain}} 위",
+    "current": "현재",
+    "max": "최대",
+    "gasFee": "가스비",
+    "estimatedByWallet": "지갑에서 추정",
+    "relayFee": "릴레이 수수료",
+    "route": "경로",
+    "fetchingRoute": "경로 가져오는 중...",
+    "insufficient": "잔액 부족 — {{balance}} {{symbol}} 보유",
+    "preparingTx": "트랜잭션 준비 중...",
+    "confirmInWallet": "지갑에서 확인해 주세요",
+    "tryAgain": "다시 시도",
+    "submitted": "트랜잭션 제출됨",
+    "done": "완료",
+    "txCancelled": "트랜잭션 취소됨",
+    "noEvmWallet": "EVM 지갑을 찾을 수 없습니다. MetaMask를 설치하세요.",
+    "unsupportedTx": "지원되지 않는 트랜잭션 유형"
+  },
+  "promoBanner": {
+    "coffee": {
+      "title": "친구에게 커피 한 잔",
+      "subtitle": "따뜻한 커피 선물"
+    },
+    "rose": {
+      "title": "장미 한 송이",
+      "subtitle": "특별한 사람에게"
+    },
+    "boss": {
+      "title": "보스가 되어 혜택을",
+      "subtitle": "관대함을 보여주세요"
+    }
+  },
+  "register": {
+    "title": "계정 만들기",
+    "chooseNickname": "결제 주소의 닉네임을 선택하세요",
+    "nicknamePlaceholder": "예: alice · 小明 · 🦊",
+    "nicknameHint": "모든 언어 · 1–12자 · 🎲 랜덤",
+    "randomNickname": "랜덤 닉네임",
+    "creating": "만드는 중…",
+    "submit": "계정 만들기 →"
+  },
+  "registered": {
+    "openWallet": "지갑 열기 →",
+    "wow": "와! 멋진",
+    "wowCard": "iUSD 결제 카드를 얻었어요!",
+    "tapCard": "카드 탭",
+    "shareText": "내 카드 QR을 스캔해서 iUSD 선물을 보내주세요! 🎁"
+  },
+  "toast": {
+    "thatsYou": "본인이에요!",
+    "copied": "{{value}} 복사됨",
+    "addedToContacts": "{{name}}을(를) 연락처에 추가",
+    "linkCopied": "링크가 복사되었습니다",
+    "paymentNotLinked": "결제가 아직 연결되지 않았어요 — 잠시 후 다시",
+    "claimFailed": "수령 실패",
+    "claimQueued": "수령 대기 중",
+    "networkError": "네트워크 오류: {{msg}}",
+    "noNewContactsInHistory": "기록에 새 연락처 없음",
+    "importedFromHistory_one": "기록에서 연락처 {{count}}개 가져옴",
+    "importedFromHistory_other": "기록에서 연락처 {{count}}개 가져옴",
+    "noNewImport": "가져올 새 연락처 없음",
+    "importFailed": "가져오기 실패: {{msg}}"
+  },
+  "nav": {
+    "dashboard": "대시보드",
+    "home": "홈",
+    "more": "더보기"
+  },
+  "payLink": {
+    "resolving": "결제 링크 해석 중…",
+    "invoiceDetails": "청구서 세부",
+    "status": "상태",
+    "invoiceId": "청구서 ID",
+    "recipient": "수취인",
+    "dueDate": "기한",
+    "paymentProof": "결제 증명",
+    "invalidLink": "잘못된 링크",
+    "claimed": "수령됨",
+    "paymentComplete": "결제 완료",
+    "receivedByName": "{{name}}이(가) {{amount}} iUSD 받음",
+    "paymentSent": "결제 전송됨",
+    "processingAuto": "{{amount}} iUSD · 자동 처리 중",
+    "claimWithinMinutes": "수령은 보통 1–2분 내 완료",
+    "goToDashboard": "대시보드로"
+  },
+  "verify": {
+    "title": "결제 검증",
+    "verifying": "결제 검증 중…",
+    "noPid": "결제 ID가 제공되지 않았습니다.",
+    "notFound": "결제를 찾을 수 없음",
+    "error": "오류: {{msg}}",
+    "verification": "검증",
+    "to": "받는이",
+    "platformFee": "플랫폼 수수료",
+    "txHash": "트랜잭션 해시",
+    "goHomepage": "홈페이지로"
+  },
+  "profile": {
+    "defaultSlogan": "당신이 내 하루를 만들어줘요 ✨",
+    "copyFullId": "전체 ID 복사",
+    "contactAlreadyAdded": "연락처에 이미 추가됨",
+    "addToContacts": "연락처에 추가"
+  },
+  "invoiceView": {
+    "title": "청구서",
+    "billFrom": "청구인",
+    "billTo": "수신인",
+    "issueDate": "발행일",
+    "dueDate": "기한",
+    "invoiceAmount": "청구 금액",
+    "recipientGets": "수취인이 받음",
+    "payLink": "결제 링크",
+    "taxId": "세금 번호: {{id}}",
+    "noteLabel": "메모: {{note}}",
+    "platformFeeLabel": "플랫폼 수수료 (0.5%{{cap}})",
+    "platformFeeCapped": ", 상한",
+    "paidStatus": "✓ {{date}} 결제됨",
+    "noToken": "토큰 없음",
+    "failedToLoad": "불러오기 실패",
+    "notFound": "청구서를 찾을 수 없음.",
+    "unavailable": "청구서 사용 불가.",
+    "saveAsImage": "이미지로 저장",
+    "printPdf": "인쇄 / PDF 저장",
+    "openInSafariChrome": "Safari 또는 Chrome에서 열어 PDF 저장",
+    "close": "닫기"
+  },
+  "notFound": {
+    "title": "페이지를 찾을 수 없음",
+    "desc": "찾는 페이지가 존재하지 않거나 이동되었습니다."
+  },
+  "installGuide": {
+    "alreadyInstalled": "이미 설치됨!",
+    "usingStandalone": "iUSD Pay를 독립 앱으로 사용 중입니다.",
+    "installApp": "앱 설치",
+    "androidHint": "Chrome에서 이 페이지를 열고 메뉴 (⋮) → \"홈 화면에 추가\"",
+    "desktopHint": "Chrome 주소 표시줄의 설치 아이콘 (⊕) 클릭, 또는 메뉴 → \"앱 설치\"",
+    "skip": "나중에",
+    "ios": {
+      "step1": "Safari 하단의 공유 버튼을 탭",
+      "step2": "아래로 스크롤해 \"홈 화면에 추가\"를 탭",
+      "step3": "\"추가\"를 탭해 확인"
+    }
+  },
+  "giftBox": {
+    "1": {
+      "name": "뮤직박스",
+      "description": "금과 에나멜로 제작된 방패 형태 펜던트. 한 면에는 물레방아가 있는 오토마톤 농장 장면이, 다른 면에는 빨간 배경의 장미가 표현되어 있으며, 양면 모두 반 진주로 정교하게 테두리를 장식했다."
+    },
+    "2": {
+      "name": "FLY 커피",
+      "description": "FLY 커피를 50% 할인으로 즐겨보세요. 매장에서나 포장으로나, 각 잔의 풍부한 향을 더욱 저렴하게 만끽할 수 있습니다."
+    },
+    "3": {
+      "name": "리피터 시계",
+      "description": "영국의 저명한 시계 제작자 Francis Perigal(1741–67 활동) 제작 리피터 시계. 부분 에나멜의 금제 케이스, 흰 에나멜 다이얼에 검은 숫자, 다이아몬드 세팅 은 바늘; 도금 무브먼트. 18세기 시계 공예의 정점."
+    },
+    "4": {
+      "name": "기타",
+      "description": "거북딱지, 흑단, 상아로 된 쉐브런 문양과 스크롤워크, 마름모, 기하학적 테두리를 품은 기타. 뒤판·측판·네크·헤드 전체에 상감이 들어간, 나무와 장식예술이 결합된 거장의 걸작."
+    },
+    "5": {
+      "name": "뮤직박스",
+      "description": "약 1820년 스위스제 만돌린 형태 뮤직박스. 다양한 소재로 정교하게 제작되어 19세기 초 유럽 뮤직박스 공예와 만돌린 악기 조형미가 어우러진 작품."
+    },
+    "6": {
+      "name": "기타",
+      "description": "Giacomo(별칭 Jacob) Ertel이 17세기 말 제작한 극도로 화려한 기타. 가문비·흑단·과수목·뼈·상아·자개·양피지를 사용. 독일 장인의 장식에 대한 집착과 이탈리아 제작 전통이 결합된 명품."
+    },
+    "7": {
+      "name": "시골의 겨울 아침",
+      "description": "Currier & Ives 공방 1873년 발행의 손 채색 석판화. 눈 덮인 시골 풍경: 두 마리 말이 끄는 썰매에 부부와 네 개의 큰 우유통; 저 멀리 농가. 19세기 미국의 전형적인 풍속화로 목가적 생활을 묘사."
+    },
+    "8": {
+      "name": "자유가 아니면 죽음을!",
+      "description": "Currier & Ives 공방 1876년 발행의 손 채색 석판화 \"자유가 아니면 죽음을!\". 1775년 3월 리치몬드 버지니아 의회에서 패트릭 헨리가 식민지의 권리에 대해 유명한 연설을 하는 장면을 묘사한, 독립운동의 상징적 이미지."
+    },
+    "9": {
+      "name": "뮤직박스",
+      "description": "스위스제 약 1820년 직사각형 금·에나멜 뮤직박스. 가장자리를 파랑과 노랑 에나멜로 장식하고, 뚜껑에는 고전적 에나멜 미니어처가 박혀 반 진주로 섬세하게 테두리를 돌렸다. 뮤직박스와 보석 공예의 완벽한 융합."
+    },
+    "10": {
+      "name": "시계 케이스",
+      "description": "George Harrison 제작, 약 1770년의 시계 케이스. 부분 에나멜 금제, 외부 케이스에는 다이아몬드가 세팅되어 찬란하게 빛난다. 18세기 영국의 시계 장인과 보석 세공사의 뛰어난 기술이 결집된 작품."
+    },
+    "11": {
+      "name": "디비전 비올",
+      "description": "Richard Meares가 약 1680년에 제작한 대형 디비전 비올. 가문비·흑단·단풍 사용. 디비전 비올은 르네상스 말기 가장 존중받던 활악기로, 17세기에 걸쳐 점차 바이올린에 자리를 내주었다. 음악사의 중요한 증거물."
+    },
+    "12": {
+      "name": "드래곤",
+      "description": "17세기 초 Giacomo Laurenziani가 제작한 청동 용. 입수 당시에는 그리핀으로 분류되었으나, 1950년대 이후 James Parker에 의해 용으로 올바르게 재확인된 바로크 조각의 걸작."
+    },
+    "13": {
+      "name": "장미와 백합",
+      "description": "Henri Fantin-Latour 1888년 작, 캔버스에 유채. 보존 상태가 매우 좋은 이 작품은 화가의 원숙한 회화 기법을 보여준다: 붓뿐 아니라 붓자루 끝으로도 물감을 다루는 섬세한 손길로 장미와 백합을 탁월하게 묘사했다."
+    },
+    "14": {
+      "name": "시계",
+      "description": "F. L. Meybom 약 1670–75년 제작 회중시계. 케이스는 금·청열 강철·수정·부분 도금 은과 다이아몬드로 구성; 페인티드 에나멜과 바세타이유 에나멜을 금 위에 시공한 다이얼; 도금 황동과 부분 청열 강철의 무브먼트."
+    },
+    "15": {
+      "name": "잠자리 브로치",
+      "description": "Edgar Bense 약 1890년 작 아르누보 잠자리 브로치. 금·다이아몬드·에나멜. 정교하게 조형된 잠자리에 섬세한 플리카주르 에나멜 날개를 갖춘, 아르누보 패션과 보석 공예의 본보기이자 자연주의 미학의 구현."
+    },
+    "16": {
+      "name": "팔찌",
+      "description": "19세기 인도의 팔찌(바주반드)로 추정. 짠 금에 루비와 로즈컷 다이아몬드를 박아 장식. 무굴 궁정 미학을 계승한 귀족 보석 전통에서 유사한 예를 찾을 수 있다."
+    },
+    "17": {
+      "name": "조지 클리포드의 갑옷 세트",
+      "description": "Jacob Halder가 1586년 그리니치 왕립 무기고에서 George Clifford를 위해 제작한 갑주 일습. 강철·금·가죽·직물. Clifford(1558–1605)는 1590년 여왕의 챔피언으로 임명되었고 같은 해 가터 훈장을 받았으며, 이 갑옷은 엘리자베스 시대 기사도의 상징이다."
+    },
+    "18": {
+      "name": "부엉이 머리 모양 브로치",
+      "description": "Castellani 약 1860년 제작의 올빼미 머리 모양 브로치. 금과 마노로 제작. 이 작품과 속한 그룹(2014.713.1–.10 참조)은 19세기 유럽의 역사적 양식에 대한 강한 관심을 반영하는 고고학적 부흥 양식 보석의 대표작."
+    },
+    "19": {
+      "name": "시계",
+      "description": "Charles Bobinet 약 1655–60년 작 회중시계. 마노 케이스에 에나멜 금 장식; 흰 에나멜 다이얼에 금 바늘; 도금 황동과 부분 청열 강철 무브먼트. 17세기 중엽 유럽 시계 공예의 뛰어난 기량을 보여준다."
+    },
+    "20": {
+      "name": "아이리스",
+      "description": "빈센트 반 고흐 1890년 작, 캔버스에 유채. 유명한 <아이리스>. 고흐 후기의 가장 대표적인 작품 중 하나로, 풍부한 색채와 생명력 넘치는 붓놀림으로 자연의 아름다움에 대한 깊은 경의를 표현한다."
+    },
+    "21": {
+      "name": "뚜껑이 있는 설탕 그릇",
+      "description": "Giovacchino Belli 약 1811–22년 제작 뚜껑 있는 설탕 그릇. 은 도금. Belli의 제정 양식 해석은 동시대 프랑스 해석보다 훨씬 편안하고 친근하여 신고전주의의 엄격한 선을 부드럽게 하고, 이탈리아 특유의 풍취를 지닌다."
+    },
+    "22": {
+      "name": "주전자",
+      "description": "약 1600년 제작 은 도금 에나멜 물병(ewer). 몸체에 인물과 동물의 행렬 부조가 새겨져 있으며, 이는 이집트에서 귀환하는 카이사르의 개선 또는 한니발을 꺾은 스키피오 아프리카누스의 개선을 묘사하는 르네상스 말기 금속 공예의 화려한 작품."
+    },
+    "23": {
+      "name": "마시바 히사츠구 역의 배우 아사오 가쿠주로 1세",
+      "description": "순코사이 호쿠슈(오사카) 1822년 작 목판 우키요에(니시키에). 종이에 먹과 채색, 일본 대판(오반) 종형. 오사카 가부키 배우 아사오 가쿠주로 1세가 마시바 히사츠구를 연기하는 모습; 눈을 부릅뜨고 도전하는 미에 자세가 극적 긴장감을 자아낸다."
+    },
+    "24": {
+      "name": "안데스의 왕관",
+      "description": "<안데스의 왕관> — 관 부분 약 1660년, 아치는 약 1770년. 콜롬비아 포파얀. 금 타출과 조금 기법에 에메랄드 세팅. 남미 식민지 시대의 가장 중요한 금세공품 중 하나로, 유럽과 토착 공예에 대한 신대륙 장인들의 창의적 융합을 보여준다."
+    }
+  },
+  "components": {
+    "nicknameEditor": {
+      "title": "닉네임 변경",
+      "placeholder": "닉네임",
+      "randomNickname": "랜덤 닉네임",
+      "generating": "생성 중...",
+      "firstChangeFee": "첫 변경 수수료",
+      "changeFeeN": "변경 수수료 (#{{n}}회차)",
+      "firstFeeNote": "첫 닉네임 변경은 0.10 iUSD. 이후 변경은 각 10.00 iUSD입니다.",
+      "feeNote": "각 닉네임 변경은 10.00 iUSD입니다.",
+      "idStays": "계정 ID는 동일하게 유지됩니다",
+      "notUniqueAck": "닉네임은 고유하지 않음을 이해합니다. 다른 계정이 같은 닉네임을 사용할 수 있습니다.",
+      "signing": "서명 중...",
+      "payAndSave": "{{fee}} iUSD 지불 및 저장",
+      "errEmpty": "닉네임을 입력하세요",
+      "errFee": "수수료를 확인할 수 없습니다",
+      "errTxFailed": "트랜잭션 실패",
+      "errNoHash": "트랜잭션 해시를 받지 못했습니다",
+      "errCancelled": "트랜잭션 취소됨",
+      "errGeneric": "실패"
+    },
+    "mwc": {
+      "chooseMethod": "연결 방법 선택",
+      "checkWallet": "지갑 앱을 확인하세요",
+      "approveRequest": "지갑 앱에서 연결 요청 승인",
+      "returnAfterApprove": "⚠️ 승인 후 이 페이지로 돌아오세요",
+      "tryAgain": "다시 시도",
+      "cancel": "취소",
+      "openInWallet": "지갑에서 열기",
+      "best": "추천",
+      "continueInBrowser": "{{name}} 브라우저에서 계속",
+      "signAndReturn": "서명 후 돌아오기",
+      "approveAndReturn": "앱에서 승인 후 돌아오세요",
+      "directConnection": "직접 연결 • 릴레이 서버 없음",
+      "connectionFailed": "연결 실패",
+      "state": {
+        "initializing": "초기화 중...",
+        "generatingUri": "연결 중...",
+        "waitingApproval": "지갑 앱에서 승인...",
+        "connected": "연결됨!",
+        "failed": "실패"
+      }
+    },
+    "quickLogin": {
+      "signing": "서명 중...",
+      "verifying": "확인 중...",
+      "processing": "처리 중...",
+      "signInTo": "{{action}} 로그인",
+      "walletTapToSignIn": "지갑 연결됨. 탭하여 로그인하세요.",
+      "almostThere": "거의 다 됐어요! {{action}}를 위해 등록을 완료하세요.",
+      "redirecting": "등록으로 이동 중...",
+      "connectionFailed": "연결 실패",
+      "tryAgain": "다시 시도",
+      "connecting": "연결 중...",
+      "connectTo": "{{action}}에 연결",
+      "tapConnectHint": "연결을 탭하세요 — 지갑이 서명을 요청합니다",
+      "signInWith": "다음으로 로그인",
+      "orWallet": "또는 지갑",
+      "other": "기타",
+      "openInWalletBrowser": "지갑 브라우저에서 이 링크를 여세요",
+      "linkCopied": "링크가 복사되었습니다",
+      "dismiss": "닫기"
+    },
+    "identityCardBack": {
+      "idLabel": "ID:",
+      "deposit": "입금",
+      "withdraw": "출금",
+      "onlyOn": "전용",
+      "gas": "Gas",
+      "gasOk": "Gas 정상",
+      "lowGas": "Gas 부족"
+    },
+    "qrScan": {
+      "scanQR": "QR 스캔",
+      "cameraUnavailable": "카메라를 사용할 수 없음",
+      "turnFlashOff": "플래시 끄기",
+      "turnFlashOn": "플래시 켜기",
+      "cancel": "취소"
+    },
+    "errorBoundary": {
+      "updating": "업데이트 중…",
+      "somethingWrong": "문제가 발생했습니다",
+      "genericErr": "예기치 않은 오류로 페이지를 로드할 수 없습니다.",
+      "reload": "새로고침",
+      "resetReload": "초기화 후 새로고침"
+    },
+    "identityCard": {
+      "validFrom": "유효 시작",
+      "status": "상태",
+      "statusActive": "활성",
+      "statusFrozen": "동결",
+      "statusDeactivated": "비활성화",
+      "viewProfile": "프로필 카드 보기",
+      "scanAndGift": "스캔하고 선물 ✨",
+      "share": "↗ 공유",
+      "shareText": "iUSD Pay 카드를 받았어요! 스캔하고 선물",
+      "copyLink": "링크 복사",
+      "copied": "복사됨!"
+    }
+  },
+  "soundStyles": {
+    "click": {
+      "keyboard": {
+        "name": "키보드",
+        "desc": "기계식 키보드 클릭"
+      },
+      "pop": {
+        "name": "소프트 팝",
+        "desc": "버블 팝"
+      },
+      "tic": {
+        "name": "틱",
+        "desc": "짧고 높은 틱"
+      },
+      "chime": {
+        "name": "차임",
+        "desc": "부드러운 벨 소리"
+      },
+      "glass": {
+        "name": "글래스",
+        "desc": "유리 소리"
+      },
+      "coin": {
+        "name": "코인",
+        "desc": "금속 징소리"
+      },
+      "digital": {
+        "name": "디지털",
+        "desc": "8-bit 블립"
+      },
+      "drip": {
+        "name": "드립",
+        "desc": "물방울 소리"
+      },
+      "paper": {
+        "name": "페이퍼",
+        "desc": "종이 두드림"
+      },
+      "piano": {
+        "name": "피아노",
+        "desc": "부드러운 피아노"
+      },
+      "silent": {
+        "name": "무음",
+        "desc": "클릭 소리 없음"
+      }
+    },
+    "card": {
+      "breeze": {
+        "name": "산들바람",
+        "desc": "부드러운 바람 지남"
+      },
+      "dream_bells": {
+        "name": "드림 벨",
+        "desc": "유리 풍경 반짝임"
+      },
+      "page_turn": {
+        "name": "페이지 넘김",
+        "desc": "종이 바스락 소리"
+      },
+      "whoosh": {
+        "name": "우쉬",
+        "desc": "빠른 스우쉬"
+      },
+      "soft_pop": {
+        "name": "소프트 팝",
+        "desc": "부드러운 더블 팝"
+      },
+      "silent": {
+        "name": "무음",
+        "desc": "플립 소리 없음"
+      }
+    },
+    "gift": {
+      "celebration": {
+        "name": "셀러브레이션",
+        "desc": "상승 코드 C-E-G-C"
+      },
+      "sparkle": {
+        "name": "스파클",
+        "desc": "높은 반짝임"
+      },
+      "fanfare": {
+        "name": "팡파르",
+        "desc": "금관 타다"
+      },
+      "bell_cascade": {
+        "name": "벨 캐스케이드",
+        "desc": "하강하는 벨"
+      },
+      "soft_bell": {
+        "name": "소프트 벨",
+        "desc": "부드러운 단일 벨"
+      },
+      "silent": {
+        "name": "무음",
+        "desc": "선물 소리 없음"
+      }
+    },
+    "txn": {
+      "whoosh_up": {
+        "name": "우쉬 업",
+        "desc": "상승하는 스우쉬"
+      },
+      "coin_drop": {
+        "name": "코인 드롭",
+        "desc": "금속 코인 착지"
+      },
+      "pneumatic": {
+        "name": "공압식",
+        "desc": "레트로 튜브 전송"
+      },
+      "confirm_chime": {
+        "name": "확인 차임",
+        "desc": "두 음절 확인음"
+      },
+      "paper_slide": {
+        "name": "페이퍼 슬라이드",
+        "desc": "종이 미끄러짐"
+      },
+      "silent": {
+        "name": "무음",
+        "desc": "거래 소리 없음"
+      }
+    },
+    "menu": {
+      "slide": {
+        "name": "슬라이드",
+        "desc": "패널 슬라이드 인"
+      },
+      "soft_pop": {
+        "name": "소프트 팝",
+        "desc": "부드럽게 열리는 팝"
+      },
+      "swish": {
+        "name": "스위시",
+        "desc": "공기 스위시"
+      },
+      "silent": {
+        "name": "무음",
+        "desc": "메뉴 소리 없음"
+      }
+    }
+  },
+  "time": {
+    "justNow": "방금",
+    "minutesAgo": "{{n}}분 전",
+    "hoursAgo": "{{n}}시간 전",
+    "daysAgo": "{{n}}일 전"
+  },
+  "receiptView": {
+    "back": "← 뒤로",
+    "paymentReceipt": "결제 영수증",
+    "receipt": "영수증",
+    "noPaymentId": "결제 ID 없음",
+    "notFound": "영수증을 찾을 수 없음.",
+    "failedToLoad": "불러오기 실패",
+    "fee": "수수료: {{amount}} iUSD",
+    "date": "날짜",
+    "confirmedLabel": "확인됨",
+    "verify": "확인",
+    "from": "보낸 사람",
+    "to": "받는 사람",
+    "tx": "Tx: {{hash}}",
+    "id": "ID: {{id}}",
+    "statusPaid": "결제됨",
+    "statusConfirmed": "확인됨",
+    "statusPending": "대기 중",
+    "statusRevoked": "취소됨",
+    "statusRefunded": "환불됨",
+    "statusExpired": "만료됨",
+    "statusFailed": "실패",
+    "statusUnknown": "알 수 없음",
+    "saveAsImage": "이미지로 저장",
+    "printPdf": "인쇄 / PDF 저장",
+    "openInSafariChrome": "Safari 또는 Chrome으로 열어 PDF 저장",
+    "errorPrefix": "오류: {{msg}}"
+  },
+  "update": {
+    "available": "새 버전이 있습니다",
+    "reload": "새로고침"
+  }
+}

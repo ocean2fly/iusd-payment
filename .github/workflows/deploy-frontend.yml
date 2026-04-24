@@ -1,0 +1,110 @@
+name: Deploy Frontend
+
+permissions:
+  contents: read
+  actions: read
+
+on:
+  workflow_dispatch:
+    inputs:
+      target_environment:
+        description: 'GitHub Environment (mainnet|sandbox|testnet)'
+        required: false
+        default: mainnet
+        type: string
+      frontend_provider:
+        description: 'Frontend deployment provider (self-hosted|vercel)'
+        required: false
+        default: self-hosted
+        type: choice
+        options:
+          - self-hosted
+          - vercel
+      artifact_run_id:
+        description: 'Optional CI run id for frontend-dist'
+        required: false
+        default: ''
+        type: string
+  workflow_call:
+    inputs:
+      target_environment:
+        required: false
+        type: string
+        default: mainnet
+      frontend_provider:
+        required: false
+        type: string
+        default: self-hosted
+      artifact_run_id:
+        required: false
+        type: string
+        default: ''
+
+jobs:
+  deploy:
+    name: Deploy Frontend
+    runs-on: [self-hosted, ipay]
+    environment: ${{ inputs.target_environment || 'mainnet' }}
+
+    steps:
+      - name: Resolve artifact run id
+        id: artifact_run
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const explicit = `${{ inputs.artifact_run_id || '' }}`.trim();
+            if (explicit) {
+              core.setOutput('run_id', explicit);
+              return;
+            }
+            const { owner, repo } = context.repo;
+            const res = await github.rest.actions.listWorkflowRuns({
+              owner,
+              repo,
+              workflow_id: 'ci.yml',
+              branch: 'main',
+              status: 'completed',
+              per_page: 20,
+            });
+            const run = res.data.workflow_runs.find((item) => item.conclusion === 'success');
+            if (!run) {
+              core.setFailed('No successful CI run found for ci.yml on main');
+              return;
+            }
+            core.setOutput('run_id', String(run.id));
+
+      - name: Download frontend artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: frontend-dist
+          path: .deploy-frontend
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          run-id: ${{ steps.artifact_run.outputs.run_id }}
+
+      - name: Verify artifact
+        run: |
+          if [ ! -f ".deploy-frontend/index.html" ]; then
+            echo "❌ Frontend artifact missing index.html"
+            exit 1
+          fi
+          echo "✅ Frontend artifact ready"
+
+      - name: Deploy to self-hosted runtime
+        if: ${{ (inputs.frontend_provider || 'self-hosted') != 'vercel' }}
+        env:
+          DEPLOY_BASE_DIR: ${{ vars.DEPLOY_BASE_DIR }}
+          FRONTEND_RUNTIME_DIR: ${{ vars.FRONTEND_RUNTIME_DIR || format('{0}/frontend', vars.DEPLOY_BASE_DIR || '/srv/ipay') }}
+          APP_PORT: '3201'
+        run: |
+          TIMESTAMP=$(date +%s)
+          sudo mkdir -p "$FRONTEND_RUNTIME_DIR"
+          sudo chown -R "$USER":"$USER" "$FRONTEND_RUNTIME_DIR"
+          bash scripts/deploy/deploy-frontend-static.sh ".deploy-frontend" "$FRONTEND_RUNTIME_DIR" "$TIMESTAMP"
+
+      - name: Summary
+        run: |
+          echo "## Frontend Deployment" >> $GITHUB_STEP_SUMMARY
+          echo "- Artifact run id: \`${{ steps.artifact_run.outputs.run_id }}\`" >> $GITHUB_STEP_SUMMARY
+          echo "- Provider: ${{ inputs.frontend_provider || 'self-hosted' }}" >> $GITHUB_STEP_SUMMARY
+          echo "- Environment: ${{ inputs.target_environment || 'mainnet' }}" >> $GITHUB_STEP_SUMMARY
+          echo "- Runtime dir: ${{ vars.FRONTEND_RUNTIME_DIR || format('{0}/frontend', vars.DEPLOY_BASE_DIR || '/srv/ipay') }}" >> $GITHUB_STEP_SUMMARY

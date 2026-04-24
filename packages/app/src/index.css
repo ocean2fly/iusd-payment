@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Prevent horizontal overflow and unwanted zoom */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+html {
+  overflow-x: hidden;
+  touch-action: pan-x pan-y;
+  -ms-touch-action: pan-x pan-y;
+}
+body {
+  overflow-x: hidden;
+  width: 100%;
+  overscroll-behavior-x: none;
+}
+#root {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* iOS zoom prevention handled by viewport meta + touch-action */
+
+/* ── Design tokens — Light mode (default) ────────────────────────────────── */
+:root {
+  --bg:             #f7f7f5;       /* warm off-white */
+  --surface:        #ffffff;
+  --surface-raised: #fafaf8;
+  --border:         rgba(0,0,0,0.08);
+  --text:           #1c1c1e;       /* near-black, not pure */
+  --text-secondary: #636366;
+  --muted:          #aeaeb2;
+  --accent:         #1c1c1e;
+  --icon:           #4b4b58;
+
+  /* Sidebar */
+  --sidebar-bg:     #f2f2f0;
+  --sidebar-border: rgba(0,0,0,0.07);
+  --nav-active-bg:  rgba(0,0,0,0.07);
+  --nav-active-txt: #1c1c1e;
+  --nav-txt:        #636366;
+  --nav-hover-bg:   rgba(0,0,0,0.04);
+
+  /* Aliases for legacy code */
+  --bg-main:        var(--bg);
+  --bg-surface:     var(--surface);
+  --bg-elevated:    rgba(0,0,0,0.04);
+  --text-primary:   var(--text);
+  --text-muted:     var(--muted);
+
+  /* Error — soft, not blinding */
+  --error:          #c0392b;
+  --error-bg:       #fff5f5;
+  --error-border:   rgba(192,57,43,0.25);
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: inherit;
+  min-height: 100vh;
+}
+
+/* ── Dark mode (OS-driven) ───────────────────────────────────────────────── */
+/* Dark mode - system preference */
+@media (prefers-color-scheme: dark) {
+  :root:not(.light) {
+    --bg:             #141414;
+    --surface:        #1e1e1e;
+    --surface-raised: #252525;
+    --border:         rgba(255,255,255,0.09);
+    --text:           #e8e8e3;
+    --text-secondary: #9a9a9a;
+    --muted:          #636366;
+    --accent:         #e8e8e3;
+    --icon:           #b0b0b8;
+
+    --sidebar-bg:     #111111;
+    --sidebar-border: rgba(255,255,255,0.07);
+    --nav-active-bg:  rgba(255,255,255,0.09);
+    --nav-active-txt: #e8e8e3;
+    --nav-txt:        #7a7a7a;
+    --nav-hover-bg:   rgba(255,255,255,0.04);
+
+    --bg-main:        var(--bg);
+    --bg-surface:     var(--surface);
+    --bg-elevated:    rgba(255,255,255,0.05);
+    --text-primary:   var(--text);
+    --text-muted:     var(--muted);
+
+    --error:          #e57373;
+    --error-bg:       rgba(220,38,38,0.12);
+    --error-border:   rgba(220,38,38,0.25);
+  }
+  :root:not(.light) body {
+    background: var(--bg);
+    color: var(--text);
+  }
+}
+
+/* Dark mode - manual override via .dark class */
+:root.dark {
+  --bg:             #141414;
+  --surface:        #1e1e1e;
+  --surface-raised: #252525;
+  --border:         rgba(255,255,255,0.09);
+  --text:           #e8e8e3;
+  --text-secondary: #9a9a9a;
+  --muted:          #636366;
+  --accent:         #e8e8e3;
+  --icon:           #b0b0b8;
+
+  --sidebar-bg:     #111111;
+  --sidebar-border: rgba(255,255,255,0.07);
+  --nav-active-bg:  rgba(255,255,255,0.09);
+  --nav-active-txt: #e8e8e3;
+  --nav-txt:        #7a7a7a;
+  --nav-hover-bg:   rgba(255,255,255,0.04);
+
+  --bg-main:        var(--bg);
+  --bg-surface:     var(--surface);
+  --bg-elevated:    rgba(255,255,255,0.05);
+  --text-primary:   var(--text);
+  --text-muted:     var(--muted);
+
+  --error:          #e57373;
+  --error-bg:       rgba(220,38,38,0.12);
+  --error-border:   rgba(220,38,38,0.25);
+}
+:root.dark body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* ── Base components ─────────────────────────────────────────────────────── */
+.btn-primary {
+  background: var(--text);
+  color: var(--surface);
+  @apply font-semibold px-4 py-2.5 rounded-xl transition-colors
+         disabled:opacity-40 disabled:cursor-not-allowed;
+}
+
+.btn-secondary {
+  background: var(--surface);
+  color: var(--text-secondary);
+  border: 1px solid var(--border);
+  @apply font-medium px-4 py-2.5 rounded-xl transition-colors;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  @apply rounded-2xl shadow-sm p-5;
+}
+
+.input {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  color: var(--text);
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.04);
+  @apply w-full rounded-xl px-4 py-3.5 focus:outline-none transition-all duration-200;
+}
+
+.input:focus {
+  border-color: var(--text);
+  box-shadow: 0 0 0 3px rgba(0,0,0,0.06), inset 0 1px 2px rgba(0,0,0,0.04);
+}
+
+.input::placeholder { 
+  color: var(--muted); 
+  font-weight: 400;
+}
+
+.zk-badge {
+  background: var(--bg-elevated);
+  color: var(--text-secondary);
+  @apply inline-flex items-center gap-1 text-xs font-medium px-2 py-0.5 rounded-full;
+}
+
+/* Hide number input spinners */
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+input[type=number] { -moz-appearance: textfield; }
+
+/* Ripple animation for tactile list-item click feedback */
+@keyframes giftRipple {
+  to { transform: scale(1); opacity: 0; }
+}
+
+/* ─── Global click / tap feedback for all buttons & clickable elements ─── */
+/* Applies to every <button>, [role="button"], and elements with the
+   .ipay-pressable class. Provides a unified press-down effect across the
+   whole app without touching individual components.
+   Opt out with data-no-press="true". */
+
+button, [role="button"], .ipay-pressable {
+  -webkit-tap-highlight-color: transparent;
+  /* transition covers only the effects we add below — inline styles
+     override these at full specificity so per-component animations
+     (like the 3D Share button) still work. */
+  transition: filter 0.14s ease, transform 0.14s ease, box-shadow 0.14s ease;
+}
+
+/* Hover — slight brighten on desktop pointer devices only */
+@media (hover: hover) {
+  button:not(:disabled):not([data-no-press="true"]):hover,
+  [role="button"]:not([data-no-press="true"]):hover,
+  .ipay-pressable:hover {
+    filter: brightness(1.06);
+  }
+}
+
+/* Active press — darken + tiny shrink. Filter works on any background
+   (solid, gradient, image) without breaking it. */
+button:not(:disabled):not([data-no-press="true"]):active,
+[role="button"]:not([data-no-press="true"]):active,
+.ipay-pressable:active {
+  filter: brightness(0.82) saturate(1.15);
+  transform: scale(0.97);
+}
+
+/* Disabled buttons don't respond */
+button:disabled {
+  filter: none !important;
+  transform: none !important;
+  cursor: not-allowed;
+}
+
+/* Range slider — larger touch target + more sensitive on mobile */
+input[type=range].ipay-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  width: 100%;
+  height: 44px;               /* big touch area */
+  padding: 0;
+  margin: 0;
+  touch-action: pan-y pinch-zoom;
+  cursor: pointer;
+}
+input[type=range].ipay-slider::-webkit-slider-runnable-track {
+  height: 6px;
+  border-radius: 3px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+}
+input[type=range].ipay-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--text);
+  border: 2px solid var(--surface);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3), 0 0 0 1px var(--border);
+  margin-top: -12px;          /* align thumb on track */
+  cursor: grab;
+  transition: transform 0.1s;
+}
+input[type=range].ipay-slider::-webkit-slider-thumb:active { transform: scale(1.2); cursor: grabbing; }
+input[type=range].ipay-slider::-moz-range-track {
+  height: 6px;
+  border-radius: 3px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+}
+input[type=range].ipay-slider::-moz-range-thumb {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--text);
+  border: 2px solid var(--surface);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  cursor: grab;
+}

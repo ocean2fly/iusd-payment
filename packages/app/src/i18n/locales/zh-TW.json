@@ -1,0 +1,1250 @@
+{
+  "popup": {
+    "title": "請在瀏覽器設定中允許彈出視窗",
+    "subtitle": "您的瀏覽器正在封鎖登入彈窗。請依下圖在「設定」中啟用。",
+    "next": "下一步",
+    "back": "上一步",
+    "gotIt": "我知道了",
+    "continue": "繼續",
+    "enableTitle": "啟用彈出視窗",
+    "signinNeedsPopup": "登入需要彈出視窗。",
+    "gotoMobile": "請前往「設定」→ 瀏覽器 → 允許彈出式視窗。",
+    "gotoDesktop": "請前往「設定」→ 允許彈出式視窗。",
+    "checkDetail": "查看詳情"
+  },
+  "auth": {
+    "connect": "連接錢包",
+    "signIn": "登入 →",
+    "connecting": "連接中…",
+    "signing": "簽名中…",
+    "checkWallet": "請在錢包中確認簽名請求…",
+    "settingUp": "正在設定您的帳戶…",
+    "coinbaseConnected": "Coinbase Wallet 已連接！",
+    "walletConnected": "錢包已連接！",
+    "wcTimeout": "WalletConnect 已逾時",
+    "restoring": "正在恢復錢包工作階段…",
+    "openingWindow": "正在開啟登入視窗…",
+    "tapConnect": "點擊「連接錢包」— 錢包將要求簽名",
+    "signInWith": "登入方式",
+    "or": "或",
+    "tryAgain": "重試",
+    "reconnect": "重新連接錢包",
+    "popupBlockedMobile": "彈窗已被封鎖。請前往「設定」→ 瀏覽器 → 允許彈出式視窗。",
+    "popupBlockedDesktop": "彈窗已被封鎖。請前往「設定」→ 允許彈出式視窗。",
+    "signFailed": "登入失敗，請再試一次。",
+    "connectionLost": "錢包連線已中斷，請重新連接。",
+    "signatureCancelled": "已取消簽名。",
+    "networkBlocked": "API 無法存取或被封鎖（網路/CORS）。請在新分頁中重試。"
+  },
+  "landing": {
+    "tagline": "Initia 上的穩定幣支付",
+    "installAsApp": "安裝為應用程式",
+    "forceRefresh": "強制重新整理",
+    "refresh": "重新整理",
+    "forceRefreshTip": "強制重新整理以解決本機頁面問題"
+  },
+  "wallets": {
+    "openInWalletBrowser": "請使用錢包應用程式瀏覽器開啟",
+    "pasteUrl": "貼上 iUSD pay 網址（已複製）並前往",
+    "done": "完成",
+    "other": "其他"
+  },
+  "common": {
+    "language": "語言",
+    "cancel": "取消",
+    "save": "儲存",
+    "saving": "儲存中…",
+    "saved": "已儲存",
+    "close": "關閉",
+    "change": "變更",
+    "loading": "載入中…",
+    "view": "檢視",
+    "optional": "選填",
+    "on": "開",
+    "off": "關"
+  },
+  "welcome": {
+    "tagline": "Initia 上的穩定幣支付",
+    "whatYouGet": "功能亮點",
+    "features": {
+      "transfer": "透過掃碼自由轉帳與收款",
+      "merchants": "無縫對接商家",
+      "gifts": "向好友與群組發送紅包"
+    },
+    "agreePrefix": "我同意",
+    "and": "與",
+    "tos": "服務條款",
+    "privacy": "隱私政策",
+    "experimentalNote": "。本應用程式為主網實驗版。",
+    "getStarted": "開始使用 →"
+  },
+  "dashboard": {
+    "tapEditNickname": "點擊編輯暱稱",
+    "minGasHint": "至少需要 1 INIT 或 1 USDC 作為 gas",
+    "refreshBalances": "重新整理餘額",
+    "actions": {
+      "transfer": "轉帳",
+      "request": "收款",
+      "gift": "紅包",
+      "inbox": "收件匣",
+      "contacts": "聯絡人",
+      "scan": "掃碼",
+      "history": "紀錄",
+      "settings": "設定"
+    }
+  },
+  "settings": {
+    "title": "設定",
+    "account": {
+      "title": "帳戶",
+      "nickname": "暱稱",
+      "setNickname": "設定暱稱",
+      "bio": "個人簡介",
+      "bioPlaceholder": "例如：掃我領紅包，回贈你一個吻 💋",
+      "id": "ID",
+      "wallet": "錢包",
+      "copied": "已複製",
+      "ecosystem": "生態系統",
+      "autoClaim": "自動領取"
+    },
+    "appearance": {
+      "title": "外觀",
+      "auto": "自動",
+      "light": "淺色",
+      "dark": "深色"
+    },
+    "sound": {
+      "title": "音效",
+      "desc": "UI 點擊、卡片翻轉、慶祝音效",
+      "muted": "已靜音",
+      "on": "開啟",
+      "styles": "音效風格",
+      "customize": "自訂",
+      "tapPreview": "點擊任一風格預覽並選擇",
+      "unmutePreview": "請先解除靜音以聆聽預覽",
+      "cat": {
+        "click": "點擊",
+        "cardFlip": "翻卡",
+        "gift": "禮物",
+        "transaction": "交易",
+        "menu": "選單"
+      }
+    },
+    "receive": {
+      "title": "收款地址",
+      "privacyProtection": "隱私保護",
+      "defaultWallet": "使用本錢包（預設）",
+      "change": "變更",
+      "modalTitle": "保護您的收款地址",
+      "modalDesc": "您可以設定獨立錢包接收 iUSD 付款，保持已連接錢包的隱私。付款將自動導向此地址。",
+      "complianceHeader": "⚠ 合規提示",
+      "complianceDesc": "無論地址如何路由，所有交易在適用反洗錢政策下仍可稽核。此簽名確認您已知悉並同意。",
+      "placeholder": "0x… 或 init1…（留空則使用本錢包）",
+      "signSave": "簽名並儲存",
+      "signing": "簽名中…"
+    },
+    "about": {
+      "title": "關於",
+      "iusdPay": "iUSD Pay",
+      "network": "網路",
+      "contract": "合約",
+      "tos": "服務條款",
+      "privacy": "隱私政策",
+      "forceRefresh": "強制重新整理",
+      "community": "社群"
+    },
+    "danger": {
+      "title": "危險區域",
+      "disconnect": "斷開錢包",
+      "disconnectTitle": "斷開錢包？",
+      "disconnectDesc": "您可以隨時重新連接。",
+      "delete": "刪除帳戶",
+      "deleteConfirmWarn": "⚠ 此操作將永久刪除您的帳戶",
+      "confirmDelete": "確認刪除",
+      "deleting": "刪除中…"
+    }
+  },
+  "transfer": {
+    "title": "轉帳",
+    "paymentCodeTitle": "付款碼",
+    "showToRecipient": "向收款人出示此 QR 碼。",
+    "scanAndEnter": "掃描並輸入金額以請求付款。",
+    "waitingForRequest": "等待請求中…",
+    "sessionExpired": "工作階段已過期",
+    "generateNew": "產生新代碼",
+    "generating": "正在產生付款碼…",
+    "recipientPlaceholder": "暱稱或帳戶 ID",
+    "contacts": "聯絡人",
+    "checking": "查詢中…",
+    "noContactsMatch": "沒有符合「{{query}}」的聯絡人",
+    "noContactsYet": "尚無聯絡人",
+    "noContactsHint": "發送付款或檢視歷史以開始",
+    "amountLabel": "金額",
+    "amountMin": "至少 0.1 iUSD",
+    "amountMax": "每筆最多 1,000 iUSD",
+    "memoLabel": "備註",
+    "memoPlaceholder": "選填備註",
+    "fee": "手續費：{{amount}} iUSD",
+    "feeCap": "（已封頂）",
+    "total": "合計：{{amount}} iUSD",
+    "autoSaveContact": "此人將自動儲存到您的聯絡人",
+    "paymentQR": "付款碼",
+    "building": "建構中…",
+    "confirming": "確認中…",
+    "send": "發送",
+    "sendAmount": "發送 {{amount}} iUSD"
+  },
+  "request": {
+    "title": "收款",
+    "modePersonal": "我",
+    "modeBusiness": "商家",
+    "tabNew": "新建",
+    "tabInvoices": "發票",
+    "empty": "尚無請求",
+    "createFirst": "建立第一個請求 →",
+    "share": "分享 ↗",
+    "amountLabel": "金額",
+    "noteLabel": "備註",
+    "notePlaceholder": "描述（選填）",
+    "taxNoLabel": "稅號",
+    "dueLabel": "到期",
+    "invLabel": "發票號",
+    "payerLabel": "付款人",
+    "payerPlaceholder": "姓名（選填）",
+    "status": {
+      "draft": "草稿",
+      "sent": "等待付款",
+      "paying": "等待確認",
+      "paid": "已支付",
+      "overdue": "逾期",
+      "refunded": "已退款",
+      "cancelled": "已取消"
+    }
+  },
+  "scan": {
+    "title": "掃碼",
+    "lookingUp": "正在查詢帳戶…",
+    "paymentDetails": "付款詳情",
+    "scannedContent": "掃描內容",
+    "manualInput": "手動輸入 / 圖片",
+    "pasteHint": "貼上連結或帳戶 ID…",
+    "startCamera": "開啟相機",
+    "stopCamera": "停止相機",
+    "flipCamera": "切換相機",
+    "retry": "重試",
+    "scannedCheck": "已掃描！請查看您的電腦。",
+    "scanAgain": "↩ 重新掃描",
+    "tagInvoice": "🧾 發票 / 請求",
+    "tagIdentity": "👤 身份",
+    "tagScanned": "🔗 已掃描",
+    "due": "到期",
+    "payRequest": "💸 支付此請求",
+    "payAmount": "💸 支付 {{amount}} iUSD",
+    "contactSaved": "✅ 聯絡人已儲存!",
+    "reAddContactsTag": "👤 重新加入聯絡人",
+    "addContactsTag": "👤 加入聯絡人",
+    "transfer": "轉帳",
+    "gift": "禮物",
+    "contactAlreadyAdded": "聯絡人已加入",
+    "reAddToContacts": "重新加入聯絡人",
+    "addToContacts": "加入聯絡人",
+    "visit": "訪問 →",
+    "clickToStart": "點擊啟動相機",
+    "pointPhone": "掃描中 — 將手機對準 QR 碼",
+    "disconnect": "✕ 中斷連線",
+    "go": "前往",
+    "dropToScan": "放下以掃描 QR",
+    "chooseFromGallery": "從相簿選擇",
+    "galleryHint": "選擇或拖曳 QR 碼圖片",
+    "cameraN": "相機 {{n}}",
+    "err": {
+      "accessBlocked": "🔒 相機存取被封鎖",
+      "permissionDesc": "相機權限被拒絕。你需要在瀏覽器設定中重新啟用。",
+      "chromeEdge": "🌐 Chrome / Edge",
+      "pasteInstructions": "複製此 URL → 貼到新分頁 → 將相機設定為",
+      "allow": "允許",
+      "copy": "複製",
+      "firefoxHint": "點擊網址列中的相機 🔒 圖示 → 允許",
+      "safariHint": "設定 → Safari → 相機 → 允許",
+      "androidHint": "點擊 ⋮ → 網站設定 → 相機 → 允許",
+      "retryAfter": "↺ 啟用後重試",
+      "noCamera": "📷 未找到相機",
+      "noCameraDesc": "此裝置未偵測到相機。",
+      "useManualFull": "使用下方手動輸入或連接外部掃描器。",
+      "inUse": "📷 相機被佔用",
+      "inUseDesc": "相機正被其他應用程式使用。請關閉其他應用程式後重試。",
+      "flashNotSupported": "此裝置不支援閃光燈",
+      "noQrInImage": "圖片中未找到 QR 碼",
+      "couldNotCreateRelay": "無法建立中繼工作階段",
+      "cameraError": "相機錯誤：{{msg}}",
+      "cameraDenied": "相機被拒絕：{{msg}}",
+      "connectionFailed": "連線失敗。請嘗試基本模式。",
+      "desktopNotReady": "桌面尚未就緒。請重新載入桌面頁面。",
+      "failedToSend": "傳送失敗",
+      "invalidSession": "無效工作階段"
+    },
+    "relay": {
+      "gettingCamera": "取得相機中…",
+      "connectingDesktop": "連線桌面中…",
+      "liveCameraHeader": "📹 即時相機",
+      "qrScannerHeader": "📤 QR 掃描器",
+      "liveBadge": "● 直播",
+      "streamingDesktop": "📹 串流至桌面 — 他們看到你看到的",
+      "pointAtDesktop": "📤 對準桌面上的 QR 碼",
+      "statusPrefix": "🔄 {{status}}"
+    }
+  },
+  "gift": {
+    "title": "紅包",
+    "message": "留言",
+    "quickPicks": "快速選擇",
+    "next": "下一步 →",
+    "recipient": "接收人",
+    "shares": "份數",
+    "total": "合計",
+    "ready": "紅包已就緒！",
+    "shareAccessHint": "將領取連結分享給好友。",
+    "rightClickSave": "右鍵圖片儲存 · 連結已複製",
+    "dismiss": "關閉",
+    "viewDetails": "檢視紅包詳情 →",
+    "scanToOpen": "掃碼打開紅包",
+    "noReplies": "尚無回覆",
+    "noViews": "尚無檢視",
+    "loadingHistory": "載入歷史…",
+    "giftList": "禮物列表",
+    "historyTab": "歷史",
+    "newest": "最新",
+    "oldest": "最早",
+    "newestFirst": "最新優先",
+    "oldestFirst": "最早優先",
+    "noDescription": "暫無描述。",
+    "allCollections": "全部分類",
+    "collection": {
+      "flowers": "鮮花",
+      "drinks": "飲品",
+      "food": "食品",
+      "treats": "零食",
+      "tech": "科技",
+      "luxury": "奢華",
+      "office": "辦公",
+      "art": "藝術",
+      "books": "書籍",
+      "games": "遊戲",
+      "wellness": "健康",
+      "travel": "旅行",
+      "fashion": "時尚",
+      "kids": "兒童",
+      "pets": "寵物",
+      "sports": "運動",
+      "other": "其他",
+      "painting": "繪畫",
+      "music_box": "音樂盒",
+      "instrument": "樂器",
+      "sculpture": "雕塑",
+      "textile": "紡織品",
+      "ceramic": "陶瓷",
+      "watch": "腕錶",
+      "brooch": "胸針",
+      "armor": "盔甲",
+      "furniture": "家具",
+      "jewelry": "珠寶"
+    },
+    "flexible": "自由金額",
+    "source": "來源 ↗",
+    "progressPanel": {
+      "progress": "進度",
+      "inProgress": "進行中",
+      "completed": "已完成",
+      "expired": "已過期",
+      "expiredRefunded": "已過期 · 已退款",
+      "expiresIn": "{{label}} 後過期",
+      "endsIn": "剩餘 {{label}}",
+      "claimedOf": "/ 共 {{total}} 份已領取",
+      "claimsHeader": "領取 · {{count}}",
+      "replied": "💌 已回覆",
+      "claimedChip": "✓ 已領取",
+      "anon": "匿名",
+      "allClaimed": "所有份額已被領取。",
+      "refunded_one": "{{count}} 份未領取已退款",
+      "refunded_other": "{{count}} 份未領取已退款",
+      "refundedNote": "禮物到期時，未領取份額的金額已自動退回你的餘額。",
+      "noClaimsYet": "還沒有人領取。分享連結通知他們吧。",
+      "daysHours": "{{days}}天 {{hours}}小時",
+      "hoursMinutes": "{{hours}}小時 {{minutes}}分",
+      "minutesOnly": "{{minutes}}分"
+    },
+    "back": "← 返回",
+    "stepChoose": "選擇禮物",
+    "stepWrite": "留言",
+    "stepSendTo": "發送給",
+    "feePercent": "手續費 {{percent}}%",
+    "feeLabel": "手續費 ({{percent}}%)",
+    "more": "更多",
+    "browseAll": "瀏覽所有禮物",
+    "writePlaceholder": "寫一段訊息...",
+    "amountIusd": "金額 (iUSD)",
+    "amountRangePlaceholder": "0.1 ~ 1000 iUSD",
+    "tapToEdit": "✎ 點擊編輯",
+    "amountInRange": "0.10 – 1,000 iUSD",
+    "anyoneGroup": "任何人 (群組)",
+    "anyoneCanClaim": "任何人可領取",
+    "enterContact": "輸入聯絡人或 ID",
+    "invalidRecipient": "無效的使用者名稱或 ID",
+    "usernameInactive": "使用者名稱不可用",
+    "recipientRequired": "請選擇收件人",
+    "sendFailed": "傳送失敗",
+    "missingTxParams": "缺少交易參數",
+    "giftTxFailed": "禮物交易失敗",
+    "contactsHeader": "聯絡人",
+    "fromHistory": "✨ 來自歷史",
+    "splitEqual": "均分",
+    "splitRandom": "隨機",
+    "balanceLine": "餘額: {{amount}} iUSD",
+    "wrapping": "包裝中...",
+    "insufficientBalance": "餘額不足",
+    "wrapGift": "🎁 包裝禮物",
+    "giftNumber": "禮物 #{{id}}",
+    "fromName": "來自 {{name}}",
+    "anonymous": "匿名",
+    "mysteryAwaits": "一份神秘禮物等待您",
+    "claimedAgo": "{{time}}領取",
+    "claimed": "已領取",
+    "view": "查看 →",
+    "openCta": "🎁 打開 →",
+    "expiredChip": "已過期",
+    "claimedOfShort": "{{claimed}}/{{total}} 已領取",
+    "enjoyEmoji": "請享用! 🎁",
+    "forYouEmoji": "用愛送給你 ❤️",
+    "happyBirthday": "生日快樂! 🎂",
+    "thankYouEmoji": "謝謝! 🙏",
+    "cheersEmoji": "乾杯! 🥂",
+    "justBecause": "只是因為 🌟",
+    "deserveIt": "你值得擁有 ✨",
+    "haveFun": "玩得開心! 🎉",
+    "treatYourself": "犒勞自己 💫",
+    "yourGiftReady": "你的禮物已準備好！",
+    "toLabel": "發給",
+    "feeLabelShort": "手續費",
+    "notificationSent": "已向 {{name}} 發送通知",
+    "fromSender": "來自 {{name}}",
+    "giftWaitingShort": "一份禮物等著你",
+    "scanToOpenShort": "掃碼打開",
+    "iusdPay": "iUSD Pay",
+    "copied": "已複製！",
+    "copyLink": "複製連結",
+    "saveImage": "儲存圖片",
+    "shareLink": "分享連結",
+    "backToQr": "← 返回 QR",
+    "closeShareLater": "可以關閉，稍後從禮物記錄中分享。",
+    "preparing": "準備中...",
+    "imageSaved": "圖片已儲存！",
+    "qrBtn": "QR",
+    "backBtn": "返回",
+    "hasAGiftForYou": "有份禮物送給你",
+    "sharesCount_one": "{{count}} 份",
+    "sharesCount_other": "{{count}} 份",
+    "openedCount": "{{count}}/{{total}} 已打開",
+    "viewsCount": "{{count}} 次查看",
+    "someone": "某人",
+    "shareTitle": "{{name}} 禮物",
+    "featured": "⭐ 精選"
+  },
+  "giftClaim": {
+    "loading": "載入紅包中…",
+    "goHome": "回首頁",
+    "youReceived": "您收到",
+    "from": "來自",
+    "reply": "回覆 →",
+    "alreadyClaimed": "已領取",
+    "scanProfile": "掃碼檢視主頁",
+    "thankPresets": {
+      "thankBoss": "謝謝老闆！",
+      "appreciated": "非常感謝！",
+      "soKind": "你真好！",
+      "madeMyDay": "讓我開心一天！",
+      "youreBest": "你最棒！",
+      "whatSurprise": "好驚喜！",
+      "loveYou": "愛你！",
+      "sweetest": "你最貼心！",
+      "heartFull": "心滿意足！",
+      "bestBirthday": "最棒的生日！",
+      "bestGift": "最棒的禮物！",
+      "cheersYou": "敬你！"
+    },
+    "iGotLabel": "★ 我得到",
+    "onlyOneShare": "只有 1 份",
+    "sharesCountLabel_one": "{{count}} 份",
+    "sharesCountLabel_other": "{{count}} 份",
+    "fromSenderOverlay": "來自 {{name}}",
+    "detailsBtn": "詳情",
+    "claimedLabel": "已領取",
+    "viewedLabel": "瀏覽",
+    "chasedLabel": "搶到",
+    "moreBtn": "[更多]",
+    "membersHeader": "成員 · {{count}}",
+    "lettersHeader": "留言 · {{count}}",
+    "replyBtn": "回覆",
+    "replyToPlaceholder": "回覆 {{name}}…",
+    "loveWhatYouSee": "★ 喜歡你看到的嗎？",
+    "giftThemLine": "給 {{name}} 送個小費",
+    "scanOrOpenProfile": "開啟我的主頁 →",
+    "scanOr": "掃碼或",
+    "postToPlaceholder": "發給 {{name}}…",
+    "postBtn": "發送",
+    "sentWithLoveBy": "用心送出，來自",
+    "giftReceivedChip": "收到禮物！",
+    "anonName": "他們",
+    "errInvalidLink": "無效的禮物連結",
+    "errNotFound": "未找到禮物",
+    "errClaimFailed": "領取失敗",
+    "errFailed": "失敗",
+    "errSignInFirst": "請先登入",
+    "errInvalidClaimLink": "無效的領取連結",
+    "signInToSave": "登入以儲存聯絡人",
+    "failedSaveContact": "儲存聯絡人失敗",
+    "shareTitle": "來自 {{name}} 的禮物"
+  },
+  "history": {
+    "title": "歷史",
+    "paymentJourney": "付款軌跡",
+    "expires": "過期",
+    "noInvoices": "尚無發票",
+    "noActivity": "尚無活動",
+    "tabs": {
+      "all": "全部",
+      "sent": "發出",
+      "received": "收到",
+      "gift": "禮物",
+      "invoices": "發票",
+      "stats": "統計"
+    },
+    "payStatus": {
+      "sent": {
+        "pending": "待確認",
+        "confirmed": "已確認",
+        "revoked": "已撤銷",
+        "refunded": "已退款",
+        "expired": "已過期",
+        "unknown": "未知"
+      },
+      "received": {
+        "claimable": "可領取",
+        "received": "已收到",
+        "cancelled": "已取消",
+        "refunded": "已退款",
+        "expired": "已過期",
+        "unknown": "未知"
+      }
+    },
+    "paymentId": "付款 ID",
+    "sortNewest": "排序：最新在前（點擊切換到最早）",
+    "sortOldest": "排序：最早在前（點擊切換到最新）",
+    "loadMore": "載入更多",
+    "invoicePayment": "發票付款",
+    "sentTo": "發送至",
+    "receivedFrom": "來自",
+    "cancelInvoice": "取消發票",
+    "cancelInvoiceConfirm": "取消此發票？",
+    "cancelFailed": "取消失敗：{{msg}}",
+    "timeline": {
+      "created": "已建立",
+      "fee": "手續費 {{amount}}",
+      "pendingClaim": "等待領取",
+      "awaitingRecipient": "等待收款方",
+      "autoClaimed": "將自動領取",
+      "confirmed": "已確認",
+      "received": "已收到",
+      "expiresOn": "到期 {{date}}",
+      "revoked": "已撤銷",
+      "returnedToSender": "已退回發送方",
+      "claimed": "已領取",
+      "refunded": "已退款",
+      "returnedToClaimer": "已退給領取方",
+      "expired": "已過期"
+    },
+    "stats": {
+      "accounting": "帳務",
+      "giftsSent": "發出禮物",
+      "giftsReceived": "收到禮物",
+      "paid": "已支付",
+      "received": "已收到",
+      "moneyIn": "收入",
+      "moneyOut": "支出",
+      "net": "淨額",
+      "pending": "待定",
+      "thisMonth": "本月"
+    },
+    "noGiftHistory": "暫無禮物記錄",
+    "receivedSection": "已收 · {{count}}",
+    "sentSection": "已送 · {{count}}",
+    "loadingMore": "載入中…",
+    "loadMoreReceived": "載入更多已收",
+    "loadMoreSent": "載入更多已送",
+    "refreshTitle": "重新整理",
+    "exportCsv": "匯出 CSV 歷史",
+    "revokeFailed": "撤銷失敗",
+    "refundFailed": "退款失敗: {{msg}}",
+    "refundConfirm": "將此款項退還給發送方？",
+    "anyone": "任何人",
+    "direct": "直接",
+    "fromLabel": "來自",
+    "toLabel": "發給",
+    "copySaveTitle": "複製 shortId + 儲存至聯絡人",
+    "due": "到期",
+    "noSentTransactions": "暫無發送記錄",
+    "noReceivedTransactions": "暫無接收記錄",
+    "noTransactionsYet": "暫無交易 — 產生交易後統計將會填充。",
+    "detailSent": "↑ 發送",
+    "detailReceived": "↓ 接收",
+    "copyBtn": "📋 複製",
+    "receiptPdf": "↓ 收據 PDF",
+    "invoicePdf": "↓ 發票 PDF",
+    "revokeBtn": "↩ 撤銷",
+    "refundBtn": "↩ 退款"
+  },
+  "inbox": {
+    "title": "收件匣",
+    "claimed": "已領取！",
+    "feePaid": "已付手續費",
+    "anonymous": "匿名",
+    "claimTo": "領取至：",
+    "autoClaimFuture": "自動領取未來付款",
+    "autoExpires": "未領取將自動過期",
+    "loadingReplies": "正在載入回覆…",
+    "filter": {
+      "all": "全部",
+      "payment": "付款",
+      "gift": "禮物",
+      "reply": "回覆"
+    },
+    "replyCount_one": "{{count}} 則回覆",
+    "replyCount_other": "{{count}} 則回覆",
+    "refresh": "↻ 重新整理",
+    "historyLabel": "歷史 · {{count}}",
+    "statusReceived": "已收到",
+    "statusCancelled": "已取消",
+    "statusRefunded": "已退款",
+    "statusExpired": "已過期",
+    "statusDone": "完成",
+    "businessInvoice": "🏪 商家發票",
+    "personalPayment": "👤 個人付款",
+    "fromId": "來自 {{id}}",
+    "fromLabel": "來自",
+    "receipt": "收據",
+    "invoice": "發票",
+    "refund": "↩ 退款",
+    "refundConfirm": "將此款項退還給發送方？",
+    "refundFailed": "退款失敗: {{msg}}",
+    "noRepliesHint": "暫無回覆。禮物感謝訊息將顯示於此。",
+    "alreadyClaimedRefreshed": "此付款已自動領取。收件匣已重新整理。",
+    "alreadyClaimedRemoved": "已領取 — 從收件匣移除。",
+    "newGiftsSection": "新禮物 · {{count}}",
+    "giftsSection": "禮物 · {{count}}",
+    "sentSection": "已送出 · {{count}}",
+    "loadMoreReplies": "載入更多回覆"
+  },
+  "contacts": {
+    "noResults": "無結果",
+    "autoSavedHint": "您付款過的人會自動儲存",
+    "importFromHistory": "✨ 從歷史匯入",
+    "importFromHistoryTitle": "從最近的付款 + 禮物歷史中匯入交易方",
+    "searchPlaceholder": "按名稱或 ID 搜尋..."
+  },
+  "merchant": {
+    "title": "商家資料",
+    "preview": "預覽",
+    "businessName": "公司名稱 *",
+    "businessNamePlaceholder": "例如：傑克咖啡",
+    "companyLogo": "公司 Logo（選填）",
+    "uploadJpgPng": "上傳 JPG / PNG",
+    "remove": "移除",
+    "logoHint": "JPG/PNG · 最大 500 KB · 安全儲存",
+    "maxFileSize": "檔案大小不超過 500 KB",
+    "clearConfirm": "清空商家資料？",
+    "brandColor": "品牌色",
+    "tagline": "口號 / 描述（選填）",
+    "taglinePlaceholder": "例如：城裡最好的咖啡",
+    "businessFont": "公司名稱字型",
+    "contactInfo": "聯絡方式",
+    "email": "電郵",
+    "phone": "電話",
+    "website": "網站",
+    "emailPlaceholder": "contact@example.com",
+    "phonePlaceholder": "+886 912 345 678",
+    "websitePlaceholder": "https://example.com",
+    "addressLegal": "地址與法定資訊",
+    "address": "地址",
+    "addressPlaceholder": "XX 路 123 號，XX 市，國家",
+    "taxIdLabel": "稅號 / 公司登記號",
+    "taxIdPlaceholder": "例如：TW-12-3456789",
+    "invoiceNumbering": "發票編號",
+    "prefix": "前綴",
+    "startingNo": "起始編號",
+    "startingFrom": "起始編號：{{sample}}（伺服端自動遞增）",
+    "save": "儲存商家資料",
+    "saved": "✓ 已儲存！",
+    "clear": "清空",
+    "storedLocally1": "此資料儲存在你的裝置上。",
+    "storedLocally2": "在請求頁切換至商家模式即可使用。",
+    "setUpProfile": "🏢 設定你的商家資料 →"
+  },
+  "invoices": {
+    "title": "記帳",
+    "protocolFees": "已付協定費"
+  },
+  "payRequest": {
+    "title": "付款請求",
+    "requestSent": "請求已發送！",
+    "error": "錯誤"
+  },
+  "receipt": {
+    "paymentSent": "付款已發送。",
+    "home": "首頁",
+    "viewInvoice": "檢視發票",
+    "loading": "正在載入回執…"
+  },
+  "install": {
+    "addToHome": "加到主畫面",
+    "tapShare": "點擊分享",
+    "tapMenu": "點擊選單",
+    "installTitle": "安裝 iUSD Pay",
+    "install": "安裝"
+  },
+  "deposit": {
+    "balance": "餘額",
+    "youReceive": "您將收到",
+    "rate": "匯率",
+    "estTime": "預計時間",
+    "depositTitle": "儲值 {{label}}",
+    "withdrawTitle": "提取 {{label}}",
+    "from": "來自",
+    "to": "到",
+    "selectFrom": "選擇要儲值的資產",
+    "selectTo": "選擇目標",
+    "loadingAssets": "載入中...",
+    "noAssets": "未找到有餘額的資產",
+    "noDestinations": "未找到目標鏈",
+    "onChain": "位於 {{chain}}",
+    "current": "目前",
+    "max": "最大",
+    "gasFee": "Gas 費",
+    "estimatedByWallet": "由錢包估算",
+    "relayFee": "中繼費",
+    "route": "路徑",
+    "fetchingRoute": "取得路徑中...",
+    "insufficient": "餘額不足 — 你有 {{balance}} {{symbol}}",
+    "preparingTx": "準備交易中...",
+    "confirmInWallet": "請在錢包中確認",
+    "tryAgain": "重試",
+    "submitted": "交易已提交",
+    "done": "完成",
+    "txCancelled": "交易已取消",
+    "noEvmWallet": "未找到 EVM 錢包。請安裝 MetaMask。",
+    "unsupportedTx": "不支援的交易類型"
+  },
+  "promoBanner": {
+    "coffee": {
+      "title": "請朋友喝杯咖啡",
+      "subtitle": "送上一杯溫暖的咖啡"
+    },
+    "rose": {
+      "title": "送一朵玫瑰",
+      "subtitle": "送給特別的人"
+    },
+    "boss": {
+      "title": "做老闆，發福利",
+      "subtitle": "展示你的慷慨"
+    }
+  },
+  "register": {
+    "title": "建立帳戶",
+    "chooseNickname": "為您的收款地址選一個暱稱",
+    "nicknamePlaceholder": "例如：alice · 小明 · 🦊",
+    "nicknameHint": "任何語言 · 1–12 個字元 · 🎲 隨機產生",
+    "randomNickname": "隨機暱稱",
+    "creating": "建立中…",
+    "submit": "建立帳戶 →"
+  },
+  "registered": {
+    "openWallet": "打開錢包 →",
+    "wow": "哇，您獲得了一張酷炫的",
+    "wowCard": "iUSD 付款卡！",
+    "tapCard": "點擊卡片",
+    "shareText": "掃我的 QR 送我 iUSD 禮物吧！🎁"
+  },
+  "toast": {
+    "thatsYou": "這是您自己！",
+    "copied": "已複製 {{value}}",
+    "addedToContacts": "已將 {{name}} 加入聯絡人",
+    "linkCopied": "連結已複製",
+    "paymentNotLinked": "付款尚未關聯 — 請幾秒後再試",
+    "claimFailed": "領取失敗",
+    "claimQueued": "領取已排隊",
+    "networkError": "網路錯誤：{{msg}}",
+    "noNewContactsInHistory": "歷史中沒有新聯絡人",
+    "importedFromHistory_one": "已從歷史匯入 {{count}} 位聯絡人",
+    "importedFromHistory_other": "已從歷史匯入 {{count}} 位聯絡人",
+    "noNewImport": "沒有可匯入的新聯絡人",
+    "importFailed": "匯入失敗：{{msg}}"
+  },
+  "nav": {
+    "dashboard": "主頁",
+    "home": "首頁",
+    "more": "更多"
+  },
+  "payLink": {
+    "resolving": "正在解析付款連結…",
+    "invoiceDetails": "發票詳情",
+    "status": "狀態",
+    "invoiceId": "發票 ID",
+    "recipient": "收款人",
+    "dueDate": "到期日",
+    "paymentProof": "付款憑證",
+    "invalidLink": "無效連結",
+    "claimed": "已領取",
+    "paymentComplete": "付款完成",
+    "receivedByName": "{{name}} 已收到 {{amount}} iUSD",
+    "paymentSent": "付款已發送",
+    "processingAuto": "{{amount}} iUSD · 自動處理中",
+    "claimWithinMinutes": "領取通常在 1–2 分鐘內完成",
+    "goToDashboard": "前往主頁"
+  },
+  "verify": {
+    "title": "付款驗證",
+    "verifying": "正在驗證付款…",
+    "noPid": "未提供付款 ID。",
+    "notFound": "未找到付款",
+    "error": "錯誤：{{msg}}",
+    "verification": "驗證",
+    "to": "至",
+    "platformFee": "平台費",
+    "txHash": "交易雜湊",
+    "goHomepage": "回首頁"
+  },
+  "profile": {
+    "defaultSlogan": "你讓我很開心 ✨",
+    "copyFullId": "複製完整 ID",
+    "contactAlreadyAdded": "已加入聯絡人",
+    "addToContacts": "加入聯絡人"
+  },
+  "invoiceView": {
+    "title": "發票",
+    "billFrom": "開票方",
+    "billTo": "收票方",
+    "issueDate": "開立日期",
+    "dueDate": "到期日",
+    "invoiceAmount": "發票金額",
+    "recipientGets": "收款人收到",
+    "payLink": "付款連結",
+    "taxId": "稅號: {{id}}",
+    "noteLabel": "備註: {{note}}",
+    "platformFeeLabel": "平台費 (0.5%{{cap}})",
+    "platformFeeCapped": ", 已封頂",
+    "paidStatus": "✓ 已於 {{date}} 支付",
+    "noToken": "未提供令牌",
+    "failedToLoad": "載入失敗",
+    "notFound": "發票未找到。",
+    "unavailable": "發票不可用。",
+    "saveAsImage": "儲存為圖片",
+    "printPdf": "列印 / 儲存 PDF",
+    "openInSafariChrome": "在 Safari 或 Chrome 中開啟以儲存為 PDF",
+    "close": "關閉"
+  },
+  "notFound": {
+    "title": "頁面未找到",
+    "desc": "您查找的頁面不存在或已被移動。"
+  },
+  "installGuide": {
+    "alreadyInstalled": "已安裝！",
+    "usingStandalone": "您正以獨立應用程式方式使用 iUSD Pay。",
+    "installApp": "安裝應用程式",
+    "androidHint": "在 Chrome 中打開此頁面，點選單 (⋮) → \"加到主畫面\"",
+    "desktopHint": "在 Chrome 中，點擊網址列的安裝圖示 (⊕)，或透過選單 → \"安裝應用\"",
+    "skip": "暫不安裝",
+    "ios": {
+      "step1": "點擊 Safari 底部的分享按鈕",
+      "step2": "向下捲動並點選 \"加到主畫面\"",
+      "step3": "點擊 \"加入\" 確認"
+    }
+  },
+  "giftBox": {
+    "1": {
+      "name": "音樂盒",
+      "description": "金與琺瑯製成的盾形吊墜。一面是帶水車的自動裝置農場場景，生動展現田園生活；另一面是紅底玫瑰圖案。兩面邊緣均以半珍珠精心鑲嵌，工藝精湛。"
+    },
+    "2": {
+      "name": "FLY 咖啡",
+      "description": "暢飲 FLY 咖啡，五折優惠。無論內用外帶，都能享受超值折扣，品嘗每一杯的醇香。"
+    },
+    "3": {
+      "name": "三問懷錶",
+      "description": "由英國著名製錶師 Francis Perigal（活躍於 1741–67 年）製作的打簧錶。錶殼為局部琺瑯裝飾的金質，白色琺瑯錶盤，黑色數字，鑲嵌鑽石的銀質指針；機芯鍍金。打簧錶是 18 世紀製錶工藝的巔峰之作。"
+    },
+    "4": {
+      "name": "吉他",
+      "description": "吉他背板、側板、琴頸和琴頭覆蓋玳瑁、烏木和象牙製成的雪紋圖案，並以捲草紋、菱形和幾何圖案鑲邊。這件樂器是奢華裝飾藝術與精湛木工技藝的完美結合，體現了製作者的高超造詣。"
+    },
+    "5": {
+      "name": "音樂盒",
+      "description": "約 1820 年的瑞士音樂盒，造型為曼陀林。採用多種材料精心製作，融合了 19 世紀初歐洲音樂盒工藝與曼陀林樂器造型美學。"
+    },
+    "6": {
+      "name": "吉他",
+      "description": "由 Giacomo（又名 Jacob）Ertel 於 17 世紀末製作的極其華麗的吉他。材料包括雲杉、烏木、果木、骨、象牙、珍珠母和羊皮紙。這件樂器結合了德意志工匠對奢華裝飾的追求與義大利製琴傳統，是吉他製作史上的精品。"
+    },
+    "7": {
+      "name": "鄉村冬日清晨",
+      "description": "Currier & Ives 工作室於 1873 年出品的手工上色石版畫。畫面描繪了雪景中的鄉村景象：兩匹馬牽引的雪橇上坐著一對夫妻和四個大奶罐；遠處是他們的農舍。這是 19 世紀美國典型的風俗畫，展現田園牧歌式的生活。"
+    },
+    "8": {
+      "name": "不自由毋寧死！",
+      "description": "Currier & Ives 工作室於 1876 年出品的手工上色石版畫《不自由毋寧死！》。描繪了 1775 年 3 月在里奇蒙召開的維吉尼亞議會上，Patrick Henry 發表關於殖民地權利的著名演說的場景，是美國獨立運動的經典圖像。"
+    },
+    "9": {
+      "name": "音樂盒",
+      "description": "約 1820 年瑞士製長方形金琺瑯音樂盒。邊緣以藍黃兩色琺瑯裝飾；盒蓋鑲嵌了一幅琺瑯古典微繪作品，周圍環繞半顆珍珠的精緻鑲邊。音樂盒工藝與珠寶工藝在此完美融合。"
+    },
+    "10": {
+      "name": "錶殼",
+      "description": "由 George Harrison 製作的錶殼，約 1770 年。局部琺瑯裝飾的金質錶殼，外殼則鑲嵌了璀璨的鑽石，體現了 18 世紀英國製錶與珠寶匠人的卓越技藝。"
+    },
+    "11": {
+      "name": "分奏維奧爾琴",
+      "description": "Richard Meares 約 1680 年製作的大型維奧琴（Division Viol）。以雲杉、烏木和楓木製成。維奧琴是文藝復興晚期最受推崇的弓弦樂器，在 17 世紀逐漸被提琴取代，是音樂史上的重要見證。"
+    },
+    "12": {
+      "name": "龍",
+      "description": "17 世紀初由 Giacomo Laurenziani 創作的青銅龍。收購時被歸類為獅鷲，直到 1950 年代後 James Parker 才正確辨認出它是龍，是巴洛克雕塑的精彩實例。"
+    },
+    "13": {
+      "name": "玫瑰與百合",
+      "description": "Henri Fantin-Latour 於 1888 年創作的布面油畫。這幅保存完好的畫作展示了藝術家爐火純青的油畫技法：他不僅用畫筆，還用畫筆的末端來塑造筆觸；玫瑰與百合的靜物呈現出細膩的光影與質感。"
+    },
+    "14": {
+      "name": "懷錶",
+      "description": "F. L. Meybom 約 1670–75 年製作的懷錶。錶殼由黃金、藍鋼、水晶以及部分鍍金銀和鑽石構成；錶盤採用繪畫琺瑯和低嵌琺瑯工藝於金上製作；機芯為鍍金黃銅與部分藍鋼，是 17 世紀歐洲製錶藝術的傑作。"
+    },
+    "15": {
+      "name": "蜻蜓胸針",
+      "description": "Edgar Bense 約 1890 年創作的蜻蜓胸針。以金、鑽石和琺瑯製成。這隻精巧的蜻蜓搭配細膩的空窗琺瑯翅膀，是新藝術運動時尚與珠寶工藝的典範之作，充分體現了自然主義美學。"
+    },
+    "16": {
+      "name": "臂環",
+      "description": "歸屬於 19 世紀印度的臂飾（bazuband）。以編織金絲製成，鑲嵌紅寶石和一顆玫瑰式切割鑽石。類似作品可在印度貴族珠寶傳統中找到，是蒙兀兒宮廷美學的延續。"
+    },
+    "17": {
+      "name": "喬治·克利福德的盔甲套裝",
+      "description": "Jacob Halder 於 1586 年在格林威治皇家軍械庫為 George Clifford 製作的鎧甲。鋼、金、皮革和織物。Clifford（1558–1605）於 1590 年被任命為女王侍衛，同年被授予嘉德勳章，這副鎧甲是伊莉莎白時代騎士精神的象徵。"
+    },
+    "18": {
+      "name": "貓頭鷹頭形胸針",
+      "description": "Castellani 約 1860 年製作的貓頭鷹頭形胸針。以金與瑪瑙製成。這件作品及其所屬系列反映了 19 世紀歐洲對歷史風格的濃厚興趣，是考古復興風格珠寶的代表。"
+    },
+    "19": {
+      "name": "懷錶",
+      "description": "Charles Bobinet 約 1655–60 年製作的懷錶。錶殼為瑪瑙，配以琺瑯金飾；錶盤為白色琺瑯配金質指針；機芯為鍍金黃銅和部分藍鋼，展現了 17 世紀中葉歐洲製錶業的高超技藝。"
+    },
+    "20": {
+      "name": "鳶尾花",
+      "description": "Vincent van Gogh 於 1890 年創作的布面油畫，即著名的《鳶尾花》。這是梵谷晚期最具代表性的作品之一，以豐富的色彩、充滿生命力的筆觸，展現他對自然之美的深情禮讚。"
+    },
+    "21": {
+      "name": "帶蓋糖罐",
+      "description": "Giovacchino Belli 約 1811–22 年製作的帶蓋糖碗。銀鍍金。Belli 版本的帝國風格在此顯得比同時代法國版本更舒緩、親切，柔化了嚴謹的新古典主義線條，別具義大利風情。"
+    },
+    "22": {
+      "name": "水瓶",
+      "description": "約 1600 年製作的銀鍍金琺瑯水罐。器身裝飾著遊行人物和動物的浮雕，可能表現凱撒從埃及歸來的凱旋或西庇阿·阿非利加努斯的凱旋遊行，是文藝復興晚期金屬工藝的華彩之作。"
+    },
+    "23": {
+      "name": "飾演真柴久次的歌舞伎演員初代淺尾奧十郎",
+      "description": "Shunkōsai Hokushū（春好齋北洲）1822 年創作的木版浮世繪（錦繪）。以紙本水墨設色，採用日本大判豎幅。描繪大阪歌舞伎演員淺尾岳十郎 I 飾演馬柴久次的形象，他怒目圓睜，擺出挑釁的姿態，極具戲劇張力。"
+    },
+    "24": {
+      "name": "安第斯皇冠",
+      "description": "《安地斯之冠》——冠體約 1660 年，拱架約 1770 年。來自哥倫比亞波帕揚。採用金錘揲和鐫花工藝，鑲嵌祖母綠。這件冠冕是南美殖民時期最重要的金銀器之一，展現了新大陸工匠對歐洲與本土工藝的創造性融合。"
+    }
+  },
+  "components": {
+    "nicknameEditor": {
+      "title": "修改暱稱",
+      "placeholder": "你的暱稱",
+      "randomNickname": "隨機暱稱",
+      "generating": "生成中...",
+      "firstChangeFee": "首次修改費",
+      "changeFeeN": "修改費（第 #{{n}} 次）",
+      "firstFeeNote": "首次修改暱稱費用 0.10 iUSD，之後每次修改 10.00 iUSD。",
+      "feeNote": "每次修改暱稱費用 10.00 iUSD。",
+      "idStays": "你的帳戶 ID 保持不變",
+      "notUniqueAck": "我了解暱稱不唯一，其他帳戶可能使用相同的暱稱。",
+      "signing": "簽名中...",
+      "payAndSave": "支付 {{fee}} iUSD 並儲存",
+      "errEmpty": "暱稱不能為空",
+      "errFee": "無法確定費用",
+      "errTxFailed": "交易失敗",
+      "errNoHash": "未回傳交易雜湊",
+      "errCancelled": "交易已取消",
+      "errGeneric": "失敗"
+    },
+    "mwc": {
+      "chooseMethod": "選擇連線方式",
+      "checkWallet": "請查看你的錢包 app",
+      "approveRequest": "在錢包 app 裡核准連線請求",
+      "returnAfterApprove": "⚠️ 核准後請返回此頁面",
+      "tryAgain": "重試",
+      "cancel": "取消",
+      "openInWallet": "在錢包中開啟",
+      "best": "推薦",
+      "continueInBrowser": "在 {{name}} 的瀏覽器中繼續",
+      "signAndReturn": "簽名並返回",
+      "approveAndReturn": "在 app 中核准，然後返回此處",
+      "directConnection": "直接連線 • 無中繼伺服器",
+      "connectionFailed": "連線失敗",
+      "state": {
+        "initializing": "初始化中...",
+        "generatingUri": "連線中...",
+        "waitingApproval": "請在錢包 app 中核准...",
+        "connected": "已連線！",
+        "failed": "失敗"
+      }
+    },
+    "quickLogin": {
+      "signing": "簽名中...",
+      "verifying": "驗證中...",
+      "processing": "處理中...",
+      "signInTo": "登入以 {{action}}",
+      "walletTapToSignIn": "錢包已連線，點擊登入",
+      "almostThere": "就差一步！完成註冊即可 {{action}}",
+      "redirecting": "正在跳轉到註冊...",
+      "connectionFailed": "連線失敗",
+      "tryAgain": "重試",
+      "connecting": "連線中...",
+      "connectTo": "連線以 {{action}}",
+      "tapConnectHint": "點擊連線 — 錢包將要求簽名",
+      "signInWith": "登入方式",
+      "orWallet": "或 錢包",
+      "other": "其他",
+      "openInWalletBrowser": "在錢包瀏覽器中開啟此連結",
+      "linkCopied": "連結已複製到剪貼簿",
+      "dismiss": "關閉"
+    },
+    "identityCardBack": {
+      "idLabel": "ID：",
+      "deposit": "儲值",
+      "withdraw": "提取",
+      "onlyOn": "僅支援",
+      "gas": "Gas",
+      "gasOk": "Gas 充足",
+      "lowGas": "Gas 不足"
+    },
+    "qrScan": {
+      "scanQR": "掃碼",
+      "cameraUnavailable": "相機不可用",
+      "turnFlashOff": "關閉閃光燈",
+      "turnFlashOn": "開啟閃光燈",
+      "cancel": "取消"
+    },
+    "errorBoundary": {
+      "updating": "更新中…",
+      "somethingWrong": "發生錯誤",
+      "genericErr": "遇到意外錯誤，無法載入此頁面。",
+      "reload": "重新載入",
+      "resetReload": "重設並重新載入"
+    },
+    "identityCard": {
+      "validFrom": "生效日期",
+      "status": "狀態",
+      "statusActive": "活躍",
+      "statusFrozen": "凍結",
+      "statusDeactivated": "已停用",
+      "viewProfile": "查看個人資料卡",
+      "scanAndGift": "掃碼送禮 ✨",
+      "share": "↗ 分享",
+      "shareText": "我的 iUSD Pay 卡片！掃碼送禮",
+      "copyLink": "複製連結",
+      "copied": "已複製！"
+    }
+  },
+  "soundStyles": {
+    "click": {
+      "keyboard": {
+        "name": "鍵盤",
+        "desc": "機械鍵盤點擊聲"
+      },
+      "pop": {
+        "name": "柔和氣泡",
+        "desc": "氣泡破裂聲"
+      },
+      "tic": {
+        "name": "滴答",
+        "desc": "短促高音滴答"
+      },
+      "chime": {
+        "name": "風鈴",
+        "desc": "柔和鈴聲"
+      },
+      "glass": {
+        "name": "玻璃",
+        "desc": "玻璃叮噹聲"
+      },
+      "coin": {
+        "name": "硬幣",
+        "desc": "金屬叮噹"
+      },
+      "digital": {
+        "name": "數字",
+        "desc": "8-bit 電子音"
+      },
+      "drip": {
+        "name": "水滴",
+        "desc": "水滴聲"
+      },
+      "paper": {
+        "name": "紙張",
+        "desc": "紙張輕拍"
+      },
+      "piano": {
+        "name": "鋼琴",
+        "desc": "柔和鋼琴音"
+      },
+      "silent": {
+        "name": "靜音",
+        "desc": "無點擊聲"
+      }
+    },
+    "card": {
+      "breeze": {
+        "name": "微風",
+        "desc": "柔和風過"
+      },
+      "dream_bells": {
+        "name": "夢幻鈴",
+        "desc": "玻璃風鈴閃爍"
+      },
+      "page_turn": {
+        "name": "翻頁",
+        "desc": "紙張沙沙聲"
+      },
+      "whoosh": {
+        "name": "呼聲",
+        "desc": "快速揮動"
+      },
+      "soft_pop": {
+        "name": "柔和氣泡",
+        "desc": "輕柔雙音氣泡"
+      },
+      "silent": {
+        "name": "靜音",
+        "desc": "無翻轉聲"
+      }
+    },
+    "gift": {
+      "celebration": {
+        "name": "慶祝",
+        "desc": "上升和弦 C-E-G-C"
+      },
+      "sparkle": {
+        "name": "閃爍",
+        "desc": "高音閃爍"
+      },
+      "fanfare": {
+        "name": "號角",
+        "desc": "銅管噹噹"
+      },
+      "bell_cascade": {
+        "name": "鈴聲級聯",
+        "desc": "下降鈴聲"
+      },
+      "soft_bell": {
+        "name": "柔和鈴",
+        "desc": "單次柔和鈴"
+      },
+      "silent": {
+        "name": "靜音",
+        "desc": "無禮物聲"
+      }
+    },
+    "txn": {
+      "whoosh_up": {
+        "name": "呼聲上升",
+        "desc": "上升揮動聲"
+      },
+      "coin_drop": {
+        "name": "硬幣落下",
+        "desc": "金屬硬幣落地"
+      },
+      "pneumatic": {
+        "name": "氣動",
+        "desc": "復古氣動管"
+      },
+      "confirm_chime": {
+        "name": "確認鈴",
+        "desc": "雙音確認"
+      },
+      "paper_slide": {
+        "name": "紙張滑動",
+        "desc": "紙張滑過"
+      },
+      "silent": {
+        "name": "靜音",
+        "desc": "無交易聲"
+      }
+    },
+    "menu": {
+      "slide": {
+        "name": "滑動",
+        "desc": "面板滑入"
+      },
+      "soft_pop": {
+        "name": "柔和氣泡",
+        "desc": "溫和打開"
+      },
+      "swish": {
+        "name": "嗖聲",
+        "desc": "空氣嗖聲"
+      },
+      "silent": {
+        "name": "靜音",
+        "desc": "無選單聲"
+      }
+    }
+  },
+  "time": {
+    "justNow": "剛剛",
+    "minutesAgo": "{{n}}分鐘前",
+    "hoursAgo": "{{n}}小時前",
+    "daysAgo": "{{n}}天前"
+  },
+  "receiptView": {
+    "back": "← 返回",
+    "paymentReceipt": "付款收據",
+    "receipt": "收據",
+    "noPaymentId": "未提供付款 ID",
+    "notFound": "未找到收據。",
+    "failedToLoad": "載入失敗",
+    "fee": "手續費：{{amount}} iUSD",
+    "date": "日期",
+    "confirmedLabel": "已確認",
+    "verify": "驗證",
+    "from": "來自",
+    "to": "至",
+    "tx": "交易：{{hash}}",
+    "id": "ID: {{id}}",
+    "statusPaid": "已支付",
+    "statusConfirmed": "已確認",
+    "statusPending": "待處理",
+    "statusRevoked": "已撤銷",
+    "statusRefunded": "已退款",
+    "statusExpired": "已過期",
+    "statusFailed": "失敗",
+    "statusUnknown": "未知",
+    "saveAsImage": "儲存為圖片",
+    "printPdf": "列印 / 儲存 PDF",
+    "openInSafariChrome": "在 Safari 或 Chrome 中開啟以儲存為 PDF",
+    "errorPrefix": "錯誤：{{msg}}"
+  },
+  "update": {
+    "available": "發現新版本",
+    "reload": "重新整理"
+  }
+}

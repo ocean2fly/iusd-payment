@@ -1,0 +1,208 @@
+name: Deploy Backend
+
+permissions:
+  contents: read
+  actions: read
+
+on:
+  workflow_dispatch:
+    inputs:
+      target_environment:
+        description: "GitHub Environment"
+        required: false
+        default: mainnet
+        type: string
+      artifact_run_id:
+        description: "Optional CI run id for api-runtime-bundle"
+        required: false
+        default: ""
+        type: string
+  workflow_call:
+    inputs:
+      target_environment:
+        required: false
+        type: string
+        default: mainnet
+      artifact_run_id:
+        required: false
+        type: string
+        default: ""
+
+jobs:
+  deploy:
+    name: Deploy API
+    runs-on: [self-hosted, ipay]
+    environment: ${{ inputs.target_environment || 'mainnet' }}
+
+    steps:
+      - name: Validate required config
+        env:
+          DEPLOY_HOST: ${{ vars.DEPLOY_HOST }}
+          DEPLOY_USER: ${{ vars.DEPLOY_USER }}
+          DEPLOY_BASE_DIR: ${{ vars.DEPLOY_BASE_DIR }}
+          API_PORT: ${{ vars.API_PORT }}
+          DB_ENGINE: ${{ vars.DB_ENGINE }}
+          CHAIN_ID: ${{ vars.CHAIN_ID }}
+          RPC_URL: ${{ vars.RPC_URL }}
+          REST_URL: ${{ vars.REST_URL }}
+          IPAY_POOL_ADDRESS: ${{ vars.IPAY_POOL_ADDRESS }}
+          GIFT_POOL_ADDRESS: ${{ vars.GIFT_POOL_ADDRESS }}
+          MODULE_ADDRESS: ${{ vars.MODULE_ADDRESS }}
+          IUSD_FA: ${{ vars.IUSD_FA }}
+          APP_URL: ${{ vars.APP_URL }}
+          ADMIN_PUBKEY: ${{ vars.ADMIN_PUBKEY }}
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          DEPLOY_SSH_PRIVATE_KEY: ${{ secrets.DEPLOY_SSH_PRIVATE_KEY }}
+          SERVER_SECRET: ${{ secrets.SERVER_SECRET }}
+        run: |
+          [ -n "$DEPLOY_HOST" ] || { echo "❌ Missing vars.DEPLOY_HOST"; exit 1; }
+          [ -n "$DEPLOY_USER" ] || { echo "❌ Missing vars.DEPLOY_USER"; exit 1; }
+          [ -n "$DEPLOY_BASE_DIR" ] || { echo "❌ Missing vars.DEPLOY_BASE_DIR"; exit 1; }
+          [ -n "$API_PORT" ] || { echo "❌ Missing vars.API_PORT"; exit 1; }
+          [ -n "$DB_ENGINE" ] || { echo "❌ Missing vars.DB_ENGINE"; exit 1; }
+          [ -n "$CHAIN_ID" ] || { echo "❌ Missing vars.CHAIN_ID"; exit 1; }
+          [ -n "$RPC_URL" ] || { echo "❌ Missing vars.RPC_URL"; exit 1; }
+          [ -n "$REST_URL" ] || { echo "❌ Missing vars.REST_URL"; exit 1; }
+          [ -n "$IPAY_POOL_ADDRESS" ] || { echo "❌ Missing vars.IPAY_POOL_ADDRESS"; exit 1; }
+          [ -n "$GIFT_POOL_ADDRESS" ] || { echo "❌ Missing vars.GIFT_POOL_ADDRESS"; exit 1; }
+          [ -n "$MODULE_ADDRESS" ] || { echo "❌ Missing vars.MODULE_ADDRESS"; exit 1; }
+          [ -n "$IUSD_FA" ] || { echo "❌ Missing vars.IUSD_FA"; exit 1; }
+          [ -n "$APP_URL" ] || { echo "❌ Missing vars.APP_URL"; exit 1; }
+          [ -n "$ADMIN_PUBKEY" ] || { echo "❌ Missing vars.ADMIN_PUBKEY"; exit 1; }
+          [ -n "$DATABASE_URL" ] || { echo "❌ Missing secrets.DATABASE_URL"; exit 1; }
+          [ -n "$DEPLOY_SSH_PRIVATE_KEY" ] || { echo "❌ Missing secrets.DEPLOY_SSH_PRIVATE_KEY"; exit 1; }
+          [ -n "$SERVER_SECRET" ] || { echo "❌ Missing secrets.SERVER_SECRET"; exit 1; }
+          echo "✅ Deployment config present"
+
+      - name: Resolve artifact run id
+        id: artifact_run
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const explicit = `${{ inputs.artifact_run_id || '' }}`.trim();
+            if (explicit) {
+              core.setOutput('run_id', explicit);
+              return;
+            }
+            const { owner, repo } = context.repo;
+            const res = await github.rest.actions.listWorkflowRuns({
+              owner,
+              repo,
+              workflow_id: 'ci.yml',
+              branch: 'main',
+              status: 'completed',
+              per_page: 20,
+            });
+            const run = res.data.workflow_runs.find((item) => item.conclusion === 'success');
+            if (!run) {
+              core.setFailed('No successful CI run found for ci.yml on main');
+              return;
+            }
+            core.setOutput('run_id', String(run.id));
+
+      - name: Download runtime artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: api-runtime-bundle
+          path: .deploy-backend
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          run-id: ${{ steps.artifact_run.outputs.run_id }}
+
+      - name: Prepare SSH key
+        run: |
+          mkdir -p ~/.ssh
+          chmod 700 ~/.ssh
+          printf '%s\n' '${{ secrets.DEPLOY_SSH_PRIVATE_KEY }}' > ~/.ssh/ipay_deploy
+          chmod 600 ~/.ssh/ipay_deploy
+          ssh-keyscan -H "${{ vars.DEPLOY_HOST }}" >> ~/.ssh/known_hosts
+
+      - name: Sync files to server
+        env:
+          DEPLOY_HOST: ${{ vars.DEPLOY_HOST }}
+          DEPLOY_USER: ${{ vars.DEPLOY_USER }}
+          DEPLOY_BASE_DIR: ${{ vars.DEPLOY_BASE_DIR }}
+        run: |
+          ssh -i ~/.ssh/ipay_deploy "$DEPLOY_USER@$DEPLOY_HOST" "mkdir -p '$DEPLOY_BASE_DIR/repo'"
+          rsync -az --delete --exclude='.env*' -e "ssh -i ~/.ssh/ipay_deploy" .deploy-backend/ "$DEPLOY_USER@$DEPLOY_HOST:$DEPLOY_BASE_DIR/repo/"
+
+      - name: Write runtime env on server
+        env:
+          DEPLOY_HOST: ${{ vars.DEPLOY_HOST }}
+          DEPLOY_USER: ${{ vars.DEPLOY_USER }}
+          DEPLOY_BASE_DIR: ${{ vars.DEPLOY_BASE_DIR }}
+          API_PORT: ${{ vars.API_PORT }}
+          DB_ENGINE: ${{ vars.DB_ENGINE }}
+          CHAIN_ID: ${{ vars.CHAIN_ID }}
+          RPC_URL: ${{ vars.RPC_URL }}
+          REST_URL: ${{ vars.REST_URL }}
+          IPAY_POOL_ADDRESS: ${{ vars.IPAY_POOL_ADDRESS }}
+          GIFT_POOL_ADDRESS: ${{ vars.GIFT_POOL_ADDRESS }}
+          MODULE_ADDRESS: ${{ vars.MODULE_ADDRESS }}
+          IUSD_FA: ${{ vars.IUSD_FA }}
+          APP_URL: ${{ vars.APP_URL }}
+          ADMIN_PUBKEY: ${{ vars.ADMIN_PUBKEY }}
+          RELAYER_ADDRESS: ${{ vars.RELAYER_ADDRESS }}
+          DEPLOYER_ADDRESS: ${{ vars.DEPLOYER_ADDRESS }}
+          TREASURY_ADDRESS: ${{ vars.TREASURY_ADDRESS }}
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          SERVER_SECRET: ${{ secrets.SERVER_SECRET }}
+          UPLOAD_DIR: ${{ vars.UPLOAD_DIR }}
+          UPLOAD_URL_BASE: ${{ vars.UPLOAD_URL_BASE }}
+        run: |
+          ssh -i ~/.ssh/ipay_deploy "$DEPLOY_USER@$DEPLOY_HOST" \
+            "printf '%s\n' \
+            'NODE_ENV=production' \
+            'PORT=$API_PORT' \
+            'DB_ENGINE=$DB_ENGINE' \
+            'PG_SSL_MODE=no-verify' \
+            'CHAIN_ID=$CHAIN_ID' \
+            'RPC_URL=$RPC_URL' \
+            'REST_URL=$REST_URL' \
+            'MODULE_ADDRESS=$MODULE_ADDRESS' \
+            'IPAY_POOL_ADDRESS=$IPAY_POOL_ADDRESS' \
+            'GIFT_POOL_ADDRESS=$GIFT_POOL_ADDRESS' \
+            'IUSD_FA=$IUSD_FA' \
+            'APP_URL=$APP_URL' \
+            'ADMIN_PUBKEY=$ADMIN_PUBKEY' \
+            'RELAYER_ADDRESS=$RELAYER_ADDRESS' \
+            'DEPLOYER_ADDRESS=$DEPLOYER_ADDRESS' \
+            'TREASURY_ADDRESS=$TREASURY_ADDRESS' \
+            'DATABASE_URL=$DATABASE_URL' \
+            'SERVER_SECRET=$SERVER_SECRET' \
+            'UPLOAD_DIR=$UPLOAD_DIR' \
+            'UPLOAD_URL_BASE=$UPLOAD_URL_BASE' \
+            > '$DEPLOY_BASE_DIR/repo/packages/api/.env.api'"
+
+      - name: Install runtime deps and restart API
+        env:
+          DEPLOY_HOST: ${{ vars.DEPLOY_HOST }}
+          DEPLOY_USER: ${{ vars.DEPLOY_USER }}
+          DEPLOY_BASE_DIR: ${{ vars.DEPLOY_BASE_DIR }}
+          API_PORT: ${{ vars.API_PORT }}
+        run: |
+          ssh -i ~/.ssh/ipay_deploy "$DEPLOY_USER@$DEPLOY_HOST" "set -e; cd '$DEPLOY_BASE_DIR/repo' && pnpm install --prod --no-frozen-lockfile"
+          ssh -i ~/.ssh/ipay_deploy "$DEPLOY_USER@$DEPLOY_HOST" "set -e; API_PORT='$API_PORT' bash '$DEPLOY_BASE_DIR/repo/scripts/deploy/restart-api.sh' '$DEPLOY_BASE_DIR/repo' '$DEPLOY_BASE_DIR/repo/packages/api' 'dist/index.js'"
+          ssh -i ~/.ssh/ipay_deploy "$DEPLOY_USER@$DEPLOY_HOST" "
+            echo 'Waiting for API to start on port $API_PORT...'
+            for i in \$(seq 1 20); do
+              STATUS=\$(curl -s -o /dev/null -w '%{http_code}' 'http://127.0.0.1:$API_PORT/health' 2>/dev/null || echo '000')
+              if [ \"\$STATUS\" = '200' ]; then
+                echo \"✅ API health check passed (attempt \$i)\"
+                exit 0
+              fi
+              echo \"  attempt \$i/20: HTTP \$STATUS — retrying in 2s...\"
+              sleep 2
+            done
+            echo '❌ API health check failed after 20 attempts'
+            pm2 logs ipay-api --lines 80 --nostream || true
+            exit 1
+          "
+
+      - name: Summary
+        run: |
+          echo "## Backend deployment" >> "$GITHUB_STEP_SUMMARY"
+          echo "- Artifact run id: \`${{ steps.artifact_run.outputs.run_id }}\`" >> "$GITHUB_STEP_SUMMARY"
+          echo "- Host: \`${{ vars.DEPLOY_HOST }}\`" >> "$GITHUB_STEP_SUMMARY"
+          echo "- User: \`${{ vars.DEPLOY_USER }}\`" >> "$GITHUB_STEP_SUMMARY"
+          echo "- Directory: \`${{ vars.DEPLOY_BASE_DIR }}/repo\`" >> "$GITHUB_STEP_SUMMARY"
+          echo "- API port: \`${{ vars.API_PORT }}\`" >> "$GITHUB_STEP_SUMMARY"

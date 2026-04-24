@@ -1,0 +1,1250 @@
+{
+  "popup": {
+    "title": "Benarkan tetingkap pop dalam Tetapan pelayar",
+    "subtitle": "Pelayar anda menyekat tetingkap pop log masuk. Aktifkannya dalam Tetapan seperti yang ditunjukkan.",
+    "next": "Seterusnya",
+    "back": "Kembali",
+    "gotIt": "Faham",
+    "continue": "Teruskan",
+    "enableTitle": "Aktifkan tetingkap pop",
+    "signinNeedsPopup": "Log masuk memerlukan tetingkap pop.",
+    "gotoMobile": "Pergi ke Tetapan → pelayar → benarkan tetingkap pop.",
+    "gotoDesktop": "Pergi ke Tetapan → benarkan tetingkap pop.",
+    "checkDetail": "Lihat butiran"
+  },
+  "auth": {
+    "connect": "Sambung",
+    "signIn": "Log masuk →",
+    "connecting": "Menyambung…",
+    "signing": "Menandatangani…",
+    "checkWallet": "Semak dompet anda untuk permintaan tandatangan…",
+    "settingUp": "Menyediakan akaun anda…",
+    "coinbaseConnected": "Coinbase Wallet bersambung!",
+    "walletConnected": "Dompet bersambung!",
+    "wcTimeout": "WalletConnect tamat masa",
+    "restoring": "Memulihkan sesi dompet…",
+    "openingWindow": "Membuka tetingkap log masuk…",
+    "tapConnect": "Ketik Sambung — dompet akan meminta tandatangan",
+    "signInWith": "Log masuk dengan",
+    "or": "atau",
+    "tryAgain": "Cuba lagi",
+    "reconnect": "Sambung semula dompet",
+    "popupBlockedMobile": "Tetingkap pop disekat. Pergi ke Tetapan → pelayar → benarkan tetingkap pop.",
+    "popupBlockedDesktop": "Tetingkap pop disekat. Pergi ke Tetapan → benarkan tetingkap pop.",
+    "signFailed": "Log masuk gagal. Sila cuba lagi.",
+    "connectionLost": "Sambungan dompet terputus. Sila sambung semula.",
+    "signatureCancelled": "Tandatangan dibatalkan.",
+    "networkBlocked": "API tidak boleh dihubungi atau disekat (rangkaian/CORS). Sila cuba dalam tab baru."
+  },
+  "landing": {
+    "tagline": "Pembayaran stablecoin di Initia",
+    "installAsApp": "Pasang sebagai apl",
+    "forceRefresh": "Muat semula paksa",
+    "refresh": "Muat semula",
+    "forceRefreshTip": "Muat semula paksa untuk menyelesaikan masalah halaman tempatan"
+  },
+  "wallets": {
+    "openInWalletBrowser": "Buka dalam pelayar apl dompet",
+    "pasteUrl": "Tampal URL iUSD pay (telah disalin) dan pergi",
+    "done": "Selesai",
+    "other": "Lain"
+  },
+  "common": {
+    "language": "Bahasa",
+    "cancel": "Batal",
+    "save": "Simpan",
+    "saving": "Menyimpan…",
+    "saved": "Disimpan",
+    "close": "Tutup",
+    "change": "Tukar",
+    "loading": "Memuatkan…",
+    "view": "Papar",
+    "optional": "Pilihan",
+    "on": "HIDUP",
+    "off": "MATI"
+  },
+  "welcome": {
+    "tagline": "Pembayaran stablecoin di Initia",
+    "whatYouGet": "Apa yang anda dapat",
+    "features": {
+      "transfer": "Pindah dan minta bebas dengan Scan",
+      "merchants": "Integrasi lancar dengan peniaga",
+      "gifts": "Hantar hadiah kepada rakan dan kumpulan"
+    },
+    "agreePrefix": "Saya bersetuju dengan",
+    "and": "dan",
+    "tos": "Syarat Perkhidmatan",
+    "privacy": "Dasar Privasi",
+    "experimentalNote": ". Apl ini eksperimental di mainnet.",
+    "getStarted": "Mulakan →"
+  },
+  "dashboard": {
+    "tapEditNickname": "Ketik untuk edit nama panggilan",
+    "minGasHint": "Min 1 INIT atau 1 USDC untuk gas",
+    "refreshBalances": "Muat semula baki",
+    "actions": {
+      "transfer": "Hantar",
+      "request": "Minta",
+      "gift": "Hadiah",
+      "inbox": "Peti masuk",
+      "contacts": "Kenalan",
+      "scan": "Imbas",
+      "history": "Sejarah",
+      "settings": "Tetapan"
+    }
+  },
+  "settings": {
+    "title": "Tetapan",
+    "account": {
+      "title": "Akaun",
+      "nickname": "Nama panggilan",
+      "setNickname": "Tetapkan nama panggilan",
+      "bio": "Bio / Slogan",
+      "bioPlaceholder": "cth. Imbas saya dan hadiahi, saya balas dengan ciuman 💋",
+      "id": "ID",
+      "wallet": "Dompet",
+      "copied": "Disalin",
+      "ecosystem": "Ekosistem",
+      "autoClaim": "Tuntut auto"
+    },
+    "appearance": {
+      "title": "Rupa",
+      "auto": "Auto",
+      "light": "Cerah",
+      "dark": "Gelap"
+    },
+    "sound": {
+      "title": "Bunyi",
+      "desc": "Klik UI, pusingan kad, sambutan",
+      "muted": "Senyap",
+      "on": "Hidup",
+      "styles": "Gaya bunyi",
+      "customize": "Sesuaikan",
+      "tapPreview": "Ketik gaya untuk pratonton dan pilih",
+      "unmutePreview": "Buka senyap di atas untuk mendengar",
+      "cat": {
+        "click": "Klik",
+        "cardFlip": "Pusingan kad",
+        "gift": "Hadiah",
+        "transaction": "Transaksi",
+        "menu": "Menu"
+      }
+    },
+    "receive": {
+      "title": "Alamat Terima",
+      "privacyProtection": "Perlindungan Privasi",
+      "defaultWallet": "Dompet saya (lalai)",
+      "change": "Tukar",
+      "modalTitle": "Lindungi alamat terima anda",
+      "modalDesc": "Anda boleh menetapkan dompet berasingan untuk menerima bayaran iUSD, menjaga dompet yang disambung peribadi. Bayaran akan dialihkan automatik ke alamat ini.",
+      "complianceHeader": "⚠ Notis Pematuhan",
+      "complianceDesc": "Semua transaksi kekal boleh diaudit di bawah dasar AML yang berkenaan tanpa mengira laluan. Tandatangan ini mengesahkan pemahaman dan persetujuan anda.",
+      "placeholder": "0x… atau init1… (kosong = guna dompet anda)",
+      "signSave": "Tandatangan & Simpan",
+      "signing": "Menandatangani…"
+    },
+    "about": {
+      "title": "Mengenai",
+      "iusdPay": "iUSD Pay",
+      "network": "Rangkaian",
+      "contract": "Kontrak",
+      "tos": "Syarat Perkhidmatan",
+      "privacy": "Dasar Privasi",
+      "forceRefresh": "Muat semula paksa",
+      "community": "Komuniti"
+    },
+    "danger": {
+      "title": "Zon Bahaya",
+      "disconnect": "Putuskan Dompet",
+      "disconnectTitle": "Putuskan dompet?",
+      "disconnectDesc": "Anda boleh sambung semula bila-bila masa.",
+      "delete": "Padam Akaun",
+      "deleteConfirmWarn": "⚠ Ini memadam akaun anda secara kekal",
+      "confirmDelete": "Sahkan Padam",
+      "deleting": "Memadam…"
+    }
+  },
+  "transfer": {
+    "title": "Hantar",
+    "paymentCodeTitle": "Kod Pembayaran",
+    "showToRecipient": "Tunjukkan QR ini kepada penerima.",
+    "scanAndEnter": "Imbas dan masukkan jumlah untuk meminta bayaran.",
+    "waitingForRequest": "Menunggu permintaan…",
+    "sessionExpired": "Sesi tamat",
+    "generateNew": "Jana Kod Baru",
+    "generating": "Menjana kod pembayaran…",
+    "recipientPlaceholder": "Nama panggilan atau ID Akaun",
+    "contacts": "Kenalan",
+    "checking": "Memeriksa…",
+    "noContactsMatch": "Tiada kenalan yang sepadan dengan \"{{query}}\"",
+    "noContactsYet": "Belum ada kenalan",
+    "noContactsHint": "Hantar bayaran atau lihat Sejarah untuk mula",
+    "amountLabel": "Jumlah",
+    "amountMin": "Min 0.1 iUSD",
+    "amountMax": "Maks 1,000 iUSD setiap transaksi",
+    "memoLabel": "Memo",
+    "memoPlaceholder": "Memo pilihan",
+    "fee": "Yuran: {{amount}} iUSD",
+    "feeCap": "(had)",
+    "total": "Jumlah: {{amount}} iUSD",
+    "autoSaveContact": "Orang ini akan disimpan auto ke Kenalan",
+    "paymentQR": "QR Bayaran",
+    "building": "Membina…",
+    "confirming": "Sahkan…",
+    "send": "Hantar",
+    "sendAmount": "Hantar {{amount}} iUSD"
+  },
+  "request": {
+    "title": "Minta",
+    "modePersonal": "Saya",
+    "modeBusiness": "Perniagaan",
+    "tabNew": "Baru",
+    "tabInvoices": "Invois",
+    "empty": "Belum ada permintaan",
+    "createFirst": "Cipta permintaan pertama →",
+    "share": "Kongsi ↗",
+    "amountLabel": "Jumlah",
+    "noteLabel": "Memo",
+    "notePlaceholder": "Keterangan (pilihan)",
+    "taxNoLabel": "No. Cukai",
+    "dueLabel": "Tamat",
+    "invLabel": "Invois #",
+    "payerLabel": "Pembayar",
+    "payerPlaceholder": "Nama (pilihan)",
+    "status": {
+      "draft": "Draf",
+      "sent": "Menunggu Bayaran",
+      "paying": "Menunggu Sah",
+      "paid": "Dibayar",
+      "overdue": "Tertunggak",
+      "refunded": "Dibayar Balik",
+      "cancelled": "Dibatalkan"
+    }
+  },
+  "scan": {
+    "title": "Imbas QR",
+    "lookingUp": "Mencari akaun…",
+    "paymentDetails": "BUTIRAN BAYARAN",
+    "scannedContent": "KANDUNGAN DIIMBAS",
+    "manualInput": "INPUT MANUAL / IMEJ",
+    "pasteHint": "Tampal URL atau ID Akaun…",
+    "startCamera": "Mula Kamera",
+    "stopCamera": "Henti Kamera",
+    "flipCamera": "Tukar Kamera",
+    "retry": "Cuba semula",
+    "scannedCheck": "Diimbas! Semak desktop anda.",
+    "scanAgain": "↩ Imbas semula",
+    "tagInvoice": "🧾 Invois / Permintaan",
+    "tagIdentity": "👤 Identiti",
+    "tagScanned": "🔗 Diimbas",
+    "due": "Tarikh akhir",
+    "payRequest": "💸 Bayar permintaan ini",
+    "payAmount": "💸 Bayar {{amount}} iUSD",
+    "contactSaved": "✅ Kenalan disimpan!",
+    "reAddContactsTag": "👤 Tambah semula",
+    "addContactsTag": "👤 Tambah ke kenalan",
+    "transfer": "Pindah",
+    "gift": "Hadiah",
+    "contactAlreadyAdded": "Kenalan sudah ditambah",
+    "reAddToContacts": "Tambah semula",
+    "addToContacts": "Tambah ke kenalan",
+    "visit": "Lawat →",
+    "clickToStart": "Klik untuk mulakan kamera",
+    "pointPhone": "Mengimbas — arahkan telefon ke QR",
+    "disconnect": "✕ Putuskan",
+    "go": "Pergi",
+    "dropToScan": "Lepaskan untuk imbas QR",
+    "chooseFromGallery": "Pilih dari galeri",
+    "galleryHint": "Pilih atau seret imej QR",
+    "cameraN": "Kamera {{n}}",
+    "err": {
+      "accessBlocked": "🔒 Akses kamera disekat",
+      "permissionDesc": "Kebenaran kamera dinafikan. Anda perlu mendayakannya semula dalam tetapan pelayar.",
+      "chromeEdge": "🌐 Chrome / Edge",
+      "pasteInstructions": "Salin URL ini → tampal dalam tab baharu → tetapkan Kamera kepada",
+      "allow": "Benarkan",
+      "copy": "Salin",
+      "firefoxHint": "Klik ikon 🔒 kamera di bar alamat → Benarkan",
+      "safariHint": "Tetapan → Safari → Kamera → Benarkan",
+      "androidHint": "Ketik ⋮ → Tetapan tapak → Kamera → Benarkan",
+      "retryAfter": "↺ Cuba semula selepas mendayakan",
+      "noCamera": "📷 Tiada kamera dijumpai",
+      "noCameraDesc": "Tiada kamera dikesan pada peranti ini.",
+      "useManualFull": "Gunakan input manual di bawah atau sambungkan pengimbas luar.",
+      "inUse": "📷 Kamera sedang digunakan",
+      "inUseDesc": "Kamera sedang digunakan oleh aplikasi lain. Tutup aplikasi lain dan cuba lagi.",
+      "flashNotSupported": "Lampu suluh tidak disokong pada peranti ini",
+      "noQrInImage": "Tiada kod QR dijumpai dalam imej",
+      "couldNotCreateRelay": "Tidak dapat mencipta sesi relay",
+      "cameraError": "Ralat kamera: {{msg}}",
+      "cameraDenied": "Kamera dinafikan: {{msg}}",
+      "connectionFailed": "Sambungan gagal. Cuba mod Basic.",
+      "desktopNotReady": "Desktop belum sedia. Muat semula halaman desktop.",
+      "failedToSend": "Gagal menghantar",
+      "invalidSession": "Sesi tidak sah"
+    },
+    "relay": {
+      "gettingCamera": "Mendapatkan kamera…",
+      "connectingDesktop": "Menyambung ke desktop…",
+      "liveCameraHeader": "📹 Kamera langsung",
+      "qrScannerHeader": "📤 Pengimbas QR",
+      "liveBadge": "● LANGSUNG",
+      "streamingDesktop": "📹 Strim ke desktop — mereka lihat apa yang anda lihat",
+      "pointAtDesktop": "📤 Halakan ke kod QR pada desktop",
+      "statusPrefix": "🔄 {{status}}"
+    }
+  },
+  "gift": {
+    "title": "Hadiah",
+    "message": "Mesej",
+    "quickPicks": "Pilihan pantas",
+    "next": "Seterusnya →",
+    "recipient": "Penerima",
+    "shares": "Bahagian",
+    "total": "Jumlah",
+    "ready": "Hadiah sedia!",
+    "shareAccessHint": "Kongsi pautan akses kepada rakan anda.",
+    "rightClickSave": "Klik kanan imej untuk simpan · Pautan disalin",
+    "dismiss": "Tutup",
+    "viewDetails": "Lihat butiran hadiah →",
+    "scanToOpen": "Imbas untuk buka",
+    "noReplies": "Belum ada balasan",
+    "noViews": "Belum ada tontonan",
+    "loadingHistory": "Memuat sejarah…",
+    "giftList": "Senarai hadiah",
+    "historyTab": "Sejarah",
+    "newest": "Terbaru",
+    "oldest": "Terawal",
+    "newestFirst": "Terbaru dulu",
+    "oldestFirst": "Terawal dulu",
+    "noDescription": "Tiada keterangan tersedia.",
+    "allCollections": "Semua koleksi",
+    "collection": {
+      "flowers": "Bunga",
+      "drinks": "Minuman",
+      "food": "Makanan",
+      "treats": "Manisan",
+      "tech": "Teknologi",
+      "luxury": "Mewah",
+      "office": "Pejabat",
+      "art": "Seni",
+      "books": "Buku",
+      "games": "Permainan",
+      "wellness": "Kesihatan",
+      "travel": "Perjalanan",
+      "fashion": "Fesyen",
+      "kids": "Kanak-kanak",
+      "pets": "Haiwan",
+      "sports": "Sukan",
+      "other": "Lain-lain",
+      "painting": "Lukisan",
+      "music_box": "Kotak muzik",
+      "instrument": "Alat muzik",
+      "sculpture": "Arca",
+      "textile": "Tekstil",
+      "ceramic": "Seramik",
+      "watch": "Jam tangan",
+      "brooch": "Kerongsang",
+      "armor": "Perisai",
+      "furniture": "Perabot",
+      "jewelry": "Perhiasan"
+    },
+    "flexible": "Fleksibel",
+    "source": "Sumber ↗",
+    "progressPanel": {
+      "progress": "Kemajuan",
+      "inProgress": "Sedang berjalan",
+      "completed": "Siap",
+      "expired": "Tamat",
+      "expiredRefunded": "Tamat · dikembalikan",
+      "expiresIn": "Tamat dalam {{label}}",
+      "endsIn": "Berakhir dalam {{label}}",
+      "claimedOf": "daripada {{total}} dituntut",
+      "claimsHeader": "Tuntutan · {{count}}",
+      "replied": "💌 DIBALAS",
+      "claimedChip": "✓ DITUNTUT",
+      "anon": "Anon",
+      "allClaimed": "Semua bahagian telah dituntut.",
+      "refunded_one": "{{count}} bahagian tidak dituntut telah dikembalikan",
+      "refunded_other": "{{count}} bahagian tidak dituntut telah dikembalikan",
+      "refundedNote": "Dana untuk bahagian yang tidak dituntut dikembalikan ke baki anda secara automatik apabila hadiah tamat tempoh.",
+      "noClaimsYet": "Belum ada yang menuntut. Kongsi pautan untuk memberitahu mereka.",
+      "daysHours": "{{days}}h {{hours}}j",
+      "hoursMinutes": "{{hours}}j {{minutes}}m",
+      "minutesOnly": "{{minutes}}m"
+    },
+    "back": "← Kembali",
+    "stepChoose": "Pilih hadiah",
+    "stepWrite": "Tulis mesej",
+    "stepSendTo": "Hantar kepada",
+    "feePercent": "yuran {{percent}}%",
+    "feeLabel": "Yuran ({{percent}}%)",
+    "more": "lagi",
+    "browseAll": "Lihat semua hadiah",
+    "writePlaceholder": "Tulis mesej...",
+    "amountIusd": "Jumlah (iUSD)",
+    "amountRangePlaceholder": "0.1 ~ 1000 iUSD",
+    "tapToEdit": "✎ ketuk untuk edit",
+    "amountInRange": "0.10 – 1,000 iUSD",
+    "anyoneGroup": "Sesiapa sahaja (kumpulan)",
+    "anyoneCanClaim": "Sesiapa boleh tuntut",
+    "enterContact": "Masukkan kenalan atau ID",
+    "invalidRecipient": "Nama pengguna atau ID tidak sah",
+    "usernameInactive": "Nama pengguna tidak aktif",
+    "recipientRequired": "Penerima diperlukan",
+    "sendFailed": "Hantar gagal",
+    "missingTxParams": "Parameter transaksi hilang",
+    "giftTxFailed": "Transaksi hadiah gagal",
+    "contactsHeader": "Kenalan",
+    "fromHistory": "✨ Dari Sejarah",
+    "splitEqual": "Sama rata",
+    "splitRandom": "Rawak",
+    "balanceLine": "Baki: {{amount}} iUSD",
+    "wrapping": "Membungkus...",
+    "insufficientBalance": "Baki tidak mencukupi",
+    "wrapGift": "🎁 Bungkus hadiah",
+    "giftNumber": "Hadiah #{{id}}",
+    "fromName": "Daripada {{name}}",
+    "anonymous": "Tidak dikenali",
+    "mysteryAwaits": "Hadiah misteri menanti",
+    "claimedAgo": "Dituntut {{time}}",
+    "claimed": "Dituntut",
+    "view": "Lihat →",
+    "openCta": "🎁 Buka →",
+    "expiredChip": "Tamat",
+    "claimedOfShort": "{{claimed}}/{{total}} dituntut",
+    "enjoyEmoji": "Nikmati! 🎁",
+    "forYouEmoji": "Dengan kasih ❤️",
+    "happyBirthday": "Selamat hari lahir! 🎂",
+    "thankYouEmoji": "Terima kasih! 🙏",
+    "cheersEmoji": "Hidup! 🥂",
+    "justBecause": "Sekadar 🌟",
+    "deserveIt": "Anda layak ✨",
+    "haveFun": "Berseronoklah! 🎉",
+    "treatYourself": "Manjakan diri 💫",
+    "yourGiftReady": "Hadiah anda sudah sedia!",
+    "toLabel": "Kepada",
+    "feeLabelShort": "Yuran",
+    "notificationSent": "Notifikasi dihantar kepada {{name}}",
+    "fromSender": "DARIPADA {{name}}",
+    "giftWaitingShort": "Hadiah menunggu anda",
+    "scanToOpenShort": "Imbas untuk buka",
+    "iusdPay": "iUSD Pay",
+    "copied": "Disalin!",
+    "copyLink": "Salin pautan",
+    "saveImage": "Simpan imej",
+    "shareLink": "Kongsi pautan",
+    "backToQr": "← Kembali ke QR",
+    "closeShareLater": "Anda boleh tutup dan kongsi kemudian dari Sejarah Hadiah.",
+    "preparing": "Menyediakan...",
+    "imageSaved": "Imej disimpan!",
+    "qrBtn": "QR",
+    "backBtn": "Kembali",
+    "hasAGiftForYou": "mempunyai hadiah untuk anda",
+    "sharesCount_one": "{{count}} bahagian",
+    "sharesCount_other": "{{count}} bahagian",
+    "openedCount": "{{count}}/{{total}} dibuka",
+    "viewsCount": "{{count}} tontonan",
+    "someone": "Seseorang",
+    "shareTitle": "Hadiah {{name}}",
+    "featured": "⭐ Pilihan"
+  },
+  "giftClaim": {
+    "loading": "Memuat hadiah…",
+    "goHome": "Halaman Utama",
+    "youReceived": "Anda menerima",
+    "from": "Daripada",
+    "reply": "Balas →",
+    "alreadyClaimed": "Sudah Dituntut",
+    "scanProfile": "Imbas profil",
+    "thankPresets": {
+      "thankBoss": "Terima kasih bos!",
+      "appreciated": "Sangat dihargai!",
+      "soKind": "Baik hatinya!",
+      "madeMyDay": "Gembirakan hari saya!",
+      "youreBest": "Anda yang terbaik!",
+      "whatSurprise": "Mengejutkan!",
+      "loveYou": "Sayang awak!",
+      "sweetest": "Anda yang paling manis!",
+      "heartFull": "Hati saya penuh!",
+      "bestBirthday": "Hari jadi terbaik!",
+      "bestGift": "Hadiah terbaik!",
+      "cheersYou": "Tahniah kepada anda!"
+    },
+    "iGotLabel": "★ SAYA DAPAT",
+    "onlyOneShare": "Hanya 1 bahagian",
+    "sharesCountLabel_one": "{{count}} bahagian",
+    "sharesCountLabel_other": "{{count}} bahagian",
+    "fromSenderOverlay": "daripada {{name}}",
+    "detailsBtn": "butiran",
+    "claimedLabel": "dituntut",
+    "viewedLabel": "dilihat",
+    "chasedLabel": "ditangkap",
+    "moreBtn": "[lagi]",
+    "membersHeader": "AHLI · {{count}}",
+    "lettersHeader": "SURAT · {{count}}",
+    "replyBtn": "Balas",
+    "replyToPlaceholder": "Balas {{name}}…",
+    "loveWhatYouSee": "★ Suka yang anda lihat?",
+    "giftThemLine": "Beri tip kepada {{name}}",
+    "scanOrOpenProfile": "Buka profil saya →",
+    "scanOr": "Imbas atau",
+    "postToPlaceholder": "Siarkan kepada {{name}}…",
+    "postBtn": "Siar",
+    "sentWithLoveBy": "Dihantar dengan kasih oleh",
+    "giftReceivedChip": "Hadiah diterima!",
+    "anonName": "mereka",
+    "errInvalidLink": "Pautan hadiah tidak sah",
+    "errNotFound": "Hadiah tidak ditemui",
+    "errClaimFailed": "Tuntutan gagal",
+    "errFailed": "Gagal",
+    "errSignInFirst": "Sila log masuk dahulu",
+    "errInvalidClaimLink": "Pautan tuntutan tidak sah",
+    "signInToSave": "Log masuk untuk simpan kenalan",
+    "failedSaveContact": "Gagal simpan kenalan",
+    "shareTitle": "Hadiah daripada {{name}}"
+  },
+  "history": {
+    "title": "Sejarah",
+    "paymentJourney": "Perjalanan Bayaran",
+    "expires": "Tamat",
+    "noInvoices": "Belum ada invois",
+    "noActivity": "Belum ada aktiviti",
+    "tabs": {
+      "all": "Semua",
+      "sent": "Hantar",
+      "received": "Terima",
+      "gift": "Hadiah",
+      "invoices": "Invois",
+      "stats": "Statis."
+    },
+    "payStatus": {
+      "sent": {
+        "pending": "Menunggu Sah",
+        "confirmed": "Disahkan",
+        "revoked": "Dibatalkan",
+        "refunded": "Dibayar Balik",
+        "expired": "Tamat",
+        "unknown": "Tidak Diketahui"
+      },
+      "received": {
+        "claimable": "Boleh Tuntut",
+        "received": "Diterima",
+        "cancelled": "Dibatalkan",
+        "refunded": "Dibayar Balik",
+        "expired": "Tamat",
+        "unknown": "Tidak Diketahui"
+      }
+    },
+    "paymentId": "ID BAYARAN",
+    "sortNewest": "Susun: Terbaru dulu (klik untuk terawal)",
+    "sortOldest": "Susun: Terawal dulu (klik untuk terbaru)",
+    "loadMore": "Muat lebih",
+    "invoicePayment": "Bayaran Invois",
+    "sentTo": "Dihantar kepada",
+    "receivedFrom": "Diterima dari",
+    "cancelInvoice": "Batalkan Invois",
+    "cancelInvoiceConfirm": "Batalkan invois ini?",
+    "cancelFailed": "Pembatalan gagal: {{msg}}",
+    "timeline": {
+      "created": "Dicipta",
+      "fee": "yuran {{amount}}",
+      "pendingClaim": "Menunggu tuntutan",
+      "awaitingRecipient": "Menunggu penerima",
+      "autoClaimed": "Akan dituntut secara automatik",
+      "confirmed": "Disahkan",
+      "received": "Diterima",
+      "expiresOn": "Tamat {{date}}",
+      "revoked": "Dibatalkan",
+      "returnedToSender": "Dana dikembalikan kepada penghantar",
+      "claimed": "Dituntut",
+      "refunded": "Dibayar balik",
+      "returnedToClaimer": "Dikembalikan kepada penuntut",
+      "expired": "Tamat"
+    },
+    "stats": {
+      "accounting": "PERAKAUNAN",
+      "giftsSent": "Hadiah Dihantar",
+      "giftsReceived": "Hadiah Diterima",
+      "paid": "Dibayar",
+      "received": "Diterima",
+      "moneyIn": "Masuk",
+      "moneyOut": "Keluar",
+      "net": "Bersih",
+      "pending": "Tertunda",
+      "thisMonth": "BULAN INI"
+    },
+    "noGiftHistory": "Tiada sejarah hadiah lagi",
+    "receivedSection": "Diterima · {{count}}",
+    "sentSection": "Dihantar · {{count}}",
+    "loadingMore": "Memuatkan…",
+    "loadMoreReceived": "Muat lebih diterima",
+    "loadMoreSent": "Muat lebih dihantar",
+    "refreshTitle": "Muat semula",
+    "exportCsv": "Eksport sejarah CSV",
+    "revokeFailed": "Pembatalan gagal",
+    "refundFailed": "Kembali gagal: {{msg}}",
+    "refundConfirm": "Kembalikan bayaran ini kepada penghantar?",
+    "anyone": "Sesiapa sahaja",
+    "direct": "terus",
+    "fromLabel": "DARIPADA",
+    "toLabel": "KEPADA",
+    "copySaveTitle": "Salin shortId + simpan ke kenalan",
+    "due": "Tarikh akhir",
+    "noSentTransactions": "Tiada transaksi yang dihantar",
+    "noReceivedTransactions": "Tiada transaksi yang diterima",
+    "noTransactionsYet": "Tiada transaksi lagi — statistik akan diisi apabila anda bertransaksi.",
+    "detailSent": "↑ Dihantar",
+    "detailReceived": "↓ Diterima",
+    "copyBtn": "📋 Salin",
+    "receiptPdf": "↓ Resit PDF",
+    "invoicePdf": "↓ Invois PDF",
+    "revokeBtn": "↩ Batal",
+    "refundBtn": "↩ Kembalikan"
+  },
+  "inbox": {
+    "title": "Peti Masuk",
+    "claimed": "Dituntut!",
+    "feePaid": "Yuran dibayar",
+    "anonymous": "Tanpa nama",
+    "claimTo": "Tuntut ke:",
+    "autoClaimFuture": "Tuntut auto bayaran akan datang",
+    "autoExpires": "Tamat auto jika tidak dituntut",
+    "loadingReplies": "Memuat balasan…",
+    "filter": {
+      "all": "Semua",
+      "payment": "Bayaran",
+      "gift": "Hadiah",
+      "reply": "Balas"
+    },
+    "replyCount_one": "{{count}} balasan",
+    "replyCount_other": "{{count}} balasan",
+    "refresh": "↻ Muat semula",
+    "historyLabel": "SEJARAH · {{count}}",
+    "statusReceived": "Diterima",
+    "statusCancelled": "Dibatalkan",
+    "statusRefunded": "Dikembalikan",
+    "statusExpired": "Tamat",
+    "statusDone": "Selesai",
+    "businessInvoice": "🏪 Invois Perniagaan",
+    "personalPayment": "👤 Bayaran Peribadi",
+    "fromId": "Daripada {{id}}",
+    "fromLabel": "Daripada",
+    "receipt": "Resit",
+    "invoice": "Invois",
+    "refund": "↩ Kembalikan",
+    "refundConfirm": "Kembalikan bayaran ini kepada penghantar?",
+    "refundFailed": "Kembali gagal: {{msg}}",
+    "noRepliesHint": "Tiada balasan lagi. Ucapan terima kasih hadiah akan muncul di sini.",
+    "alreadyClaimedRefreshed": "Bayaran ini telah dituntut secara automatik. Kotak masuk dimuat semula.",
+    "alreadyClaimedRemoved": "Sudah dituntut — dikeluarkan dari kotak masuk.",
+    "newGiftsSection": "HADIAH BARU · {{count}}",
+    "giftsSection": "HADIAH · {{count}}",
+    "sentSection": "DIHANTAR · {{count}}",
+    "loadMoreReplies": "Muat lebih balasan"
+  },
+  "contacts": {
+    "noResults": "Tiada keputusan",
+    "autoSavedHint": "Orang yang anda hantar disimpan automatik",
+    "importFromHistory": "✨ Import dari Sejarah",
+    "importFromHistoryTitle": "Import pihak lawan dari sejarah pembayaran + hadiah terkini",
+    "searchPlaceholder": "Cari nama atau ID..."
+  },
+  "merchant": {
+    "title": "Profil Perniagaan",
+    "preview": "Pratonton",
+    "businessName": "Nama Perniagaan *",
+    "businessNamePlaceholder": "cth. Jack's Coffee",
+    "companyLogo": "Logo Syarikat (pilihan)",
+    "uploadJpgPng": "Muat Naik JPG / PNG",
+    "remove": "Alih keluar",
+    "logoHint": "JPG/PNG · maks 500 KB · disimpan dengan selamat",
+    "maxFileSize": "Saiz fail maks 500 KB",
+    "clearConfirm": "Kosongkan profil perniagaan?",
+    "brandColor": "Warna Jenama",
+    "tagline": "Slogan / Penerangan (pilihan)",
+    "taglinePlaceholder": "cth. Kopi terbaik di bandar",
+    "businessFont": "Fon Nama Perniagaan",
+    "contactInfo": "Maklumat Hubungan",
+    "email": "EMEL",
+    "phone": "TELEFON",
+    "website": "LAMAN WEB",
+    "emailPlaceholder": "contact@example.com",
+    "phonePlaceholder": "+60 12 345 6789",
+    "websitePlaceholder": "https://example.com",
+    "addressLegal": "Alamat & Perundangan",
+    "address": "ALAMAT",
+    "addressPlaceholder": "Jalan 123, Bandar",
+    "taxIdLabel": "NO. CUKAI / DAFTAR PERNIAGAAN",
+    "taxIdPlaceholder": "cth. MY-12-3456789",
+    "invoiceNumbering": "Penomboran Invois",
+    "prefix": "AWALAN",
+    "startingNo": "NO. PERMULAAN",
+    "startingFrom": "Bermula daripada: {{sample}} (auto-kenaikan di pelayan)",
+    "save": "Simpan Profil Perniagaan",
+    "saved": "✓ Disimpan!",
+    "clear": "Kosongkan",
+    "storedLocally1": "Profil ini disimpan secara tempatan pada peranti anda.",
+    "storedLocally2": "Tukar ke mod Perniagaan pada halaman Permintaan untuk menggunakannya.",
+    "setUpProfile": "🏢 Sediakan profil perniagaan anda →"
+  },
+  "invoices": {
+    "title": "Perakaunan",
+    "protocolFees": "Yuran Protokol Dibayar"
+  },
+  "payRequest": {
+    "title": "Permintaan Bayaran",
+    "requestSent": "Permintaan dihantar!",
+    "error": "Ralat"
+  },
+  "receipt": {
+    "paymentSent": "Bayaran dihantar.",
+    "home": "Laman Utama",
+    "viewInvoice": "Lihat Invois",
+    "loading": "Memuat resit…"
+  },
+  "install": {
+    "addToHome": "Tambah ke Skrin Utama",
+    "tapShare": "Ketuk Kongsi",
+    "tapMenu": "Ketuk menu",
+    "installTitle": "Pasang iUSD Pay",
+    "install": "Pasang"
+  },
+  "deposit": {
+    "balance": "Baki",
+    "youReceive": "Anda akan terima",
+    "rate": "Kadar",
+    "estTime": "Anggaran masa",
+    "depositTitle": "Deposit {{label}}",
+    "withdrawTitle": "Keluarkan {{label}}",
+    "from": "Dari",
+    "to": "Ke",
+    "selectFrom": "Pilih aset untuk dideposit",
+    "selectTo": "Pilih destinasi",
+    "loadingAssets": "Memuatkan...",
+    "noAssets": "Tiada aset berbaki ditemui",
+    "noDestinations": "Tiada rantaian destinasi ditemui",
+    "onChain": "pada {{chain}}",
+    "current": "semasa",
+    "max": "MAKS",
+    "gasFee": "Yuran gas",
+    "estimatedByWallet": "Dianggar oleh dompet",
+    "relayFee": "Yuran relay",
+    "route": "Laluan",
+    "fetchingRoute": "Mendapatkan laluan...",
+    "insufficient": "Baki tidak mencukupi — anda ada {{balance}} {{symbol}}",
+    "preparingTx": "Menyediakan transaksi...",
+    "confirmInWallet": "Sila sahkan dalam dompet anda",
+    "tryAgain": "Cuba lagi",
+    "submitted": "Transaksi dihantar",
+    "done": "Siap",
+    "txCancelled": "Transaksi dibatalkan",
+    "noEvmWallet": "Dompet EVM tidak ditemui. Sila pasang MetaMask.",
+    "unsupportedTx": "Jenis transaksi tidak disokong"
+  },
+  "promoBanner": {
+    "coffee": {
+      "title": "Belanja rakan secawan kopi",
+      "subtitle": "Hadiah kopi yang hangat"
+    },
+    "rose": {
+      "title": "Hantar bunga ros",
+      "subtitle": "Untuk seseorang istimewa"
+    },
+    "boss": {
+      "title": "Jadi bos, tawarkan faedah",
+      "subtitle": "Tunjukkan kemurahan hati"
+    }
+  },
+  "register": {
+    "title": "Cipta akaun",
+    "chooseNickname": "Pilih nama panggilan untuk alamat bayaran anda",
+    "nicknamePlaceholder": "cth. alice · 小明 · 🦊",
+    "nicknameHint": "Sebarang bahasa · 1–12 aksara · 🎲 rawak",
+    "randomNickname": "Nama panggilan rawak",
+    "creating": "Mencipta…",
+    "submit": "Cipta akaun →"
+  },
+  "registered": {
+    "openWallet": "Buka dompet →",
+    "wow": "WOW! Anda dapat kad",
+    "wowCard": "Kad pembayaran iUSD!",
+    "tapCard": "KETUK KAD",
+    "shareText": "Hantar saya iUSD — imbas QR kad saya! 🎁"
+  },
+  "toast": {
+    "thatsYou": "Itu anda!",
+    "copied": "Disalin {{value}}",
+    "addedToContacts": "{{name}} ditambah ke kenalan",
+    "linkCopied": "Pautan disalin",
+    "paymentNotLinked": "Bayaran belum dihubungkan — cuba lagi dalam beberapa saat",
+    "claimFailed": "Tuntutan gagal",
+    "claimQueued": "Tuntutan dalam baris gilir",
+    "networkError": "Ralat rangkaian: {{msg}}",
+    "noNewContactsInHistory": "Tiada kenalan baru dalam sejarah",
+    "importedFromHistory_one": "Diimport {{count}} kenalan dari sejarah",
+    "importedFromHistory_other": "Diimport {{count}} kenalan dari sejarah",
+    "noNewImport": "Tiada kenalan baru untuk diimport",
+    "importFailed": "Import gagal: {{msg}}"
+  },
+  "nav": {
+    "dashboard": "Papan Pemuka",
+    "home": "Utama",
+    "more": "Lagi"
+  },
+  "payLink": {
+    "resolving": "Menyelesaikan pautan bayaran…",
+    "invoiceDetails": "BUTIRAN INVOIS",
+    "status": "Status",
+    "invoiceId": "ID Invois",
+    "recipient": "Penerima",
+    "dueDate": "Tarikh Akhir",
+    "paymentProof": "BUKTI BAYARAN",
+    "invalidLink": "Pautan Tidak Sah",
+    "claimed": "Dituntut",
+    "paymentComplete": "Bayaran Selesai",
+    "receivedByName": "{{name}} menerima {{amount}} iUSD",
+    "paymentSent": "Bayaran Dihantar",
+    "processingAuto": "{{amount}} iUSD · diproses automatik",
+    "claimWithinMinutes": "Tuntutan biasanya selesai dalam 1–2 minit",
+    "goToDashboard": "Ke Papan Pemuka"
+  },
+  "verify": {
+    "title": "Pengesahan Bayaran",
+    "verifying": "Sedang mengesahkan bayaran…",
+    "noPid": "Tiada ID bayaran diberikan.",
+    "notFound": "Bayaran tidak dijumpai",
+    "error": "Ralat: {{msg}}",
+    "verification": "Pengesahan",
+    "to": "KEPADA",
+    "platformFee": "Yuran Platform",
+    "txHash": "Transaction Hash",
+    "goHomepage": "Ke Laman Utama"
+  },
+  "profile": {
+    "defaultSlogan": "Anda ceriakan hari saya ✨",
+    "copyFullId": "Salin ID penuh",
+    "contactAlreadyAdded": "Sudah ditambah ke kenalan",
+    "addToContacts": "Tambah ke kenalan"
+  },
+  "invoiceView": {
+    "title": "INVOIS",
+    "billFrom": "Daripada",
+    "billTo": "Kepada",
+    "issueDate": "Tarikh Keluaran",
+    "dueDate": "Tarikh Akhir",
+    "invoiceAmount": "Jumlah Invois",
+    "recipientGets": "Penerima mendapat",
+    "payLink": "Pautan Bayaran",
+    "taxId": "No. Cukai: {{id}}",
+    "noteLabel": "Nota: {{note}}",
+    "platformFeeLabel": "Yuran Platform (0.5%{{cap}})",
+    "platformFeeCapped": ", had",
+    "paidStatus": "✓ Dibayar pada {{date}}",
+    "noToken": "Tiada token",
+    "failedToLoad": "Gagal memuat",
+    "notFound": "Invois tidak ditemui.",
+    "unavailable": "Invois tidak tersedia.",
+    "saveAsImage": "Simpan sebagai imej",
+    "printPdf": "Cetak / Simpan PDF",
+    "openInSafariChrome": "Buka dalam Safari atau Chrome untuk simpan sebagai PDF",
+    "close": "Tutup"
+  },
+  "notFound": {
+    "title": "Halaman tidak dijumpai",
+    "desc": "Halaman yang anda cari tidak wujud atau telah dialihkan."
+  },
+  "installGuide": {
+    "alreadyInstalled": "Sudah dipasang!",
+    "usingStandalone": "Anda menggunakan iUSD Pay sebagai aplikasi standalone.",
+    "installApp": "Pasang Apl",
+    "androidHint": "Buka halaman ini di Chrome dan ketuk menu (⋮) → \"Tambah ke Skrin Utama\"",
+    "desktopHint": "Di Chrome, klik ikon pasang (⊕) pada bar alamat, atau Menu → \"Pasang apl\"",
+    "skip": "Langkau buat masa ini",
+    "ios": {
+      "step1": "Ketuk butang Kongsi di bahagian bawah Safari",
+      "step2": "Tatal ke bawah dan ketuk \"Tambah ke Skrin Utama\"",
+      "step3": "Ketuk \"Tambah\" untuk sahkan"
+    }
+  },
+  "giftBox": {
+    "1": {
+      "name": "Kotak muzik",
+      "description": "Loket berbentuk perisai daripada emas dan enamel. Satu sisi memaparkan adegan ladang automaton dengan kincir air; sisi lain mawar di atas latar merah. Kedua-dua sisi disempadani mutiara separuh, contoh luar biasa seni dekoratif abad ke-18."
+    },
+    "2": {
+      "name": "FLY Kopi",
+      "description": "Nikmati Fly Coffee dengan diskaun 50%. Di kafe atau dibawa pulang — cecapi aroma setiap cawan pada harga terbaik."
+    },
+    "3": {
+      "name": "Jam berulang",
+      "description": "Jam pengulang oleh Francis Perigal, pembuat jam British terkemuka (aktif 1741–67). Kes emas sebahagian berenamel; muka enamel putih dengan angka hitam dan jarum perak bertatah berlian; mekanisme bersadur emas. Kemuncak seni jam abad ke-18."
+    },
+    "4": {
+      "name": "Gitar",
+      "description": "Gitar yang belakangnya, rusuk, batang leher dan kepalanya disalut corak chevron daripada kulit kura-kura, ebony dan gading, dihias dengan gulungan bingkai, belah ketupat dan sempadan geometri. Gabungan hebat kayu dan kerja tatah yang menyerlahkan kepakaran pembuat."
+    },
+    "5": {
+      "name": "Kotak muzik",
+      "description": "Kotak muzik Switzerland sekitar 1820 berbentuk mandolin. Dihasilkan daripada pelbagai bahan dengan halus, ia menggabungkan seni kotak muzik Eropah awal abad ke-19 dengan estetika alat mandolin itu sendiri."
+    },
+    "6": {
+      "name": "Gitar",
+      "description": "Gitar berhias mewah oleh Giacomo (Jacob) Ertel, hujung abad ke-17. Spruce, ebony, kayu buah, tulang, gading, nakara dan perkamen. Karya ini menggabungkan kecintaan tukang Jerman terhadap hiasan dengan tradisi pembinaan gitar Itali."
+    },
+    "7": {
+      "name": "Pagi Musim Sejuk di Desa",
+      "description": "Litograf diwarnai tangan dari studio Currier & Ives, 1873. Pemandangan desa bersalji: giring ditarik dua ekor kuda mengangkut sepasang suami isteri dan empat bekas susu besar; jauh di belakang, ladang mereka. Contoh tipikal seni rakyat Amerika abad ke-19."
+    },
+    "8": {
+      "name": "Beri Saya Kebebasan atau Kematian!",
+      "description": "Litograf diwarnai tangan Currier & Ives, 1876, \"Beri saya kebebasan atau beri saya kematian!\". Menggambarkan Patrick Henry menyampaikan ucapan terkenalnya tentang hak-hak tanah jajahan di hadapan Perhimpunan Virginia di Richmond, Mac 1775."
+    },
+    "9": {
+      "name": "Kotak muzik",
+      "description": "Kotak muzik Switzerland berbentuk segi empat tepat daripada emas dan enamel, sekitar 1820. Sempadan berenamel biru dan kuning; penutupnya menampilkan miniatur enamel klasik yang dikelilingi mutiara separuh. Gabungan sempurna antara seni kotak muzik dan penghasilan barang kemas."
+    },
+    "10": {
+      "name": "Kes jam",
+      "description": "Kes jam oleh George Harrison, sekitar 1770. Emas sebahagian berenamel; kes luar bertatah berlian bersinar, bukti kepakaran tinggi pembuat jam dan tukang emas British pada abad ke-18."
+    },
+    "11": {
+      "name": "Division Viol",
+      "description": "Viol pembahagian oleh Richard Meares, sekitar 1680. Spruce, ebony, maple. Viol, alat bertali tertua yang paling dihormati pada akhir Renaissance, secara beransur digantikan oleh biola pada abad ke-17; saksi penting dalam sejarah muzik."
+    },
+    "12": {
+      "name": "Naga",
+      "description": "Naga gangsa awal abad ke-17 karya Giacomo Laurenziani. Ketika diperoleh telah dikatalogkan sebagai grifon; sejak dekad 1950-an James Parker mengenal pasti semula dengan betul sebagai naga; contoh barok yang menakjubkan."
+    },
+    "13": {
+      "name": "Ros dan lili",
+      "description": "Henri Fantin-Latour, 1888, minyak atas kanvas. Karya yang tersimpan dalam keadaan cemerlang ini mempamerkan pengendalian pigmen yang penuh ketangkasan: pelukis menggunakan bukan sahaja berus tetapi juga hujung pemegangnya untuk membentuk mawar dan lili dengan cahaya dan tekstur yang halus."
+    },
+    "14": {
+      "name": "Jam",
+      "description": "Jam F. L. Meybom, sekitar 1670–75. Kes emas, keluli biru, kristal batu dan perak bersadur separa dengan berlian; muka dengan enamel dilukis dan basse-taille atas emas; mekanisme tembaga bersadur emas dan keluli separa biru."
+    },
+    "15": {
+      "name": "Kerongsang pepatung",
+      "description": "Kerongsang pepatung gaya Art Nouveau oleh Edgar Bense, sekitar 1890. Emas, berlian dan enamel. Sayap halusnya dalam teknik plique-à-jour memahkotai pepatung yang dipahat halus, mengabadikan fesyen dan pembuatan barang kemas Art Nouveau serta estetika naturalis."
+    },
+    "16": {
+      "name": "Gelang lengan",
+      "description": "Gelang lengan India (bazuband), abad ke-19. Emas tenun bertatah delima dan sebiji berlian potongan rose. Contoh serupa terdapat dalam tradisi barang kemas bangsawan India, warisan estetika istana Mughal."
+    },
+    "17": {
+      "name": "Set Perisai George Clifford",
+      "description": "Set perisai yang dibuat oleh Jacob Halder pada 1586 di Armori Diraja Greenwich untuk George Clifford. Keluli, emas, kulit dan tekstil. Clifford (1558–1605) dilantik sebagai Juara Ratu pada 1590 dan dianugerahi Pangkat Garter pada tahun yang sama."
+    },
+    "18": {
+      "name": "Kerongsang berbentuk kepala burung hantu",
+      "description": "Kerongsang berbentuk kepala burung hantu oleh Castellani, sekitar 1860. Emas dan akik. Karya ini dan kumpulan yang dimiliki (lihat 2014.713.1–.10) mencerminkan minat besar Eropah abad ke-19 terhadap gaya bersejarah dan mewakili barang kemas kebangkitan arkeologi."
+    },
+    "19": {
+      "name": "Jam",
+      "description": "Jam Charles Bobinet, sekitar 1655–60. Kes akik dengan pemasangan emas berenamel; muka enamel putih dengan jarum emas; mekanisme tembaga bersadur emas dan keluli separa biru. Bukti kepakaran pembuatan jam Eropah pertengahan abad ke-17."
+    },
+    "20": {
+      "name": "Iris",
+      "description": "Vincent van Gogh, 1890, minyak atas kanvas. Lukisan Irises yang terkenal. Salah satu karya paling ikonik pada fasa akhir pelukis; dengan warna yang meriah dan sapuan berus penuh tenaga, ia memberi penghormatan mendalam kepada keindahan alam."
+    },
+    "21": {
+      "name": "Mangkuk gula bertutup",
+      "description": "Mangkuk gula bertutup oleh Giovacchino Belli, sekitar 1811–22. Perak bersadur emas. Tafsiran gaya Empire Belli lebih santai dan intim berbanding tafsiran Perancis sezaman, melembutkan garis neoklasik yang ketat dengan sentuhan Itali yang tersendiri."
+    },
+    "22": {
+      "name": "Kendi",
+      "description": "Ewer perak bersadur dan enamel, sekitar 1600. Badannya dihiasi perarakan manusia dan haiwan yang menggambarkan Kemenangan Caesar ketika pulang dari Mesir atau kemenangan Scipio Africanus selepas mengalahkan Hannibal; karya logam cemerlang akhir Renaissance."
+    },
+    "23": {
+      "name": "Pelakon Asao Gakujūrō I sebagai Mashiba Hisatsugu",
+      "description": "Ukiran kayu Shunkōsai Hokushū (Osaka), 1822. Nishiki-e atas kertas dengan dakwat dan warna, format ōban menegak Jepun. Menggambarkan pelakon kabuki Osaka Asao Gakujūrō I dalam peranan Mashiba Hisatsugu dengan pandangan garang dan pose mencabar penuh dramatik."
+    },
+    "24": {
+      "name": "Mahkota Andes",
+      "description": "\"Mahkota Andes\" — diadem sekitar 1660 dan gerbang sekitar 1770. Dari Popayán, Colombia. Emas repoussé dan ukiran bertatah zamrud. Salah satu karya emas terpenting zaman kolonial Amerika Selatan, sintesis kreatif teknik Eropah dan peribumi."
+    }
+  },
+  "components": {
+    "nicknameEditor": {
+      "title": "Tukar nama panggilan",
+      "placeholder": "Nama panggilan anda",
+      "randomNickname": "Nama panggilan rawak",
+      "generating": "MENJANA...",
+      "firstChangeFee": "Yuran tukar pertama",
+      "changeFeeN": "Yuran tukar (tukaran #{{n}})",
+      "firstFeeNote": "Tukaran pertama nama panggilan berharga 0.10 iUSD. Tukaran seterusnya berharga 10.00 iUSD setiap satu.",
+      "feeNote": "Setiap tukaran nama panggilan berharga 10.00 iUSD.",
+      "idStays": "ID akaun anda kekal sama",
+      "notUniqueAck": "Saya faham nama panggilan tidak unik. Akaun lain boleh guna nama sama.",
+      "signing": "Menandatangani...",
+      "payAndSave": "Bayar {{fee}} iUSD & simpan",
+      "errEmpty": "Nama panggilan tidak boleh kosong",
+      "errFee": "Tidak dapat tentukan yuran",
+      "errTxFailed": "Transaksi gagal",
+      "errNoHash": "Tiada hash transaksi dikembalikan",
+      "errCancelled": "Transaksi dibatalkan",
+      "errGeneric": "Gagal"
+    },
+    "mwc": {
+      "chooseMethod": "Pilih kaedah sambungan",
+      "checkWallet": "Semak apl dompet anda",
+      "approveRequest": "Luluskan permintaan sambungan di apl dompet",
+      "returnAfterApprove": "⚠️ Kembali ke halaman ini selepas meluluskan",
+      "tryAgain": "Cuba lagi",
+      "cancel": "Batal",
+      "openInWallet": "Buka dalam dompet",
+      "best": "TERBAIK",
+      "continueInBrowser": "Teruskan dalam pelayar {{name}}",
+      "signAndReturn": "Tandatangan & kembali",
+      "approveAndReturn": "Luluskan dalam apl dan kembali",
+      "directConnection": "Sambungan terus • Tiada pelayan relay",
+      "connectionFailed": "Sambungan gagal",
+      "state": {
+        "initializing": "Memulakan...",
+        "generatingUri": "Menyambung...",
+        "waitingApproval": "Luluskan dalam apl dompet...",
+        "connected": "Disambung!",
+        "failed": "Gagal"
+      }
+    },
+    "quickLogin": {
+      "signing": "Menandatangani...",
+      "verifying": "Mengesahkan...",
+      "processing": "Memproses...",
+      "signInTo": "Log masuk untuk {{action}}",
+      "walletTapToSignIn": "Dompet disambung. Ketik untuk log masuk.",
+      "almostThere": "Hampir siap! Lengkapkan pendaftaran untuk {{action}}.",
+      "redirecting": "Mengalih ke pendaftaran...",
+      "connectionFailed": "Sambungan gagal",
+      "tryAgain": "Cuba lagi",
+      "connecting": "Menyambung...",
+      "connectTo": "Sambung untuk {{action}}",
+      "tapConnectHint": "Ketik Sambung — dompet akan minta tandatangan",
+      "signInWith": "Log masuk dengan",
+      "orWallet": "ATAU DOMPET",
+      "other": "Lain",
+      "openInWalletBrowser": "Buka pautan ini dalam pelayar dompet anda",
+      "linkCopied": "Pautan disalin ke papan keratan",
+      "dismiss": "Tutup"
+    },
+    "identityCardBack": {
+      "idLabel": "ID:",
+      "deposit": "Deposit",
+      "withdraw": "Keluar",
+      "onlyOn": "Hanya di",
+      "gas": "Gas",
+      "gasOk": "Gas OK",
+      "lowGas": "Gas rendah"
+    },
+    "qrScan": {
+      "scanQR": "Imbas QR",
+      "cameraUnavailable": "Kamera tidak tersedia",
+      "turnFlashOff": "Matikan lampu suluh",
+      "turnFlashOn": "Hidupkan lampu suluh",
+      "cancel": "Batal"
+    },
+    "errorBoundary": {
+      "updating": "Mengemas kini…",
+      "somethingWrong": "Ada yang tidak kena",
+      "genericErr": "Ralat tidak dijangka menghalang halaman dimuatkan.",
+      "reload": "Muat semula",
+      "resetReload": "Set semula & muat"
+    },
+    "identityCard": {
+      "validFrom": "SAH DARI",
+      "status": "STATUS",
+      "statusActive": "Aktif",
+      "statusFrozen": "Dibekukan",
+      "statusDeactivated": "Dinyahaktifkan",
+      "viewProfile": "Lihat kad profil",
+      "scanAndGift": "Imbas dan Hadiah ✨",
+      "share": "↗ Kongsi",
+      "shareText": "Saya ada kad iUSD Pay! Imbas dan beri hadiah",
+      "copyLink": "Salin pautan",
+      "copied": "Disalin!"
+    }
+  },
+  "soundStyles": {
+    "click": {
+      "keyboard": {
+        "name": "Papan kekunci",
+        "desc": "Klik papan kekunci mekanikal"
+      },
+      "pop": {
+        "name": "Pop lembut",
+        "desc": "Buih pecah"
+      },
+      "tic": {
+        "name": "Tik",
+        "desc": "Tik tajam pendek"
+      },
+      "chime": {
+        "name": "Loceng",
+        "desc": "Ding lembut"
+      },
+      "glass": {
+        "name": "Kaca",
+        "desc": "Denting kaca"
+      },
+      "coin": {
+        "name": "Syiling",
+        "desc": "Denting logam"
+      },
+      "digital": {
+        "name": "Digital",
+        "desc": "Blip 8-bit"
+      },
+      "drip": {
+        "name": "Titis",
+        "desc": "Titis air"
+      },
+      "paper": {
+        "name": "Kertas",
+        "desc": "Ketukan kertas"
+      },
+      "piano": {
+        "name": "Piano",
+        "desc": "Nota piano lembut"
+      },
+      "silent": {
+        "name": "Senyap",
+        "desc": "Tiada bunyi klik"
+      }
+    },
+    "card": {
+      "breeze": {
+        "name": "Bayu",
+        "desc": "Angin lembut"
+      },
+      "dream_bells": {
+        "name": "Loceng Mimpi",
+        "desc": "Kilauan loceng kaca"
+      },
+      "page_turn": {
+        "name": "Pusing halaman",
+        "desc": "Bunyi kertas"
+      },
+      "whoosh": {
+        "name": "Whoosh",
+        "desc": "Swoosh pantas"
+      },
+      "soft_pop": {
+        "name": "Pop lembut",
+        "desc": "Pop dua kali lembut"
+      },
+      "silent": {
+        "name": "Senyap",
+        "desc": "Tiada bunyi selak"
+      }
+    },
+    "gift": {
+      "celebration": {
+        "name": "Perayaan",
+        "desc": "Kord naik C-E-G-C"
+      },
+      "sparkle": {
+        "name": "Kilauan",
+        "desc": "Nota berkilau tinggi"
+      },
+      "fanfare": {
+        "name": "Fanfare",
+        "desc": "Ta-da tembaga"
+      },
+      "bell_cascade": {
+        "name": "Air terjun loceng",
+        "desc": "Loceng menurun"
+      },
+      "soft_bell": {
+        "name": "Loceng lembut",
+        "desc": "Loceng lembut tunggal"
+      },
+      "silent": {
+        "name": "Senyap",
+        "desc": "Tiada bunyi hadiah"
+      }
+    },
+    "txn": {
+      "whoosh_up": {
+        "name": "Whoosh Naik",
+        "desc": "Swoosh naik"
+      },
+      "coin_drop": {
+        "name": "Syiling jatuh",
+        "desc": "Syiling logam mendarat"
+      },
+      "pneumatic": {
+        "name": "Pneumatik",
+        "desc": "Tiub retro"
+      },
+      "confirm_chime": {
+        "name": "Loceng pengesahan",
+        "desc": "Dua nada pengesahan"
+      },
+      "paper_slide": {
+        "name": "Luncuran kertas",
+        "desc": "Kertas meluncur"
+      },
+      "silent": {
+        "name": "Senyap",
+        "desc": "Tiada bunyi transaksi"
+      }
+    },
+    "menu": {
+      "slide": {
+        "name": "Luncur",
+        "desc": "Panel meluncur masuk"
+      },
+      "soft_pop": {
+        "name": "Pop lembut",
+        "desc": "Bukaan lembut"
+      },
+      "swish": {
+        "name": "Swish",
+        "desc": "Swish udara"
+      },
+      "silent": {
+        "name": "Senyap",
+        "desc": "Tiada bunyi menu"
+      }
+    }
+  },
+  "time": {
+    "justNow": "baru saja",
+    "minutesAgo": "{{n}}m lalu",
+    "hoursAgo": "{{n}}j lalu",
+    "daysAgo": "{{n}}h lalu"
+  },
+  "receiptView": {
+    "back": "← Kembali",
+    "paymentReceipt": "Resit Bayaran",
+    "receipt": "Resit",
+    "noPaymentId": "Tiada ID bayaran",
+    "notFound": "Resit tidak ditemui.",
+    "failedToLoad": "Gagal memuat",
+    "fee": "Yuran: {{amount}} iUSD",
+    "date": "Tarikh",
+    "confirmedLabel": "Disahkan",
+    "verify": "Sahkan",
+    "from": "Daripada",
+    "to": "Kepada",
+    "tx": "Tx: {{hash}}",
+    "id": "ID: {{id}}",
+    "statusPaid": "Dibayar",
+    "statusConfirmed": "Disahkan",
+    "statusPending": "Tertangguh",
+    "statusRevoked": "Dibatalkan",
+    "statusRefunded": "Dikembalikan",
+    "statusExpired": "Tamat",
+    "statusFailed": "Gagal",
+    "statusUnknown": "Tidak diketahui",
+    "saveAsImage": "Simpan sebagai imej",
+    "printPdf": "Cetak / Simpan PDF",
+    "openInSafariChrome": "Buka dalam Safari atau Chrome untuk simpan sebagai PDF",
+    "errorPrefix": "Ralat: {{msg}}"
+  },
+  "update": {
+    "available": "Versi baharu tersedia",
+    "reload": "Muat semula"
+  }
+}

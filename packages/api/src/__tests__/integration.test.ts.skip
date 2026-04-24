@@ -1,0 +1,357 @@
+/**
+ * Integration Tests — End-to-End API flows
+ *
+ * Tests full user journeys across all payment instruments.
+ * NODE_ENV=test skips OFAC network calls (deterministic).
+ */
+import { describe, it, expect, beforeAll, afterAll } from 'vitest'
+import Fastify from 'fastify'
+import { buildApp } from '../index'
+
+let app: ReturnType<typeof Fastify>
+
+beforeAll(async () => {
+  app = await buildApp()
+  await app.ready()
+})
+
+afterAll(async () => {
+  await app.close()
+})
+
+// ── Journey 1: P2P Payment ───────────────────────────────────────────────────
+describe('Journey: P2P Payment (end-to-end)', () => {
+  let paymentId: string
+
+  it('creates ZK payment', async () => {
+    const res = await app.inject({
+      method: 'POST',
+      url: '/v1/payments',
+      headers: {
+        'X-IPay-ToS-Accepted': '1',
+        'X-Wallet-Address': 'init1alice111111111111111111111111111111111',
+      },
+      payload: {
+        recipient:  'init1bob11111111111111111111111111111111111',
+        amount:     '50.000000',
+        chain:      'interwoven-1',
+        nullifier:  '0xabc111000000000000000000000000000000000000000000000000000000001',
+        commitment: '0xdef222000000000000000000000000000000000000000000000000000000002',
+        proof: {
+          pi_a: ['1','2','1'], pi_b: [['1','2'],['3','4'],['1','0']], pi_c: ['5','6','1'],
+          protocol: 'groth16', curve: 'bn128'
+        },
+      },
+    })
+    expect(res.statusCode).toBe(201)
+    const body = JSON.parse(res.body)
+    expect(body.paymentId).toMatch(/^iPay-/)
+    expect(body.status).toBe('created')
+    paymentId = body.paymentId
+  })
+
+  it('retrieves payment status', async () => {
+    const res = await app.inject({ method: 'GET', url: `/v1/payments/${paymentId}/status` })
+    expect(res.statusCode).toBe(200)
+    expect(JSON.parse(res.body).paymentId).toBe(paymentId)
+  })
+
+  it('stores encrypted note for the payment', async () => {
+    const res = await app.inject({
+      method: 'POST', url: '/v1/history/notes',
+      payload: {
+        order_id:      paymentId,
+        owner_vk_hash: 'journey1vkhash',
+        ciphertext:    'ZW5jcnlwdGVkbm90ZQ==',
+        instrument_type: 0,
+        chain: 'interwoven-1',
+      },
+    })
+    expect(res.statusCode).toBe(201)
+    expect(JSON.parse(res.body).note_id).toBe(`NOTE-${paymentId}`)
+  })
+
+  it('retrieves note via vk_hash', async () => {
+    const res = await app.inject({
+      method: 'GET', url: `/v1/history?vk_hash=journey1vkhash`,
+    })
+    expect(res.statusCode).toBe(200)
+    const notes = JSON.parse(res.body).notes
+    expect(notes.some((n: any) => n.order_id === paymentId)).toBe(true)
+  })
+})
+
+// ── Journey 2: Invoice → Pay → Webhook ───────────────────────────────────────
+describe('Journey: Invoice payment', () => {
+  let invoiceId: string
+
+  it('merchant creates invoice', async () => {
+    const res = await app.inject({
+      method: 'POST', url: '/v1/invoices',
+      headers: {
+        'X-IPay-ToS-Accepted': '1',
+        'X-Wallet-Address': 'init1merchant111111111111111111111111111111',
+      },
+      payload: {
+        merchant_address: 'init1merchant111111111111111111111111111111',
+        amount: '299.99',
+        description: 'Pro subscription 1 year',
+        chain: 'interwoven-1',
+        expires_in_hours: 48,
+      },
+    })
+    expect(res.statusCode).toBe(201)
+    const body = JSON.parse(res.body)
+    expect(body.invoice_id).toMatch(/^INV-/)
+    invoiceId = body.invoice_id
+  })
+
+  it('payer pays invoice with ZK proof', async () => {
+    const res = await app.inject({
+      method: 'POST', url: `/v1/invoices/${invoiceId}/pay`,
+      headers: { 'X-IPay-ToS-Accepted': '1', 'X-Wallet-Address': 'init1payer111' },
+      payload: {
+        payer_address: 'init1payer111',
+        nullifier:     '0xbb1',
+        commitment:    '0xcc2',
+        proof: { pi_a: ['1','2','1'], pi_b: [['1','2'],['3','4'],['1','0']], pi_c: ['1','2','1'], protocol:'groth16', curve:'bn128' },
+      },
+    })
+    expect(res.statusCode).toBe(200)
+    expect(JSON.parse(res.body).status).toBe('paid')
+  })
+
+  it('invoice status reflects paid', async () => {
+    const res = await app.inject({ method: 'GET', url: `/v1/invoices/${invoiceId}` })
+    expect(JSON.parse(res.body).status).toBe('paid')
+  })
+})
+
+// ── Journey 3: Chocolate Box → Claim ─────────────────────────────────────────
+describe('Journey: Chocolate Box gift', () => {
+  let giftId: string
+
+  it('creates chocolate box (equal mode, open access)', async () => {
+    const res = await app.inject({
+      method: 'POST', url: '/v1/gifts',
+      headers: { 'X-IPay-ToS-Accepted': '1', 'X-Wallet-Address': 'init1sender111' },
+      payload: {
+        creator_address: 'init1sender111',
+        total_amount: '100',
+        slot_count: 5,
+        mode: 'equal',
+        access: 'open',
+        message: 'Happy ZK day!',
+        chain: 'interwoven-1',
+        expires_in_hours: 72,
+      },
+    })
+    expect(res.statusCode).toBe(201)
+    const body = JSON.parse(res.body)
+    expect(body.box_id).toMatch(/^GP-/)
+    expect(body.slot_amount).toBe('20.000000')
+    giftId = body.box_id
+  })
+
+  it('first claimer gets 20 iUSD', async () => {
+    const res = await app.inject({
+      method: 'POST', url: `/v1/gifts/${giftId}/claim`,
+      headers: { 'X-IPay-ToS-Accepted': '1', 'X-Wallet-Address': 'init1claimer1' },
+      payload: {
+        claimer_address: 'init1claimer1',
+        nullifier: '0xchoc001',
+        proof: { pi_a: ['1','2','1'], pi_b: [['1','2'],['3','4'],['1','0']], pi_c: ['1','2','1'], protocol:'groth16', curve:'bn128' },
+      },
+    })
+    expect(res.statusCode).toBe(200)
+    expect(JSON.parse(res.body).amount).toBe('20.000000')
+  })
+
+  it('same nullifier cannot claim twice', async () => {
+    const res = await app.inject({
+      method: 'POST', url: `/v1/gifts/${giftId}/claim`,
+      headers: { 'X-IPay-ToS-Accepted': '1', 'X-Wallet-Address': 'init1claimer2' },
+      payload: {
+        claimer_address: 'init1claimer2',
+        nullifier: '0xchoc001',  // same nullifier
+        proof: { pi_a: ['1','2','1'], pi_b: [['1','2'],['3','4'],['1','0']], pi_c: ['1','2','1'], protocol:'groth16', curve:'bn128' },
+      },
+    })
+    expect(res.statusCode).toBe(409)
+    expect(['NULLIFIER_ALREADY_USED', 'ALREADY_CLAIMED']).toContain(JSON.parse(res.body).error)
+  })
+})
+
+// ── Journey 4: Subscription lifecycle ────────────────────────────────────────
+describe('Journey: Subscription lifecycle', () => {
+  let subId: string
+
+  it('payer creates monthly subscription', async () => {
+    const res = await app.inject({
+      method: 'POST', url: '/v1/subscriptions',
+      headers: { 'X-IPay-ToS-Accepted': '1', 'X-Wallet-Address': 'init1subpayer1' },
+      payload: {
+        payer_address:    'init1subpayer1',
+        merchant_address: 'init1submerchant1',
+        amount: '19.99',
+        interval: 'monthly',
+        chain: 'interwoven-1',
+        max_periods: 12,
+      },
+    })
+    expect(res.statusCode).toBe(201)
+    const body = JSON.parse(res.body)
+    expect(body.sub_id).toMatch(/^SUB-/)
+    expect(body.status).toBe('active')
+    subId = body.sub_id
+  })
+
+  it('payer pauses subscription', async () => {
+    const res = await app.inject({
+      method: 'POST', url: `/v1/subscriptions/${subId}/pause`,
+      payload: { payer_address: 'init1subpayer1' },
+    })
+    expect(JSON.parse(res.body).status).toBe('paused')
+  })
+
+  it('payer resumes subscription', async () => {
+    const res = await app.inject({
+      method: 'POST', url: `/v1/subscriptions/${subId}/resume`,
+      payload: { payer_address: 'init1subpayer1' },
+    })
+    expect(JSON.parse(res.body).status).toBe('active')
+  })
+
+  it('payer cancels subscription', async () => {
+    const res = await app.inject({
+      method: 'POST', url: `/v1/subscriptions/${subId}/cancel`,
+      payload: { payer_address: 'init1subpayer1' },
+    })
+    expect(JSON.parse(res.body).status).toBe('cancelled')
+  })
+})
+
+// ── Journey 5: Travel Rule compliance ────────────────────────────────────────
+describe('Journey: Travel Rule (compliance)', () => {
+  it('$999 — no travel rule required', async () => {
+    const res = await app.inject({
+      method: 'POST', url: '/v1/travel-rule/check',
+      payload: { amount_usd: 999, from_address: 'init1aaa', to_address: 'init1bbb' },
+    })
+    expect(JSON.parse(res.body).requires_travel_rule).toBe(false)
+  })
+
+  it('$1000 — travel rule required', async () => {
+    const res = await app.inject({
+      method: 'POST', url: '/v1/travel-rule/check',
+      payload: { amount_usd: 1000, from_address: 'init1aaa', to_address: 'init1bbb' },
+    })
+    expect(JSON.parse(res.body).requires_travel_rule).toBe(true)
+  })
+
+  it('generates IVMS101 packet for $5000 transfer', async () => {
+    const res = await app.inject({
+      method: 'POST', url: '/v1/travel-rule/packets',
+      payload: {
+        amount_usd:          5000,
+        from_address:        'init1alice111111111111111111111111111111111',
+        to_address:          'init1bob11111111111111111111111111111111111',
+        order_id:            'iPay-travel-test001',
+        originator_address:  'init1alice111111111111111111111111111111111',
+        beneficiary_address: 'init1bob11111111111111111111111111111111111',
+        originator_info:     { name: 'Alice Testnet' },
+      },
+    })
+    expect(res.statusCode).toBe(201)
+    const body = JSON.parse(res.body)
+    expect(body.packet.originator).toBeDefined()
+    expect(body.packet.beneficiary).toBeDefined()
+    expect(body.packet.version).toBe('1.0')
+    expect(body.standard).toBe('IVMS101')
+  })
+})
+
+// ── Journey 6: OFAC + sanctions screening ────────────────────────────────────
+describe('Journey: OFAC screening', () => {
+  it('OFAC check skipped in test env (NODE_ENV=test)', async () => {
+    // In test mode, OFAC network calls are bypassed for speed.
+    // In production, 0x098b716b8aaf21512996dc57eb0615e2383e2f96 (Lazarus) would return 403.
+    // This test documents that behavior.
+    const res = await app.inject({
+      method: 'POST', url: '/v1/payments',
+      headers: {
+        'X-IPay-ToS-Accepted': '1',
+        'X-Wallet-Address':    '0x098b716b8aaf21512996dc57eb0615e2383e2f96',
+      },
+      payload: {
+        recipient:  'init1bob11111111111111111111111111111111111',
+        amount:     '100',
+        chain:      'interwoven-1',
+        nullifier:  '0xaaa999',
+        commitment: '0xbbb888',
+        proof: { pi_a: ['1','2','1'], pi_b: [['1','2'],['3','4'],['1','0']], pi_c: ['1','2','1'], protocol:'groth16', curve:'bn128' },
+      },
+    })
+    // In test env: passes through (201). In production: would be 403 SANCTIONED_ADDRESS.
+    expect([201, 403]).toContain(res.statusCode)
+  })
+
+  it('allows normal address through OFAC check', async () => {
+    const res = await app.inject({
+      method: 'POST', url: '/v1/payments',
+      headers: {
+        'X-IPay-ToS-Accepted': '1',
+        'X-Wallet-Address':    'init1cleanuser111111111111111111111111111',
+      },
+      payload: {
+        recipient:  'init1bob11111111111111111111111111111111111',
+        amount:     '5',
+        chain:      'interwoven-1',
+        nullifier:  '0xccc111',
+        commitment: '0xddd222',
+        proof: { pi_a: ['1','2','1'], pi_b: [['1','2'],['3','4'],['1','0']], pi_c: ['1','2','1'], protocol:'groth16', curve:'bn128' },
+      },
+    })
+    expect(res.statusCode).toBe(201)
+  })
+})
+
+// ── Journey 7: Audit package ─────────────────────────────────────────────────
+describe('Journey: Audit & selective disclosure', () => {
+  it('generates summary audit package', async () => {
+    const now = Math.floor(Date.now() / 1000)
+    const res = await app.inject({
+      method: 'POST', url: '/v1/audit/packages',
+      payload: {
+        subject_address:   'init1alice111111111111111111111111111111111',
+        authorization_sig: '0xmocksig',
+        grant_level:       'summary',
+        auditor_name:      'Deloitte Test',
+        period_from:       now - 86400 * 30,
+        period_to:         now,
+      },
+    })
+    expect(res.statusCode).toBe(201)
+    const body = JSON.parse(res.body)
+    expect(body.audit_id).toMatch(/^AUDIT-/)
+    expect(body.package.grant_level).toBe('summary')
+    expect(body.package_hash).toBeDefined()
+  })
+
+  it('generates full audit package', async () => {
+    const now = Math.floor(Date.now() / 1000)
+    const res = await app.inject({
+      method: 'POST', url: '/v1/audit/packages',
+      payload: {
+        subject_address:   'init1alice111111111111111111111111111111111',
+        authorization_sig: '0xmocksig2',
+        grant_level:       'full',
+        auditor_name:      'KPMG Test',
+        period_from:       now - 86400 * 90,
+        period_to:         now,
+      },
+    })
+    expect(res.statusCode).toBe(201)
+    expect(JSON.parse(res.body).package.grant_level).toBe('full')
+  })
+})

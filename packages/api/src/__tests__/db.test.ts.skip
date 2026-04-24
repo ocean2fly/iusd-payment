@@ -1,0 +1,383 @@
+/**
+ * DB schema tests — verifies tables, columns, constraints, and defaults
+ * using an isolated in-memory SQLite database.
+ */
+
+import { describe, it, expect, beforeEach, afterEach } from 'vitest'
+import Database from 'better-sqlite3'
+import { createTestDb } from '../db/index'
+
+let db: Database.Database
+
+// ---------------------------------------------------------------------------
+// Helpers
+// ---------------------------------------------------------------------------
+
+function getTableNames(d: Database.Database): string[] {
+  const rows = d.prepare(
+    "SELECT name FROM sqlite_master WHERE type='table' ORDER BY name"
+  ).all() as { name: string }[]
+  return rows.map((r) => r.name)
+}
+
+function getColumnNames(d: Database.Database, table: string): string[] {
+  const rows = d.prepare(`PRAGMA table_info(${table})`).all() as { name: string }[]
+  return rows.map((r) => r.name)
+}
+
+function insertPayment(
+  d: Database.Database,
+  paymentId: string,
+  opts: { idempotencyKey?: string | null; recipient?: string } = {}
+) {
+  const now = new Date().toISOString()
+  d.prepare(`
+    INSERT INTO payments
+      (payment_id, recipient, chain, amount, status, idempotency_key, created_at, expires_at, updated_at)
+    VALUES (?, ?, 'interwoven-1', '10.000000', 'created', ?, ?, ?, ?)
+  `).run(
+    paymentId,
+    opts.recipient ?? 'init1testaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa1b2c',
+    opts.idempotencyKey ?? null,
+    now,
+    now,
+    now,
+  )
+}
+
+// ---------------------------------------------------------------------------
+// Setup
+// ---------------------------------------------------------------------------
+
+beforeEach(() => {
+  db = createTestDb()
+})
+
+afterEach(() => {
+  db.close()
+})
+
+// ===========================================================================
+// Table existence
+// ===========================================================================
+describe('DB schema — required tables exist', () => {
+  const requiredTables = [
+    'payments',
+    'relay_secrets',
+    'inbox_claims',
+    'viewing_keys',
+    'refunds',
+    'event_log',
+    'support_tickets',
+    'audit_packages',
+    'tos_records',
+    'merchant_profiles',
+  ]
+
+  it('creates all 10 required tables', () => {
+    const tables = getTableNames(db)
+    for (const t of requiredTables) {
+      expect(tables, `missing table: ${t}`).toContain(t)
+    }
+  })
+
+  requiredTables.forEach((table) => {
+    it(`table "${table}" exists`, () => {
+      expect(getTableNames(db)).toContain(table)
+    })
+  })
+})
+
+// ===========================================================================
+// payments table columns
+// ===========================================================================
+describe('payments table — required columns', () => {
+  const requiredCols = [
+    'payment_id',
+    'recipient',
+    'sender',
+    'chain',
+    'amount',
+    'amount_micro',
+    'privacy_level',
+    'processing_tx_hash',
+    'tx_hash',
+    'claim_tx_hash',
+    'reject_tx_hash',
+    'refund_tx_hash',
+    'idempotency_key',
+    'created_at',
+    'expires_at',
+    'updated_at',
+  ]
+
+  requiredCols.forEach((col) => {
+    it(`has column: ${col}`, () => {
+      expect(getColumnNames(db, 'payments')).toContain(col)
+    })
+  })
+})
+
+// ===========================================================================
+// refunds table columns
+// ===========================================================================
+describe('refunds table — required columns', () => {
+  const requiredCols = [
+    'refund_id',
+    'payment_id',
+    'amount',
+    'reason',
+    'tx_hash',
+    'status',
+    'created_at',
+    'updated_at',
+  ]
+
+  requiredCols.forEach((col) => {
+    it(`has column: ${col}`, () => {
+      expect(getColumnNames(db, 'refunds')).toContain(col)
+    })
+  })
+})
+
+// ===========================================================================
+// event_log table columns
+// ===========================================================================
+describe('event_log table — required columns', () => {
+  const requiredCols = [
+    'id',
+    'entity_type',
+    'entity_id',
+    'from_status',
+    'to_status',
+    'actor',
+    'tx_hash',
+    'note',
+    'created_at',
+  ]
+
+  requiredCols.forEach((col) => {
+    it(`has column: ${col}`, () => {
+      expect(getColumnNames(db, 'event_log')).toContain(col)
+    })
+  })
+})
+
+// ===========================================================================
+// relay_secrets table columns
+// ===========================================================================
+describe('relay_secrets table — required columns', () => {
+  const required = [
+    'claim_key_hash',
+    'claim_key_hex',
+    'refund_key_hex',
+    'refund_key_hash',
+    'cooked_address',
+    'recipient',
+    'created_at',
+  ]
+  required.forEach((col) => {
+    it(`has column: ${col}`, () => {
+      expect(getColumnNames(db, 'relay_secrets')).toContain(col)
+    })
+  })
+})
+
+// ===========================================================================
+// inbox_claims table columns
+// ===========================================================================
+describe('inbox_claims table — required columns', () => {
+  const required = [
+    'claim_key_hash',
+    'recipient',
+    'ephemeral_pubkey',
+    'amount_micro',
+    'status',
+    'created_at',
+  ]
+  required.forEach((col) => {
+    it(`has column: ${col}`, () => {
+      expect(getColumnNames(db, 'inbox_claims')).toContain(col)
+    })
+  })
+})
+
+// ===========================================================================
+// Default values
+// ===========================================================================
+describe('payments table — default values', () => {
+  it('status defaults to "created"', () => {
+    const now = new Date().toISOString()
+    db.prepare(`
+      INSERT INTO payments (payment_id, recipient, chain, amount, created_at, expires_at)
+      VALUES (?, 'init1test', 'interwoven-1', '5.000000', ?, ?)
+    `).run('iPay-default-test', now, now)
+
+    const row = db.prepare('SELECT status FROM payments WHERE payment_id = ?').get('iPay-default-test') as any
+    expect(row.status).toBe('created')
+  })
+
+  it('updated_at is set automatically on insert', () => {
+    const now = new Date().toISOString()
+    db.prepare(`
+      INSERT INTO payments (payment_id, recipient, chain, amount, created_at, expires_at)
+      VALUES (?, 'init1test', 'interwoven-1', '5.000000', ?, ?)
+    `).run('iPay-updat-test', now, now)
+
+    const row = db.prepare('SELECT updated_at FROM payments WHERE payment_id = ?').get('iPay-updat-test') as any
+    expect(row.updated_at).toBeTruthy()
+  })
+})
+
+describe('refunds table — default status', () => {
+  it('status defaults to "pending"', () => {
+    // Insert a parent payment first (FK constraint)
+    insertPayment(db, 'iPay-parent-refund-001')
+
+    const now = new Date().toISOString()
+    db.prepare(`
+      INSERT INTO refunds (refund_id, payment_id, amount, reason, created_at, updated_at)
+      VALUES ('REF-001', 'iPay-parent-refund-001', '10.000000', 'test', ?, ?)
+    `).run(now, now)
+
+    const row = db.prepare('SELECT status FROM refunds WHERE refund_id = ?').get('REF-001') as any
+    expect(row.status).toBe('pending')
+  })
+})
+
+describe('event_log table — default entity_type', () => {
+  it('entity_type defaults to "payment"', () => {
+    const now = new Date().toISOString()
+    db.prepare(`
+      INSERT INTO event_log (entity_id, to_status, actor, created_at)
+      VALUES ('iPay-evt-test', 'processing', 'system', ?)
+    `).run(now)
+
+    const row = db.prepare('SELECT entity_type FROM event_log WHERE entity_id = ?').get('iPay-evt-test') as any
+    expect(row.entity_type).toBe('payment')
+  })
+})
+
+// ===========================================================================
+// Constraints
+// ===========================================================================
+describe('payments table — constraints', () => {
+  it('idempotency_key has UNIQUE constraint (duplicate insert throws)', () => {
+    insertPayment(db, 'iPay-idem-001', { idempotencyKey: 'key-abc-123' })
+
+    expect(() => {
+      insertPayment(db, 'iPay-idem-002', { idempotencyKey: 'key-abc-123' })
+    }).toThrow()
+  })
+
+  it('allows two payments with NULL idempotency_key (NULL is not unique)', () => {
+    insertPayment(db, 'iPay-null-001', { idempotencyKey: null })
+    expect(() => {
+      insertPayment(db, 'iPay-null-002', { idempotencyKey: null })
+    }).not.toThrow()
+  })
+
+  it('payment_id is PRIMARY KEY (duplicate throws)', () => {
+    insertPayment(db, 'iPay-pk-001')
+    expect(() => {
+      insertPayment(db, 'iPay-pk-001')
+    }).toThrow()
+  })
+
+  it('recipient is NOT NULL (missing recipient throws)', () => {
+    const now = new Date().toISOString()
+    expect(() => {
+      db.prepare(`
+        INSERT INTO payments (payment_id, chain, amount, created_at, expires_at)
+        VALUES ('iPay-norecip', 'interwoven-1', '5.0', ?, ?)
+      `).run(now, now)
+    }).toThrow()
+  })
+})
+
+describe('refunds table — foreign key constraint', () => {
+  it('inserting refund with non-existent payment_id throws (FK)', () => {
+    const now = new Date().toISOString()
+    expect(() => {
+      db.prepare(`
+        INSERT INTO refunds (refund_id, payment_id, amount, reason, created_at, updated_at)
+        VALUES ('REF-FK-BAD', 'iPay-does-not-exist', '5.0', 'test', ?, ?)
+      `).run(now, now)
+    }).toThrow()
+  })
+})
+
+// ===========================================================================
+// event_log — can insert and query
+// ===========================================================================
+describe('event_log — CRUD operations', () => {
+  it('can insert and query event_log rows', () => {
+    const now = new Date().toISOString()
+    db.prepare(`
+      INSERT INTO event_log (entity_type, entity_id, from_status, to_status, actor, tx_hash, note, created_at)
+      VALUES ('payment', 'iPay-evt-001', 'created', 'processing', 'relayer', '0xtxhash', 'test note', ?)
+    `).run(now)
+
+    const row = db.prepare('SELECT * FROM event_log WHERE entity_id = ?').get('iPay-evt-001') as any
+    expect(row).toBeDefined()
+    expect(row.from_status).toBe('created')
+    expect(row.to_status).toBe('processing')
+    expect(row.actor).toBe('relayer')
+    expect(row.tx_hash).toBe('0xtxhash')
+    expect(row.note).toBe('test note')
+  })
+
+  it('id column is autoincrement', () => {
+    const now = new Date().toISOString()
+    db.prepare(`INSERT INTO event_log (entity_id, to_status, actor, created_at) VALUES ('p1', 'processing', 'sys', ?)`).run(now)
+    db.prepare(`INSERT INTO event_log (entity_id, to_status, actor, created_at) VALUES ('p2', 'confirmed', 'sys', ?)`).run(now)
+
+    const rows = db.prepare('SELECT id FROM event_log ORDER BY id').all() as { id: number }[]
+    expect(rows.length).toBe(2)
+    expect(rows[1].id).toBeGreaterThan(rows[0].id)
+  })
+})
+
+// ===========================================================================
+// merchant_profiles table
+// ===========================================================================
+describe('merchant_profiles table — schema', () => {
+  it('has expected columns', () => {
+    const cols = getColumnNames(db, 'merchant_profiles')
+    expect(cols).toContain('merchant_id')
+    expect(cols).toContain('wallet_hash')
+    expect(cols).toContain('display_name')
+    expect(cols).toContain('created_at')
+    expect(cols).toContain('updated_at')
+  })
+})
+
+// ===========================================================================
+// support_tickets table
+// ===========================================================================
+describe('support_tickets table — schema', () => {
+  it('has expected columns', () => {
+    const cols = getColumnNames(db, 'support_tickets')
+    expect(cols).toContain('ticket_id')
+    expect(cols).toContain('payment_id')
+    expect(cols).toContain('description')
+    expect(cols).toContain('status')
+  })
+})
+
+// ===========================================================================
+// DB isolation — each test gets its own DB
+// ===========================================================================
+describe('DB isolation between tests', () => {
+  it('first test inserts a row', () => {
+    insertPayment(db, 'iPay-iso-001')
+    const row = db.prepare('SELECT * FROM payments WHERE payment_id = ?').get('iPay-iso-001')
+    expect(row).toBeDefined()
+  })
+
+  it('second test does not see rows from first test (isolated DB)', () => {
+    // 'iPay-iso-001' should NOT exist here since each test gets a fresh DB
+    const row = db.prepare('SELECT * FROM payments WHERE payment_id = ?').get('iPay-iso-001')
+    expect(row).toBeUndefined()
+  })
+})

@@ -1,0 +1,292 @@
+/**
+ * Contacts Routes Tests — /v1/contacts
+ *
+ * Auth is mocked by inserting session rows directly into the DB
+ * (no Cosmos crypto required in tests).
+ */
+import { describe, it, expect, beforeAll, afterAll, beforeEach } from 'vitest'
+import type { FastifyInstance } from 'fastify'
+import crypto from 'crypto'
+import { buildApp } from '../index'
+import { getDb } from '../db/index'
+
+let app: FastifyInstance
+
+/** Insert a test session directly into DB and return the token. */
+function createTestSession(address: string): string {
+  const token     = crypto.randomBytes(32).toString('hex')
+  const expiresAt = new Date(Date.now() + 24 * 60 * 60 * 1000).toISOString()
+  getDb()
+    .prepare('INSERT OR REPLACE INTO auth_sessions (session_id, address, expires_at, revoked) VALUES (?, ?, ?, 0)')
+    .run(token, address.toLowerCase(), expiresAt)
+  return token
+}
+
+beforeAll(async () => {
+  app = await buildApp()
+  await app.ready()
+})
+
+afterAll(async () => {
+  await app.close()
+})
+
+beforeEach(() => {
+  // Clean contacts and sessions between tests
+  getDb().exec("DELETE FROM contacts WHERE owner LIKE 'init1test%'")
+  getDb().exec("DELETE FROM auth_sessions WHERE address LIKE 'init1test%'")
+})
+
+const ADDR_A = 'init1testuser_a_000000000000000000000000aa'
+const ADDR_B = 'init1testuser_b_000000000000000000000000bb'
+const ADDR_C = 'init1testcontact_c_0000000000000000000000cc'
+
+describe('GET /v1/contacts — without auth', () => {
+  it('returns 401 when no Authorization header', async () => {
+    const res = await app.inject({ method: 'GET', url: '/v1/contacts' })
+    expect(res.statusCode).toBe(401)
+    const body = JSON.parse(res.body)
+    expect(body.error).toBe('MISSING_AUTH')
+  })
+
+  it('returns 401 for invalid token', async () => {
+    const res = await app.inject({
+      method:  'GET',
+      url:     '/v1/contacts',
+      headers: { authorization: 'Bearer invalidtoken000' },
+    })
+    expect(res.statusCode).toBe(401)
+    const body = JSON.parse(res.body)
+    expect(body.error).toBe('INVALID_TOKEN')
+  })
+})
+
+describe('GET /v1/contacts — with valid session', () => {
+  it('returns empty contacts array for new user', async () => {
+    const token = createTestSession(ADDR_A)
+    const res = await app.inject({
+      method:  'GET',
+      url:     '/v1/contacts',
+      headers: { authorization: `Bearer ${token}` },
+    })
+    expect(res.statusCode).toBe(200)
+    const body = JSON.parse(res.body)
+    expect(Array.isArray(body.contacts)).toBe(true)
+    expect(body.total).toBe(0)
+  })
+})
+
+describe('POST /v1/contacts', () => {
+  it('adds a contact scoped to session address', async () => {
+    const token = createTestSession(ADDR_A)
+    const res = await app.inject({
+      method:  'POST',
+      url:     '/v1/contacts',
+      headers: { authorization: `Bearer ${token}`, 'content-type': 'application/json' },
+      payload: { contact: ADDR_C, nickname: 'Charlie' },
+    })
+    expect(res.statusCode).toBe(201)
+    const body = JSON.parse(res.body)
+    expect(body.contact).toBe(ADDR_C.toLowerCase())
+    expect(body.nickname).toBe('Charlie')
+
+    // Verify it's stored and scoped to ADDR_A
+    const listRes = await app.inject({
+      method:  'GET',
+      url:     '/v1/contacts',
+      headers: { authorization: `Bearer ${token}` },
+    })
+    const listBody = JSON.parse(listRes.body)
+    expect(listBody.total).toBe(1)
+    expect(listBody.contacts[0].contact).toBe(ADDR_C.toLowerCase())
+  })
+
+  it('returns 409 for duplicate contact', async () => {
+    const token = createTestSession(ADDR_A)
+    const payload = { contact: ADDR_C }
+
+    await app.inject({
+      method:  'POST',
+      url:     '/v1/contacts',
+      headers: { authorization: `Bearer ${token}`, 'content-type': 'application/json' },
+      payload,
+    })
+
+    const res = await app.inject({
+      method:  'POST',
+      url:     '/v1/contacts',
+      headers: { authorization: `Bearer ${token}`, 'content-type': 'application/json' },
+      payload,
+    })
+    expect(res.statusCode).toBe(409)
+    expect(JSON.parse(res.body).error).toBe('ALREADY_EXISTS')
+  })
+
+  it('returns 400 when adding self as contact', async () => {
+    const token = createTestSession(ADDR_A)
+    const res = await app.inject({
+      method:  'POST',
+      url:     '/v1/contacts',
+      headers: { authorization: `Bearer ${token}`, 'content-type': 'application/json' },
+      payload: { contact: ADDR_A },
+    })
+    expect(res.statusCode).toBe(400)
+    expect(JSON.parse(res.body).error).toBe('CANNOT_ADD_SELF')
+  })
+
+  it('returns 400 when contact field is missing', async () => {
+    const token = createTestSession(ADDR_A)
+    const res = await app.inject({
+      method:  'POST',
+      url:     '/v1/contacts',
+      headers: { authorization: `Bearer ${token}`, 'content-type': 'application/json' },
+      payload: { nickname: 'No Address' },
+    })
+    expect(res.statusCode).toBe(400)
+    expect(JSON.parse(res.body).error).toBe('MISSING_CONTACT')
+  })
+})
+
+describe('DELETE /v1/contacts/:contact', () => {
+  it('returns 404 when deleting contact owned by different user (IDOR protection)', async () => {
+    // User A adds a contact
+    const tokenA = createTestSession(ADDR_A)
+    await app.inject({
+      method:  'POST',
+      url:     '/v1/contacts',
+      headers: { authorization: `Bearer ${tokenA}`, 'content-type': 'application/json' },
+      payload: { contact: ADDR_C },
+    })
+
+    // User B tries to delete User A's contact — should get 404 (not 403)
+    const tokenB = createTestSession(ADDR_B)
+    const res = await app.inject({
+      method:  'DELETE',
+      url:     `/v1/contacts/${ADDR_C}`,
+      headers: { authorization: `Bearer ${tokenB}` },
+    })
+    expect(res.statusCode).toBe(404)  // 404, not 403 — don't leak existence
+    expect(JSON.parse(res.body).error).toBe('NOT_FOUND')
+  })
+
+  it('successfully deletes own contact', async () => {
+    const tokenA = createTestSession(ADDR_A)
+    await app.inject({
+      method:  'POST',
+      url:     '/v1/contacts',
+      headers: { authorization: `Bearer ${tokenA}`, 'content-type': 'application/json' },
+      payload: { contact: ADDR_C },
+    })
+
+    const deleteRes = await app.inject({
+      method:  'DELETE',
+      url:     `/v1/contacts/${ADDR_C}`,
+      headers: { authorization: `Bearer ${tokenA}` },
+    })
+    expect(deleteRes.statusCode).toBe(204)
+  })
+})
+
+describe('IDOR protection', () => {
+  it("session B's GET /v1/contacts does NOT return session A's contacts", async () => {
+    const tokenA = createTestSession(ADDR_A)
+    const tokenB = createTestSession(ADDR_B)
+
+    // User A adds a contact
+    await app.inject({
+      method:  'POST',
+      url:     '/v1/contacts',
+      headers: { authorization: `Bearer ${tokenA}`, 'content-type': 'application/json' },
+      payload: { contact: ADDR_C, nickname: 'Shared Contact' },
+    })
+
+    // User B's contact list should be empty
+    const resB = await app.inject({
+      method:  'GET',
+      url:     '/v1/contacts',
+      headers: { authorization: `Bearer ${tokenB}` },
+    })
+    expect(resB.statusCode).toBe(200)
+    const bodyB = JSON.parse(resB.body)
+    expect(bodyB.total).toBe(0)
+    expect(bodyB.contacts).toHaveLength(0)
+
+    // User B's single-contact GET should return 404
+    const resB2 = await app.inject({
+      method:  'GET',
+      url:     `/v1/contacts/${ADDR_C}`,
+      headers: { authorization: `Bearer ${tokenB}` },
+    })
+    expect(resB2.statusCode).toBe(404)  // 404, not 403 — don't leak existence
+  })
+
+  it('user A can see their own contact that user B cannot see', async () => {
+    const tokenA = createTestSession(ADDR_A)
+    const tokenB = createTestSession(ADDR_B)
+
+    await app.inject({
+      method:  'POST',
+      url:     '/v1/contacts',
+      headers: { authorization: `Bearer ${tokenA}`, 'content-type': 'application/json' },
+      payload: { contact: ADDR_C },
+    })
+
+    // User A can see it
+    const resA = await app.inject({
+      method:  'GET',
+      url:     `/v1/contacts/${ADDR_C}`,
+      headers: { authorization: `Bearer ${tokenA}` },
+    })
+    expect(resA.statusCode).toBe(200)
+
+    // User B cannot see it
+    const resB = await app.inject({
+      method:  'GET',
+      url:     `/v1/contacts/${ADDR_C}`,
+      headers: { authorization: `Bearer ${tokenB}` },
+    })
+    expect(resB.statusCode).toBe(404)
+  })
+})
+
+describe('PUT /v1/contacts/:contact', () => {
+  it('updates nickname for own contact', async () => {
+    const tokenA = createTestSession(ADDR_A)
+
+    await app.inject({
+      method:  'POST',
+      url:     '/v1/contacts',
+      headers: { authorization: `Bearer ${tokenA}`, 'content-type': 'application/json' },
+      payload: { contact: ADDR_C, nickname: 'Original' },
+    })
+
+    const res = await app.inject({
+      method:  'PUT',
+      url:     `/v1/contacts/${ADDR_C}`,
+      headers: { authorization: `Bearer ${tokenA}`, 'content-type': 'application/json' },
+      payload: { nickname: 'Updated' },
+    })
+    expect(res.statusCode).toBe(200)
+    expect(JSON.parse(res.body).nickname).toBe('Updated')
+  })
+
+  it('returns 404 when updating another user\'s contact', async () => {
+    const tokenA = createTestSession(ADDR_A)
+    const tokenB = createTestSession(ADDR_B)
+
+    await app.inject({
+      method:  'POST',
+      url:     '/v1/contacts',
+      headers: { authorization: `Bearer ${tokenA}`, 'content-type': 'application/json' },
+      payload: { contact: ADDR_C },
+    })
+
+    const res = await app.inject({
+      method:  'PUT',
+      url:     `/v1/contacts/${ADDR_C}`,
+      headers: { authorization: `Bearer ${tokenB}`, 'content-type': 'application/json' },
+      payload: { nickname: 'Hacked' },
+    })
+    expect(res.statusCode).toBe(404)  // 404, not 403
+  })
+})

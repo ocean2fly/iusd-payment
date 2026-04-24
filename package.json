@@ -1,0 +1,33 @@
+{
+  "name": "ipay",
+  "version": "1.0.0",
+  "private": true,
+  "description": "iUSD payment service for the Initia blockchain ecosystem",
+  "scripts": {
+    "build": "pnpm -r build",
+    "test": "pnpm -r test",
+    "lint": "eslint 'packages/*/src/**/*.ts'",
+    "format": "prettier --write 'packages/*/src/**/*.ts'",
+    "check:no-db": "bash scripts/check-no-db-files.sh",
+    "check:app-bundle": "node scripts/check-app-bundle.mjs",
+    "postinstall": "node scripts/patch-cosmjs-types.cjs 2>/dev/null || true"
+  },
+  "engines": {
+    "node": ">=18",
+    "pnpm": ">=8"
+  },
+  "packageManager": "pnpm@9.1.0",
+  "pnpm": {
+    "overrides": {
+      "react": "^19.2.4",
+      "react-dom": "^19.2.4"
+    }
+  },
+  "dependencies": {
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "express": "^5.2.1",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4"
+  }
+}
